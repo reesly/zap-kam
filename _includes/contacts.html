@@ -1,0 +1,127 @@
+{%- assign phone = "9503108888" -%}
+{%- assign phone_title = "950 310-88-88" -%}
+{%- if include.phone -%}
+{%- if include.phone != "" -%}
+  {%- assign phone = include.phone -%}
+  {%- assign phone_title = include.phone_title -%}
+  {%- endif -%}
+{%- endif -%}
+
+<!-- Footer Section Start -->
+  <section id="footer" class="footer-area section-padding bg-gray">
+    <div class="container">
+      <div class="container contacts-area" id="contact">
+        <div class="text-center justify-content-center">
+          <div class="section-header">
+            <h2 class="section-title">Контакты</h2>
+            <div class="shape wow fadeInDown"></div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-4 col-md-6  col-xs-12 text-right " style="margin: auto;">
+            <div class="">
+              <img src="/assets/img/logo_bgwhite.png" alt="Запчасти КамАЗ">
+              <div class="textwidget">
+                <p><a href="https://zap-kam.ru">zap-kam.ru</a> </p>
+                <p> &nbsp; </p>
+                <p><a href="#~" class="small nal-link" data-toggle="modal" data-target="#regions-modal">регионы доставки</a></p>
+              </div>
+            </div>
+          </div>
+ 
+
+          <div class="contacts col-lg-4 col-md-6 col-xs-12" style="margin: auto;">
+            <div class="phone w-100">
+              <div class="phone__img">
+                <!-- <img src="assets/img/feature/phone.png" class="icon-img" alt=""> -->
+                <i class="lni-phone"></i>
+              </div>
+              <div class="phone__number">
+                <a class="nocolor" href="tel:{{phone}}">{{phone_title}}</a> <br> 
+                <a class="nocolor" href="tel:+79503108888">(950) 310-88-88</a> <br> 
+                <!-- <a class="nocolor" href="tel:+79003234141">+7 900 323-41-41</a> <br> -->
+              </div>
+
+            </div>
+
+            <div class="mail w-100">
+              <!-- <img src="assets/img/feature/mail.png" class="icon-img"> -->
+              <i class="lni-envelope size-sm"></i>
+              <a href="mailto:zap-kam16@yandex.ru">zap-kam16@yandex.ru</a>
+            </div>
+
+            <div class="geo w-100" style="padding-top:20px;">
+              <div class="geo__mark">
+                <!-- <img src="assets/img/feature/geo-mark.png" class="icon-img" alt=""> -->
+                <i class="lni-map-marker size-sm"></i>
+              </div>
+              <div class="geo__text">
+                г. Набережные Челны, ТК "Заритал" (гараж 500), 30 павильон, склад 4. 
+                <br><small>(Трубный проезд, 3 ст30) </small>
+              </div>
+            </div>
+
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+  </section>
+
+
+  
+  <div class="modal" id="regions-modal" tabindex="-1" role="dialog" aria-labelledby="regions-modal" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title">Регионы доставки</h4>
+          <button class="close" type="button" data-dismiss="modal" aria-label="close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body" id="region-model-body">
+  
+        </div>
+
+        <script>
+            //  $('#region-model-body').load('/dostavka-dvigatel-kamaz/for_modal.html');
+          </script>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Modal windows End -->
+
+  <script>
+    
+      // --------- ОТСЫЛКА ФОРМЫ  -----------------------
+      function send_request(good, contact, comment) {
+        // соберем данные и присвоим переменным.
+      
+        // проверим заполнение 
+        if (contact === "" || contact === null) {
+          alert("Укажите, пожалуйста, ваши контактные данные.");
+          return; // закончим
+        }
+        // присвоим значения input-ам  google -формы
+        $("[name='entry.1519454606']").val(contact); // input google формы, там id нет, потому ищем по имени. и присваиваем
+        $("[name='entry.191261818']").val(good);
+        $("[name='entry.1977316514']").val(comment);
+        $("[name='entry.1126040740']").val(new Date().toJSON());
+        // берем форму по Id - и командой Submit - отправляем ее на сервер
+        document.getElementById("mG61Hd").submit();
+        alert("Заявка отправлена. Спасибо. Мы свяжемся с Вами в ближайшее время.");
+        // очищу input
+        $("#input_contact").val(""); // контакты
+        $("#select").val(""); // товар
+        $("#request_comment").val("");
+      }
+      // нужна глобальная переменная, чтобы не перенаправлял нас на сайт google - после отправки заявки
+      
+    </script>
+
+  
+  

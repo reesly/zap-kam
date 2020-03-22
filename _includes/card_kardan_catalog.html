@@ -1,0 +1,65 @@
+{% assign product = include.product  %} 
+<li class="list-group-item">
+<div class="row">
+<div class="col-md-8 col-xs-12">
+    <h5 class="mt-1 font-weight-bold mb-2 name">{{ product.name}}
+        {%- if product.dlina  -%}
+        &nbsp;&nbsp;<small>(мин.длина {{ product.dlina }}мм.)</small>
+        {%- endif -%}
+    </h5>
+</div>
+<div class="col-md-4 code1 cat card-zap1-code text-right"> {{ product.code1 }} / {{ product.cat}} </div>
+</div>
+<div class="row p-0">
+<div class="col-md-5 col-xs-12">
+    <div class="p-0" style="font-size: 80%; padding-bottom: 0.6em;">
+        {%- if product.desc  -%}
+        {{ product.desc }}<br>
+        {%- endif -%}
+        {%- if product.prim -%}
+        {{ product.prim }}<br>
+        {%- endif -%}
+    </div>
+    <div class="p-0" style="font-size: 70%;">
+        {%- if product.par1 -%}
+        {{ product.par1 }}: <b>{{product.text1}}</b><br>
+        {%- endif -%}
+        {%- if product.par2 -%}
+        {{ product.par2 }}: <b>{{product.text2}}</b><br>
+        {%- endif -%}
+
+        <!-- <a class="" data-toggle="collapse" href="#collapse1_{{product.id}}" role="button" aria-expanded="false" aria-controls="collapse1_{{product.id}}">подробнее...</a> -->
+    </div>
+
+</div>
+
+<div class="col-md-4">
+    <div class="p-1 m-0 d-table" style="font-size: 80%; width: auto;">
+        {%- if product.price1 -%}
+        <div class="d-row table-bggray">
+            <div class="d-cell"><input type="checkbox" class="label-price" id="pr1_{{product.id}}" data-target="• {{ product.name }} / {{ product.price1_name }} / {{ product.price1 }} "><label class="label-price" for="pr1_{{product.id}}"> {{ product.price1_name }} </label> </div>
+            <div class="d-cell-pr"><span class="price-tb">{{ product.price1 }}</span>‎<span class="price-tbr"> ₽</span></div></div>
+        {%- endif -%}
+        {%- if product.price2 -%}
+        <div class="d-row table-bggray">
+            <div class="d-cell"> <input type="checkbox" class="label-price" id="pr2_{{product.id}}" data-target="• {{ product.name }} / {{ product.price2_name }} / {{ product.price2 }} "><label class="label-price" for="pr2_{{product.id}}"> {{ product.price2_name }} </label></div>
+            <div class="d-cell-pr"><span class="price-tb">{{ product.price2 }}</span>‎<span class="price-tbr"> ₽</span> </div></div>
+        {%- endif -%}
+        {%- if   product.price3 -%}
+        <div class="d-row table-bggray">
+            <div class="d-cell"> <input type="checkbox" class="label-price" id="pr3_{{product.id}}"data-target="• {{ product.name }} / {{ product.price3_name }} / {{ product.price3 }} "><label class="label-price" for="pr3_{{product.id}}">{{ product.price3_name }}</label></div>
+            <div class="d-cell-pr"><span class="price-tb">{{ product.price3 }}</span>‎<span class="price-tbr"> ₽</span> </div></div>
+        {%- endif -%}
+        {%- if  product.price4 -%}
+        <div class="d-row table-bggray">
+            <div class="d-cell"> <input type="checkbox" class="label-price" id="pr4_{{product.id}}" data-target="• {{ product.name }} / {{ product.price4_name }} / {{ product.price4 }} ">
+                <label class="label-price" for="pr4_{{product.id}}">{{ product.price4_name }}</label></div>
+            <div class="d-cell-pr"><span class="price-tb">{{ product.price4 }}</span>‎<span class="price-tbr"> ₽</span> </div></div>
+        {%- endif -%}
+        <div class="text-right d-row" style="font-size: 14px;">
+            <a href="javascript:" class="" style="float: right;" data-toggle="modal" data-target="#requestModal" onclick="request_form_yandex('{{ product.id }}','');"> Запросить предложение </a></div>
+    </div>
+</div>
+<div class="col-md-3 col-xs-12"><img src="{{product.img_path}}{{product.img1}}" alt="{{product.name}}" width="200"></div>
+</div>
+</li>

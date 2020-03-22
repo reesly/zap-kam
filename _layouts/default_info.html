@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html xml:lang="ru" lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="icon" href="/favicon.ico" type="image/x-icon"/>
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <!-- <link rel="canonical" href="https://zap-kam.ru/"/>  -->
+
+  <title>{{ page.title }}</title>
+  <meta property="twitter:title"  content="{{ page.title }}" />
+  <meta property="og:title"  content="{{ page.title }}" />
+  <meta property="og:type" content="website"/>
+  <meta property="og:site_name" content="Магазин автозапчастей для а\м КамАЗ"/>
+  <meta property="og:image" content="https://zap-kam.ru"/>
+      
+  <meta name="description" content="{{ page.description }}" />
+  <meta property="og:description" content="{{ page.description }}" />
+  <meta name="keywords" content="{{ page.keywords }}">
+  <meta name="author" content="Зап-Кам - Запчасти КамАЗ" />
+  
+  <link rel="stylesheet" href="/assets/fonts/line-icons.css">
+  <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/assets/css/owl.carousel.min.css">
+  <link rel="stylesheet" href="/assets/css/owl.theme.css">
+  <link rel="stylesheet" href="/assets/css/animate.css">
+  <link rel="stylesheet" href="/assets/css/magnific-popup.css">
+  <link rel="stylesheet" href="/assets/css/main.css">
+  <link rel="stylesheet" href="/assets/css/responsive.css">
+  <link rel="stylesheet" href="/assets/css/nanogallery2.min.css">
+  
+  <!-- Yandex verification -->
+  <meta name="yandex-verification" content="7f54e3c9fedc7455" />
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-159239699-1"></script>
+  <script>  window.dataLayer = window.dataLayer || [];  function gtag(){dataLayer.push(arguments);}  gtag('js', new Date());  gtag('config', 'UA-159239699-1');</script>
+
+</head>
+
+<body>
+
+  <!-- +Header   ------------------  -->
+  <header id="header-wrap">
+    <div class="head h-100">
+      <div class="head__inner h-100">
+        <!-- Navbar Start -->
+        <nav class="navbar navbar-expand-lg fixed-top scrolling-navbar">
+          <div class="container">
+            <a href="/" class="navbar-brand" style="display: contents;"> <img src="/assets/img/logo2.png" alt=""> </a> 
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
+              aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+              <i class="lni-menu" style="color: lightblue;"></i>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+              <ul class="navbar-nav mr-auto w-100 justify-content-end clearfix" id="top-submenu">
+                <li class="nav-item">
+                  <a class="nav-link" href="javascript:" onclick="$('html, body').animate({ scrollTop: 0}, 600);" >
+                    <i class="lni-home"></i> Начало
+                  </a>
+                </li>
+                  {% include top-submenu.html phone = page.phone %}
+              </ul>
+            </div>
+          </div>
+        </nav>
+        <!-- -Navbar-  -->
+
+        <!-- + Hero Area -->
+        <div id="hero-area" class="bg-blue">
+            <div class="container">
+              <div class="row">
+                <div class="col-md-8 col-xs-12">
+                  <div class="contents" style="padding-top: 70px;">
+                    <ul>
+                      <!-- <li style="margin-bottom:0px;">
+                                  <h1 class="title text-left w-100">Запчасти для КамАЗ 4310</h1>
+                                </li> -->
+                      <li style="margin-top:0px; ">
+                        <h2 class="title"> {{page.hero-title}} </h2>
+                      </li>
+            
+                      <!-- <li><i class="lni-chevron-down"></i>&nbsp;&nbsp;&nbsp;Оперативная отгрузка по России</li>
+                                <li><i class="lni-chevron-down"></i>&nbsp;&nbsp;&nbsp;Большой опыт на рынке запчастей </li>
+                                 -->
+            
+                      <li id="hero-menu">
+                        <p class="title text-left w-100">
+                          <a href="/kamaz-4310/"> Всё на КамАЗ-4310</a>
+                          &nbsp; • &nbsp; <a href="/kamaz-4310/catalog/kpp_korobki_peredach/kpp_korobki_peredach.html"> Коробки передач </a>
+                          &nbsp; • &nbsp; <a href="/kardanyi_valy/"> Карданные валы </a>
+                          <!-- &nbsp; • &nbsp; <a href="//"> Редукторы </a> -->
+                        </p>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="col-md-4 text-right">
+                  <div class="contents" style="padding-top: 30px;">
+                     
+                    <button class="btn btn-lg btn-blue" style=" position: absolute;right: 1em; bottom: 1em;
+                " data-toggle="modal" data-target="#requestModal"
+                      onclick="ym(57475078, 'reachGoal', 'RequestBill'); return true;">
+                      Запросить предложение</button> </li>
+            
+                    <!-- <a href="/index.html" class="btn btn-lg btn-primary " style=" margin-top: 15px;"> Каталог КамАЗ 4310 </a> -->
+                  </div>
+                </div>
+              </div>
+            </div>
+        </div>
+      </div>
+    </div>
+    <!-- -Hero Area -->
+  </header>
+  <!-- -Header  ------------------ -->
+
+
+
+  <section class="articles">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-10 col-xs-12" style="margin: auto;">
+          <h1 class="text-center">{{ page.h1 }} </h1>
+          {%- if page.h2 and page.h2 != "" -%}
+          <div class="section-header text-center">
+            <h2 class="section-title " style="font-size:1.5em !important;"> {{ page.h2 }} </h2>
+            <div class="shape wow fadeInDown"></div>
+          </div>
+          {%- endif -%}
+
+        </div>
+      </div>
+      
+      <div class="row">
+        
+          
+          {{ content }}
+          
+      </div>
+    </div>
+  </section>
+
+
+  
+  {% include contacts.html %}
+  {% include footer.html %}
+
+  <!-- Кнопка вверх-->
+  <a href="#" class="back-to-top">
+    <i class="lni-arrow-up"></i>
+  </a>
+
+  
+  <script src="/assets/js/jquery-min.js"></script>
+  <script src="/assets/js/popper.min.js"></script>
+  <script src="/assets/js/bootstrap.min.js"></script>
+  <script src="/assets/js/owl.carousel.min.js"></script>
+  <script src="/assets/js/wow.js"></script>
+  <script src="/assets/js/jquery.nav.js"></script>
+  <script src="/assets/js/scrolling-nav.js"></script>
+  <script src="/assets/js/jquery.easing.min.js"></script>
+  <script src="/assets/js/jquery.counterup.min.js"></script>
+  <script src="/assets/js/waypoints.min.js"></script>
+  <script src="/assets/js/main.js"></script>
+  <script src="/assets/js/typeahead.bundle.min.js"></script>
+  <script src="/assets/js/jquery.nanogallery2.min.js"></script>
+
+  
+</body>
+
+</html>

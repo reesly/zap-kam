@@ -1,0 +1,199 @@
+<!-- { % assign product = site.data.k4310 | where:"url", include.page_url | first  %}  -->
+{% assign product = include.product %} 
+
+ <div style="padding-top: 0px; margin-top: -13px; position: absolute;">
+    <a href="/kamaz-4310/catalog/" class="btn btn-link" > < каталог </a>
+  </div>
+
+  <div class="w-100">&nbsp;</div>
+  <div style="clear: both;"></div> 
+ 
+   
+      <div id="" class="col-md-5 col-xs-12">
+        <div id="ng-catalog_"{{product.id}} data-nanogallery2 = '{
+            "thumbnailLabel":{"display":false},
+            "thumbnailBorderVertical":0,"thumbnailBorderHorizontal":0,
+            "thumbnailWidth":   "auto",
+            "thumbnailHeight":   300,
+            "thumbnailAlignment": "right", 
+            "fillWidth": "right", 
+            "thumbnailDisplayTransition":"slideUp",
+            "thumbnailHoverEffect2":"scale120|toolsAppear|toolsAppear",
+            "itemsBaseURL":     "{{product.img_path}}"
+          }' >
+          <!-- fillWidth -->
+          {%- if product.img1 -%}
+            <a href = "{{product.img1}}" data-ngThumb = "{{product.img1}}" itemprop="image" title="{{product.name}}"> {{product.name}}</a>
+          {%- endif -%}
+          
+          {%- if product.img2 -%}
+            <a href = "{{product.img2}}" data-ngThumb = "{{product.img2}}" itemprop="image" title="{{product.name}}"> {{product.name}}</a>
+          {%- endif -%}
+          
+          {%- if product.img3 -%}
+          <a href = "{{product.img3}}" data-ngThumb = "{{product.img3}}" itemprop="image" title="{{product.name}}"> {{product.name}}</a>
+          {%- endif -%}
+          
+          {%- if product.img4 -%}
+          <a href = "{{product.img4}}" data-ngThumb = "{{product.img4}}" itemprop="image" title="{{product.name}}"> {{product.name}}</a>
+          {%- endif -%}
+          
+          {%- if product.img5 -%}
+          <a href = "{{product.img5}}" data-ngThumb = "{{product.img5}}" itemprop="image" title="{{product.name}}"> {{product.name}}</a>
+          {%- endif -%}
+          
+          {%- if product.img1 or product.img2 or product.img3 or product.img4 or product.img5 -%}
+          {%- else -%}
+            <a href = "nophoto.jpg" data-ngThumb = "nophoto.jpg" title="{{product.name}}"> {{product.name}} </a>
+          {%- endif -%}
+
+        </div>
+      </div>
+
+      <div id="description" class="col-md-7 col-xs-12">
+        <!-- <h2>{{name}}</h2> -->
+        <table class="table table-borderless table-hover" style="width: auto; max-width: 450px;">
+            <tr>
+              <td colspan="2"><span itemprop="name" style="font-size:1.1em; font-weight: 600; padding-bottom: 0;">{{ product.name }} </span>
+                {%- if product.code1 -%}
+                <br><small>код</small>. <span itemprop="sku"> {{ product.code1 }} </span>
+                {%- endif -%}
+                {%- if product.code2 -%}
+                <br> {{ product.code2 }}
+                {%- endif -%}
+                
+              </td>
+            </tr>
+            {%- unless include.page_url == include.page_url != "" -%}
+              <tr> <td colspan="2" style="text-align: right;">  
+                <a href="/catalog/{{ product.url }}.html" class="btn btn-link"> Полное описание двигателя... </a> </td> </tr>
+            {%- endunless -%}
+            
+            {%- if product.price1 -%}
+            
+            
+            <a href="javascript:" onclick="" >
+              <tr class="table-active"> <td itemscope="" itemtype="http://schema.org/Offer" itemprop="offers">
+                <link itemprop="availability" href="http://schema.org/InStock">
+                <meta itemprop="priceCurrency" content="RUB">
+                <meta itemprop="price" content="{{product.price1}}">
+        
+                <input type="checkbox" class="label-price" id="pr1_{{product.id}}" data-target="• {{ product.name }} / {{ product.price1_name }} / {{ product.price1 }} ">
+                <label class="label-price" for="pr1_{{product.id}}">
+                 {{ product.price1_name }} </label> </td>
+                <td style="text-align: right; min-width: 125px;"><span style="font-size:1.1em;font-weight: 600;">{{ product.price1 }} </span>‎ <span style="color: gray;">₽</span>  </td> </tr>
+            </a>
+            {%- endif -%}
+
+            {%- if product.price2 -%}
+            <tr class="table-active"> <td>  <input type="checkbox" class="label-price" id="pr2_{{product.id}}" data-target="• {{ product.name }} / {{ product.price2_name }} / {{ product.price2 }} ">
+              <label class="label-price" for="pr2_{{product.id}}">
+              {{ product.price2_name }} </label></td>
+              <td style="text-align: right;"><span style="font-size:1.1em;font-weight: 600;">{{ product.price2 }} </span>‎ <span style="color: gray;">₽</span>  </td> </tr>
+            {%- endif -%}
+
+            {%- if   product.price3 -%}
+            <tr class="table-active"> <td> <input type="checkbox" class="label-price" id="pr3_{{product.id}}" data-target="• {{ product.name }} / {{ product.price3_name }} / {{ product.price3 }} " >
+              <label class="label-price" for="pr3_{{product.id}}">
+                {{ product.price3_name }}</label></td>
+              <td style="text-align: right;"><span style="font-size:1.1em;font-weight: 600;">{{ product.price3 }} </span>‎  <span style="color: gray;">₽</span>  </td> </tr>
+            {%- endif -%}
+
+            {%- if  product.price4 -%}
+            <tr class="table-active"> <td> <input type="checkbox" class="label-price" id="pr4_{{product.id}}" data-target="• {{ product.name }} / {{ product.price4_name }} / {{ product.price4 }} "> 
+               <label class="label-price" for="pr4_{{product.id}}">
+                 {{ product.price4_name }}</label></td>
+              <td style="text-align: right;"><span style="font-size:1.1em;font-weight: 600;">{{ product.price4 }} </span>‎  <span style="color: gray;">₽</span>  </td> </tr>
+            {%- endif -%}
+
+            
+          <tr>
+            <td colspan="2">
+              
+                <!-- <strong> Запросить предложение</strong> -->
+                <div class="form-group form-inline text-right" id='default-suggestions_card'>
+        
+                  
+                    <button class="btn btn-blue" style="float: right;" data-toggle="modal" data-target="#requestModal"
+                      onclick="ym(57475078, 'reachGoal', 'RequestBill'); 
+                      request_form_yandex('{{ product.id }}','{{product.path}}{{product.url}}');                      
+                      pars = 'https:'+'/'+'/forms.yandex.ru/u/5e5831b56296cf035c59867f/?iframe=1'+pars;
+
+
+                      document.getElementById('form1').src = pars;
+                      return true;
+
+                    ">  Запросить предложение </button> 
+                </div>
+            </td>
+          </tr>
+
+         
+            {%- if product.par1 -%}
+            <tr><td> {{ product.par1 }} </td>
+              <td> <small> {{ product.text1 }}</small> </td>
+            </tr>
+            {%- endif -%}
+            
+            {%- if product.par2 -%}
+            <tr><td> {{ product.par2 }} </td>
+              <td> <small> {{ product.text2 }}</small> </td>
+            </tr>
+            {%- endif -%}
+
+            {%- if product.par3 -%}
+            <tr><td> {{ product.par3 }} </td>
+              <td> <small> {{ product.text3 }}</small> </td>
+            </tr>
+            {%- endif -%}
+
+            {%- assign mass = "" -%}
+            {%- if product.m -%}
+            {%- assign mass = "&weight="+product.m -%}
+            <tr><td> Масса </td>
+              <td> <span itemprop="weight">{{ product.m }}</span> кг. </td>
+            </tr>
+            {%- endif -%}
+
+            {%- assign sizes = "" -%}
+            {%- if product.l -%}
+            {%- assign sizes = "&size="+product.l*100+","+product.w*100+","+product.h*100 -%}
+            
+            <tr><td> Габариты (ДШВ),м</td>
+              <td> {{ product.l }} х {{ product.w }} x {{ product.h }}  <span itemprop="volume invisible"> </span> </td>
+            </tr>
+            {%- endif -%}
+          
+            {%- if product.prim -%}
+            <tr><td colspan="2"> <small>{{ product.prim }}</small> </td>
+            </tr>
+            {%- endif -%}
+
+            {%- if product.prim2  -%}
+            <tr>
+              <td colspan="2"> <small>{{ product.prim2 }}</small> </td>
+            </tr>
+            {%- endif -%}
+          
+            {%- if product.desc  -%}
+            <tr>
+              <td colspan="2"><small itemprop="description">{{ product.desc }} </small></td>
+            </tr>
+            {%- endif -%}
+
+            {%- if product.comment  -%}
+            <tr>
+              <td colspan="2"><small>{{ product.comment }} </small></td>
+            </tr>
+            {%- endif -%}
+          
+        </table>
+      </div>
+      
+      
+    <div class="col-md-10 col-xs-12" style="margin: auto;">
+        <div class="ec-delivery"></div>
+
+    <script id="dcsbl" 
+    src="https://dostavka.sbl.su/api/delivery.js?comp=10,8,24{{sizes}}{{mass}}&size=&startCt=Набережные Челны&startCntr=RU&btn=no&innerDeliv=1&sizeShow=1&startPick=1&title=расчет доставки&autoEnd=1"></script>
+  </div>

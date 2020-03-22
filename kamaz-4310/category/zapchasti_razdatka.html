@@ -1,0 +1,124 @@
+---
+layout: default_info
+title: Запчасти на раздаточную коробку вездеходов КамАЗ-4310, 43114, 43118, 4350 - ЗапКам.Запчасти
+description: Подбор запчастей для раздаточной коробки КамАЗ (раздатки) - дифференциалы, валы, обоймы, шестерни, фланцы, механизмы включения. Каталог с ценами, описанием, применимостью и техническими характеристиками. Новые и восстановленные б/у после кап.ремонта.
+keywords: КамАЗ раздатка Карданный вал карданная передача каталог цены
+hero-title: Запчасти на вездеходы КамАЗ-4310, 43114, 43118, 4326, 4350
+h1: Раздаточная коробка - запчасти на технику КамАЗ  
+h2:
+phone: 9272482335
+phone_title: (927) 248 23-35
+---
+
+<!-- Модель камаза  -->
+<div class="col-md-11 col-xs-12" style="margin: auto;">
+    <p>
+        Валы КамАЗ создаются из высококачественных материалов, с применением последних технологий, производятся 
+        на современных автоматических линиях c высокой точностью обработки и полным соответствием размеров конструкторской документации.
+    </p>
+    <p>
+        На производстве ведется строгий контроль качества с помощью современных высокоточных измерительных приборов.
+    </p>
+
+</div>
+
+
+<!-- Товары ---->
+
+
+<div class="col-md-11 col-xs-12" style="margin: auto;">
+    <p></p>
+    <h3>Каталог шестерен КамАЗ</h3>
+    <div class="form form-inline">
+        <input id="pListSearch" class="fuzzy-search" type="search" class="form-control" placeholder="поиск..." style="width:130px;"/>
+        &nbsp;&nbsp;
+        <button class="btn btn-blue" onclick="$('#pListSearch').val('Коробка раздаточная'); filterProductList($('#pListSearch').val());" title="Коробка раздаточная">Раздатка</button>   
+        <button class="btn btn-blue" onclick="$('#pListSearch').val('Коробка передач'); filterProductList($('#pListSearch').val());" title="Коробка передач">КПП</button>   
+        <button class="btn btn-blue" onclick="$('#pListSearch').val('4310'); filterProductList($('#pListSearch').val());" title="4310">4310</button>   
+        <button class="btn btn-blue" onclick="$('#pListSearch').val('43114'); filterProductList($('#pListSearch').val());" title="43114">43114-43118</button>   
+        <button class="btn btn-blue" onclick="$('#pListSearch').val('4350'); filterProductList($('#pListSearch').val());" title="65111">4350</button>   
+        <button class="btn btn-blue" onclick="$('#pListSearch').val('43261'); filterProductList($('#pListSearch').val());" title="65111">43261</button>   
+        
+        
+          
+    </div>
+
+    {% include catalog-loading-panel.html %}
+
+    <div id="productList" class="pt-4 pb-2" style="display: none; ">
+    
+        <div class="row shadow list">
+            {% for product in site.data.k4310 %}
+            {%- if product.path == "/kamaz-4310/catalog/zapchasti/" and product.cat == "Коробка раздаточная" -%}
+                {% include card_zapchasti_catalog.html product = product %}
+            {%- endif -%}
+            {% endfor %}
+
+            <div id="loadingDiv">
+                <span>Загрузка данных</span>
+            </div>
+        </div>
+        <div class="no-result">Не найдено</div>
+        <ul class="pagination"></ul>
+    </div>
+    
+
+
+</div>
+
+
+<div class="col-md-10 col-xs-12" style="margin: auto;">
+
+    <div class="alert alert-info">
+        <p>Предоставляется гарантия производителя.</p>
+        
+    </div>
+
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <h3 class="text-center w-100">Валы первичные коробки передач КамАЗ</h3>
+    <table class="table" style="width: auto;">
+        <tr>
+            <th width="180"><img src="/kamaz-4310/category/img/val_15.1701025.jpg" alt="Вал 14.1701130"></th>
+            <td><b>15.1701025</b>
+                <br>Вал первичный коробки передач в сборе со втулкой, подшипником и муфтой синхронизатора, стянутыми кольцевой гайкой, застопоренной раскерниванием поя­ска в пазы вала. 
+                <br>
+                Устанавливается на модели КП 15 различных комплектаций. Обладает гарантированным ресурсом не менее 350 тыс. км.
+                Допускается замена на вал 152.1701025, с одновременной установкой шестерни 4 передачи 142.1701115, синхронизатора 4 и 5
+                передач 142.1701151 и вала вторичного коробки передач 142.1701105. </td>
+            
+            <th width="180"><img src="/kamaz-4310/category/img/val_152.1701025.jpg" alt="Вал 152.1701025"></th>
+            <td><b>152.1701025</b>
+                <br>Устанавливается на модели КП 152 различных комплектаций. Имеет усиленную зубчатую муфту,
+                 прочность которой повышена за счет увеличения высоты зуба и площади контакта.
+                  Обладает гарантированным ресурсом не менее 500 тыс. км. </td>
+            
+            <th width="180"><img src="/kamaz-4310/category/img/val_154.1701027.jpg" alt="Вал 154.1701027"></th>
+            <td><b>154.1701027</b>
+                <br>
+                Вал первичный коробки передач с зубчатой муфтой. Устанавливается на модели КП 154 различных комплектаций. Зубчатый венец
+                шлифуется, что позволяет достичь высоких показателей прочности и износостойкости, также способствует снижению шума при
+                работе. Обладает гарантированным ресурсом не менее 500 тыс. км. </td>
+        </tr>
+    </table>
+    
+
+    
+    
+    <p>
+        <iframe width="800" height="450" src="https://www.youtube.com/embed/tcvkMMREjHU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </p>
+    <p>
+        <iframe width="800" height="450" src="https://www.youtube.com/embed/mVifllCmg4s" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </p>
+    
+    
+    <p></p>
+    <p></p>
+    {% include kupite_u_nas.html %}
+    
+    
+  <div style="height: 100px;">&nbsp;</div>
+  
+
+<script src="/assets/js/list.min.js"></script>

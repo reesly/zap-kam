@@ -1,0 +1,124 @@
+---
+layout: default_info
+title: Шестерни раздаточной коробки и КПП КамАЗ - ЗапКам.Запчасти
+description: Подбор шестерен КамАЗ для коробки передач и раздаточной коробки для вездехов КамАЗ-4310. Каталог камазовских валов с ценами, описанием, применимостью и техническими характеристиками. Новые и восстановленные б/у после кап.ремонта.
+keywords: КамАЗ Карданный вал карданная передача каталог цены
+hero-title: Запчасти на вездеходы КамАЗ-4310, 43114, 43118, 4326, 4350
+h1: Шестерни передач КамАЗ  
+h2:
+phone: 
+---
+
+<!-- Модель камаза  -->
+<div class="col-md-11 col-xs-12" style="margin: auto;">
+    <p>
+        Шестерни КамАЗ производятся на современном автоматизированном оборудовании Gildemeister, Liebherr, Gleason из аналогов европейской высокопроч­ной стали, что обеспечивает высокую точность обработки и полное соответствие кон­структорской документации.
+        <br> Детали хонингуются с точностью до 18 мкм, что возможно только в заводских условиях.
+    </p>
+    <p>
+
+    </p>
+
+</div>
+
+
+<!-- Товары ---->
+
+
+<div class="col-md-11 col-xs-12" style="margin: auto;">
+    <p></p>
+    <h3>Каталог шестерен КамАЗ</h3>
+    <div class="form form-inline">
+        <input id="pListSearch" class="fuzzy-search" type="search" class="form-control" placeholder="поиск..." style="width:130px;"/>
+        &nbsp;&nbsp;
+        <button class="btn btn-blue" onclick="$('#pListSearch').val('Коробка раздаточная'); filterProductList($('#pListSearch').val());" title="Коробка раздаточная">Раздатка</button>   
+        <button class="btn btn-blue" onclick="$('#pListSearch').val('Коробка передач'); filterProductList($('#pListSearch').val());" title="Коробка передач">КПП</button>   
+        <button class="btn btn-blue" onclick="$('#pListSearch').val('4310'); filterProductList($('#pListSearch').val());" title="4310">4310</button>   
+        <button class="btn btn-blue" onclick="$('#pListSearch').val('43114'); filterProductList($('#pListSearch').val());" title="43114">43114-43118</button>   
+        <button class="btn btn-blue" onclick="$('#pListSearch').val('4350'); filterProductList($('#pListSearch').val());" title="65111">4350</button>   
+        <button class="btn btn-blue" onclick="$('#pListSearch').val('43261'); filterProductList($('#pListSearch').val());" title="65111">43261</button>   
+        
+        
+          
+    </div>
+
+    {% include catalog-loading-panel.html %}
+
+    <div id="productList" class="pt-4 pb-2" style="display: none; ">
+    
+        <div class="row shadow list">
+            {% for product in site.data.k4310 %}
+            {%- if product.path == "/kamaz-4310/catalog/zapchasti/" and product.cat2 == "Шестерни" -%}
+                {% include card_zapchasti_catalog.html product = product %}
+            {%- endif -%}
+            {% endfor %}
+
+            <div id="loadingDiv">
+                <span>Загрузка данных</span>
+            </div>
+        </div>
+        <div class="no-result">Не найдено</div>
+        <ul class="pagination"></ul>
+    </div>
+    
+
+
+</div>
+
+
+<div class="col-md-10 col-xs-12" style="margin: auto;">
+
+    <div class="alert alert-info">
+        <p>Предоставляется гарантия производителя.</p>
+        
+    </div>
+
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <h3 class="text-center w-100">Шестерни КПП КамАЗ</h3>
+    <table class="table" style="width: auto;">
+        <tr>
+            <th width="180"><img src="/kamaz-4310/category/img/shesternya_14.1701130.jpg" alt="Шестерня КПП 14.1701130">
+            </th>
+            <td><b>14.1701130</b>
+                <br>Применяется на КП моделей 14, 15, 141, 142, 152. Шестерня третьей передачи вторичного вала КП в сборе с конусным кольцом, напрессованным и приваренным электронно-лучевой сваркой. Прочность сварного соединения контролируется с обеспечением 3-х кратного запаса относительно номинального момента.</td>
+        </tr>
+        <tr>
+            <th><img src="/kamaz-4310/category/img/shesternya_14.1701056.jpg" alt="Шестерня КПП 14.1701056"> </th>
+            <td><b>14.1701056</b>
+                <br>Применяется на КП моделей 14, 15, 141, 142, 152. Шестерня привода промежуточного вала КП.</td>
+        </tr>
+        <tr>
+            <th><img src="/kamaz-4310/category/img/shesternya_154.1701115.jpg" alt="Шестерня КПП 154.1701115"> </th>
+            </th>
+            <td><b>154.1701115</b> <br> Шестерня четвертой передачи, применяется на моделях КП 144, 154. Изготавливается шестерня из стали нормированной
+                прокаливаемости. Зубья шестерни подвергаются шлифовке.</td>
+        </tr>
+        <tr>
+            <th>
+                <br><img src="/kamaz-4310/category/img/shesternya_152.1770050.jpg" alt="Шестерня КПП 152.1770050"> </th>
+            </th>
+            <td><b>152.1770050</b> <br>  Применяется на КП моделей 152, 154. Шестерня первичного вала делителя в сборе с конусным кольцом, напрессованным и приваренным электронно-лучевой сваркой. Прочность сварного соединения контролируется с обеспечением 3-х кратного запаса относительно номинального момента. </td>
+        </tr>
+        
+        
+    </table>
+    
+    
+    <p>
+        <iframe width="800" height="450" src="https://www.youtube.com/embed/tcvkMMREjHU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </p>
+    <p>
+        <iframe width="800" height="450" src="https://www.youtube.com/embed/mVifllCmg4s" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </p>
+    
+    
+    <p></p>
+    <p></p>
+    {% include kupite_u_nas.html %}
+    
+    
+  <div style="height: 100px;">&nbsp;</div>
+  
+
+<script src="/assets/js/list.min.js"></script>

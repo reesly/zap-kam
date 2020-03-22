@@ -1,0 +1,23 @@
+User-agent: Yandex
+Allow: /
+Disallow: /assets/
+Disallow: /_includes/
+Disallow: /data/
+Disallow: /_layouts/
+Disallow: /materials/
+
+User-agent: Googlebot
+Allow: /
+Disallow: /assets/
+Disallow: /_includes/
+Disallow: /data/
+Disallow: /_layouts/
+Disallow: /materials/
+
+User-agent: *
+Allow: /
+Disallow: /assets/
+Disallow: /_includes/
+Disallow: /data/
+Disallow: /_layouts/
+Disallow: /materials/

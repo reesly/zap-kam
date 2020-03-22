@@ -1,0 +1,37 @@
+---
+layout: 
+---
+---
+layout: default_info
+title: {{page._name}} {{page.code1}} {{page.code2}} цена, фото, описание, применимость - ЗапКам.Запчасти
+description: Продаем {{page._name}} {{page.code1}} ({{page.cat}}) {{page.prim}} - с доставкой по всей России. В наличии новые, восстановленные, капремонт. Прайс-лист, модификации, каталог, описание, характеристики.
+keywords: {{page._name}} {{page.code1}} - {{page.prim}}
+hero-title: Запчасти на вездеходы КамАЗ-4310, 43114, 43118, 65111
+h1: {{ page._name }} {{page.code1}}
+h2:
+phone: 9272482335
+phone_title: +7 (927) 248 23-35
+---
+
+<!-- Товар ---->
+<div id="anc_1"></div>
+{% assign page_url = page.name | replace: ".html", "" %}
+{% assign product = site.data.k4310 | where:"url", page_url | first  %}
+{%- if product -%}
+    {% include card_zapchasti.html product = product %}
+{%- endif -%}
+
+<div class="col-md-10 col-xs-12" style="margin: auto;">
+    <!-- <h3>Описание</h3> -->
+    <p>
+
+    </p>
+    
+    <hr>
+    
+    <p></p>
+    <p></p>
+    {% include kupite_u_nas.html %}
+  <div style="height: 100px;">&nbsp;</div>
+  
+</div>

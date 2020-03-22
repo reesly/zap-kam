@@ -1,0 +1,72 @@
+---
+layout: default_info
+title: Оплата и доставка запчастей на КамАЗ 4310, 43114, 43118 - сроки и стоимость - ЗапКам.Запчасти
+description: Безналичный расчёт, наличными, оплата картой. Расчет доставки запчастей на КамАЗ 4310. Быстро и точно. Большой ассортимент- коробки передач КПП, редукторы, карданные валы, двигатели, кабины - в наличии, с оперативной доставкой по России и СНГ. Зап-Кам.
+keywords: Камаз запчасти Доставка вездеход военный 4310 5310 коробки передач редукторы тягач
+hero-title: Запчасти на КамАЗ-4310
+h1: Оплата и доставка агрегатов и запчастей на технику КамАЗ
+h2:
+phone: 
+phone_title: 
+---
+
+<h3 class="text-center w-100">Оплата</h3>
+<table class="table table-our-plus table-hoverable table-borderless">
+  <tbody>
+    <tr>
+      <td><i class='lni-chevron-down'></i></td>
+      <td> <b>Безналичная оплата</b>  
+        Оплата юридическим лицам на основании выставленных счетов с НДС. 
+      </td>
+    </tr>
+    
+    <tr>
+      <td><i class='lni-chevron-down'></i></td>
+      <td> <b>Наличный расчёт</b> <br>
+        При покупке в розничном магазине. Для физ.лиц возможна оплата переводом на карту.</td>
+    </tr>
+    <tr>
+      <td><i class='lni-chevron-down'></i></td>
+      <td> Оплата при поступлении <br>
+      При покупке крупных агрегатов возможна оплата после осмотра товара на пункте выдачи</td>
+    </tr>
+  </tbody>
+</table>
+<p>&nbsp;</p>
+
+<h3 class="text-center w-100">Регионы доставки</h3>
+<div class="col-md-10 col-xs-12" style="margin: auto;">
+
+    <table class="table table-hover table-hover table-striped table-responsive" style="width:auto;">
+  <thead>
+    <th>Город</th>
+    <th>Сроки доставки, дн.</th>
+    <th style="max-width: 50%;">Пункт выдачи</th>
+    <th class="text-right">Расстояние от Н.Челнов, км.</th>
+  </thead>
+  {%- for item in site.data.dostavka -%}
+    {%- if item.point1 and item.term -%}
+    
+    <tr>
+      <th>
+        {%- if item.url -%}
+          <a href="/kamaz-4310/dostavka/{{item.url}}">
+        {%- endif -%}
+        {%- if item.city -%}
+          {{ item.city }}
+        {%- endif -%}
+        {%- if item.url -%}
+          </a>
+        {%- endif -%}
+      </th>
+      <td>{{ item.term }} </td>
+      <td>{{ item.point1 }}</a></td>
+      <td class="small">{{ item.dist_chelny }}</td>
+      
+    </tr>
+    {%- endif -%}
+  {%- endfor -%}
+
+  </table>
+
+</div>

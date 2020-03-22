@@ -1,0 +1,110 @@
+<!-- url	name	cat	id	ord	code1	code2	code3	prim	prim2
+price1	price1_name	price2	price2_name	price3	price3_name	price4	price4_name	
+desc	img_path img1	img2	img3	img4	img5	text1	text2	text3 -->
+
+{% assign product = include.product  %} 
+
+
+<div class="catalog-item col-md-6 col-lg-6 col-xs-12">
+
+<div class="row" style="font-size: 80%;">
+    <div class="col-md-12 col-xs-12 title-bg name">
+      <a href="{{ product.path }}{{ product.url }}" onclick="">
+        <div style="font-size:1.2em; font-weight: 600; padding-bottom: 0;">{{ product.name }} &nbsp;&nbsp;&nbsp; {{ product.code1 }} </div> 
+      </a>
+    </div>
+
+    <div class="col-md-4 col-xs-4 catalog-item-img-div">
+      <a href="{{ product.path }}{{ product.url }}" onclick="">
+        {%- if product.img1 -%}
+          <img class="catalog-item-img" src="{{product.img_path}}{{product.img1}}" alt="{{product.name}}" style="padding:0;">
+        {%- else -%}
+          <img class="catalog-item-img" src="/assets/img/nophoto.jpg" alt="Фото скоро появится"  style="padding:0;">
+        {%- endif -%}
+      </a>
+        <span class="code1" style="color:rgb(146, 146, 146);float: right; font-size:1.0em; ">
+          {%- if product.code1 -%}
+          <small>код</small>. {{ product.code1 }}
+          {%- endif -%}
+          {%- if product.code2 -%}
+            <br> {{ product.code2 }}
+          {%- endif -%}
+        </span>
+        {%- if product.code2 -%}
+        <span class="invisible cat">
+          {{ product.cat }}
+        </span>
+        {%- endif -%}
+        
+    </div>
+
+    <div id="description" class="col-md-8 col-xs-8">
+      <!-- <h2>{{name}}</h2> -->
+      <table class="table table-hover table-sm" style="font-size: 80%;">
+            <tr> <td colspan="2"  class="text-right" style="border-top:none; padding-top: 0px;">  
+              <a href="{{product.path}}{{product.url}}.html" class=""> 
+                 подробнее... 
+              </a> 
+            </td> </tr>
+          
+          {%- if product.price1 -%}
+          <a href="javascript:" onclick="" >
+            <tr class="table-bggray" > <td>  <input type="checkbox" class="label-price" id="pr1_{{product.id}}" data-target="• {{ product.name }} / {{ product.price1_name }} / {{ product.price1 }} ">
+              <label class="label-price" for="pr1_{{product.id}}">
+                {{ product.price1_name }} </label> </td>
+              <td style="text-align: right; min-width: 100px;"><span style="font-size:1.1em;font-weight: 600;">{{ product.price1 }} </span>‎ <span style="color: gray;">₽</span>  </td> </tr>
+          </a>
+          {%- endif -%}
+
+          {%- if product.price2 -%}
+          <tr class="table-bggray"> <td>  <input type="checkbox" class="label-price" id="pr2_{{product.id}}" data-target="• {{ product.name }} / {{ product.price2_name }} / {{ product.price2 }} ">
+            <label class="label-price" for="pr2_{{product.id}}">
+            {{ product.price2_name }} </label></td>
+            <td style="text-align: right;"><span style="font-size:1.1em;font-weight: 600;">{{ product.price2 }} </span>‎ <span style="color: gray;">₽</span>  </td> </tr>
+          {%- endif -%}
+
+          {%- if   product.price3 -%}
+          <tr class="table-bggray"> <td> <input type="checkbox" class="label-price" id="pr3_{{product.id}}" data-target="• {{ product.name }} / {{ product.price3_name }} / {{ product.price3 }} " >
+            <label class="label-price" for="pr3_{{product.id}}">
+              {{ product.price3_name }}</label></td>
+            <td style="text-align: right;"><span style="font-size:1.1em;font-weight: 600;">{{ product.price3 }} </span>‎  <span style="color: gray;">₽</span>  </td> </tr>
+          {%- endif -%}
+
+          {%- if  product.price4 -%}
+          <tr class="table-bggray"> <td> <input type="checkbox" class="label-price" id="pr4_{{product.id}}" data-target="• {{ product.name }} / {{ product.price4_name }} / {{ product.price4 }} "> 
+              <label class="label-price" for="pr4_{{product.id}}">
+                {{ product.price4_name }}</label></td>
+            <td style="text-align: right;"><span style="font-size:1.1em;font-weight: 600;">{{ product.price4 }} </span>‎  <span style="color: gray;">₽</span>  </td> </tr>
+          {%- endif -%}
+
+          
+        <tr>
+          <td colspan="2" class="text-right" style="font-size: 14px;">
+            <a href="javascript:" class="" style="float: right;" data-toggle="modal" data-target="#requestModal" onclick="request_form_yandex('{{ product.id }}','{{product.path}}{{product.url}}');"> Запросить предложение </a> 
+          </td>
+        </tr>
+
+        <tr style="border-bottom: gray; border-bottom-width: 1px;"> <td colspan="2" style="font-size: 12px;">  
+          <a href="{{product.path}}{{product.url}}.html" class=""></a>
+            {%- if product.desc  -%}
+            <div class="text-line-1">
+              {{ product.desc }} 
+            </div>
+            {%- endif -%}
+            {%- if product.prim -%}
+            <div class="text-line-2 prim">
+              {{ product.prim }}
+            </div>
+            {%- endif -%}
+          </a> 
+      </td> </tr>
+        
+          
+        
+          
+        
+      </table>
+    </div>
+    
+  </div>
+</div>

@@ -1,0 +1,156 @@
+---
+layout: default_info
+title: Карданные валы на технику IVECO - ЗапКам.Запчасти
+description: Продаем карданные валы и передачи для техники IVECO от различных производителей. Каталог IVECOовских валов с ценами, описанием и техническими характеристиками. Новые и восстановленные б/у после кап.ремонта.
+keywords: IVECO Карданный вал карданная передача каталог цены
+hero-title: Карданные валы с доставкой по России и СНГ 
+h1: Карданные валы и передачи IVECO
+h2:
+phone: 
+---
+
+<!-- Модель камаза  -->
+<div class="col-md-6 col-xs-6">
+    
+    <div id="nanogallery2" data-nanogallery2 = '{
+        "thumbnailLabel":{"display":false},
+        "thumbnailBorderVertical":0,"thumbnailBorderHorizontal":0,
+        "thumbnailWidth":   "auto XL800",
+        "thumbnailHeight":   300,
+        "thumbnailAlignment": "center", 
+        "fillWidth": "center", 
+        "thumbnailDisplayTransition":"slideUp",
+        "thumbnailHoverEffect2":"scale120|toolsAppear|toolsAppear",
+        "itemsBaseURL":     "/kardanyi_valy/img/category/"
+      }' >
+      <!-- fillWidth -->
+      
+      <a href = "ural_scheme_1.png" data-ngThumb = "ural_scheme_1.png" title="{{page.title}}"> Вал карданный заднего моста IVECO-63685 </a>
+      <a href = "ural_scheme_2.png" data-ngThumb = "ural_scheme_2.png" title="{{page.title}}"> Схема расположения карданных валов автомобилей с колесной формулой 6X6 </a>
+    </div>
+
+</div>
+
+<div class="col-md-6 col-xs-6">
+    <p>
+        Карданные валы автомобилей «IVECO» унифицированы между собой.<br>
+        Ходовая часть большинства моделей грузовых автомобилей "IVECO" построена по трехосной схеме 
+        с колесной формулой 6x4 (IVECO-377) или 6x6 (IVECO-4320 и модификации, IVECO-43223).
+        
+    </p>
+    <p>
+        Мы продаем полную номенклатуру карданных валов на технику IVECO.
+    </p>
+    
+</div>
+
+
+<!-- Товары ---->
+<style>
+    .list-group-item{ margin-bottom: 1px; }
+</style>
+
+<div class="col-md-11 col-xs-12" style="margin: auto;">
+    <p></p>
+    <h3>Каталог </h3>
+    <div class="form form-inline">
+        <input id="pListSearch" class="fuzzy-search" type="search" class="form-control" placeholder="поиск..." style="width:130px;"/>
+        <button class="btn btn-blue" onclick="$('#pListSearch').val('4320'); filterProductList($('#pListSearch').val());" title="IVECO-4320">IVECO 4320</button>
+        <button class="btn btn-blue" onclick="$('#pListSearch').val('5557'); filterProductList($('#pListSearch').val());" title="IVECO-5557">5557</button>
+        <button class="btn btn-blue" onclick="$('#pListSearch').val('375'); filterProductList($('#pListSearch').val());" title="IVECO-375">375</button>
+        <button class="btn btn-blue" onclick="$('#pListSearch').val('63685'); filterProductList($('#pListSearch').val());" title="IVECO-63685">63685</button>
+        
+    </div>
+    
+    <div id="productList" style="display: none;">
+        {% include catalog-loading-panel.html %}
+
+        <ul class="list-group shadow list">
+            {% for product in site.data.kardany %}
+            {%- if product.cat_url == "iveco" -%}
+            {% include card_kardan_catalog.html product = product %}
+            {%- endif -%}
+            {% endfor %}
+
+            <div id="loadingDiv">
+                <span>Загрузка данных</span>
+            </div>
+        </ul>
+        <div class="no-result">Не найдено</div>
+        <ul class="pagination"></ul>
+    </div>
+</div>
+
+
+<div class="col-md-10 col-xs-12" style="margin: auto;">
+    <div class="alert alert-info">
+        <p>Заводская гарантия на новые валы составляет 1 год</p>
+        <p>Гарантийный срок считается с даты продажи.</p>
+        <p>
+            Карданные валы марки "Камский кардан" имеют сертификат соответствия ЕАС.
+        </p>
+    </div>
+
+    <p></p>
+    <p></p>
+    {% include kupite_u_nas.html %}
+    
+    <p></p>
+    <hr>
+    <div class="alert alert-info">
+        <b>Восстановленный карданный вал</b>. <br>
+        В качестве бюджетного варианта предлагаем восстановленные карданные валы после кап.ремонта
+         в заводских условиях, срок службы которых не менее 7 лет.
+        <br>
+        
+        <br>
+        Заводская гарантия - 6 месяцев.
+    </div>
+    <hr>
+    <h3></h3>
+    <p></p>
+    <p>
+        Карданный вал - механическое устройство,
+         передающее крутящий момент от коробки передач (или раздаточной коробки) на ведущие оси автомобиля.
+    </p>   
+    <p>
+        
+    </p>
+<p>
+    <strong>Устройство карданной передачи IVECO:</strong><br>
+    <p>
+        Карданные валы открытого типа с шарнирами, установленными на игольчатых подшипниках. Подшипники защищены радиальными
+        сальниками и дополнительными торцевыми уплотнениями. Карданные валы привода переднего и заднего мостов одинаковы по
+        конструкции, имеют шарниры типа ЗИЛ и отличаются только Длиной и присоединительными фланцами. Промежуточный карданный
+        вал и вал привода среднего моста имеют шарниры типа МАЗ.
+    </p>
+</p>
+
+
+    <p>
+        <strong>Техническое обслуживание</strong><br>
+    
+        При эксплуатации автомобиля необходимо: <br>
+        - систематически проверять крепления фланцев карданных валов. <br>
+        - при ослаблении болтов, крепящих опорные пластины подшипников крестовины, подтянуть игольчатых
+        и законтрить;
+    
+    </p>
+    <p>
+        - периодически проверять зазоры в шлицевом и шарнирном сочленении карданных валов (при зазорах появляется
+         стук при трогании с места).
+        <br>
+        При обнаружении зазора следует отремонтировать карданные валы.
+    </p>
+    
+    
+   
+
+    <!-- <p>
+        <iframe width="800" height="450" src="https://www.youtube.com/embed/URsFZz3r0Vs?start=23" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </p> -->
+    
+  <div style="height: 100px;">&nbsp;</div>
+  
+
+<script src="/assets/js/list.min.js"></script>
