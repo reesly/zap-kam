@@ -9,7 +9,7 @@
   <div style="clear: both;"></div> 
  
    
-      <div id="" class="col-md-5 col-xs-12">
+      <div id="" class="col-lg-3 col-md-5 col-xs-12">
         <div id="ng-catalog_"{{product.id}} data-nanogallery2 = '{
             "thumbnailLabel":{"display":false},
             "thumbnailBorderVertical":0,"thumbnailBorderHorizontal":0,
@@ -50,7 +50,7 @@
         </div>
       </div>
 
-      <div id="description" class="col-md-7 col-xs-12">
+      <div id="description" class="col-lg-5 col-md-7 col-xs-12">
         <!-- <h2>{{name}}</h2> -->
         <table class="table table-borderless table-hover" style="width: auto; max-width: 450px;">
             <tr>
@@ -78,7 +78,7 @@
                 <meta itemprop="priceCurrency" content="RUB">
                 <meta itemprop="price" content="{{product.price1}}">
         
-                <input type="checkbox" class="label-price" id="pr1_{{product.id}}" data-target="• {{ product.name }} / {{ product.price1_name }} / {{ product.price1 }} ">
+                <input type="checkbox" class="label-price" id="pr1_{{product.id}}" data-target="• {{ product.name }} {{product.code1}} / {{ product.price1_name }} / {{ product.price1 }} ">
                 <label class="label-price" for="pr1_{{product.id}}">
                  {{ product.price1_name }} </label> </td>
                 <td style="text-align: right; min-width: 125px;"><span style="font-size:1.1em;font-weight: 600;">{{ product.price1 }} </span>‎ <span style="color: gray;">₽</span>  </td> </tr>
@@ -86,21 +86,21 @@
             {%- endif -%}
 
             {%- if product.price2 -%}
-            <tr class="table-active"> <td>  <input type="checkbox" class="label-price" id="pr2_{{product.id}}" data-target="• {{ product.name }} / {{ product.price2_name }} / {{ product.price2 }} ">
+            <tr class="table-active"> <td>  <input type="checkbox" class="label-price" id="pr2_{{product.id}}" data-target="• {{ product.name }} {{product.code1}} / {{ product.price2_name }} / {{ product.price2 }} ">
               <label class="label-price" for="pr2_{{product.id}}">
               {{ product.price2_name }} </label></td>
               <td style="text-align: right;"><span style="font-size:1.1em;font-weight: 600;">{{ product.price2 }} </span>‎ <span style="color: gray;">₽</span>  </td> </tr>
             {%- endif -%}
 
             {%- if   product.price3 -%}
-            <tr class="table-active"> <td> <input type="checkbox" class="label-price" id="pr3_{{product.id}}" data-target="• {{ product.name }} / {{ product.price3_name }} / {{ product.price3 }} " >
+            <tr class="table-active"> <td> <input type="checkbox" class="label-price" id="pr3_{{product.id}}" data-target="• {{ product.name }} {{product.code1}} / {{ product.price3_name }} / {{ product.price3 }} " >
               <label class="label-price" for="pr3_{{product.id}}">
                 {{ product.price3_name }}</label></td>
               <td style="text-align: right;"><span style="font-size:1.1em;font-weight: 600;">{{ product.price3 }} </span>‎  <span style="color: gray;">₽</span>  </td> </tr>
             {%- endif -%}
 
             {%- if  product.price4 -%}
-            <tr class="table-active"> <td> <input type="checkbox" class="label-price" id="pr4_{{product.id}}" data-target="• {{ product.name }} / {{ product.price4_name }} / {{ product.price4 }} "> 
+            <tr class="table-active"> <td> <input type="checkbox" class="label-price" id="pr4_{{product.id}}" data-target="• {{ product.name }} {{product.code1}} / {{ product.price4_name }} / {{ product.price4 }} "> 
                <label class="label-price" for="pr4_{{product.id}}">
                  {{ product.price4_name }}</label></td>
               <td style="text-align: right;"><span style="font-size:1.1em;font-weight: 600;">{{ product.price4 }} </span>‎  <span style="color: gray;">₽</span>  </td> </tr>
@@ -149,16 +149,15 @@
 
             {%- assign mass = "" -%}
             {%- if product.m -%}
-            {%- assign mass = "&weight="+product.m -%}
+            {%- capture mass -%}&weight={{product.m}}{%- endcapture -%}
             <tr><td> Масса </td>
               <td> <span itemprop="weight">{{ product.m }}</span> кг. </td>
             </tr>
             {%- endif -%}
 
             {%- assign sizes = "" -%}
-            {%- if product.l -%}
-            {%- assign sizes = "&size="+product.l*100+","+product.w*100+","+product.h*100 -%}
-            
+            {%- if product.l  -%}
+            {%- capture sizes -%}&size={{product.l | times: 100 | plus: 1}},{{product.w | times: 100 | plus: 1}},{{product.h | times: 100 | plus: 1}}{%- endcapture -%}
             <tr><td> Габариты (ДШВ),м</td>
               <td> {{ product.l }} х {{ product.w }} x {{ product.h }}  <span itemprop="volume invisible"> </span> </td>
             </tr>
@@ -191,9 +190,9 @@
       </div>
       
       
-    <div class="col-md-10 col-xs-12" style="margin: auto;">
-        <div class="ec-delivery"></div>
+    <div class="col-lg-4 col-md-10 col-xs-12" style="margin: auto;">
+        <div class="ec-delivery" style=""></div>
 
     <script id="dcsbl" 
-    src="https://dostavka.sbl.su/api/delivery.js?comp=10,8,24{{sizes}}{{mass}}&size=&startCt=Набережные Челны&startCntr=RU&btn=no&innerDeliv=1&sizeShow=1&startPick=1&title=расчет доставки&autoEnd=1"></script>
+    src="https://dostavka.sbl.su/api/delivery.js?comp=10,8,24{{sizes}}{{mass}}&startCt=Набережные Челны&startCntr=RU&btn=no&innerDeliv=1&sizeShow=1&startPick=1&title=расчет доставки&autoEnd=1&dopInsure=0&dopLathing=1"></script>
   </div>

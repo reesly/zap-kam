@@ -75,15 +75,15 @@ exclude:
 
 
 # page_gen: 
-  # - index_files: false
-  #   data: dostavka
-  #   dir: "kamaz-4310/dostavka"
-  #   name: url
-  #   template: dostavka_4310
-  #   filter_condition: "record['point1'] != ''"
+#   - index_files: false
+#     data: dostavka
+#     dir: "kamaz-4310/dostavka"
+#     name: url
+#     template: dostavka_4310
+#     filter_condition: "record['point1'] != ''"
 
   # - index_files: false
-  #   data: k4310
+  #   data: k4310---
   #   dir: "kamaz-4310/catalog/zapchasti"
   #   name: url
   #   template: templ_zapchasti

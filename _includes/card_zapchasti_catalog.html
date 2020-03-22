@@ -49,7 +49,7 @@ desc	img_path img1	img2	img3	img4	img5	text1	text2	text3 -->
           
           {%- if product.price1 -%}
           <a href="javascript:" onclick="" >
-            <tr class="table-bggray" > <td>  <input type="checkbox" class="label-price" id="pr1_{{product.id}}" data-target="• {{ product.name }} / {{ product.price1_name }} / {{ product.price1 }} ">
+            <tr class="table-bggray" > <td>  <input type="checkbox" class="label-price" id="pr1_{{product.id}}" data-target="• {{ product.name }} {{product.code1}} / {{ product.price1_name }} / {{ product.price1 }} ">
               <label class="label-price" for="pr1_{{product.id}}">
                 {{ product.price1_name }} </label> </td>
               <td style="text-align: right; min-width: 100px;"><span style="font-size:1.1em;font-weight: 600;">{{ product.price1 }} </span>‎ <span style="color: gray;">₽</span>  </td> </tr>
@@ -57,21 +57,21 @@ desc	img_path img1	img2	img3	img4	img5	text1	text2	text3 -->
           {%- endif -%}
 
           {%- if product.price2 -%}
-          <tr class="table-bggray"> <td>  <input type="checkbox" class="label-price" id="pr2_{{product.id}}" data-target="• {{ product.name }} / {{ product.price2_name }} / {{ product.price2 }} ">
+          <tr class="table-bggray"> <td>  <input type="checkbox" class="label-price" id="pr2_{{product.id}}" data-target="• {{ product.name }} {{product.code1}} / {{ product.price2_name }} / {{ product.price2 }} ">
             <label class="label-price" for="pr2_{{product.id}}">
             {{ product.price2_name }} </label></td>
             <td style="text-align: right;"><span style="font-size:1.1em;font-weight: 600;">{{ product.price2 }} </span>‎ <span style="color: gray;">₽</span>  </td> </tr>
           {%- endif -%}
 
           {%- if   product.price3 -%}
-          <tr class="table-bggray"> <td> <input type="checkbox" class="label-price" id="pr3_{{product.id}}" data-target="• {{ product.name }} / {{ product.price3_name }} / {{ product.price3 }} " >
+          <tr class="table-bggray"> <td> <input type="checkbox" class="label-price" id="pr3_{{product.id}}" data-target="• {{ product.name }} {{product.code1}} / {{ product.price3_name }} / {{ product.price3 }} " >
             <label class="label-price" for="pr3_{{product.id}}">
               {{ product.price3_name }}</label></td>
             <td style="text-align: right;"><span style="font-size:1.1em;font-weight: 600;">{{ product.price3 }} </span>‎  <span style="color: gray;">₽</span>  </td> </tr>
           {%- endif -%}
 
           {%- if  product.price4 -%}
-          <tr class="table-bggray"> <td> <input type="checkbox" class="label-price" id="pr4_{{product.id}}" data-target="• {{ product.name }} / {{ product.price4_name }} / {{ product.price4 }} "> 
+          <tr class="table-bggray"> <td> <input type="checkbox" class="label-price" id="pr4_{{product.id}}" data-target="• {{ product.name }} {{product.code1}} / {{ product.price4_name }} / {{ product.price4 }} "> 
               <label class="label-price" for="pr4_{{product.id}}">
                 {{ product.price4_name }}</label></td>
             <td style="text-align: right;"><span style="font-size:1.1em;font-weight: 600;">{{ product.price4 }} </span>‎  <span style="color: gray;">₽</span>  </td> </tr>

@@ -2017,3 +2017,8 @@ margin: auto;
   box-orient: vertical;
   cursor: pointer;
 }
+
+.ec-delivery .ec-calc-layout {
+  box-shadow: none;
+  -webkit-box-shadow:none;
+}
