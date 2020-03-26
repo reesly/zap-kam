@@ -83,6 +83,11 @@ var prodList;
         });
       
       
+        var hash = decodeURIComponent($(location).attr('hash')).replace("#","");
+        if (hash) {
+          $('#pListSearch').val(hash)
+          filterProductList(hash);
+        }
     }
     
 

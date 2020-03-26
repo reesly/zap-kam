@@ -1945,6 +1945,7 @@ margin: auto;
 
 .card a[href^='##'] { 
   color: gray;
+  display: none;
 }
 
 

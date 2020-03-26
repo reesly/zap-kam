@@ -1,0 +1,83 @@
+---
+layout: default_info
+title: Коробки раздаточные на КамАЗ 4310, 43114, 43118, 65111, 6522 - ЗапКам.Запчасти
+description: Продаем раздаточную коробку на вездеходы КамАЗ 4310, 43114, 43118, 65111, 6522 с КОМ и без КОМа с доставкой по всей России. В наличии новые, восстановленные, капремонт. Прайс-лист, модификации, каталог, описание, характеристики.
+keywords: Коробка раздаточная КамАЗ 4310, 43114, 43118, 65111, 6522
+hero-title: Агрегаты на вездеходы КамАЗ-4310, 43114, 43118, 65111
+h1: Коробки раздаточные на технику КамАЗ 
+h2:
+phone: 9272482335
+phone_title: (927) 248 23-35
+---
+
+
+<!-- Модель камаза  -->
+<p>
+    Раздаточная коробка – агрегат трансмиссии автомобиля, предназначен для передачи крутящего момента от коробки передач к мостам 
+    и распределения крутящего момента между ведущими мостами, изменения крутящего момента по величине.
+</p>
+
+<!-- Товары ---->
+<style>
+    .list-group-item{ margin-bottom: 1px; }
+</style>
+
+<div class="col-md-11 col-xs-12" style="margin: auto;">
+    <p></p>
+    <h3>Каталог раздаток</h3>
+    <!-- <div class="form form-inline">
+        <input id="pListSearch" class="fuzzy-search" type="search" class="form-control" placeholder="поиск..." style="width:130px;"/>
+        &nbsp;&nbsp;
+        <button class="btn btn-blue" onclick="$('#pListSearch').val('Блок цилиндров'); filterProductList($('#pListSearch').val());" title="Блок цилиндров">Блок цилиндров</button>   
+        <button class="btn btn-blue" onclick="$('#pListSearch').val('Вал'); filterProductList($('#pListSearch').val());" title="Валы">Валы</button>   
+          
+    </div>
+    {% include catalog-loading-panel.html %} -->
+
+    <div id="productList" class="pt-2 pb-2" style="display: none; ">
+    
+        <div class="row list">
+            {% for product in site.data.k4310 %}
+            {%- if product.path == "/kamaz-4310/catalog/korobki_razdatochnye/" -%}
+                {% include card_zapchasti_catalog.html product = product %}
+            {%- endif -%}
+            {% endfor %}
+
+            <div id="loadingDiv">
+                <span>Загрузка данных</span>
+            </div>
+        </div>
+        <div class="no-result">Не найдено</div>
+        <ul class="pagination"></ul>
+    </div>
+    
+
+
+</div>
+
+
+<div class="col-md-10 col-xs-12" style="margin: auto;">
+
+    <p>
+        Раздаточная коробка крепится с помощью кронштейнов и резиновых подушек к лонжерону рамы и продольной
+        балке, расположенной между поперечинами.
+    </p>
+
+    <div class="alert alert-info">
+        <p>Предоставляется гарантия производителя.</p>
+        <p></p>
+    </div>
+
+    <p>
+        <a href="/kamaz-4310/info/tipichnye-neispravnosti-razdatochnoj-korobki-kamaz.html">Типичные неисправности раздаточной коробки КамАЗ</a>
+    </p>
+    <p></p>
+    <p></p>
+    {% include kupite_u_nas.html %}
+    {% include garantiya.html %}
+    
+    
+  <div style="height: 100px;">&nbsp;</div>
+  
+
+<script src="/assets/js/list.min.js"></script>

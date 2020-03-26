@@ -1,15 +1,17 @@
 <!-- { % assign product = site.data.k4310 | where:"url", include.page_url | first  %}  -->
 {% assign product = include.product %} 
 
- <div style="padding-top: 0px; margin-top: -13px; position: absolute;">
-    <a href="/kamaz-4310/catalog/" class="btn btn-link" > < каталог </a>
+ <div style="padding-top: 8px; margin-top: 0px; position: absolute;">
+ <a href="javascript:"  onclick="if(history.length > 0) {history.back();} else { window.location.href = '{{ product.path }}' }" class="" > < назад </a>
+
+    
   </div>
 
   <div class="w-100">&nbsp;</div>
   <div style="clear: both;"></div> 
  
    
-      <div id="" class="col-lg-3 col-md-5 col-xs-12">
+      <div id="" class="col-lg-3 col-md-5 col-xs-12" style="padding-top:14px;">
         <div id="ng-catalog_"{{product.id}} data-nanogallery2 = '{
             "thumbnailLabel":{"display":false},
             "thumbnailBorderVertical":0,"thumbnailBorderHorizontal":0,
@@ -195,4 +197,8 @@
 
     <script id="dcsbl" 
     src="https://dostavka.sbl.su/api/delivery.js?comp=10,8,24{{sizes}}{{mass}}&startCt=Набережные Челны&startCntr=RU&btn=no&innerDeliv=1&sizeShow=1&startPick=1&title=расчет доставки&autoEnd=1&dopInsure=0&dopLathing=1"></script>
+    <script> 
+      function csblCustomFunc($) {
+        $('.ec-calc-result__header').html('Стоимость доставки');        }
+      </script> 
   </div>

@@ -1,5 +1,11 @@
 {%- assign phone = "9503108888" -%}
 {%- assign phone_title = "950 310-88-88" -%}
+{%- if page.phone -%}
+{%- if page.phone != "" -%}
+  {%- assign phone = page.phone -%}
+  {%- assign phone_title = page.phone_title -%}
+  {%- endif -%}
+{%- endif -%}
 {%- if include.phone -%}
 {%- if include.phone != "" -%}
   {%- assign phone = include.phone -%}

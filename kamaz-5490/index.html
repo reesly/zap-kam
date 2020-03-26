@@ -150,8 +150,7 @@ phone_title: (987) 272 12-24
    
       <div class="row" id="models_container">
 
-        {% assign catt = "Двигатели" %}
-        {% for item in site.data.k5490 | where:"cat", catt %}
+        {% for item in site.data.k5490 | where: "cat", "Двигатели" %}
           {% if item.ord == "01" item.ord == or item.ord == "03" or item.ord == "05" or item.ord == "07"  %}
           <div class="engine col-md-3 col-xs-6">
               <a href="/kamaz-5490/catalog/{{item.url}}.html">
@@ -178,7 +177,7 @@ phone_title: (987) 272 12-24
       <h1 class="text-center">Запчасти на КамАЗ-5490 </h1>
     </div> -->
       
-      <!-- Раздел карточки продукта --------------------------- -->
+      <!-- --- -->
       <div class="col-md-4 col-xs-12">
           <img src="/assets/img/model/kamaz_5490.jpg" style="max-width: 100%; padding-top: 0px;">
           <table class="table">

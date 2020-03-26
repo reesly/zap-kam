@@ -50,8 +50,15 @@
           <div class="container">
             <a href="/" class="navbar-brand" style="display: contents;"> <img src="/assets/img/logo2.png" alt=""> </a> 
 
+            {%- if page.phone -%}
+            <a class="navbar-toggler" style="padding:10px 3px;" href="tel:+7{{page.phone}}" title="{{page.phone_title}}">
+              <img style="height:32px;opacity: 0.6;" src="/assets/img/icon-callto-48.png"></a>
+            <a class="navbar-toggler" id="aim2" style="padding:10px 3px;" href="https://wa.me/7{{page.phone}}" target="_blank"><img style="height:32px;opacity: 0.6;" src="/assets/img/icon-whatsapp-48.png"></a>
+
+            {%- endif -%}
+              
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
-              aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+              aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" style="padding:10px 3px;">
               <i class="lni-menu" style="color: lightblue;"></i>
             </button>
 
@@ -62,7 +69,7 @@
                     <i class="lni-home"></i> Начало
                   </a>
                 </li>
-                  {% include top-submenu.html phone = page.phone %}
+                  {% include top-submenu.html phone = page.phone phone_title = page.phone_title %}
               </ul>
             </div>
           </div>
@@ -90,7 +97,7 @@
                       <li id="hero-menu">
                         <p class="title text-left w-100">
                           <a href="/kamaz-4310/"> Всё на КамАЗ-4310</a>
-                          &nbsp; • &nbsp; <a href="/kamaz-4310/catalog/kpp_korobki_peredach/kpp_korobki_peredach.html"> Коробки передач </a>
+                          &nbsp; • &nbsp; <a href="/kamaz-4310/catalog/kpp_korobki_peredach/"> Коробки передач </a>
                           &nbsp; • &nbsp; <a href="/kardanyi_valy/"> Карданные валы </a>
                           <!-- &nbsp; • &nbsp; <a href="//"> Редукторы </a> -->
                         </p>
