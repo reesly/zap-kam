@@ -6,6 +6,10 @@
     "cSpell.enabled": true,
     "cSpell.ignoreWords": [
         "adme",
+        "cntr",
+        "dcsblp",
+        "deliv",
+        "differentsiala",
         "expand",
         "gazpromneft",
         "getr",
@@ -14,9 +18,22 @@
         "kramdown",
         "md",
         "navbar",
+        "obojma",
         "pygments",
+        "razdatochnoj",
         "rotra",
-        "сервоусилителем"
+        "поземского",
+        "поляковское",
+        "сервоусилителем",
+        "талажское"
     ],
-    "cSpell.language": "ru,en,en-US"
+    "cSpell.language": "ru,en",
+    "spellright.language": [
+        "ru"
+    ],
+    "spellright.documentTypes": [
+        "markdown",
+        "latex",
+        "plaintext"
+    ]
 }
