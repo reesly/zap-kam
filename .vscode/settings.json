@@ -3,7 +3,7 @@
         "assets",
         "toggle"
     ],
-    "cSpell.enabled": false,
+    "cSpell.enabled": true,
     "cSpell.ignoreWords": [
         "adme",
         "expand",
