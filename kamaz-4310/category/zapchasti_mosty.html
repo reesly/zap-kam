@@ -1,0 +1,104 @@
+---
+layout: default_info
+title: Запчасти на ведущие мосты вездеходов КамАЗ-4310, 43114, 43118, 4350 - ЗапКам.Запчасти
+description: Продаем запчасти для мостов и редукторов КамАЗ - дифференциалы, валы, обоймы, шестерни, муфты, кулаки. Каталог с ценами, описанием, применимостью и техническими характеристиками. Новые и восстановленные б/у после кап.ремонта.
+keywords: КамАЗ раздатка Карданный вал карданная передача каталог цены
+hero-title: Запчасти на вездеходы КамАЗ-4310, 43114, 43118, 4326, 4350
+h1: Запчасти на мосты и редукторы КамАЗ  
+h2:
+phone: 9272482335
+phone_title: (927) 248 23-35
+---
+
+<!-- Модель камаза  -->
+<div class="col-md-10 col-xs-12" style="margin: auto;">
+    <p>В семействе автомобилей КАМАЗ используется множество различных ведущих мостов, которые имеют конструктивные отличия. Все ведущие мосты можно привести к пяти типам:</p>
+    <p>1.&nbsp;Ведущие мосты полноприводных автомобилей: - Передний мост, - Промежуточный (средний) мост, - Задний мост.</p>
+    <p>2.&nbsp;Ведущие мосты неполноприводных автомобилей: - Промежуточный (средний) мост, - Задний мост. </p>
+</div>
+
+
+<!-- Товары ---->
+
+
+<div class="col-md-11 col-xs-12" style="margin: auto;">
+    <p></p>
+    <h3>Каталог шестерен КамАЗ</h3>
+    <div class="form form-inline">
+        <input id="pListSearch" class="fuzzy-search" type="search" class="form-control" placeholder="поиск..." style="width:130px;"/>
+        &nbsp;&nbsp;
+        <button class="btn btn-blue" onclick="$('#pListSearch').val('Вал'); filterProductList($('#pListSearch').val());" title="Вал">Вал</button>   
+        <button class="btn btn-blue" onclick="$('#pListSearch').val('Шестрерня'); filterProductList($('#pListSearch').val());" title="Шестрерня">Шестрерня</button>   
+        <button class="btn btn-blue" onclick="$('#pListSearch').val('Вилка'); filterProductList($('#pListSearch').val());" title="Вилка">Вилка</button>   
+        <button class="btn btn-blue" onclick="$('#pListSearch').val('Кулак'); filterProductList($('#pListSearch').val());" title="Кулак">Кулак</button>   
+        <button class="btn btn-blue" onclick="$('#pListSearch').val('Фланец'); filterProductList($('#pListSearch').val());" title="Фланец">Фланец</button>   
+        <button class="btn btn-blue" onclick="$('#pListSearch').val('4310'); filterProductList($('#pListSearch').val());" title="4310">4310</button>   
+        <button class="btn btn-blue" onclick="$('#pListSearch').val('43114'); filterProductList($('#pListSearch').val());" title="43114">43114-43118</button>   
+        <button class="btn btn-blue" onclick="$('#pListSearch').val('4350'); filterProductList($('#pListSearch').val());" title="65111">4350</button>   
+        <button class="btn btn-blue" onclick="$('#pListSearch').val('43261'); filterProductList($('#pListSearch').val());" title="43261">43261</button>   
+        
+        
+          
+    </div>
+
+    {% include catalog-loading-panel.html %}
+
+    <div id="productList" class="pt-4 pb-2" style="display: none; ">
+    
+        <div class="row list">
+            {% for product in site.data.k4310 %}
+            {%- if product.path == "/kamaz-4310/catalog/zapchasti/" -%}
+                {%- if product.cat == "Редуктор" or product.cat == "Мост передний" or product.cat == "Мост задний" or product.cat == "Мост средний" -%}
+                    {% include card_zapchasti_catalog.html product = product %}
+                {%- endif -%}
+            {%- endif -%}
+            {% endfor %}
+
+            <div id="loadingDiv">
+                <span>Загрузка данных</span>
+            </div>
+        </div>
+        <div class="no-result">Не найдено</div>
+        <ul class="pagination"></ul>
+    </div>
+    
+
+
+</div>
+
+
+<div class="col-md-10 col-xs-12" style="margin: auto;">
+
+    <div class="alert alert-info">
+        <p>Предоставляется гарантия производителя.</p>
+        
+    </div>
+
+    <p>&nbsp;</p>
+
+    <p>
+        - <a href="/kamaz-4310/info/ustroistvo-mosty-kamaz.html">Техническое обслуживание мостов</a>
+        <br>
+        - <a href="/kamaz-4310/info/tekhnicheskoe-obsluzhivanie-mosty-kamaz.html">Техническое обслуживание мостов</a>
+        <br>
+        - <a href="/kamaz-4310/info/remont-mosty-kamaz.html">Ремонт мостов КамАЗ</a>
+        <br>
+        - <a href="/kamaz-4310/info/snyatie-ustanovka-zamena-mostov-kamaz.html">Снятие-Установка мостов КамАЗ</a>
+    </p>
+    
+
+
+    <p>
+        <iframe width="800" height="450" src="https://www.youtube.com/embed/q2vkgVX36vs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </p>
+ 
+    
+    <p></p>
+    <p></p>
+    {% include kupite_u_nas.html %}
+    
+    
+  <div style="height: 100px;">&nbsp;</div>
+  
+
+<script src="/assets/js/list.min.js"></script>
