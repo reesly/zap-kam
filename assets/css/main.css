@@ -2029,3 +2029,44 @@ margin: auto;
   box-shadow: none;
   -webkit-box-shadow:none;
 }
+
+.bd-toc {
+
+  position: sticky;
+  top: 4rem;
+  height: calc(100vh - 4rem);
+  overflow-y: unset;
+
+  /* order: 1; */
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+  font-size: 0.875rem;
+}
+
+.bd-toc li{
+  font-size: 0.875rem;
+}
+
+.section-nav {
+  padding-left: 0;
+  border-right: 1px solid #eee;
+}
+.section-nav ul {
+  padding-left: 0.3rem;
+}
+
+.toc-entry {
+  display: block;
+}
+  
+
+  .toc-entry a {
+    display: block;
+    /* padding: .125rem 1.5rem; */
+    color: #77757a;
+  }
+
+  .toc-entry a :hover {
+    color: blue;
+    text-decoration: none;
+  }

@@ -1,0 +1,63 @@
+---
+layout: default_info
+title: Запасные части для КамАЗ-4310, 43114, 43118, 4350, 43261 (Евро-1-2) - ЗапКам.Запчасти
+description: Продаем запасные части для вездехов КамАЗ-4310. Каталог камазовских валов, шестерен для мостов, коробок передач с ценами, описанием и техническими характеристиками. Новые и восстановленные б/у после кап.ремонта.
+keywords: КамАЗ Карданный вал карданная передача каталог цены
+hero-title: Запчасти на вездеходы КамАЗ-4310, 43114, 43118, 65111
+h1: Каталог запасных частей КамАЗ 
+h2:
+phone: 9272482335
+phone_title: (927) 248 23-35
+---
+
+<!-- Модель камаза  -->
+
+
+<!-- Товары ---->
+<style>
+    .list-group-item{ margin-bottom: 1px; }
+</style>
+
+<div class="col-md-11 col-xs-12" style="margin: auto;">
+    <p></p>
+    <h3>Каталог </h3>
+   
+    <div class="pt-2 pb-2">
+    
+        <div class="row list">
+            {% for product in site.data.k4310 %}
+            {%- unless product.id == "" -%}
+                <div class="col-md-12 ">
+                    <a href="{{ product.path }}{{ product.url }}">
+                        - {{ product.name }} &nbsp;{{ product.code1 }} 
+                    </a>
+                </div>
+            {%- endunless -%}
+            {% endfor %}
+        </div>
+    </div>
+</div>
+
+
+<div class="col-md-10 col-xs-12" style="margin: auto;">
+
+    
+    <p></p>
+    <p></p>
+    {% include kupite_u_nas.html %}
+    
+    <p></p>
+    <hr>
+    
+    <p>
+    
+    </p>
+    
+    <!-- <p>
+        <iframe width="800" height="450" src="https://www.youtube.com/embed/URsFZz3r0Vs?start=23" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </p> -->
+    
+  <div style="height: 100px;">&nbsp;</div>
+  
+
+<script src="/assets/js/list.min.js"></script>
