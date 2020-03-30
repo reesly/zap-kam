@@ -1,0 +1,9 @@
+---
+layout: null
+---
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  {% for post in site.static_files %} {% if post.extname == ".html" %}
+  <url><loc>https://zap-kam.ru{{ post.path }}</loc><lastmod>{{ post.modified_time | date_to_xmlschema }}</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url> {% endif %} {% endfor %}
+  {% for post in site.pages %}
+    <url><loc>https://zap-kam.ru{{ post.url }}</loc><lastmod>{{ site.time | date_to_xmlschema }}</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url>  {% endfor %}
+</urlset>
