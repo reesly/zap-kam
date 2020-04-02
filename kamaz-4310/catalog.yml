@@ -16,18 +16,18 @@ layout:
         </currencies>
         <categories>
             <category id="1">Запчасти КамАЗ</category>
-            <category id="Коробка передач" parentId="1">Коробка передач</category>
-            <category id="Двигатели" parentId="1">Двигатели</category>
-            <category id="Запчасти двигателя" parentId="1">Запчасти двигателя</category>
-            <category id="КПП" parentId="1">КПП</category>
-            <category id="Двигатели" parentId="1">Двигатели</category>
-            <category id="Коробка раздаточная" parentId="1">Коробка раздаточная</category>
-            <category id="Мост задний" parentId="1">Мост задний</category>
-            <category id="Мост передний" parentId="1">Мост передний</category>
-            <category id="Мост средний" parentId="1">Мост средний</category>
-            <category id="Подвод воздуха к шинам" parentId="1">Подвод воздуха к шинам</category>
-            <category id="Редуктор" parentId="1">Редуктор</category>
-            <category id="Сцепление" parentId="1">Сцепление</category>
+            <category id="101" parentId="1">Коробка передач</category>
+            <category id="102" parentId="1">Двигатели</category>
+            <category id="103" parentId="1">Запчасти двигателя</category>
+            <category id="104" parentId="1">КПП</category>
+            <category id="105" parentId="1">Двигатели</category>
+            <category id="106" parentId="1">Коробка раздаточная</category>
+            <category id="107" parentId="1">Мост задний</category>
+            <category id="108" parentId="1">Мост передний</category>
+            <category id="109" parentId="1">Мост средний</category>
+            <category id="110" parentId="1">Подвод воздуха к шинам</category>
+            <category id="111" parentId="1">Редуктор</category>
+            <category id="112" parentId="1">Сцепление</category>
         </categories>
         <offers>
 {% for product in site.data.k4310 %}
