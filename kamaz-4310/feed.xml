@@ -1,0 +1,40 @@
+---
+layout:
+---
+<rss xmlns:yandex="http://news.yandex.ru" xmlns:media="http://search.yahoo.com/mrss/" xmlns:turbo="http://turbo.yandex.ru" version="2.0">
+    <channel>
+        <title>ЗапКам.Запчасти</title>
+        <link>https://zap-kam.ru</link>
+        <description>Запчасти на вездеходы КамАЗ 4310, 43114, 43118, 4350, 43261 (Евро-1-2) для раздаточных коробок, КПП, мостов и редукторов: дифференциалы, валы, шестерни, кулаки, фланцы, цапфа. </description>
+        <turbo:analytics type="Yandex" id="123456"></turbo:analytics>
+        <turbo:adNetwork type="Yandex" id="идентификатор блока" turbo-ad-id="first_ad_place"></turbo:adNetwork>
+        <yandex:related type="infinity">
+            <link url="https://zap-kam.ru/">Главная</link>
+            <link url="https://zap-kam.ru/"></link>
+        </yandex:related>
+        {% for post in site.pages %}
+        {% if post.h1 %}
+        {% unless post.url contains "catalog" %}
+        <item turbo="true">
+            <link>https://zap-kam.ru{{ post.url }}</link>
+            <author>ЗапКам.Запчасти</author>
+            <category>Запчасти КамАЗ</category>
+            <pubDate>Wed, 1 Apr 2020 12:00:00 +0300</pubDate>
+            <turbo:content>
+                <![CDATA[
+                    <header>
+                        <h1>{{post.h1}}</h1>
+                        <menu>
+                            <a href="https://zap-kam.ru/page1.html">Пункт 1</a>
+                            <a href="https://example.com/page2.html">Пункт 2</a>
+                        </menu>
+                    </header>
+                    {{page.content | replace: """, "&quot;" | replace: "'", "&apos;" | replace: ">", "&gt;" | replace: "<", "&lt;" | replace: "&", "&amp;" }}
+                ]]>
+            </turbo:content>
+        </item>
+        {% endunless %}
+        {% endif %}
+        {% endfor %}
+    </channel>
+</rss>
