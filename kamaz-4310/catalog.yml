@@ -1,0 +1,112 @@
+---
+layout:
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<yml_catalog date="2020-04-01 12:00">
+    <shop>
+        <name>ЗапКам.Запчасти</name>
+        <company></company>
+        <url>https://zap-kam.ru</url>
+        <platform>html</platform>
+        <version></version>
+        <agency></agency>
+        <email>zap-kam16@yandex.ru</email>
+        <currencies>
+            <currency id="RUR" rate="1"/>
+        </currencies>
+        <categories>
+            <category id="1">Запчасти КамАЗ</category>
+            <category id="Коробка передач" parentId="1">Коробка передач</category>
+            <category id="Двигатели" parentId="1">Двигатели</category>
+            <category id="Запчасти двигателя" parentId="1">Запчасти двигателя</category>
+            <category id="КПП" parentId="1">КПП</category>
+            <category id="Двигатели" parentId="1">Двигатели</category>
+            <category id="Коробка раздаточная" parentId="1">Коробка раздаточная</category>
+            <category id="Мост задний" parentId="1">Мост задний</category>
+            <category id="Мост передний" parentId="1">Мост передний</category>
+            <category id="Мост средний" parentId="1">Мост средний</category>
+            <category id="Подвод воздуха к шинам" parentId="1">Подвод воздуха к шинам</category>
+            <category id="Редуктор" parentId="1">Редуктор</category>
+            <category id="Сцепление" parentId="1">Сцепление</category>
+        </categories>
+        <offers>
+{% for product in site.data.k4310 %}
+{%- unless product.id == "" -%}
+        <offer id="{{product.id}}" bid="{{product.id}}">
+            <name>{{product.name}}</name>
+            <vendor></vendor>
+            <vendorCode></vendorCode>
+            <url>https://zap-kam.ru{{product.path}}{{product.url}}</url>
+            <price>{{product.price1}}</price>
+            <oldprice></oldprice>
+            <enable_auto_discounts>false</enable_auto_discounts>
+            <currencyId>RUR</currencyId>
+            <categoryId>{{product.cat}}</categoryId>
+            <picture>https://zap-kam.ru{{product.img_path}}{{product.img1}}</picture>
+            <store>true</store>
+            <description>
+                <![CDATA[     
+                    <h3>{{product.name}} {{product.code1}}</h3>
+                
+                    {%- if product.desc  -%}
+                        <p>{{ product.desc }}</p>
+                    {%- endif -%}
+
+                    {%- if product.comment  -%}
+                        <p>{{ product.comment }}</p>
+                    {%- endif -%}
+                                        
+                    {%- if product.prim -%}
+                        <p>Применяемость: {{ product.prim }}</p>
+                    {%- endif -%}
+
+                    {%- if product.prim2  -%}
+                        <p>{{ product.prim2 }}</p>
+                    {%- endif -%}
+            ]]>
+            </description>
+            <sales_notes></sales_notes>
+            <manufacturer_warranty>true</manufacturer_warranty>
+            <country_of_origin></country_of_origin>
+            <barcode></barcode>
+            {%- if product.par1 -%}
+                <param name="{{ product.par1 }}">{{ product.text1 }}</param>
+            {%- endif -%}
+            {%- if product.par2 -%}
+                <param name="{{ product.par2 }}">{{ product.text2 }}</param>
+            {%- endif -%}
+            {%- if product.par3 -%}
+                <param name="{{ product.par3 }}">{{ product.text3 }}</param>
+            {%- endif -%}
+            <condition type="new">
+            </condition>                
+            <weight>{{ product.par3 }}</weight>
+            <dimensions></dimensions>
+        </offer>
+{%- endunless -%}
+{% endfor %}
+    </offers>
+    <gifts>
+        <!-- <gift id="33">
+            <name>Кружка 300 мл Brand 16</name>
+            <picture>https://zap-kam.ru/promos/33.jpg</picture>
+        </gift>             -->
+    </gifts>
+    <promos>
+        <!-- <promo id="PromoGift" type="gift with purchase">
+            <start-date>2020-02-01 09:00:00</start-date>
+            <end-date>2020-03-01 22:00:00</end-date>
+            <description>Купите бытовую технику марки Brand и получите кружку в подарок.</description>
+            <url>http://zap-kam.ru/promos/gift</url>
+            <purchase>
+                <product offer-id="9012"/>
+                <product offer-id="12346"/>
+            </purchase>
+            <promo-gifts>
+                <promo-gift offer-id="9012"/>
+                <promo-gift gift-id="33"/>
+            </promo-gifts>
+        </promo> -->
+    </promos>
+</shop>
+</yml_catalog>
