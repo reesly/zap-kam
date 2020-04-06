@@ -31,7 +31,7 @@ layout:
         </categories>
         <offers>
 {% for product in site.data.k4310 %}
-{%- if product.price1 -%}
+{%- if product.price1 and product.ord -%}
 {%- unless product.price1 contains " " -%}
 {%- if product.url -%}
         <offer id="{{product.id}}" bid="{{product.id}}">
