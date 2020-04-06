@@ -1,5 +1,5 @@
 ---
-layout:
+layout: 
 ---
 <rss xmlns:yandex="http://news.yandex.ru" xmlns:media="http://search.yahoo.com/mrss/" xmlns:turbo="http://turbo.yandex.ru" version="2.0">
     <channel>
@@ -29,7 +29,7 @@ layout:
                             <a href="https://example.com/page2.html">Пункт 2</a>
                         </menu>
                     </header>
-                    {{page.content | replace: """, "&quot;" | replace: "'", "&apos;" | replace: ">", "&gt;" | replace: "<", "&lt;" | replace: "&", "&amp;" }}
+                    {{page.content | replace: "'", "&apos;" | replace: ">", "&gt;" | replace: "<", "&lt;" | replace: "&", "&amp;" }}
                 ]]>
             </turbo:content>
         </item>
@@ -38,3 +38,4 @@ layout:
         {% endfor %}
     </channel>
 </rss>
+<!-- | replace: """, "&quot;"  -->

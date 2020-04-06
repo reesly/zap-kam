@@ -32,6 +32,7 @@ layout:
         <offers>
 {% for product in site.data.k4310 %}
 {%- if product.price1 -%}
+{%- unless product.price1 contains " " -%}
 {%- if product.url -%}
         <offer id="{{product.id}}" bid="{{product.id}}">
             <name>{{product.name}}</name>
@@ -84,6 +85,7 @@ layout:
             <dimensions></dimensions>
         </offer>
 {%- endif -%}
+{%- endunless -%}
 {%- endif -%}
 {% endfor %}
     </offers>
