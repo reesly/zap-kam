@@ -2025,11 +2025,6 @@ margin: auto;
   cursor: pointer;
 }
 
-.ec-delivery .ec-calc-layout {
-  box-shadow: none;
-  -webkit-box-shadow:none;
-}
-
 .bd-toc {
 
   position: sticky;
@@ -2070,3 +2065,15 @@ margin: auto;
     color: blue;
     text-decoration: none;
   }
+
+
+  /* ДОСТАВКА убрать тень */
+.ec-delivery .ec-calc-layout {
+  -webkit-box-shadow: none !important; 
+  -moz-box-shadow: none !important;
+  box-shadow: none !important; 
+}
+
+.ec-calc .ec-calc-form-submit {
+  background-color: #014E9E !important;
+}
