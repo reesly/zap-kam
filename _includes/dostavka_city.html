@@ -1,0 +1,40 @@
+
+<div id="anc_1"></div>
+{% assign city = include.city  %}
+
+<div class="row pt-3 pb-4">
+  <div class="col-md-6">
+    <table class="table" style="width: auto; font-size: 1.1em;">
+      <tr><td style="border-top: none;">Поставляем запчасти и агрегаты на технику КамАЗ в г. <strong><a href="{{city.url}}">{{ city.city }}</a></strong>. </td></tr>
+      <tr><td> Примерные сроки доставки - {{city.term}} рабочих дней. </td></tr>
+      <tr><td> Перед полной оплатой Вы сможете осмотреть и проверить запчасти на пунктах доставки по адресам: <strong>{{ city.point1 }}</strong> </td></tr>
+      <tr><td> <a class="btn btn-blue" href="#dcsbl-point">Все пункты выдачи </a>
+       </td></tr>
+      
+      <tr><td class="small"> Расстояние от Набережных Челнов - {{city.dist_chelny}} км. </td></tr>
+      <tr><td class="small"> Расстояние от Москвы - {{city.dist_moscow}} км. </td></tr>
+    </table>
+    
+   
+  </div>
+  <div class="col-md-6"> 
+    
+
+    <div class="ec-delivery"></div>
+    
+    <script id="dcsbl" 
+    src="https://dostavka.sbl.su/api/delivery.js?comp=10,8,24&weight=60&size=40,20,30&endCntr=RU&endCt={{city.city}}&startCt=Набережные Челны&startCntr=RU&btn=no&innerDeliv=1&sizeShow=1&startPick=1&title=Доставка в г. {{city.city}}&autoEnd=0&dopInsure=0"></script>
+    
+    <script> 
+      function csblCustomFunc($) {
+        $(".ec-calc-result__header").html("Стоимость доставки в {{city.city}} (редуктор)");   }
+    </script> 
+  
+  </div>
+
+  <div class="col-md-12">
+    <div id="dcsbl-point"></div>
+    <script id="dcsblp" src="https://dostavka.sbl.su/api2/points.js?name=1&company=10,8,24&exc=Набережные Челны&city={{city.city}}&country=RU&color=#000&map=1&gps=1"></script>
+  </div>
+</div>
+

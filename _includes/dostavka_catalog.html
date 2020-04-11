@@ -1,0 +1,99 @@
+{% assign city = include.city  %}
+
+
+<div>
+
+    <div class="card-columns">
+         
+      <!--  Всё  -->
+      <div class="card">
+        <div class="card-header media">
+          <img class="card-icon1" src="/assets/img/model/kamaz_4310.jpg" alt="">
+          <h4> Запчасти для КамАЗ-4310, 43101, 4326 </h4>
+        </div>
+        <ul class="card-body">
+          <li><a href='/kamaz-4310/category/zapchasti_kamaz-4310.html'>все запчасти</a></li>
+          <li><a href='/kamaz-4310/category/zapchasti_razdatka.html'>раздаточной коробки</a></li>
+          <li><a href='/kamaz-4310/category/zapchasti_korobka_peredach.html'>коробки передач</a></li>
+          <li><a href='/kamaz-4310/category/zapchasti_mosty.html'>ведущих мостов</a></li>
+          <li><a href='/kamaz-4310/category/valy_kamaz.html'>Валы </a></li>
+          <li><a href='/kamaz-4310/category/shesterny_kamaz.html'>Шестерни</a></li>
+          <!-- <li><a href='/kamaz-4310/catalog/'>редукторов</a></li> -->
+          <li><a href='/kamaz-4310/catalog/dvigateli/'>Двигатели</a></li>
+          <li><a href='/kamaz-4310/catalog/dvigatel_zapchasti/'>Запчасти для двигателя 4310</a></li>
+          <li><a href='/kamaz-4310/catalog/kpp_korobki_peredach/kpp_korobki_peredach_4310.html'>Запчасти для КПП 4310</a></li>
+          
+        </ul>
+      </div>
+  
+    
+       <!--  Валы карданные -->
+       <div class="card">
+        <div class="card-header media">
+          <img class="card-icon1" src="/kamaz-4310/img/catalog-icons/valy-kardannye-kamaz.jpg" alt="">
+          <h4> Валы карданные </h4>
+        </div>
+        <ul class="card-body">
+          <li><a href='/kardanyi_valy/'>Каталог валов карданных</a></li>
+          <li><a href='/kardanyi_valy/category/kardan-kamaz.html'>Вал карданный КамАЗ</a></li>
+          <li><a href='/kardanyi_valy/category/kardan-ural.html'>Вал карданный Урал</a></li>
+          <li><a href='/kardanyi_valy/category/kardan-maz.html'>Вал карданный МАЗ</a></li>
+          <li><a href='/kardanyi_valy/category/kardan-maz-man.html'>Вал карданный МАЗ-МАН</a></li>
+          <li><a href='/kardanyi_valy/category/kardan-gaz.html'>Вал карданный ГАЗ</a></li>
+          <li><a href='/kardanyi_valy/category/kardan-zil.html'>Вал карданный ЗИЛ</a></li>
+          <li><a href='/kardanyi_valy/category/kardan-kraz.html'>Вал карданный КРАЗ</a></li>
+          <li><a href='/kardanyi_valy/category/kardan-mtz.html'>Вал карданный МТЗ</a></li>
+          <li><a href='/kardanyi_valy/category/kardan-mzkt.html'>Вал карданный МЗКТ</a></li>
+          <li><a href='/kardanyi_valy/category/kardan-prochie.html'>Прочие карданы</a></li>
+        </ul>
+      </div>
+
+
+      <!--  Коробки передач  -->
+      <div class="card">
+        <div class="card-header media">
+          <img class="card-icon1" src="/kamaz-4310/img/catalog-icons/kpp-korobka.jpg" alt="">
+          <h4> Коробки передач КамАЗ</h4>
+        </div>
+        <ul class="card-body">
+          <li><a href='/kamaz-4310/category/zapchasti_korobka_peredach.html'>Запчасти КПП</a></li>
+          <li><a href='/kamaz-4310/catalog/kpp_korobki_peredach/kpp_14_kamaz.html'>Коробка КПП-14</a></li>
+          <li><a href='/kamaz-4310/catalog/kpp_korobki_peredach/kpp_141_kamaz.html'>Коробка КПП-141</a></li>
+          <li><a href='/kamaz-4310/catalog/kpp_korobki_peredach/kpp_142_kamaz.html'>Коробка КПП-142</a></li>
+          <li><a href='/kamaz-4310/catalog/kpp_korobki_peredach/kpp_15_kamaz.html'>Коробка КПП-15</a></li>
+          <li><a href='/kamaz-4310/catalog/kpp_korobki_peredach/kpp_151_kamaz.html'>Коробка КПП-151</a></li>
+          <li><a href='/kamaz-4310/catalog/kpp_korobki_peredach/kpp_152_kamaz.html'>Коробка КПП-152</a></li>
+          <li><a href='/kamaz-4310/catalog/kpp_korobki_peredach/kpp_154_kamaz.html'>Коробка КПП-154</a></li>
+        </ul>
+        <div class="card-header media">
+          <img class="card-icon1" src="/kamaz-4310/img/catalog-icons/kpp-korobka.jpg" alt="">
+          <h4> Коробки передач ZF на КамАЗ</h4>
+        </div>
+        <ul class="card-body">
+          <li><a href='/kamaz-4310/catalog/kpp_korobki_peredach/kpp_kamaz_zf-16s151.html'>Коробка КПП ZF 16S.151</a></li>
+          <li><a href='/kamaz-4310/catalog/kpp_korobki_peredach/kpp_kamaz_zf-16s1820.html'>Коробка КПП ZF 16S.1820</a></li>
+          <li><a href='/kamaz-4310/catalog/kpp_korobki_peredach/kpp_kamaz_zf-9s1310.html'>Коробка КПП ZF 9S.1310</a></li>
+        </ul>
+      </div>
+
+
+      
+  </div>
+  </div>
+  
+  
+  <div>
+    <div class="row list">
+      {% for product in site.data.k4310 %}
+      {%- if product.id == "3" or product.id == "5" or product.id == "6" or product.id == "13" or product.id == "15" or product.id == "17" or product.id == "43" or product.id == "47" or product.id == "51" or product.id == "313" or product.id == "335" or product.id == "337"  or product.id == "339"  or product.id == "363"  or product.id == "365"  or product.id == "367"  or product.id == "411" or product.id == "413" or product.id == "415" or product.id == "491" or product.id == "517" -%}
+          {% include card_zapchasti_catalog.html product = product %}
+      {%- endif -%}
+      {% endfor %}
+  
+  
+  </div>
+  </div>
+
+  <div>
+    {%- include kupite_catalog.html -%}
+  </div>

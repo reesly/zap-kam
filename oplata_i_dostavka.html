@@ -45,12 +45,12 @@ phone_title:
     <th class="text-right">Расстояние от Н.Челнов, км.</th>
   </thead>
   {%- for item in site.data.dostavka -%}
-    {%- if item.point1 and item.term -%}
+    {%- if item.city -%}
     
     <tr>
       <th>
         {%- if item.url -%}
-          <a href="/kamaz-4310/dostavka/{{item.url}}">
+          <a href="/dostavka/{{item.url}}">
         {%- endif -%}
         {%- if item.city -%}
           {{ item.city }}
