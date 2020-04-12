@@ -75,6 +75,13 @@ exclude:
 
 
 # page_gen: 
+#   - index_files: false 
+#     data: kardany
+#     dir: kardanyi_valy/catalog
+#     name: url 
+#     template: dostavka_index
+#     filter_condition: "record['point1'] != ''"
+
 #   - index_files: true 
 #     data: dostavka
 #     name: url 
