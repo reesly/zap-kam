@@ -182,7 +182,24 @@ var prodList;
       });
 
 
-  });      
+
+
+    // Корзина
+    $.jqCart({
+        buttons: '.add_item',        // селектор кнопок, аля "Добавить в корзину"
+        handler: '/php/handler.php', // путь к обработчику
+        visibleLabel: false,         // показывать/скрывать ярлык при пустой корзине (по умолчанию: false)
+        openByAdding: false,         // автоматически открывать корзину при добавлении товара (по умолчанию: false)
+        currency: '&#8381;',          // валюта: строковое значение, мнемоники (по умолчанию "$")
+        cartLabel: '.label-place'    /* селектор элемента, где будет размещен ярлык, 
+                                        он же - "кнопка" для открытия корзины */
+    });
+    // дополнительные методы
+    //$.jqCart('openCart'); // открыть корзину
+    // $.jqCart('clearCart'); // очистить корзину
+
+
+  }); // on_load     
 
 }(jQuery));
 
@@ -245,24 +262,41 @@ function filterProductList(text){
   
 }
 
-function request_form_yandex(p_id, text ){
+function request_form_yandex(p_id, text) {
+
+  var tx = ''; var pars = '';
+  if (($('#pr1_' + p_id).is(':checked') != true) && ($('#pr2_' + p_id).is(':checked') != true)
+    && ($('#pr3_' + p_id).is(':checked') != true) && ($('#pr4_' + p_id).is(':checked') != true)) {
+    $('#pr1_' + p_id).prop('checked', true);
+  }
+  if ($('#pr1_' + p_id).is(':checked') == true) { tx = tx + "• " + $('#pr1_' + p_id).data('title') + $('#pr1_' + p_id).data('id') + $('#pr1_' + p_id).data('price') + '  (' + text + ')\n'; }
+  if ($('#pr2_' + p_id).is(':checked') == true) { tx = tx + "• " + $('#pr2_' + p_id).data('title') + $('#pr2_' + p_id).data('id') + $('#pr2_' + p_id).data('price') + '  (' + text + ')\n'; }
+  if ($('#pr3_' + p_id).is(':checked') == true) { tx = tx + "• " + $('#pr3_' + p_id).data('title') + $('#pr3_' + p_id).data('id') + $('#pr3_' + p_id).data('price') + '  (' + text + ')\n'; }
+  if ($('#pr4_' + p_id).is(':checked') == true) { tx = tx + "• " + $('#pr4_' + p_id).data('title') + $('#pr4_' + p_id).data('id') + $('#pr4_' + p_id).data('price') + '  (' + text + ')\n'; }
+
+  if (tx != '') { pars = pars + '&answer_long_text_1877903=' + encodeURIComponent(tx + '\n- '); }
+
+
+  pars = 'https:' + '/' + '/forms.yandex.ru/u/5e5831b56296cf035c59867f/?iframe=1' + pars;
+  document.getElementById('form1').src = pars;
+
+  ym(57702985, 'reachGoal', 'RequestBill');
+  return true;
+}
+
+function add_to_cart(p_id, text) {
+
+  var tx = ''; var pars = '';
+  if (($('#pr1_' + p_id).is(':checked') != true) && ($('#pr2_' + p_id).is(':checked') != true)
+    && ($('#pr3_' + p_id).is(':checked') != true) && ($('#pr4_' + p_id).is(':checked') != true)) {
+    $('#pr1_' + p_id).prop('checked', true);
+  }
+  if ($('#pr1_' + p_id).is(':checked') == true) { $.jqCart('addToCartJs', $('#pr1_' + p_id) );  }
+  if ($('#pr2_' + p_id).is(':checked') == true) { $.jqCart('addToCartJs', $('#pr2_' + p_id) );  }
+  if ($('#pr3_' + p_id).is(':checked') == true) { $.jqCart('addToCartJs', $('#pr3_' + p_id) );  }
+  if ($('#pr4_' + p_id).is(':checked') == true) { $.jqCart('addToCartJs', $('#pr4_' + p_id) );  }
+
   
-          var tx = ''; var pars = '';
-          if( ($('#pr1_'+p_id).is(':checked')!=true) && ($('#pr2_'+p_id).is(':checked')!=true) 
-              &&($('#pr3_'+p_id).is(':checked')!=true) && ($('#pr4_'+p_id).is(':checked')!=true) ){
-              $('#pr1_'+p_id).prop('checked', true);
-          }
-          if($('#pr1_'+p_id).is(':checked')==true) { tx = tx + $('#pr1_'+p_id).data('target') + '   ('+ text + ')\n'; }
-          if($('#pr2_'+p_id).is(':checked')==true) { tx = tx + $('#pr2_'+p_id).data('target') + '  ('+ text + ')\n'; }
-          if($('#pr3_'+p_id).is(':checked')==true) { tx = tx + $('#pr3_'+p_id).data('target') + '  ('+ text + ')\n'; }
-          if($('#pr4_'+p_id).is(':checked')==true) { tx = tx + $('#pr4_'+p_id).data('target') + '  ('+ text + ')\n'; }
-          
-          if(tx != ''){ pars = pars + '&answer_long_text_1877903=' + encodeURIComponent(tx+'\n- '); }
-          
-          
-          pars = 'https:'+'/'+'/forms.yandex.ru/u/5e5831b56296cf035c59867f/?iframe=1'+pars;
-          document.getElementById('form1').src = pars;
-          
-          ym(57475078, 'reachGoal', 'RequestBill'); 
-          return true;
+  ym(57702985, 'reachGoal', 'InCart');
+  return true;
 }

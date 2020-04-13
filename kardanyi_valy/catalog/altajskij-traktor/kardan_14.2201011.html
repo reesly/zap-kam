@@ -1,0 +1,35 @@
+---
+layout: default_info
+title: pa1ge_name pa1ge_cat pa1ge_code1 - цена, фото, описание, применимость - ЗапКам.Запчасти
+description: Продаем кардан {page.cat}} {page.code1}} - с доставкой по всей России. В наличии новые, восстановленные, капремонт. Прайс-лист, модификации, каталог, описание, характеристики.
+keywords: page_name page_code1 - page_prim page.prim2 page.dlina
+hero-title: Карданные валы page_cat с доставкой по России 
+h1: 
+h2:
+phone: 
+phone_title: 
+---
+
+<!-- Товар ---->
+<div id="anc_1"></div>
+{% assign page_url = page.name | replace: ".html", "" %}
+{% assign product = site.data.kardany | where:"url", page_url | first  %}
+{%- if product -%}
+    {% assign product.path = "/" %}
+    {% include card_zapchasti.html product = product %}
+{%- endif -%}
+
+<div class="col-md-10 col-xs-12" style="margin: auto;">
+    <!-- <h3>Описание</h3> -->
+    <p>
+
+    </p>
+    
+    
+    <p></p>
+    <p></p>
+    {% include kupite_u_nas.html %}
+    {% include garantiya.html %}
+  <div style="height: 100px;">&nbsp;</div>
+  
+</div>

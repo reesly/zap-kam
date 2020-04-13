@@ -30,6 +30,7 @@
   <link rel="stylesheet" href="/assets/css/main.css">
   <link rel="stylesheet" href="/assets/css/responsive.css">
   <link rel="stylesheet" href="/assets/css/nanogallery2.min.css">
+  <link rel="stylesheet" href="/assets/css/jqcart.css">
   
   <!-- Yandex verification -->
   <meta name="yandex-verification" content="7f54e3c9fedc7455" />
@@ -52,10 +53,11 @@
 
             {%- if page.phone -%}
             <a class="navbar-toggler" style="padding:10px 3px;" href="tel:+7{{page.phone}}" title="{{page.phone_title}}">
-              <img style="height:32px;opacity: 0.6;" src="/assets/img/icon-callto-48.png"></a>
-            <a class="navbar-toggler" id="aim2" style="padding:10px 3px;" href="https://wa.me/7{{page.phone}}" target="_blank"><img style="height:32px;opacity: 0.6;" src="/assets/img/icon-whatsapp-48.png"></a>
+              <img style="height:26px;opacity: 0.6;" src="/assets/img/icon-callto-48.png"></a>
+            <a class="navbar-toggler" id="aim2" style="padding:10px 3px;" href="https://wa.me/7{{page.phone}}" target="_blank"><img style="height:28px;opacity: 0.6;" src="/assets/img/icon-whatsapp-48.png"></a>
 
             {%- endif -%}
+            <!-- Корзина --><a href="#" class="navbar-toggler label-place" style="padding:10px 3px; opacity: 0.8;"></a>
               
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
               aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" style="padding:10px 3px;">
@@ -66,7 +68,7 @@
               <ul class="navbar-nav mr-auto w-100 justify-content-end clearfix" id="top-submenu">
                 <li class="nav-item">
                   <a class="nav-link" href="javascript:" onclick="$('html, body').animate({ scrollTop: 0}, 600);" >
-                    <i class="lni-home"></i> Начало
+                    <i class="lni-home"></i> 
                   </a>
                 </li>
                   {% include top-submenu.html phone = page.phone phone_title = page.phone_title %}
@@ -110,7 +112,7 @@
                      
                     <button class="btn btn-lg btn-blue" style=" position: absolute;right: 1em; bottom: 1em;
                 " data-toggle="modal" data-target="#requestModal"
-                      onclick="ym(57475078, 'reachGoal', 'RequestBill'); return true;">
+                      onclick="ym(57702985, 'reachGoal', 'RequestBill'); return true;">
                       Запросить предложение</button> </li>
             
                     <!-- <a href="/index.html" class="btn btn-lg btn-primary " style=" margin-top: 15px;"> Каталог КамАЗ 4310 </a> -->
@@ -165,7 +167,7 @@
   <script src="/assets/js/jquery-min.js"></script>
   <script src="/assets/js/popper.min.js"></script>
   <script src="/assets/js/bootstrap.min.js"></script>
-  <script src="/assets/js/owl.carousel.min.js"></script>
+  <!-- <script src="/assets/js/owl.carousel.min.js"></script> -->
   <script src="/assets/js/wow.js"></script>
   <script src="/assets/js/jquery.nav.js"></script>
   <script src="/assets/js/scrolling-nav.js"></script>
@@ -175,7 +177,7 @@
   <script src="/assets/js/main.js"></script>
   <script src="/assets/js/typeahead.bundle.min.js"></script>
   <script src="/assets/js/jquery.nanogallery2.min.js"></script>
-
+  <script src="/assets/js/jqcart.js"></script>
   
 </body>
 

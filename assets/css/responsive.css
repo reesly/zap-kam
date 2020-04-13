@@ -222,6 +222,18 @@
     font-size: 1.0em;
   }
   
+  .jqcart-checkout {
+    width: 96% !important;
+  }
+
+  .navbar-brand img {
+    max-width: 50%;
+  }
+
+  .contents {
+    padding-bottom:   0px;
+  }
+  
   /* #hero-area h1 {
     font-size: 1.5em;
   }

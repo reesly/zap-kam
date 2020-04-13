@@ -2,7 +2,7 @@
 {% assign product = include.product %} 
 
  <div style="padding-top: 8px; margin-top: 0px; position: absolute;">
- <a href="javascript:"  onclick="if(history.length > 0) {history.back();} else { window.location.href = '{{ product.path }}' }" class="" > < назад </a>
+ <a href="javascript:" onclick="if(history.length > 0) { history.back(); } else { window.location.href = '{{ product.path }}' }" class="" > < назад </a>
 
     
   </div>
@@ -26,22 +26,27 @@
           <!-- fillWidth -->
           {%- if product.img1 -%}
             <a href = "{{product.img1}}" data-ngThumb = "{{product.img1}}" itemprop="image" title="{{product.name}}"> {{product.name}}</a>
+            <div class="collapse"> <img src="{{product.img_path}}{{product.img1}}" alt="{{product.name}} {{product.code1}} {%- if {{page.dlina}} -%} (L=page.dlina) {%- endif -%}">  </div>
           {%- endif -%}
           
           {%- if product.img2 -%}
             <a href = "{{product.img2}}" data-ngThumb = "{{product.img2}}" itemprop="image" title="{{product.name}}"> {{product.name}}</a>
+            <div class="collapse"> <img src="{{product.img_path}}{{product.img2}}" alt="{{product.name}} {{product.code1}} {%- if {{page.dlina}} -%} (L=page.dlina) {%- endif -%}">  </div>
           {%- endif -%}
           
           {%- if product.img3 -%}
           <a href = "{{product.img3}}" data-ngThumb = "{{product.img3}}" itemprop="image" title="{{product.name}}"> {{product.name}}</a>
+          <div class="collapse"> <img src="{{product.img_path}}{{product.img3}}" alt="{{product.name}} {{product.code1}} {%- if {{page.dlina}} -%} (L=page.dlina) {%- endif -%}">  </div>
           {%- endif -%}
           
           {%- if product.img4 -%}
           <a href = "{{product.img4}}" data-ngThumb = "{{product.img4}}" itemprop="image" title="{{product.name}}"> {{product.name}}</a>
+          <div class="collapse"> <img src="{{product.img_path}}{{product.img4}}" alt="{{product.name}} {{product.code1}} {%- if {{page.dlina}} -%} (L=page.dlina) {%- endif -%}">  </div>
           {%- endif -%}
           
           {%- if product.img5 -%}
           <a href = "{{product.img5}}" data-ngThumb = "{{product.img5}}" itemprop="image" title="{{product.name}}"> {{product.name}}</a>
+          <div class="collapse"> <img src="{{product.img_path}}{{product.img5}}" alt="{{product.name}} {{product.code1}} {%- if {{page.dlina}} -%} (L=page.dlina) {%- endif -%}">  </div>
           {%- endif -%}
           
           {%- if product.img1 or product.img2 or product.img3 or product.img4 or product.img5 -%}
@@ -56,9 +61,9 @@
         <!-- <h2>{{name}}</h2> -->
         <table class="table table-borderless table-hover" style="width: auto; max-width: 450px;">
             <tr>
-              <td colspan="2"><span itemprop="name" style="font-size:1.1em; font-weight: 600; padding-bottom: 0;">{{ product.name }} </span>
+              <td colspan="2"><span itemprop="name" style="font-size:1.1em; font-weight: 600; padding-bottom: 0;">{{ product.name }} {%- if {{page.dlina}} -%} (L=page.dlina) {%- endif -%}  </span> 
                 {%- if product.code1 -%}
-                <br><small>код</small>. <span itemprop="sku"> {{ product.code1 }} </span>
+                <br><small>код</small>. <span itemprop="sku" style="font-size:1.1em; font-weight: 600;"> {{ product.code1 }} </span>
                 {%- endif -%}
                 {%- if product.code2 -%}
                 <br> {{ product.code2 }}
@@ -72,37 +77,37 @@
             {%- endunless -%}
             
             {%- if product.price1 -%}
-            
-            
             <a href="javascript:" onclick="" >
               <tr class="table-active"> <td itemscope="" itemtype="http://schema.org/Offer" itemprop="offers">
                 <link itemprop="availability" href="http://schema.org/InStock">
                 <meta itemprop="priceCurrency" content="RUB">
-                <meta itemprop="price" content="{{product.price1}}">
+                <meta itemprop="price" content="{{product.price1 | replace: ' ', '' | replace: ' ', ''}}">
         
-                <input type="checkbox" class="label-price" id="pr1_{{product.id}}" data-target="• {{ product.name }} {{product.code1}} / {{ product.price1_name }} / {{ product.price1 }} ">
+                <input type="checkbox" class="label-price" id="pr1_{{product.id}}" data-id="{{product.code1}}" data-title="{{ product.name }} {{product.code1}}/ {{product.price1_name}} {%- if {{page.dlina}} -%} (L=page.dlina) {%- endif -%}" data-price="{{ product.price1 | replace: ' ', '' | replace: ' ', '' }}" data-img="{{product.img_path}}{{product.img1}}">
                 <label class="label-price" for="pr1_{{product.id}}">
                  {{ product.price1_name }} </label> </td>
-                <td style="text-align: right; min-width: 125px;"><span style="font-size:1.1em;font-weight: 600;">{{ product.price1 }} </span>‎ <span style="color: gray;">₽</span>  </td> </tr>
+                <td style="text-align: right; min-width: 125px;"><span style="font-size:1.1em;font-weight: 600;">
+                  {{ product.price1 }} </span>‎ <span style="color: gray;">₽</span>  
+                  </td> </tr>
             </a>
             {%- endif -%}
 
             {%- if product.price2 -%}
-            <tr class="table-active"> <td>  <input type="checkbox" class="label-price" id="pr2_{{product.id}}" data-target="• {{ product.name }} {{product.code1}} / {{ product.price2_name }} / {{ product.price2 }} ">
+            <tr class="table-active"> <td>  <input type="checkbox" class="label-price" id="pr2_{{product.id}}"  data-id="{{product.code1}}-ц2" data-title="{{ product.name }} {{product.code1}}/ {{product.price2_name}} {%- if {{page.dlina}} -%} (L=page.dlina) {%- endif -%}" data-price="{{ product.price2 | replace: ' ', '' | replace: ' ', '' }}" data-img="{{product.img_path}}{{product.img1}}">
               <label class="label-price" for="pr2_{{product.id}}">
               {{ product.price2_name }} </label></td>
-              <td style="text-align: right;"><span style="font-size:1.1em;font-weight: 600;">{{ product.price2 }} </span>‎ <span style="color: gray;">₽</span>  </td> </tr>
+              <td style="text-align: right;"><span style="font-size:1.1em;font-weight: 600;">{{ product.price2 }} </span>‎ <span style="color: gray;">₽</span> </tr>
             {%- endif -%}
 
             {%- if   product.price3 -%}
-            <tr class="table-active"> <td> <input type="checkbox" class="label-price" id="pr3_{{product.id}}" data-target="• {{ product.name }} {{product.code1}} / {{ product.price3_name }} / {{ product.price3 }} " >
+            <tr class="table-active"> <td> <input type="checkbox" class="label-price" id="pr3_{{product.id}}"  data-id="{{product.code1}}-ц3" data-title="{{ product.name }} {{product.code1}}/ {{product.price3_name}} {%- if {{page.dlina}} -%} (L=page.dlina) {%- endif -%}" data-price="{{ product.price3 | replace: ' ', '' | replace: ' ', '' }}" data-img="{{product.img_path}}{{product.img1}}" >
               <label class="label-price" for="pr3_{{product.id}}">
                 {{ product.price3_name }}</label></td>
               <td style="text-align: right;"><span style="font-size:1.1em;font-weight: 600;">{{ product.price3 }} </span>‎  <span style="color: gray;">₽</span>  </td> </tr>
             {%- endif -%}
 
             {%- if  product.price4 -%}
-            <tr class="table-active"> <td> <input type="checkbox" class="label-price" id="pr4_{{product.id}}" data-target="• {{ product.name }} {{product.code1}} / {{ product.price4_name }} / {{ product.price4 }} "> 
+            <tr class="table-active"> <td> <input type="checkbox" class="label-price" id="pr4_{{product.id}}"  data-id="{{product.code1}}-ц4" data-title="{{ product.name }} {{product.code1}}/ {{product.price4_name}} {%- if {{page.dlina}} -%} (L=page.dlina) {%- endif -%}" data-price="{{ product.price4 | replace: ' ', '' | replace: ' ', '' }}" data-img="{{product.img_path}}{{product.img1}}"> 
                <label class="label-price" for="pr4_{{product.id}}">
                  {{ product.price4_name }}</label></td>
               <td style="text-align: right;"><span style="font-size:1.1em;font-weight: 600;">{{ product.price4 }} </span>‎  <span style="color: gray;">₽</span>  </td> </tr>
@@ -116,36 +121,106 @@
                 <div class="form-group form-inline text-right" id='default-suggestions_card'>
         
                   
-                    <button class="btn btn-blue" style="float: right;" data-toggle="modal" data-target="#requestModal"
-                      onclick="ym(57475078, 'reachGoal', 'RequestBill'); 
-                      request_form_yandex('{{ product.id }}','{{product.path}}{{product.url}}');                      
-                      pars = 'https:'+'/'+'/forms.yandex.ru/u/5e5831b56296cf035c59867f/?iframe=1'+pars;
-
-
-                      document.getElementById('form1').src = pars;
+                    <button class="btn btn-primary" style="float: right;" data-toggle="modal" data-target="#requestModal"
+                      onclick="request_form_yandex('{{ product.id }}','{{product.path}}{{product.url}}');">  Заказать </button> 
+                    &nbsp;&nbsp;&nbsp;
+                    
+                    <button class="btn btn-secondary" onclick = "
+                      add_to_cart('{{ product.id }}','{{product.path}}{{product.url}}');   
                       return true;
-
-                    ">  Запросить предложение </button> 
+                    "> В заявку </button> 
                 </div>
             </td>
           </tr>
 
          
             {%- if product.par1 -%}
-            <tr><td> {{ product.par1 }} </td>
-              <td> <small> {{ product.text1 }}</small> </td>
+            <tr class="small2"><td> {{ product.par1 }} </td>
+              <td>{{ product.text1 }}</td>
             </tr>
             {%- endif -%}
             
             {%- if product.par2 -%}
-            <tr><td> {{ product.par2 }} </td>
-              <td> <small> {{ product.text2 }}</small> </td>
+            <tr class="small2"><td> {{ product.par2 }} </td>
+              <td>{{ product.text2 }}</td>
             </tr>
             {%- endif -%}
 
             {%- if product.par3 -%}
-            <tr><td> {{ product.par3 }} </td>
-              <td> <small> {{ product.text3 }}</small> </td>
+            <tr class="small2"><td> {{ product.par3 }} </td>
+              <td>{{ product.text3 }}</td>
+            </tr>
+            {%- endif -%}
+
+            {%- if product.par4 -%}
+            <tr class="small2"><td> {{ product.par4 }} </td>
+              <td>{{ product.text4 }}</td>
+            </tr>
+            {%- endif -%}
+
+            {%- if product.par5 -%}
+            <tr class="small2"><td> {{ product.par5 }} </td>
+              <td>{{ product.text5 }}</td>
+            </tr>
+            {%- endif -%}
+
+            {%- if product.par6 -%}
+            <tr class="small2"><td> {{ product.par6 }} </td>
+              <td>{{ product.text6 }}</td>
+            </tr>
+            {%- endif -%}
+
+            {%- if product.par7 -%}
+            <tr class="small2"><td> {{ product.par7 }} </td>
+              <td>{{ product.text7 }}</td>
+            </tr>
+            {%- endif -%}
+
+            {%- if product.par8 -%}
+            <tr class="small2"><td> {{ product.par8 }} </td>
+              <td>{{ product.text8 }}</td>
+            </tr>
+            {%- endif -%}
+
+            {%- if product.par9 -%}
+            <tr class="small2"><td> {{ product.par9 }} </td>
+              <td>{{ product.text9 }}</td>
+            </tr>
+            {%- endif -%}
+
+            {%- if product.par10 -%}
+            <tr class="small2"><td> {{ product.par10 }} </td>
+              <td>{{ product.text10 }}</td>
+            </tr>
+            {%- endif -%}
+
+            {%- if product.par11 -%}
+            <tr class="small2"><td> {{ product.par11 }} </td>
+              <td>{{ product.text11 }}</td>
+            </tr>
+            {%- endif -%}
+
+            {%- if product.par12 -%}
+            <tr class="small2"><td> {{ product.par12 }} </td>
+              <td>{{ product.text12 }}</td>
+            </tr>
+            {%- endif -%}
+
+            {%- if product.par13 -%}
+            <tr class="small2"><td> {{ product.par13 }} </td>
+              <td>{{ product.text13 }}</td>
+            </tr>
+            {%- endif -%}
+
+            {%- if product.par14 -%}
+            <tr class="font-size-085"><td> {{ product.par14 }} </td>
+              <td>{{ product.text14 }}</td>
+            </tr>
+            {%- endif -%}
+
+            {%- if product.par15 -%}
+            <tr class="small2"><td> {{ product.par15 }} </td>
+              <td>{{ product.text15 }}</td>
             </tr>
             {%- endif -%}
 
@@ -199,6 +274,272 @@
     src="https://dostavka.sbl.su/api/delivery.js?comp=10,8,24{{sizes}}{{mass}}&startCt=Набережные Челны&startCntr=RU&btn=no&innerDeliv=1&sizeShow=1&startPick=1&title=расчет доставки&autoEnd=1&dopInsure=0&btnBg=#014E9E&dopLathing=1"></script>
     <script> 
       function csblCustomFunc($) {
-        $('.ec-calc-result__header').html('Стоимость доставки');        }
+        $('.__header').html('Стоимость доставки');        }
       </script> 
+
+    <div id="delivery_city" class="collapse">
+      <div class="gorod_dostavki">
+        <h3>Укажите ваш город  </h3>
+        <select name="gorod_dostavki_select" id="gorod_dostavki_select" >
+          <option  disabled>--</option>
+          <option value='abakan'>Абакан</option>
+          <option value='achinsk'>Ачинск</option>
+          <option value='almetevsk'>Альметьевск</option>
+          <option value='angarsk'>Ангарск</option>
+          <option value='arhangelsk'>Архангельск</option>
+          <option value='astrahan'>Астрахань</option>
+          <option value='barnaul'>Барнаул</option>
+          <option value='batajsk'>Батайск</option>
+          <option value='belgorod'>Белгород</option>
+          <option value='berezniki'>Березники</option>
+          <option value='bijsk'>Бийск</option>
+          <option value='blagoveshchensk'>Благовещенск</option>
+          <option value='bratsk'>Братск</option>
+          <option value='bryansk'>Брянск</option>
+          <option value='chajkovskij'>Чайковский</option>
+          <option value='cheboksary'>Чебоксары</option>
+          <option value='chelyabinsk'>Челябинск</option>
+          <option value='cherepovets'>Череповец</option>
+          <option value='chita'>Чита</option>
+          <option value='dimitrovgrad'>Димитровград</option>
+          <option value='ekaterinburg'>Екатеринбург</option>
+          <option value='habarovsk'>Хабаровск</option>
+          <option value='hanty-mansijsk'>Ханты-Мансийск</option>
+          <option value='irkutsk'>Иркутск</option>
+          <option value='ishim'>Ишим</option>
+          <option value='ivanovo'>Иваново</option>
+          <option value='izhevsk'>Ижевск</option>
+          <option value='joshkar-ola'>Йошкар-Ола</option>
+          <option value='kaliningrad'>Калининград</option>
+          <option value='kaluga'>Калуга</option>
+          <option value='kamensk-uralskij'>Каменск-Уральский</option>
+          <option value='kansk'>Канск</option>
+          <option value='kazan'>Казань</option>
+          <option value='kemerovo'>Кемерово</option>
+          <option value='kirov'>Киров</option>
+          <option value='kolomna'>Коломна</option>
+          <option value='komsomolsk-na-amure'>Комсомольск-на-Амуре</option>
+          <option value='kostroma'>Кострома</option>
+          <option value='krasnodar'>Краснодар</option>
+          <option value='krasnoyarsk'>Красноярск</option>
+          <option value='kurgan'>Курган</option>
+          <option value='kursk'>Курск</option>
+          <option value='kyzyl'>Кызыл</option>
+          <option value='lipetsk'>Липецк</option>
+          <option value='magadan'>Магадан</option>
+          <option value='magnitogorsk'>Магнитогорск</option>
+          <option value='majkop'>Майкоп</option>
+          <option value='miass'>Миасс</option>
+          <option selected value='moskva'>Москва</option>
+          <option value='murmansk'>Мурманск</option>
+          <option value='murom'>Муром</option>
+          <option value='naberezhnye-chelny'>Набережные Челны</option>
+          <option value='nahodka'>Находка</option>
+          <option value='nalchik'>Нальчик</option>
+          <option value='neftekamsk'>Нефтекамск</option>
+          <option value='nizhnekamsk'>Нижнекамск</option>
+          <option value='nizhnevartovsk'>Нижневартовск</option>
+          <option value='nizhnij-novgorod'>Нижний Новгород</option>
+          <option value='nizhnij-tagil'>Нижний Тагил</option>
+          <option value='novocheboksarsk'>Новочебоксарск</option>
+          <option value='novocherkassk'>Новочеркасск</option>
+          <option value='novokuznetsk'>Новокузнецк</option>
+          <option value='novorossijsk'>Новороссийск</option>
+          <option value='novosibirsk'>Новосибирск</option>
+          <option value='noyabrsk'>Ноябрьск</option>
+          <option value='oktyabrskij'>Октябрьский</option>
+          <option value='omsk'>Омск</option>
+          <option value='orehovo-zuevo'>Орехово-Зуево</option>
+          <option value='orenburg'>Оренбург</option>
+          <option value='orsk'>Орск</option>
+          <option value='penza'>Пенза</option>
+          <option value='perm'>Пермь</option>
+          <option value='petrozavodsk'>Петрозаводск</option>
+          <option value='podolsk'>Подольск</option>
+          <option value='prokopevsk'>Прокопьевск</option>
+          <option value='pskov'>Псков</option>
+          <option value='pyatigorsk'>Пятигорск</option>
+          <option value='rostov-na-donu'>Ростов-на-Дону</option>
+          <option value='rubtsovsk'>Рубцовск</option>
+          <option value='ryazan'>Рязань</option>
+          <option value='rybinsk'>Рыбинск</option>
+          <option value='salavat'>Салават</option>
+          <option value='samara'>Самара</option>
+          <option value='sankt-peterburg'>Санкт-Петербург</option>
+          <option value='saransk'>Саранск</option>
+          <option value='saratov'>Саратов</option>
+          <option value='sevastopol'>Севастополь</option>
+          <option value='shahty'>Шахты</option>
+          <option value='simferopol'>Симферополь</option>
+          <option value='smolensk'>Смоленск</option>
+          <option value='sochi'>Сочи</option>
+          <option value='staryj-oskol'>Старый Оскол</option>
+          <option value='stavropol'>Ставрополь</option>
+          <option value='sterlitamak'>Стерлитамак</option>
+          <option value='surgut'>Сургут</option>
+          <option value='syktyvkar'>Сыктывкар</option>
+          <option value='taganrog'>Таганрог</option>
+          <option value='tambov'>Тамбов</option>
+          <option value='tobolsk'>Тобольск</option>
+          <option value='tolyatti'>Тольятти</option>
+          <option value='tomsk'>Томск</option>
+          <option value='tula'>Тула</option>
+          <option value='tver'>Тверь</option>
+          <option value='tyumen'>Тюмень</option>
+          <option value='ufa'>Уфа</option>
+          <option value='ulan-ude'>Улан-Удэ</option>
+          <option value='ulyanovsk'>Ульяновск</option>
+          <option value='ussurijsk'>Уссурийск</option>
+          <option value='velikie-luki'>Великие Луки</option>
+          <option value='velikij-novgorod'>Великий Новгород</option>
+          <option value='vladikavkaz'>Владикавказ</option>
+          <option value='vladimir'>Владимир</option>
+          <option value='vladivostok'>Владивосток</option>
+          <option value='volgograd'>Волгоград</option>
+          <option value='vologda'>Вологда</option>
+          <option value='volzhskij'>Волжский</option>
+          <option value='voronezh'>Воронеж</option>
+          <option value='yakutsk'>Якутск</option>
+          <option value='yaroslavl'>Ярославль</option>
+          <option value='yuzhno-sahalinsk'>Южно-Сахалинск</option>
+          <option value='zlatoust'>Златоуст</option>
+
+        </select>
+      </div>
+    </div>
+
+    <div id="delivery_price" class="collapse">
+      <div class="stoimost_dostavki">
+        <div style="display: block;">
+          <div class="header">Стоимость доставки</div>
+          <div>
+            Доставка до дверей <br>
+            Размеры ДхШхВ, см<br>
+            Обрешетка, если вам требуется жесткая упаковка груза, то поставьте галочку.
+          </div>
+          <table >
+            <thead>
+              <tr>
+                <th>Компании</th>
+                <th>Перевозка</th>
+                <th>Стоимость</th>
+              </tr>
+            </thead>
+            <tbody id="Tbody">
+              <tr>
+                <td>ТК «ПЭК»</td>
+                <td id="Route">
+                  <div>Набережные Челны - Москва <strong>430 руб.</strong> (авто) </div>
+                </td>
+                <td>
+                  <div class="-table__rouble">430 руб. (авто) </div>
+                </td>
+              </tr>
+              <tr>
+                <td>ТК «Деловые линии»</td>
+                <td id="Route">
+                  <div>Набережные Челны - Москва <strong>440 руб.</strong> (авто) </div>
+                  <div class="__insurin">+ <b>Москва</b>: въезд на терминал - <b>100 руб.</b></div>
+                </td>
+                <td>
+                  <div class="-table__rouble">540 руб. (авто) </div>
+                </td>
+              </tr>
+              <tr>
+                <td>ТК «Байкал Сервис»</td>
+                <td id="Route">
+                  <div>Набережные Челны - Москва <strong>444 руб.</strong> (авто) </div>
+                  <div class="insurin">+ <b>Москва</b>: въезд на терминал - <b>102 руб.</b></div>
+                </td>
+                <td>
+                  <div class="table__rouble">546 руб. (авто) </div>
+                </td>
+              </tr>
+            </tbody>
+          </table> <a href="#" class="calc-again" style="display: none;">Рассчитать с другими параметрами</a>
+        </div>
+
+        <hr>
+
+        <h3>Стоимость доставки по России</h3> 
+        <div><strong><a href='/dostavka/almetevsk/'>Альметьевск</a></strong><div>Срок поставки: 1-2 дней</div><div>Пункты выдачи:<a href='https://www.google.com/maps/search/?api=1&query=54.898416,52.319537'> 423450, г. Альметьевск, ул. Полевая, д. 1В, торгово-складской комплекс «Строительный рынок» (после АЗС Татнефть поворот в комплекс)</a> </div></div>
+        <div><strong><a href='/dostavka/arhangelsk/'>Архангельск</a></strong><div>Срок поставки: 4-5 дней</div><div>Пункты выдачи:<a href='https://www.google.com/maps/search/?api=1&query=64.570049,40.576311'> Архангельская область, г.Архангельск, Талажское шоссе, д. 4</a> </div></div>
+        <div><strong><a href='/dostavka/astrahan/'>Астрахань</a></strong><div>Срок поставки: 5-7 дней</div><div>Пункты выдачи:<a href='https://www.google.com/maps/search/?api=1&query=46.311861,48.056556'> 414057, г.Астрахань, ул. Рождественского, д. 17</a> </div></div>
+        <div><strong><a href='/dostavka/barnaul/'>Барнаул</a></strong><div>Срок поставки: 6-8 дней</div><div>Пункты выдачи:<a href='https://www.google.com/maps/search/?api=1&query=53.326144,83.749225'> Алтайский край, г.Барнаул, Чернышевского, 293 А</a> </div></div>
+        <div><strong><a href='/dostavka/belgorod/'>Белгород</a></strong><div>Срок поставки: 4-5 дней</div><div>Пункты выдачи:<a href='https://www.google.com/maps/search/?api=1&query=50.588102,36.570581'> Белгородская обл, г.Белгород, ул. Кирпичный тупик, д.2А</a> </div></div>
+        <div><strong><a href='/dostavka/blagoveshchensk/'>Благовещенск</a></strong><div>Срок поставки: 12-16 дней</div><div>Пункты выдачи:<a href='https://www.google.com/maps/search/?api=1&query=50.288223,127.52496'> Амурская область, Благовещенский р-н, г.Благовещенск, ул. Калинина, д.126 (территория ИПК «Приамурье»)</a> </div></div>
+        <div><strong><a href='/dostavka/bryansk/'>Брянск</a></strong><div>Срок поставки: 6-7 дней</div><div>Пункты выдачи:<a href='https://www.google.com/maps/search/?api=1&query=53.337344,34.279585'> Брянская обл, г.Брянск, ул. М.Расковой, д.25</a> </div></div>
+        <div><strong><a href='/dostavka/cheboksary/'>Чебоксары</a></strong><div>Срок поставки: 3-4 дней</div><div>Пункты выдачи:<a href='https://www.google.com/maps/search/?api=1&query=56.113035,47.274992'> Чувашская Республика - Чувашия, г.Чебоксары, ул. Гаражный проезд, 3, Лит. В, В1</a> </div></div>
+        <div><strong><a href='/dostavka/chelyabinsk/'>Челябинск</a></strong><div>Срок поставки: 4-5 дней</div><div>Пункты выдачи:<a href='https://www.google.com/maps/search/?api=1&query=55.214675,61.433474'> Челябинская область, г. Челябинск, Северный луч, д. 1а</a> </div></div>
+        <div><strong><a href='/dostavka/chita/'>Чита</a></strong><div>Срок поставки: 14-17 дней</div><div>Пункты выдачи:<a href='https://www.google.com/maps/search/?api=1&query=52.069629,113.45368'> Забайкальский край, г. Чита, ул. Туринская, 1б</a> </div></div>
+        <div><strong><a href='/dostavka/dimitrovgrad/'>Димитровград</a></strong><div>Срок поставки: 3-5 дней</div><div>Пункты выдачи:<a href='https://www.google.com/maps/search/?api=1&query=54.213412,49.571899'> 433504, г. Димитровград, ул. Промышленная, д.35/5</a> </div></div>
+        <div><strong><a href='/dostavka/ekaterinburg/'>Екатеринбург</a></strong><div>Срок поставки: 3-4 дней</div><div>Пункты выдачи:<a href='https://www.google.com/maps/search/?api=1&query=56.823662,60.681989'> Свердловская обл., г.Екатеринбург, ул. Чистопольская, д. 6</a> </div></div>
+        <div><strong><a href='/dostavka/habarovsk/'>Хабаровск</a></strong><div>Срок поставки: 11-14 дней</div><div>Пункты выдачи:<a href='https://www.google.com/maps/search/?api=1&query=48.503271,135.03527'> Хабаровский край, г. Хабаровск, ул. Тихоокеанская, д. 73, корп. 3</a> </div></div>
+        <div><strong><a href='/dostavka/irkutsk/'>Иркутск</a></strong><div>Срок поставки: 10-13 дней</div><div>Пункты выдачи:<a href='https://www.google.com/maps/search/?api=1&query=52.3508,104.2093'> Иркутская обл., г.Иркутск, ул. Новаторов, д.1</a> </div></div>
+        <div><strong><a href='/dostavka/ivanovo/'>Иваново</a></strong><div>Срок поставки: 1-2 дней</div><div>Пункты выдачи:<a href='https://www.google.com/maps/search/?api=1&query=56.999441,40.916123'> Ивановская обл., г.Иваново, ул. Парижской Коммуны, д. 84</a> </div></div>
+        <div><strong><a href='/dostavka/joshkar-ola/'>Йошкар-Ола</a></strong><div>Срок поставки: 4-5 дней</div><div>Пункты выдачи:<a href='https://www.google.com/maps/search/?api=1&query=56.614759,47.867277'> Марий Эл Респ., г.Йошкар-Ола, ул. Строителей, 99 Б</a> </div></div>
+        <div><strong><a href='/dostavka/kaliningrad/'>Калининград</a></strong><div>Срок поставки: 6-8 дней</div><div>Пункты выдачи:<a href='https://www.google.com/maps/search/?api=1&query=54.726904,20.565517'> Калининградская обл, г. Калининград, ул. Пригородная, д. 20</a> </div></div>
+        <div><strong><a href='/dostavka/kaluga/'>Калуга</a></strong><div>Срок поставки: 3-4 дней</div><div>Пункты выдачи:<a href='https://www.google.com/maps/search/?api=1&query=54.5582,36.2694'> Калужская обл., г. Калуга, ул. Параллельная, д.11, стр. 22</a> </div></div>
+        <div><strong><a href='/dostavka/kazan/'>Казань</a></strong><div>Срок поставки: 1-3 дней</div><div>Пункты выдачи:<a href='https://www.google.com/maps/search/?api=1&query=55.729605,49.116044'> Республика Татарстан, г. Казань, ул. Тихорецкая, д. 19</a> </div></div>
+        <div><strong><a href='/dostavka/kemerovo/'>Кемерово</a></strong><div>Срок поставки: 6-8 дней</div><div>Пункты выдачи:<a href='https://www.google.com/maps/search/?api=1&query=55.337,86.061694'> Кемеровская обл, г.Кемерово, Кузнецкий пр-т, д. 91</a> </div></div>
+        <div><strong><a href='/dostavka/kirov/'>Киров</a></strong><div>Срок поставки: 5-7 дней</div><div>Пункты выдачи:<a href='https://www.google.com/maps/search/?api=1&query=58.571493,49.578056'> г. Киров, ул. Щорса, д. 70А/5</a> </div></div>
+        <div><strong><a href='/dostavka/kostroma/'>Кострома</a></strong><div>Срок поставки: 2-3 дней</div><div>Пункты выдачи:<a href='https://www.google.com/maps/search/?api=1&query=57.763717,40.994083'> г. Кострома, ул. Деминская, д. 2 Б</a> </div></div>
+        <div><strong><a href='/dostavka/krasnodar/'>Краснодар</a></strong><div>Срок поставки: 3-5 дней</div><div>Пункты выдачи:<a href='https://www.google.com/maps/search/?api=1&query=45.092874,38.99389'> 350072, Краснодар, ул. Автомобильная, д. 3</a> </div></div>
+        <div><strong><a href='/dostavka/krasnoyarsk/'>Красноярск</a></strong><div>Срок поставки: 7-11 дней</div><div>Пункты выдачи:<a href='https://www.google.com/maps/search/?api=1&query=56.079578,92.944367'> Красноярский край, г.Красноярск, Северное шоссе, 5Г стр 26</a> </div></div>
+        <div><strong><a href='/dostavka/kurgan/'>Курган</a></strong><div>Срок поставки: 5-8 дней</div><div>Пункты выдачи:<a href='https://www.google.com/maps/search/?api=1&query=55.478659,65.378731'> Курганская обл., г.Курган, ул. Омская, д. 146</a> </div></div>
+        <div><strong><a href='/dostavka/magnitogorsk/'>Магнитогорск</a></strong><div>Срок поставки: 6-7 дней</div><div>Пункты выдачи:<a href='https://www.google.com/maps/search/?api=1&query=53.434801,58.937134'> 455000, г. Магнитогорск, ул. Энергетиков 2/1</a> </div></div>
+        <div><strong><a href='/dostavka/miass/'>Миасс</a></strong><div>Срок поставки: 5-8 дней</div><div>Пункты выдачи:<a href='https://www.google.com/maps/search/?api=1&query=55.041091,60.105532'> Челябинская обл., г. Миасс ул. Академика Павлова, д.8</a> </div></div>
+        <div><strong><a href='/dostavka/murmansk/'>Мурманск</a></strong><div>Срок поставки: 4-5 дней</div><div>Пункты выдачи:<a href='https://www.google.com/maps/search/?api=1&query=68.99291,33.131745'> Мурманская обл., г. Мурманск, ул. Домостроительная, д.16/1</a> </div></div>
+        <div><strong><a href='/dostavka/nalchik/'>Нальчик</a></strong><div>Срок поставки: 9-10 дней</div><div>Пункты выдачи:<a href='https://www.google.com/maps/search/?api=1&query=43.499124,43.595654'> Кабардино-Балкарская Респ., г. Нальчик, переулок Кузнечный, д.5</a> </div></div>
+        <div><strong><a href='/dostavka/neftekamsk/'>Нефтекамск</a></strong><div>Срок поставки: 1-2 дней</div><div>Пункты выдачи:<a href='https://www.google.com/maps/search/?api=1&query=56.103527,54.246493'> Башкортостан Респ, г. Нефтекамск, ул. Высоковольтная, стр.2</a> </div></div>
+        <div><strong><a href='/dostavka/nizhnevartovsk/'>Нижневартовск</a></strong><div>Срок поставки: 5-7 дней</div><div>Пункты выдачи:<a href='https://www.google.com/maps/search/?api=1&query=60.953886,76.533094'> Тюменская область , Ханты – Мансийский автономный округ- Югра, г. Нижневартовск, ул. Индустриальная, д. 38</a> </div></div>
+        <div><strong><a href='/dostavka/nizhnij-novgorod/'>Нижний Новгород</a></strong><div>Срок поставки: 1-2 дней</div><div>Пункты выдачи:<a href='https://www.google.com/maps/search/?api=1&query=56.3049,43.865099'> Канавинский район, ул. Вторчермета, д.1, строение К2 (Заезд с Базового проезда)</a> </div></div>
+        <div><strong><a href='/dostavka/nizhnij-tagil/'>Нижний Тагил</a></strong><div>Срок поставки: 5-6 дней</div><div>Пункты выдачи:<a href='https://www.google.com/maps/search/?api=1&query=57.907644,60.023192'> Свердловская обл., г. Нижний Тагил, Восточное шоссе, 17</a> </div></div>
+        <div><strong><a href='/dostavka/novocheboksarsk/'>Новочебоксарск</a></strong><div>Срок поставки: 3-4 дней</div><div>Пункты выдачи:<a href='https://www.google.com/maps/search/?api=1&query=56.108333,47.4515'> 429950, г. Новочебоксарск, ул. Строителей, д.33А к.1</a> </div></div>
+        <div><strong><a href='/dostavka/novorossijsk/'>Новороссийск</a></strong><div>Срок поставки: 3-5 дней</div><div>Пункты выдачи:<a href='https://www.google.com/maps/search/?api=1&query=44.769659,37.723753'> 353991, г. Новороссийск, с. Кирилловка, ул. 3-я Промышленная, д. 6</a> </div></div>
+        <div><strong><a href='/dostavka/novosibirsk/'>Новосибирск</a></strong><div>Срок поставки: 5-7 дней</div><div>Пункты выдачи:<a href='https://www.google.com/maps/search/?api=1&query=55.012999,82.863903'> 630032, г.Новосибирск, ул. Большая, д. 280</a> </div></div>
+        <div><strong><a href='/dostavka/noyabrsk/'>Ноябрьск</a></strong><div>Срок поставки: 6-8 дней</div><div>Пункты выдачи:<a href='https://www.google.com/maps/search/?api=1&query=63.196093,75.49339'> Ямало-Ненецкий АО, г. Ноябрьск, Промузел &quot;Пелей&quot;, Панель10</a> </div></div>
+        <div><strong><a href='/dostavka/omsk/'>Омск</a></strong><div>Срок поставки: 5-6 дней</div><div>Пункты выдачи:<a href='https://www.google.com/maps/search/?api=1&query=54.987123,73.48155'> Омская область, г. Омск, пр-т Космический, 109 к.1</a> </div></div>
+        <div><strong><a href='/dostavka/orenburg/'>Оренбург</a></strong><div>Срок поставки: 3-4 дней</div><div>Пункты выдачи:<a href='https://www.google.com/maps/search/?api=1&query=51.850378,55.13066'> 460052, г. Оренбург, Шарлыкское шоссе, д. 12 корпус 1</a> </div></div>
+        <div><strong><a href='/dostavka/penza/'>Пенза</a></strong><div>Срок поставки: 1-2 дней</div><div>Пункты выдачи:<a href='https://www.google.com/maps/search/?api=1&query=53.189598,45.036749'> Пензенская область, г. Пенза, ул. Измайлова, д.13</a> </div></div>
+        <div><strong><a href='/dostavka/perm/'>Пермь</a></strong><div>Срок поставки: 3-4 дней</div><div>Пункты выдачи:<a href='https://www.google.com/maps/search/?api=1&query=57.923219,56.166597'> Пермский край, г. Пермь, ул. Промышленная, 123</a> </div></div>
+        <div><strong><a href='/dostavka/petrozavodsk/'>Петрозаводск</a></strong><div>Срок поставки: 2-5 дней</div><div>Пункты выдачи:<a href='https://www.google.com/maps/search/?api=1&query=61.814913,34.310074'> Республика Карелия, г. Петрозаводск, ул. Зайцева, д. 65 корп. 4</a> </div></div>
+        <div><strong><a href='/dostavka/pskov/'>Псков</a></strong><div>Срок поставки: 2-3 дней</div><div>Пункты выдачи:<a href='https://www.google.com/maps/search/?api=1&query=57.83369,28.306759'> Псковская область, г. Псков, ул. Леона Поземского, 110Д, помещение 1001</a> </div></div>
+        <div><strong><a href='/dostavka/pyatigorsk/'>Пятигорск</a></strong><div>Срок поставки: 5-8 дней</div><div>Пункты выдачи:<a href='https://www.google.com/maps/search/?api=1&query=44.041111,43.001859'> Ставропольский край, г. Пятигорск, ул. Егоршина, 6</a> </div></div>
+        <div><strong><a href='/dostavka/rostov-na-donu/'>Ростов-на-Дону</a></strong><div>Срок поставки: 2-3 дней</div><div>Пункты выдачи:<a href='https://www.google.com/maps/search/?api=1&query=47.238196,39.599507'> 344090, г. Ростов-на-Дону, ул. Доватора, дом 148</a> </div></div>
+        <div><strong><a href='/dostavka/ryazan/'>Рязань</a></strong><div>Срок поставки: 1-2 дней</div><div>Пункты выдачи:<a href='https://www.google.com/maps/search/?api=1&query=54.586473,39.726948'> г. Рязань, 195 км Окружной дороги</a> </div></div>
+        <div><strong><a href='/dostavka/salavat/'>Салават</a></strong><div>Срок поставки: 3-6 дней</div><div>Пункты выдачи:<a href='https://www.google.com/maps/search/?api=1&query=53.373595,55.921627'> Республика Башкортостан, г. Салават, ул. Уфимская, 11/1</a> </div></div>
+        <div><strong><a href='/dostavka/samara/'>Самара</a></strong><div>Срок поставки: 2-3 дней</div><div>Пункты выдачи:<a href='https://www.google.com/maps/search/?api=1&query=53.210861,50.310889'> 443052, г. Самара, ул. Земеца, д. 32, литер 354</a> </div></div>
+        <div><strong><a href='/dostavka/sankt-peterburg/'>Санкт-Петербург</a></strong><div>Срок поставки: 1-2 дней</div><div>Пункты выдачи:<a href='https://www.google.com/maps/search/?api=1&query=59.942818,30.440896'> г. Санкт-Петербург, ул. Якорная, д. 17, лит. Ш</a> </div></div>
+        <div><strong><a href='/dostavka/saratov/'>Саратов</a></strong><div>Срок поставки: 3-5 дней</div><div>Пункты выдачи:<a href='https://www.google.com/maps/search/?api=1&query=51.557081,46.070333'> г. Саратов, ул. Соколовая гора, д. 5</a> </div></div>
+        <div><strong><a href='/dostavka/sevastopol/'>Севастополь</a></strong><div>Срок поставки: 5-7 дней</div><div>Пункты выдачи:<a href='https://www.google.com/maps/search/?api=1&query=44.583717,33.479851'> г. Севастополь, Фиолентовское шоссе, 1/5</a> </div></div>
+        <div><strong><a href='/dostavka/simferopol/'>Симферополь</a></strong><div>Срок поставки: 5-7 дней</div><div>Пункты выдачи:<a href='https://www.google.com/maps/search/?api=1&query=44.980699,34.155941'> Республика Крым, г. Симферополь, ул. Глинки, д. 67 Г</a> </div></div>
+        <div><strong><a href='/dostavka/smolensk/'>Смоленск</a></strong><div>Срок поставки: 6-7 дней</div><div>Пункты выдачи:<a href='https://www.google.com/maps/search/?api=1&query=54.798031,32.05599'> Смоленская область, г. Смоленск, ул. Старо-Комендантская, д. 2</a> </div></div>
+        <div><strong><a href='/dostavka/sochi/'>Сочи</a></strong><div>Срок поставки: 9-10 дней</div><div>Пункты выдачи:<a href='https://www.google.com/maps/search/?api=1&query=43.45457,39.917951'> Краснодарский край, г. Сочи, ул.Гастелло, 23а, литер А</a> </div></div>
+        <div><strong><a href='/dostavka/stavropol/'>Ставрополь</a></strong><div>Срок поставки: 3-6 дней</div><div>Пункты выдачи:<a href='https://www.google.com/maps/search/?api=1&query=45.059938,41.904143'> Ставропольский край, г. Ставрополь, ул. 2-я Промышленная, 33</a> </div></div>
+        <div><strong><a href='/dostavka/sterlitamak/'>Стерлитамак</a></strong><div>Срок поставки: 3-6 дней</div><div>Пункты выдачи:<a href='https://www.google.com/maps/search/?api=1&query=53.64708,55.953695'> Республика Башкортостан, г. Стерлитамак, ул. Элеваторная, 19</a> </div></div>
+        <div><strong><a href='/dostavka/surgut/'>Сургут</a></strong><div>Срок поставки: 6-9 дней</div><div>Пункты выдачи:<a href='https://www.google.com/maps/search/?api=1&query=61.265524,73.471221'> Ханты-Мансийский Автономный округ - Югра АО, г. Сургут, ул. Аграрная, д. 3</a> </div></div>
+        <div><strong><a href='/dostavka/tambov/'>Тамбов</a></strong><div>Срок поставки: 3-5 дней</div><div>Пункты выдачи:<a href='https://www.google.com/maps/search/?api=1&query=52.728144,41.426247'> Тамбовская область, г. Тамбов, ул. Кавалерийская, 13А</a> </div></div>
+        <div><strong><a href='/dostavka/tolyatti/'>Тольятти</a></strong><div>Срок поставки: 3-4 дней</div><div>Пункты выдачи:<a href='https://www.google.com/maps/search/?api=1&query=53.525601,49.469486'> Самарская область, г. Тольятти, ул. Базовая, 1,стр. 20</a> </div></div>
+        <div><strong><a href='/dostavka/tomsk/'>Томск</a></strong><div>Срок поставки: 6-8 дней</div><div>Пункты выдачи:<a href='https://www.google.com/maps/search/?api=1&query=56.512004,84.952211'> Томская область г. Томск, ул. Пролетарская, д. 38В, стр. 1</a> </div></div>
+        <div><strong><a href='/dostavka/tula/'>Тула</a></strong><div>Срок поставки: 2-3 дней</div><div>Пункты выдачи:<a href='https://www.google.com/maps/search/?api=1&query=54.20889,37.549935'> г. Тула, ул. Чмутова, д. 158 В</a> </div></div>
+        <div><strong><a href='/dostavka/tver/'>Тверь</a></strong><div>Срок поставки: 2 дней</div><div>Пункты выдачи:<a href='https://www.google.com/maps/search/?api=1&query=56.835486,35.958303'> г.Тверь, Московское шоссе, д. 18, стр. 1</a> </div></div>
+        <div><strong><a href='/dostavka/tyumen/'>Тюмень</a></strong><div>Срок поставки: 4-5 дней</div><div>Пункты выдачи:<a href='https://www.google.com/maps/search/?api=1&query=57.1442,65.6041'> Тюменская область, г. Тюмень, ул. Одесская, д.1, стр. 8</a> </div></div>
+        <div><strong><a href='/dostavka/ufa/'>Уфа</a></strong><div>Срок поставки: 3-4 дней</div><div>Пункты выдачи:<a href='https://www.google.com/maps/search/?api=1&query=54.787997,56.09008'> Республика Башкортостан, г. Уфа, ул. Сельская Богородская, 57</a> </div></div>
+        <div><strong><a href='/dostavka/ulan-ude/'>Улан-Удэ</a></strong><div>Срок поставки: 13-14 дней</div><div>Пункты выдачи:<a href='https://www.google.com/maps/search/?api=1&query=51.838696,107.64631'> Республика Бурятия, г. Улан-Удэ, ул. Ботаническая, д. 38/2</a> </div></div>
+        <div><strong><a href='/dostavka/ulyanovsk/'>Ульяновск</a></strong><div>Срок поставки: 3-4 дней</div><div>Пункты выдачи:<a href='https://www.google.com/maps/search/?api=1&query=54.299586,48.294273'> Ульяновская область, г. Ульяновск, Московское шоссе, д.9 а, корп.2</a> </div></div>
+        <div><strong><a href='/dostavka/ussurijsk/'>Уссурийск</a></strong><div>Срок поставки: 19-21 дней</div><div>Пункты выдачи:<a href='https://www.google.com/maps/search/?api=1&query=43.842759,131.92609'> Приморский край, г. Уссурийск, ул. Резервная, 31</a> </div></div>
+        <div><strong><a href='/dostavka/velikij-novgorod/'>Великий Новгород</a></strong><div>Срок поставки: 1 дней</div><div>Пункты выдачи:<a href='https://www.google.com/maps/search/?api=1&query=58.551637,31.260581'> Новгородская обл, г.Великий Новгород, Район Колмово, Базовый пер., д.13</a> </div></div>
+        <div><strong><a href='/dostavka/vladikavkaz/'>Владикавказ</a></strong><div>Срок поставки: 8-9 дней</div><div>Пункты выдачи:<a href='https://www.google.com/maps/search/?api=1&query=43.04969607,44.691743'> г. Владикавказ, ул.Ставропольская 2Б</a> </div></div>
+        <div><strong><a href='/dostavka/vladimir/'>Владимир</a></strong><div>Срок поставки: 1-2 дней</div><div>Пункты выдачи:<a href='https://www.google.com/maps/search/?api=1&query=56.156596,40.385713'> Владимирская обл., г. Владимир, ул. Гастелло, д.8</a> </div></div>
+        <div><strong><a href='/dostavka/vladivostok/'>Владивосток</a></strong><div>Срок поставки: 17-19 дней</div><div>Пункты выдачи:<a href='https://www.google.com/maps/search/?api=1&query=43.13142,131.9181'> Приморский край, г. Владивосток, Военное шоссе, д. 18</a> </div></div>
+        <div><strong><a href='/dostavka/volgograd/'>Волгоград</a></strong><div>Срок поставки: 3-5 дней</div><div>Пункты выдачи:<a href='https://www.google.com/maps/search/?api=1&query=48.74865,44.470119'> Волгоградская область, г. Волгоград, ул. Землячки д. 16</a> </div></div>
+        <div><strong><a href='/dostavka/vologda/'>Вологда</a></strong><div>Срок поставки: 2-4 дней</div><div>Пункты выдачи:<a href='https://www.google.com/maps/search/?api=1&query=59.208208,39.820744'> Вологодская обл., г. Вологда, ул. Ильюшина, д. 9 Б</a> </div></div>
+        <div><strong><a href='/dostavka/voronezh/'>Воронеж</a></strong><div>Срок поставки: 1-2 дней</div><div>Пункты выдачи:<a href='https://www.google.com/maps/search/?api=1&query=51.711022,39.291179'> Воронежская обл, г.Воронеж, Землячки, д.15</a> </div></div>
+        <div><strong><a href='/dostavka/yaroslavl/'>Ярославль</a></strong><div>Срок поставки: 1-2 дней</div><div>Пункты выдачи:<a href='https://www.google.com/maps/search/?api=1&query=57.658917,39.839806'> 150044, г. Ярославль, ул. Базовая, д. 2</a> </div></div>
+        
+
+        
+      </div>
+    </div>
   </div>

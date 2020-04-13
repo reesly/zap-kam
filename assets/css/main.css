@@ -190,11 +190,11 @@ color: whitesmoke;
 
 
 .btn {
-  font-size: 14px;
-  padding: 10px 30px;
+  font-size: 1.1em;
+  padding: 5px 30px;
   cursor: pointer;
   font-weight: 400;
-  border-radius: 30px;
+  border-radius: 10px;
   -webkit-transition: all 0.2s linear;
   -moz-transition: all 0.2s linear;
   -o-transition: all 0.2s linear;
@@ -207,6 +207,11 @@ color: whitesmoke;
   box-shadow: none;
   outline: none;
   color: #fff;
+}
+
+.btn-primary {
+  background-color:#014E9E;
+
 }
 
 .btn-common {
@@ -636,7 +641,7 @@ max-height: 40px;
 .navbar-brand img {
   /* width: 60%; */
   max-height: 40px;
-  padding-right: 25px;
+  padding-right: 12px;
 }
 
 .top-nav-collapse .navbar-nav li.active a.nav-link {
@@ -672,6 +677,10 @@ iframe:hover {
 
 .navbar-expand-md .navbar-nav .nav-item {
   padding-left: 40px;
+}
+
+.nav-item, .navbar-toggler {
+  list-style: none;
 }
 
 .navbar-expand-md .navbar-nav .nav-link {
@@ -1996,6 +2005,10 @@ margin: auto;
   font-size: 75%;
 }
 
+.small2{
+  font-size: 0.85em;
+}
+
 .text-line-2 {
   -ms-text-overflow: ellipsis;
   text-overflow: ellipsis;
@@ -2077,3 +2090,4 @@ margin: auto;
 .ec-calc .ec-calc-form-submit {
   background-color: #014E9E !important;
 }
+
