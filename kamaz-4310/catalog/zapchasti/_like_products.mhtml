@@ -1,9 +1,10 @@
-{%- assign prod = include.product -%}
+{%- assign prod = include.prod -%}
 
-<div class="col-md-12 w-100 text-center">
+<div class="col-md-12">
     <hr>
-    <h3 style="padding-top: 5px;">Возможно Вы искали:</h3>
-</div class="col-md-11" style="margin:auto;">
+    <div class="w-100 text-center">
+        <h3 style="padding-top: 5px;">Возможно Вы искали:</h3>
+    </div>
     <!-- Теги ---->
     <div class="w-100 text-center">
        
@@ -62,12 +63,13 @@
             
         </script>
     </div>
+
     <div class="w-100 text-center mt-2" style="clear: both;">
         <hr>
     </div>
     <!-- 4 похожих товара ---->
 
-    <div id="product-List" class="pt-1 pb-1">
+    <div id="product-List" class="row pt-1 pb-1">
     {% assign n = 0 %}
     
     {%- if prod.lk1 -%}
@@ -113,3 +115,4 @@
     {%- endif -%}    
 
     </div>
+</div>

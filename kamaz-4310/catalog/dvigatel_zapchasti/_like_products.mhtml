@@ -1,9 +1,11 @@
-{%- assign prod = include.product -%}
+{%- assign prod = include.prod -%}
 
-<div class="col-md-12 w-100 text-center">
+<div class="col-md-12">
     <hr>
-    <h3 style="padding-top: 5px;">Возможно Вы искали:</h3>
-</div class="col-md-11" style="margin:auto;">
+    <div class="w-100 text-center">
+        <h3 style="padding-top: 5px;">Возможно Вы искали:</h3>
+    </div>
+    
     <!-- Теги ---->
     <div class="w-100 text-center">
        
@@ -67,7 +69,7 @@
     </div>
     <!-- 4 похожих товара ---->
 
-    <div id="product-List" class="pt-1 pb-1">
+    <div id="product-List" class="pt-1 pb-1 row">
     {% assign n = 0 %}
     
     {%- if prod.lk1 -%}
@@ -104,7 +106,7 @@
 
     {%- if 4>n -%}
         {%- assign m = 4 | minus: n -%}
-        {%- assign rands = site.data.k4310 | where: "path", "/kamaz-4310/catalog/zapchasti/" | sample: m -%}
+        {%- assign rands = site.data.k4310 | where: "path", "/kamaz-4310/catalog/dvigatel_zapchasti/" | sample: m -%}
         {% for pr in rands %}
             {%- if pr and pr.code1 -%}
                 {% include card_zapchasti_catalog.html product = pr %}    
@@ -113,3 +115,4 @@
     {%- endif -%}    
 
     </div>
+</div>
