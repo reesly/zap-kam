@@ -3,7 +3,7 @@
 <div class="col-md-12 w-100 text-center">
     <hr>
     <h3 style="padding-top: 5px;">Возможно Вы искали:</h3>
-</div>
+</div class="col-md-11" style="margin:auto;">
     <!-- Теги ---->
     <div class="w-100 text-center">
        
@@ -62,12 +62,12 @@
             
         </script>
     </div>
-    <div class="col-md-12 w-100 text-center mt-2" style="clear: both;">
+    <div class="w-100 text-center mt-2" style="clear: both;">
         <hr>
     </div>
     <!-- 4 похожих товара ---->
 
-    <div id="product-List" class="row pt-1 pb-1">
+    <div id="product-List" class="pt-1 pb-1">
     {% assign n = 0 %}
     
     {%- if prod.lk1 -%}
