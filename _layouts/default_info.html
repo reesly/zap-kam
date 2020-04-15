@@ -47,7 +47,7 @@
     <div class="head h-100">
       <div class="head__inner h-100">
         <!-- Navbar Start -->
-        <nav class="navbar navbar-expand-lg fixed-top scrolling-navbar">
+        <nav class="navbar navbar-expand-lg fixed-top scrolling-navbar" style="border-bottom: 0.01rem solid #555555;">
           <div class="container">
             <a href="/" class="navbar-brand" style="display: contents;"> <img src="/assets/img/logo2.png" alt=""> </a> 
 
@@ -57,7 +57,7 @@
             <a class="navbar-toggler" id="aim2" style="padding:10px 3px;" href="https://wa.me/7{{page.phone}}" target="_blank"><img style="height:28px;opacity: 0.6;" src="/assets/img/icon-whatsapp-48.png"></a>
 
             {%- endif -%}
-            <!-- Корзина --><a href="#" class="navbar-toggler label-place" style="padding:10px 3px; opacity: 0.8;"></a>
+            <!-- Корзина --><a href="javascript:" class="navbar-toggler label-place" style="padding:10px 3px; opacity: 0.8;"></a>
               
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
               aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" style="padding:10px 3px;">
@@ -83,7 +83,7 @@
             <div class="container">
               <div class="row">
                 <div class="col-md-8 col-xs-12">
-                  <div class="contents" style="padding-top: 70px;">
+                  <div class="contents" style="padding:70px 0 0 0;">
                     <ul>
                       <!-- <li style="margin-bottom:0px;">
                                   <h1 class="title text-left w-100">Запчасти для КамАЗ 4310</h1>
@@ -110,10 +110,10 @@
                 <div class="col-md-4 text-right">
                   <div class="contents" style="padding-top: 30px;">
                      
-                    <button class="btn btn-lg btn-blue" style=" position: absolute;right: 1em; bottom: 1em;
+                    <button class="btn btn-secondary" style=" position: absolute;right: 1em; bottom: 1em;
                 " data-toggle="modal" data-target="#requestModal"
                       onclick="ym(57702985, 'reachGoal', 'RequestBill'); return true;">
-                      Запросить предложение</button> </li>
+                      Заявка</button> </li>
             
                     <!-- <a href="/index.html" class="btn btn-lg btn-primary " style=" margin-top: 15px;"> Каталог КамАЗ 4310 </a> -->
                   </div>
@@ -132,8 +132,8 @@
   <section class="articles">
     <div class="container">
       <div class="row">
-        <div class="col-md-10 col-xs-12" style="margin: auto;">
-          <h1 class="text-center">{{ page.h1 }} </h1>
+        <div class="col-md-12 col-xs-12" style="margin: auto;">
+          <h1 class="text-center pt-2">{{ page.h1 }} </h1>
           {%- if page.h2 and page.h2 != "" -%}
           <div class="section-header text-center">
             <h2 class="section-title " style="font-size:1.5em !important;"> {{ page.h2 }} </h2>

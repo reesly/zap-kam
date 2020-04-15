@@ -17,6 +17,7 @@ phone_title: (927) 248 23-35
 {%- if product -%}
     {% include card_zapchasti.html product = product %}
 {%- endif -%}
+{%- include_relative _like_products.mhtml product = product -%}
 
 <div class="col-md-10 col-xs-12" style="margin: auto;">
     <h3>Описание механизмов включения высшей и низшей передач.</h3>

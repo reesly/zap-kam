@@ -1,4 +1,8 @@
 {
+    "editor.renameOnType": true,
+    "files.associations": {
+    
+    "*.mhtml": "html"},
     "cSpell.words": [
         "assets",
         "toggle"
@@ -35,5 +39,7 @@
         "markdown",
         "latex",
         "plaintext"
-    ]
+    ],
+    "html.format.indentHandlebars": true,
+    "html.format.indentInnerHtml": true
 }

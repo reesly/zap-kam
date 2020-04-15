@@ -61,8 +61,8 @@ incremental: true
 # livereload: true
 
 # Exclude these files from your production _site
-include: 
-  - data/dostavka.tsv
+# include: 
+
 
 exclude: 
   - Gemfile
@@ -71,6 +71,7 @@ exclude:
   - materials
   - data
   - _plugins
+  - "*.mhtml"
   #- kardanyi_valy
 
 
