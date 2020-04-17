@@ -161,16 +161,16 @@
       var subtotal = 0,
 			cartHtml = '';
       cartData = actions.getStorage();
-      orderPreview = '<p class="jqcart-cart-title">Корзина <span class="jqcart-print-order"></span></p><div class="jqcart-table-wrapper"><div class="jqcart-manage-order"><div class="jqcart-thead"><div>ID</div><div></div><div>Наименование</div><div>Цена</div><div>Кол-во</div><div>Сумма</div><div></div></div>';
+      orderPreview = '<p class="jqcart-cart-title">Ваша Заявка <span class="jqcart-print-order"></span></p><div class="jqcart-table-wrapper"><div class="jqcart-manage-order"><div class="jqcart-thead"><div>ID</div><div></div><div>Наименование</div><div>Цена</div><div>Кол-во</div><div>Сумма</div><div></div></div>';
       var key, sum = 0;
       for (key in cartData) {
         if (cartData.hasOwnProperty(key)) {
           sum = Math.ceil((cartData[key].count * cartData[key].price) * 100) / 100;
-          if(sum == null || sum == "Nan") sum=0;
+          if(sum == null || isNaN(parseFloat(sum))) sum=0;
 					subtotal = Math.ceil((subtotal + sum) * 100) / 100;
 					
           orderPreview += '<div class="jqcart-tr" data-id="' + cartData[key].id + '">';
-					orderPreview += '<div class="jqcart-small-td">' + cartData[key].id + '</div>';
+					orderPreview += '<div style=""><small>' + cartData[key].id + '</small></div>';
 					orderPreview += '<div class="jqcart-small-td jqcart-item-img"><img src="' + cartData[key].img + '" alt=""></div>';
           orderPreview += '<div class="jqcart-name">' + cartData[key].title + '</div>';
           orderPreview += '<div class="jqcart-price">' + cartData[key].price + '</div>';

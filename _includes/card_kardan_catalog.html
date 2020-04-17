@@ -37,23 +37,23 @@
     <div class="p-1 m-0 d-table" style="font-size: 80%; width: auto;">
         {%- if product.price1 -%}
         <div class="d-row table-bggray">
-            <div class="d-cell"><input type="checkbox" class="label-price" id="pr1_{{product.id}}" data-target="• {{ product.name }} {{ product.code1}} / {{ product.price1_name }} / {{ product.price1 }} "><label class="label-price" for="pr1_{{product.id}}"> {{ product.price1_name }} </label> </div>
+            <div class="d-cell"><input type="checkbox" class="label-price" id="pr1_{{product.id}}" data-id="{{product.code1}}" data-title="{{ product.name }} {{product.code1}}/ {{product.price1_name}} {%- if {{page.dlina}} -%} (L=page.dlina) {%- endif -%}" data-price="{{ product.price1 | replace: ' ', '' | replace: ' ', '' }}" data-img="{{product.img_path}}{{product.img1}}"><label class="label-price" for="pr1_{{product.id}}"> {{ product.price1_name }} </label> </div>
+                                
             <div class="d-cell-pr"><span class="price-tb">{{ product.price1 }}</span>‎<span class="price-tbr"> ₽</span></div></div>
         {%- endif -%}
         {%- if product.price2 -%}
         <div class="d-row table-bggray">
-            <div class="d-cell"> <input type="checkbox" class="label-price" id="pr2_{{product.id}}" data-target="• {{ product.name }} {{ product.code1}} / {{ product.price2_name }} / {{ product.price2 }} "><label class="label-price" for="pr2_{{product.id}}"> {{ product.price2_name }} </label></div>
+            <div class="d-cell"> <input type="checkbox" class="label-price" id="pr2_{{product.id}}" data-id="{{product.code1}}_ц2" data-title="{{ product.name }} {{product.code1}}/ {{product.price2_name}} {%- if {{page.dlina}} -%} (L=page.dlina) {%- endif -%}" data-price="{{ product.price2 | replace: ' ', '' | replace: ' ', '' }}" data-img="{{product.img_path}}{{product.img1}}"><label class="label-price" for="pr2_{{product.id}}"> {{ product.price2_name }} </label></div>
             <div class="d-cell-pr"><span class="price-tb">{{ product.price2 }}</span>‎<span class="price-tbr"> ₽</span> </div></div>
         {%- endif -%}
         {%- if   product.price3 -%}
         <div class="d-row table-bggray">
-            <div class="d-cell"> <input type="checkbox" class="label-price" id="pr3_{{product.id}}"data-target="• {{ product.name }} {{ product.code1}} / {{ product.price3_name }} / {{ product.price3 }} "><label class="label-price" for="pr3_{{product.id}}">{{ product.price3_name }}</label></div>
+            <div class="d-cell"> <input type="checkbox" class="label-price" id="pr3_{{product.id}}" data-id="{{product.code1}}_ц3" data-title="{{ product.name }} {{product.code1}}/ {{product.price3_name}} {%- if {{page.dlina}} -%} (L=page.dlina) {%- endif -%}" data-price="{{ product.price3 | replace: ' ', '' | replace: ' ', '' }}" data-img="{{product.img_path}}{{product.img1}}"><label class="label-price" for="pr3_{{product.id}}">{{ product.price3_name }}</label></div>
             <div class="d-cell-pr"><span class="price-tb">{{ product.price3 }}</span>‎<span class="price-tbr"> ₽</span> </div></div>
         {%- endif -%}
         {%- if  product.price4 -%}
         <div class="d-row table-bggray">
-            <div class="d-cell"> <input type="checkbox" class="label-price" id="pr4_{{product.id}}" data-target="• {{ product.name }} {{ product.code1}} / {{ product.price4_name }} / {{ product.price4 }} ">
-                <label class="label-price" for="pr4_{{product.id}}">{{ product.price4_name }}</label></div>
+            <div class="d-cell"> <input type="checkbox" class="label-price" id="pr4_{{product.id}}" data-id="{{product.code1}}_ц4" data-title="{{ product.name }} {{product.code1}}/ {{product.price4_name}} {%- if {{page.dlina}} -%} (L=page.dlina) {%- endif -%}" data-price="{{ product.price4 | replace: ' ', '' | replace: ' ', '' }}" data-img="{{product.img_path}}{{product.img1}}"><label class="label-price" for="pr4_{{product.id}}">{{ product.price4_name }}</label></div>
             <div class="d-cell-pr"><span class="price-tb">{{ product.price4 }}</span>‎<span class="price-tbr"> ₽</span> </div></div>
         {%- endif -%}
         <div class="text-right d-row" style="font-size: 14px;">
