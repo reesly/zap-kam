@@ -620,7 +620,7 @@ hr {
 }
 
 .top-nav-collapse .navbar-brand img {
-max-height: 40px;
+  max-height: 30px;
 
 }
 
@@ -638,12 +638,6 @@ max-height: 40px;
   color: #F63854;
   border-radius: 4px;
   cursor: pointer;
-}
-
-.navbar-brand img {
-  /* width: 60%; */
-  max-height: 30px;
-  padding-right: 12px;
 }
 
 .top-nav-collapse .navbar-nav li.active a.nav-link {

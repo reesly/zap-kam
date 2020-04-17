@@ -57,9 +57,11 @@
             <div class="d-cell-pr"><span class="price-tb">{{ product.price4 }}</span>‎<span class="price-tbr"> ₽</span> </div></div>
         {%- endif -%}
         <div class="text-right d-row" style="font-size: 14px;">
-            <a href="javascript:" class="" style="float: right;" data-toggle="modal" data-target="#requestModal" onclick="request_form_yandex('{{ product.id }}','');"> Запросить предложение </a></div>
+            <a href="javascript:" data-toggle="modal" data-target="#requestModal" onclick="request_form_yandex('{{ product.id }}','');"> Заказать </a>
+            &nbsp;&nbsp;&nbsp;&nbsp; <a href="javascript:" onclick="add_to_cart('{{ product.id }}','{{product.path}}{{product.url}}');"> В заявку </a> 
+        </div>
     </div>
 </div>
 <div class="col-md-3 col-xs-12"><img src="{{product.img_path}}{{product.img1}}" alt="{{product.name}}" width="200"></div>
 </div>
-</li>
+</li> 
