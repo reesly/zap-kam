@@ -266,16 +266,21 @@ function request_form_yandex(p_id, text) {
 
   var tx = ''; var pars = '';
   if (($('#pr1_' + p_id).is(':checked') != true) && ($('#pr2_' + p_id).is(':checked') != true)
-    && ($('#pr3_' + p_id).is(':checked') != true) && ($('#pr4_' + p_id).is(':checked') != true)) {
+    && ($('#pr3_' + p_id).is(':checked') != true) && ($('#pr4_' + p_id).is(':checked') != true)
+    && ($('#pr5_' + p_id).is(':checked') != true) && ($('#pr6_' + p_id).is(':checked') != true)
+    && ($('#pr7_' + p_id).is(':checked') != true) 
+    ) {
     $('#pr1_' + p_id).prop('checked', true);
   }
-  if ($('#pr1_' + p_id).is(':checked') == true) { tx = tx + "• " + $('#pr1_' + p_id).data('title') + $('#pr1_' + p_id).data('id') + $('#pr1_' + p_id).data('price') + '  (' + text + ')\n'; }
-  if ($('#pr2_' + p_id).is(':checked') == true) { tx = tx + "• " + $('#pr2_' + p_id).data('title') + $('#pr2_' + p_id).data('id') + $('#pr2_' + p_id).data('price') + '  (' + text + ')\n'; }
-  if ($('#pr3_' + p_id).is(':checked') == true) { tx = tx + "• " + $('#pr3_' + p_id).data('title') + $('#pr3_' + p_id).data('id') + $('#pr3_' + p_id).data('price') + '  (' + text + ')\n'; }
-  if ($('#pr4_' + p_id).is(':checked') == true) { tx = tx + "• " + $('#pr4_' + p_id).data('title') + $('#pr4_' + p_id).data('id') + $('#pr4_' + p_id).data('price') + '  (' + text + ')\n'; }
+  if ($('#pr1_' + p_id).is(':checked') == true) { tx = tx + "• " + $('#pr1_' + p_id).data('title') +" "+ $('#pr1_' + p_id).data('id') + " / "+ $('#pr1_' + p_id).data('price') + "р. / "+ '  (' + text + ')\n'; }
+  if ($('#pr2_' + p_id).is(':checked') == true) { tx = tx + "• " + $('#pr2_' + p_id).data('title') +" "+ $('#pr2_' + p_id).data('id') + " / "+ $('#pr2_' + p_id).data('price') + "р. / "+ '  (' + text + ')\n'; }
+  if ($('#pr3_' + p_id).is(':checked') == true) { tx = tx + "• " + $('#pr3_' + p_id).data('title') +" "+ $('#pr3_' + p_id).data('id') + " / "+ $('#pr3_' + p_id).data('price') + "р. / "+ '  (' + text + ')\n'; }
+  if ($('#pr4_' + p_id).is(':checked') == true) { tx = tx + "• " + $('#pr4_' + p_id).data('title') +" "+ $('#pr4_' + p_id).data('id') + " / "+ $('#pr4_' + p_id).data('price') + "р. / "+ '  (' + text + ')\n'; }
+  if ($('#pr5_' + p_id).is(':checked') == true) { tx = tx + "• " + $('#pr5_' + p_id).data('title') +" "+ $('#pr5_' + p_id).data('id') + " / "+ $('#pr5_' + p_id).data('price') + "р. / "+ '  (' + text + ')\n'; }
+  if ($('#pr6_' + p_id).is(':checked') == true) { tx = tx + "• " + $('#pr6_' + p_id).data('title') +" "+ $('#pr6_' + p_id).data('id') + " / "+ $('#pr6_' + p_id).data('price') + "р. / "+ '  (' + text + ')\n'; }
+  if ($('#pr7_' + p_id).is(':checked') == true) { tx = tx + "• " + $('#pr7_' + p_id).data('title') +" "+ $('#pr7_' + p_id).data('id') + " / "+ $('#pr7_' + p_id).data('price') + "р. / "+ '  (' + text + ')\n'; }
 
   if (tx != '') { pars = pars + '&answer_long_text_1877903=' + encodeURIComponent(tx + '\n- '); }
-
 
   pars = 'https:' + '/' + '/forms.yandex.ru/u/5e5831b56296cf035c59867f/?iframe=1' + pars;
   document.getElementById('form1').src = pars;
@@ -288,13 +293,19 @@ function add_to_cart(p_id, text) {
 
   var tx = ''; var pars = '';
   if (($('#pr1_' + p_id).is(':checked') != true) && ($('#pr2_' + p_id).is(':checked') != true)
-    && ($('#pr3_' + p_id).is(':checked') != true) && ($('#pr4_' + p_id).is(':checked') != true)) {
+    && ($('#pr3_' + p_id).is(':checked') != true) && ($('#pr4_' + p_id).is(':checked') != true)
+    && ($('#pr5_' + p_id).is(':checked') != true) && ($('#pr6_' + p_id).is(':checked') != true)
+    && ($('#pr7_' + p_id).is(':checked') != true) 
+    ) {
     $('#pr1_' + p_id).prop('checked', true);
   }
   if ($('#pr1_' + p_id).is(':checked') == true) { $.jqCart('addToCartJs', $('#pr1_' + p_id) );  }
   if ($('#pr2_' + p_id).is(':checked') == true) { $.jqCart('addToCartJs', $('#pr2_' + p_id) );  }
   if ($('#pr3_' + p_id).is(':checked') == true) { $.jqCart('addToCartJs', $('#pr3_' + p_id) );  }
   if ($('#pr4_' + p_id).is(':checked') == true) { $.jqCart('addToCartJs', $('#pr4_' + p_id) );  }
+  if ($('#pr5_' + p_id).is(':checked') == true) { $.jqCart('addToCartJs', $('#pr5_' + p_id) );  }
+  if ($('#pr6_' + p_id).is(':checked') == true) { $.jqCart('addToCartJs', $('#pr6_' + p_id) );  }
+  if ($('#pr7_' + p_id).is(':checked') == true) { $.jqCart('addToCartJs', $('#pr7_' + p_id) );  }
 
   
   ym(57702985, 'reachGoal', 'InCart');

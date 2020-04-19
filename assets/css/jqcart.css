@@ -74,6 +74,7 @@
 .jqcart-checkout {
     display: inline-block;
     width: 80%;
+    max-width: 860px;
     max-height: 90%;
     overflow: auto;
     padding: 10px;

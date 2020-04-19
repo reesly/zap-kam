@@ -206,7 +206,7 @@
           sum = Math.ceil((cartData[key].count * cartData[key].price) * 100) / 100;
           if(sum == null || sum == "Nan") sum=0;
 					subtotal = Math.ceil((subtotal + sum) * 100) / 100;
-          tx += "• "+ cartData[key].title+ " / "+ cartData[key].count + " шт. /" + cartData[key].id + "/" + cartData[key].price + 'руб.\n';
+          tx += "• "+ cartData[key].title+ " / "+ cartData[key].count + " шт. / " + cartData[key].id + " / " + cartData[key].price + 'руб.\n';
         }
       }
 			

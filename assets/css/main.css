@@ -571,6 +571,10 @@ hr {
   line-height: 1.2;
 
 }
+.navbar-brand img {
+  max-height: 30px;
+}
+
 .navbar-brand-1{
   background: #a3cefa;
   background-blend-mode: screen;
