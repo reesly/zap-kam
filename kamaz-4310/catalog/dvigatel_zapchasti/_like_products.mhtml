@@ -69,7 +69,7 @@
     </div>
     <!-- 4 похожих товара ---->
 
-    <div id="product-List" class="pt-1 pb-1 row">
+    <div id="product-List" class="pt-1 pb-1 row mr-0 ml-0">
     {% assign n = 0 %}
     
     {%- if prod.lk1 -%}

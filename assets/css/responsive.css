@@ -233,6 +233,10 @@
   .contents {
     padding-bottom:   0px;
   }
+
+  .articles h1 {
+      font-size: 1.7em;
+  }
   
   /* #hero-area h1 {
     font-size: 1.5em;

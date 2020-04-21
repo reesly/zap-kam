@@ -21,37 +21,37 @@
             "fillWidth": "right", 
             "thumbnailDisplayTransition":"slideUp",
             "thumbnailHoverEffect2":"scale120|toolsAppear|toolsAppear",
-            "itemsBaseURL":     "{{product.img_path}}"
+            "itemsBaseURL":     ""
           }' >
           <!-- fillWidth -->
           {%- if product.img1 -%}
-            <a href = "{{product.img1}}" data-ngThumb = "{{product.img1}}" itemprop="image" title="{{product.name}}"> {{product.name}}</a>
+            <a href = "{{product.img_path}}{{product.img1}}" data-ngThumb = "{{product.img_path}}{{product.img1}}" itemprop="image" title="{{product.name}}"> {{product.name}}</a>
             <div class="collapse"> <img src="{{product.img_path}}{{product.img1}}" alt="{{product.name}} {{product.code1}} {%- if {{page.dlina}} -%} (L=page.dlina) {%- endif -%}">  </div>
           {%- endif -%}
           
           {%- if product.img2 -%}
-            <a href = "{{product.img2}}" data-ngThumb = "{{product.img2}}" itemprop="image" title="{{product.name}}"> {{product.name}}</a>
+            <a href = "{{product.img_path}}{{product.img2}}" data-ngThumb = "{{product.img_path}}{{product.img2}}" itemprop="image" title="{{product.name}}"> {{product.name}}</a>
             <div class="collapse"> <img src="{{product.img_path}}{{product.img2}}" alt="{{product.name}} {{product.code1}} {%- if {{page.dlina}} -%} (L=page.dlina) {%- endif -%}">  </div>
           {%- endif -%}
           
           {%- if product.img3 -%}
-          <a href = "{{product.img3}}" data-ngThumb = "{{product.img3}}" itemprop="image" title="{{product.name}}"> {{product.name}}</a>
+          <a href = "{{product.img_path}}{{product.img3}}" data-ngThumb = "{{product.img_path}}{{product.img3}}" itemprop="image" title="{{product.name}}"> {{product.name}}</a>
           <div class="collapse"> <img src="{{product.img_path}}{{product.img3}}" alt="{{product.name}} {{product.code1}} {%- if {{page.dlina}} -%} (L=page.dlina) {%- endif -%}">  </div>
           {%- endif -%}
           
           {%- if product.img4 -%}
-          <a href = "{{product.img4}}" data-ngThumb = "{{product.img4}}" itemprop="image" title="{{product.name}}"> {{product.name}}</a>
+          <a href = "{{product.img_path}}{{product.img4}}" data-ngThumb = "{{product.img_path}}{{product.img4}}" itemprop="image" title="{{product.name}}"> {{product.name}}</a>
           <div class="collapse"> <img src="{{product.img_path}}{{product.img4}}" alt="{{product.name}} {{product.code1}} {%- if {{page.dlina}} -%} (L=page.dlina) {%- endif -%}">  </div>
           {%- endif -%}
           
           {%- if product.img5 -%}
-          <a href = "{{product.img5}}" data-ngThumb = "{{product.img5}}" itemprop="image" title="{{product.name}}"> {{product.name}}</a>
+          <a href = "{{product.img_path}}{{product.img5}}" data-ngThumb = "{{product.img_path}}{{product.img5}}" itemprop="image" title="{{product.name}}"> {{product.name}}</a>
           <div class="collapse"> <img src="{{product.img_path}}{{product.img5}}" alt="{{product.name}} {{product.code1}} {%- if {{page.dlina}} -%} (L=page.dlina) {%- endif -%}">  </div>
           {%- endif -%}
           
           {%- if product.img1 or product.img2 or product.img3 or product.img4 or product.img5 -%}
           {%- else -%}
-            <a href = "nophoto.jpg" data-ngThumb = "nophoto.jpg" title="{{product.name}}"> {{product.name}} </a>
+            <a href = "{{product.img_path}}nophoto.jpg" data-ngThumb = "{{product.img_path}}nophoto.jpg" title="{{product.name}}"> {{product.name}} </a>
           {%- endif -%}
 
         </div>

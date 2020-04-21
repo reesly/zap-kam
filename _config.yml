@@ -72,7 +72,9 @@ exclude:
   - data
   - _plugins
   - "*.mhtml"
-  #- kardanyi_valy
+  # - dvigatel_zapchasti
+  # - kamaz-4310
+  # - kardanyi_valy
 
 
 # page_gen: 
