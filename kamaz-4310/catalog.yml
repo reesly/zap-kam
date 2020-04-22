@@ -84,7 +84,6 @@ layout:
             <dimensions></dimensions>
         </offer>
 {%- endif -%}
-{%- endunless -%}
 {%- endif -%}
 {% endfor %}
     </offers>
