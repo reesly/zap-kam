@@ -58,7 +58,7 @@
  <ymaps>
  <ymaps class="ymaps-copyrights-logo">
  <ymaps class="ymaps-logotype-div"><a target="_blank"
-  class="ymaps-logo-link ymaps-logo-link-ru"
+  class="ymaps-logo-link ymaps-logo-link-ru" rel="nofollow"
   href="https://yandex.ru/maps/?origin=jsapi&amp;ll=91.405525,53.711450&amp;z=14&amp;l=">
   <ymaps class="ymaps-logo-link-wrap"></ymaps>
  </a></ymaps>

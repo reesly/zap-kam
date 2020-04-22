@@ -59,7 +59,7 @@
  <ymaps class="ymaps-copyrights-pane" style="z-index: 1000; position: absolute;">
  <ymaps>
  <ymaps class="ymaps-copyrights-logo">
- <ymaps class="ymaps-logotype-div"><a class="ymaps-logo-link ymaps-logo-link-ru"
+ <ymaps class="ymaps-logotype-div"><a class="ymaps-logo-link ymaps-logo-link-ru" rel="nofollow"
   href="https://yandex.ru/maps/?origin=jsapi&amp;ll=127.540400,50.272780&amp;z=23&amp;l=">
   <ymaps class="ymaps-logo-link-wrap"></ymaps>
  </a></ymaps>
