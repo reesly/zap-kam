@@ -68,7 +68,7 @@ exclude:
   - Gemfile
   - Gemfile.lock
   - README.md
-  - materials
+  - materials 
   - data
   - _plugins
   - "*.mhtml"
