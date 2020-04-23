@@ -25,31 +25,46 @@ phone_title: (927) 248 23-35
 <div class="col-md-11 col-xs-12" style="margin: auto;">
     <p></p>
     <h3>Каталог раздаток</h3>
-    <!-- <div class="form form-inline">
-        <input id="pListSearch" class="fuzzy-search" type="search" class="form-control" placeholder="поиск..." style="width:130px;"/>
-        &nbsp;&nbsp;
-        <button class="btn btn-blue" onclick="$('#pListSearch').val('Блок цилиндров'); filterProductList($('#pListSearch').val());" title="Блок цилиндров">Блок цилиндров</button>   
-        <button class="btn btn-blue" onclick="$('#pListSearch').val('Вал'); filterProductList($('#pListSearch').val());" title="Валы">Валы</button>   
-          
-    </div>
-    {% include catalog-loading-panel.html %} -->
-
-    <div id="productList" class="pt-2 pb-2" style="display: none; ">
+    <style>
+        .list-group-item{ margin-bottom: 1px; }
+    </style>
     
-        <div class="row list">
-            {% for product in site.data.k4310 %}
-            {%- if product.path == "/kamaz-4310/catalog/korobki_razdatochnye/" -%}
-                {% include card_zapchasti_catalog.html product = product %}
-            {%- endif -%}
-            {% endfor %}
-
-            <div id="loadingDiv">
-                <span>Загрузка данных</span>
-            </div>
+    <div class="col-md-11 col-xs-12" style="margin: auto;">
+        <p></p>
+        <h3>Каталог </h3>
+        <div class="form form-inline">
+            <input id="pListSearch" class="fuzzy-search" type="search" class="form-control" placeholder="поиск..." style="width:130px;"/>
+            &nbsp;&nbsp;
+            <button class="btn btn-blue" onclick="$('#pListSearch').val('4310'); filterProductList($('#pListSearch').val());" title="4310">4310</button>   
+            <button class="btn btn-blue" onclick="$('#pListSearch').val('43114'); filterProductList($('#pListSearch').val());" title="43114">43114</button>   
+            <button class="btn btn-blue" onclick="$('#pListSearch').val('65111'); filterProductList($('#pListSearch').val());" title="65111">65111</button>   
+            <button class="btn btn-blue" onclick="$('#pListSearch').val('ZF'); filterProductList($('#pListSearch').val());" title="ZF">ZF</button>   
+               
         </div>
-        <div class="no-result">Не найдено</div>
-        <ul class="pagination"></ul>
+    
+        {% include catalog-loading-panel.html %}
+    
+        <div id="productList" class="pt-2 pb-2" style="display: none; ">
+        
+            <div class="row list">
+                {% for product in site.data.k4310 %}
+                {%- if product.path == "/kamaz-4310/catalog/razdatki/" -%}
+                    {% include card_zapchasti_catalog.html product = product %}
+                {%- endif -%}
+                {% endfor %}
+    
+                <div id="loadingDiv">
+                    <span>Загрузка данных</span>
+                </div>
+            </div>
+            <div class="no-result">Не найдено</div>
+            <ul class="pagination"></ul>
+        </div>
+          
+    
+    
     </div>
+    
     
 
 

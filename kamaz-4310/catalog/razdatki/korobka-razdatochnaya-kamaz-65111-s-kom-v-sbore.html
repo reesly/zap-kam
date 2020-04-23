@@ -1,10 +1,10 @@
 ---
 layout: default_info
-title: Коробка раздаточная на КамАЗ 65111-1800020 - ЗапКам.Запчасти
-description: Продаем раздаточную коробку на современные КамАЗ-43114, 43118, 65111, 53228, 4326, 4350, 5350, 53501, 6350, с КОМ и без КОМа с доставкой по всей России. В наличии новые, восстановленные, капремонт. Прайс-лист, модификации, каталог, описание, характеристики.
+title: Коробка раздаточная на КамАЗ 65111-1800020 с КОМ
+description: Продаем раздаточную коробку с КОМ на современные КамАЗ-43114, 43118, 65111, 53228, 4326, 4350, 5350, 53501, 6350, с КОМ и без КОМа с доставкой по всей России. В наличии новые, восстановленные, капремонт. Прайс-лист, модификации, каталог, описание, характеристики.
 keywords: Коробка раздаточная КамАЗ-43114, 43118, 65111, 53228, 4326, 4350, 5350, 53501, 6350 и др.,
 hero-title: Агрегаты на вездеходы КамАЗ-4310, 43114, 43118, 65111
-h1: Коробка раздаточная КамАЗ 65111-1800020 
+h1: Коробка раздаточная КамАЗ 65111-1800020 с КОМ
 h2:
 phone: 9272482335
 phone_title: (927) 248 23-35
@@ -13,11 +13,12 @@ phone_title: (927) 248 23-35
 
 <!-- Товар ---->
 <div id="anc_1"></div>
-{% assign page_url = "korobka_razdatochnaya_kamaz-65111" %}
+{% assign page_url = page.name | replace: ".html", "" %}
 {% assign product = site.data.k4310 | where:"url", page_url | first  %}
 {%- if product -%}
     {% include card_zapchasti.html product = product %}
 {%- endif -%}
+{%- include_relative _like_products.mhtml prod = product -%}
 
 <div class="col-md-10 col-xs-12" style="margin: auto;">
     
@@ -39,7 +40,7 @@ phone_title: (927) 248 23-35
     
 <p>
     <h3>Технические характеристики</h3>
-    <table class="table table-hover table-striped table-responsive" style="width:auto;">
+    <table class="table table-hover table-striped table-responsive-sm" style="width:auto;">
         <tbody>
             <tr>
                 <td>Модели</td>
