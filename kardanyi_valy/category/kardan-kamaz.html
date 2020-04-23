@@ -35,9 +35,14 @@ phone_title: (927) 045 01-18
 </div>
 
 <div class="col-md-6 col-xs-6">
-    <p>
-        Комплектация карданных передач автомобиля КАМАЗ зависит от колесной формулы и передаваемого момента. 
-    </p>
+    <div class="pt-4">
+        <table class="table table-hover" style="font-size: 1.0em; font-weight: 600; ">
+            <tr><td style="border-top: none;"> • Многие модели в наличии.</td></tr>
+            <tr><td> • ДЕШЕВЛЕ до 40% при изготовлении под заказ!</td></tr>
+            <tr><td> • Заводские условия. Качественные запчасти. Гарантия</td></tr>
+            <tr><td> • Восстановим заводское состояние карданного вала</td></tr>
+        </table>
+    </div>
     <p>
         Мы продаем полную номенклатуру карданных валов на весь модельный ряд КамАЗ.
     </p>
@@ -52,7 +57,7 @@ phone_title: (927) 045 01-18
 
 <div class="col-md-11 col-xs-12" style="margin: auto;">
     <p></p>
-    <h3>Каталог </h3>
+    <h3 class="text-center w-100">Каталог </h3>
     <div class="form form-inline">
         <input id="pListSearch" class="fuzzy-search" type="search" class="form-control" placeholder="поиск..." style="width:130px;"/>
         &nbsp;&nbsp;
@@ -66,10 +71,10 @@ phone_title: (927) 045 01-18
           
     </div>
     
+    {% include catalog-loading-panel.html %}
     <div id="productList" style="display: none;">
-        {% include catalog-loading-panel.html %}
-
-        <ul class="list-group shadow list">
+        
+        <ul class="list-group list">
             {% for product in site.data.kardany %}
             {%- if product.cat_url == "kamaz" -%}
             {% include card_kardan_catalog.html product = product %}

@@ -16,8 +16,7 @@ phone_title: (927) 045 01-18
     <div id="nanogallery2" data-nanogallery2 = '{
         "thumbnailLabel":{"display":false},
         "thumbnailBorderVertical":0,"thumbnailBorderHorizontal":0,
-        "thumbnailWidth":   "auto XL800",
-        "thumbnailHeight":   300,
+        "thumbnailHeight":   240,
         "thumbnailAlignment": "center", 
         "fillWidth": "center", 
         "thumbnailDisplayTransition":"slideUp",
@@ -32,12 +31,14 @@ phone_title: (927) 045 01-18
 </div>
 
 <div class="col-md-6 col-xs-6">
-    <p>
-        Карданные валы автомобилей «МАЗ» унифицированы между собой.<br>
-        Ходовая часть большинства моделей грузовых автомобилей "МАЗ" построена по трехосной схеме 
-        с колесной формулой 6x4 (МАЗ-377) или 6x6 (МАЗ-4320 и модификации, МАЗ-43223).
-        
-    </p>
+    <div class="pt-4">
+        <table class="table table-hover" style="font-size: 1.0em; font-weight: 600; ">
+            <tr><td style="border-top: none;"> • Многие модели в наличии.</td></tr>
+            <tr><td> • ДЕШЕВЛЕ до 40% при изготовлении под заказ!</td></tr>
+            <tr><td> • Заводские условия. Качественные запчасти. Гарантия</td></tr>
+            <tr><td> • Восстановим заводское состояние карданного вала</td></tr>
+        </table>
+    </div>
     <p>
         Мы продаем полную номенклатуру карданных валов на технику МАЗ.
     </p>
@@ -52,7 +53,8 @@ phone_title: (927) 045 01-18
 
 <div class="col-md-11 col-xs-12" style="margin: auto;">
     <p></p>
-    <h3>Каталог </h3>
+    <h3 class="text-center w-100">Каталог </h3>
+    <p class="text-info small2">Для подбора карданного вала желательно знать стыковочные размеры фланцев и минимальную длину вала (от краев фланцев в сжатом положении).</p>
     <div class="form form-inline">
         <input id="pListSearch" class="fuzzy-search" type="search" class="form-control" placeholder="поиск..." style="width:130px;"/>
         <button class="btn btn-blue" onclick="$('#pListSearch').val('4320'); filterProductList($('#pListSearch').val());" title="МАЗ-4320">МАЗ 4320</button>
@@ -62,11 +64,10 @@ phone_title: (927) 045 01-18
         
     </div>
     
-
+    {% include catalog-loading-panel.html %}
     <div id="productList" style="display: none;">
-        {% include catalog-loading-panel.html %}
-
-        <ul class="list-group shadow list">
+        
+        <ul class="list-group list">
             {% for product in site.data.kardany %}
             {%- if product.cat_url == "maz" -%}
             {% include card_kardan_catalog.html product = product %}

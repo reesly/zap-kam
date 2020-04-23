@@ -72,8 +72,10 @@ exclude:
   - data
   - _plugins
   - "*.mhtml"
-  # - dvigatel_zapchasti
-  # - kamaz-4310
+  - dvigatel_zapchasti
+  - kamaz-4310
+  - kamaz-5490
+  - dostavka
   # - kardanyi_valy
 
 

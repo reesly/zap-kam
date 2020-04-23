@@ -1,24 +1,24 @@
 ---
 layout: default_info
 title: Карданные валы на технику MERCEDES - ЗапКам.Запчасти
-description: Продаем карданные валы и передачи для техники MERCEDES от различных производителей. Каталог MERCEDES-овских валов с ценами, описанием и техническими характеристиками. Новые и восстановленные б/у после кап.ремонта.
+description: Продажа, производство и заводской ремонт карданных валов и передач для техники MERCEDES от различных производителей. Каталог MERCEDES-овских валов с ценами, описанием и техническими характеристиками. Новые и восстановленные б/у после кап.ремонта.
 keywords: MERCEDES Карданный вал карданная передача каталог цены
 hero-title: Карданные валы с доставкой по России и СНГ 
-h1: Карданные валы и передачи MERCEDES
-h2:
+h1: Карданные валы MERCEDES
+h2: Производство и заводской ремонт
 phone: 9270450118
 phone_title: (927) 045 01-18
 ---
 
 <!-- Модель камаза  -->
-<div class="col-md-6 col-xs-6">
+<div class="col-md-6 col-xs-6 text-center" style="margin: auto;">
     
     <div id="nanogallery2" data-nanogallery2 = '{
         "thumbnailLabel":{"display":false},
         "thumbnailBorderVertical":0,"thumbnailBorderHorizontal":0,
-        "thumbnailWidth":   "auto XL800",
-        "thumbnailHeight":   300,
-        "thumbnailAlignment": "center", 
+        
+        "thumbnailHeight":   240,
+        "thumbnailAlignment": "center",
         "fillWidth": "center", 
         "thumbnailDisplayTransition":"slideUp",
         "thumbnailHoverEffect2":"scale120|toolsAppear|toolsAppear",
@@ -26,20 +26,22 @@ phone_title: (927) 045 01-18
       }' >
       <!-- fillWidth -->
       
-      <a href = "/kardanyi_valy/img/category/ural_scheme_1.png" data-ngThumb = "/kardanyi_valy/img/category/ural_scheme_1.png" title="{{page.title}}"> Вал карданный заднего моста MERCEDES-63685 </a>
+      <a href = "/kardanyi_valy/img/category/Cardan_Shaft_Manufacture.jpg" data-ngThumb = "/kardanyi_valy/img/category/Cardan_Shaft_Manufacture.jpg" title="{{page.title}}"> Вал карданный MERCEDES </a>
     </div>
 
 </div>
 
 <div class="col-md-6 col-xs-6">
-    <p>
-        Карданные валы автомобилей «MERCEDES» унифицированы между собой.<br>
-        Ходовая часть большинства моделей грузовых автомобилей "MERCEDES" построена по трехосной схеме 
-        с колесной формулой 6x4 (MERCEDES-377) или 6x6 (MERCEDES-4320 и модификации, MERCEDES-43223).
-        
-    </p>
-    <p>
-        Мы продаем полную номенклатуру карданных валов на технику MERCEDES.
+    <div class="pt-4">
+    <table class="table table-hover" style="font-size: 1.0em; font-weight: 600; ">
+        <tr><td style="border-top: none;"> • Многие "ходовые" карданы в наличии!</td></tr>
+        <tr><td> • ДЕШЕВЛЕ до 60% при изготовлении под заказ!</td></tr>
+        <tr><td> • Заводские условия. Качественные запчасти. Гарантия</td></tr>
+        <tr><td> • Восстановим заводское состояние карданного вала</td></tr>
+    </table>
+    </div>
+    <p> 
+        Карданные валы автомобилей «MERCEDES» Actros, Axor, Atego, Crafter, чашка имеет диаметр 68мм  
     </p>
     
 </div>
@@ -52,20 +54,21 @@ phone_title: (927) 045 01-18
 
 <div class="col-md-11 col-xs-12" style="margin: auto;">
     <p></p>
-    <h3>Каталог </h3>
+    <h3 class="w-100 text-center">Каталог </h3>
+    <p class="text-info small2">Для подбора карданного вала желательно знать стыковочные размеры фланцев и минимальную длину вала (от краев фланцев в сжатом положении).</p>
     <div class="form form-inline">
         <input id="pListSearch" class="fuzzy-search" type="search" class="form-control" placeholder="поиск..." style="width:130px;"/>
-        <button class="btn btn-blue" onclick="$('#pListSearch').val('4320'); filterProductList($('#pListSearch').val());" title="MERCEDES-4320">MERCEDES 4320</button>
+        <!-- <button class="btn btn-blue" onclick="$('#pListSearch').val('4320'); filterProductList($('#pListSearch').val());" title="MERCEDES-4320">MERCEDES 4320</button>
         <button class="btn btn-blue" onclick="$('#pListSearch').val('5557'); filterProductList($('#pListSearch').val());" title="MERCEDES-5557">5557</button>
         <button class="btn btn-blue" onclick="$('#pListSearch').val('375'); filterProductList($('#pListSearch').val());" title="MERCEDES-375">375</button>
         <button class="btn btn-blue" onclick="$('#pListSearch').val('63685'); filterProductList($('#pListSearch').val());" title="MERCEDES-63685">63685</button>
-        
+         -->
     </div>
     
+    {% include catalog-loading-panel.html %}
     <div id="productList" style="display: none;">
-        {% include catalog-loading-panel.html %}
 
-        <ul class="list-group shadow list">
+        <ul class="list-group list">
             {% for product in site.data.kardany %}
             {%- if product.cat_url == "mercedes" -%}
             {% include card_kardan_catalog.html product = product %}

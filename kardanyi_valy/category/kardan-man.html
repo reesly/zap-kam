@@ -4,8 +4,8 @@ title: Карданные валы на технику MAN - ЗапКам.Зап
 description: Продаем карданные валы и передачи для техники MAN от различных производителей. Каталог MAN-овских валов с ценами, описанием и техническими характеристиками. Новые и восстановленные б/у после кап.ремонта.
 keywords: MAN Карданный вал карданная передача каталог цены
 hero-title: Карданные валы с доставкой по России и СНГ 
-h1: Карданные валы и передачи MAN
-h2:
+h1: Карданные валы MAN
+h2: Продажа • Производство • Заводской ремонт
 phone: 9270450118
 phone_title: (927) 045 01-18
 ---
@@ -16,8 +16,7 @@ phone_title: (927) 045 01-18
     <div id="nanogallery2" data-nanogallery2 = '{
         "thumbnailLabel":{"display":false},
         "thumbnailBorderVertical":0,"thumbnailBorderHorizontal":0,
-        "thumbnailWidth":   "auto XL800",
-        "thumbnailHeight":   300,
+        "thumbnailHeight":   240,
         "thumbnailAlignment": "center", 
         "fillWidth": "center", 
         "thumbnailDisplayTransition":"slideUp",
@@ -25,23 +24,25 @@ phone_title: (927) 045 01-18
         "itemsBaseURL":     ""
       }' >
       <!-- fillWidth -->
+      <a href = "/kardanyi_valy/img/category/Cardan_Shaft_Manufacture.jpg" data-ngThumb = "/kardanyi_valy/img/category/Cardan_Shaft_Manufacture.jpg" title="{{page.title}}"> Вал карданный MAN </a>
       
-      <a href = "/kardanyi_valy/img/category/ural_scheme_1.png" data-ngThumb = "/kardanyi_valy/img/category/ural_scheme_1.png" title="{{page.title}}"> Вал карданный заднего моста MAN-63685 </a>
-    
     </div>
 
 </div>
 
 <div class="col-md-6 col-xs-6">
+    <div class="pt-4">
+        <table class="table table-hover" style="font-size: 1.0em; font-weight: 600; ">
+            <tr><td style="border-top: none;"> • Многие модели в наличии.</td></tr>
+            <tr><td> • ДЕШЕВЛЕ до 40% при изготовлении под заказ!</td></tr>
+            <tr><td> • Заводские условия. Качественные запчасти. Гарантия</td></tr>
+            <tr><td> • Восстановим заводское состояние карданного вала</td></tr>
+        </table>
+    </div>
     <p>
-        Карданные валы автомобилей «MAN» унифицированы между собой.<br>
-        Ходовая часть большинства моделей грузовых автомобилей "MAN" построена по трехосной схеме 
-        с колесной формулой 6x4 (MAN-377) или 6x6 (MAN-4320 и модификации, MAN-43223).
-        
+        Мы продаем полную номенклатуру карданных валов на технику MAN TGS 18.440, TGA 18.460, TGA 18.480, TGA 26.430, TGA 33.480, TGL, L2000, M2000, F2000.
     </p>
-    <p>
-        Мы продаем полную номенклатуру карданных валов на технику MAN.
-    </p>
+
     
 </div>
 
@@ -53,20 +54,25 @@ phone_title: (927) 045 01-18
 
 <div class="col-md-11 col-xs-12" style="margin: auto;">
     <p></p>
-    <h3>Каталог </h3>
+    <h3 class="text-center w-100">Каталог </h3>
+    <p class="text-info small2">Для подбора карданного вала желательно знать стыковочные размеры фланцев и минимальную длину вала (от краев фланцев в сжатом положении).</p>
+    
     <div class="form form-inline">
         <input id="pListSearch" class="fuzzy-search" type="search" class="form-control" placeholder="поиск..." style="width:130px;"/>
-        <button class="btn btn-blue" onclick="$('#pListSearch').val('4320'); filterProductList($('#pListSearch').val());" title="MAN-4320">MAN 4320</button>
-        <button class="btn btn-blue" onclick="$('#pListSearch').val('5557'); filterProductList($('#pListSearch').val());" title="MAN-5557">5557</button>
-        <button class="btn btn-blue" onclick="$('#pListSearch').val('375'); filterProductList($('#pListSearch').val());" title="MAN-375">375</button>
-        <button class="btn btn-blue" onclick="$('#pListSearch').val('63685'); filterProductList($('#pListSearch').val());" title="MAN-63685">63685</button>
+        <button class="btn btn-blue" onclick="$('#pListSearch').val('81.39106'); filterProductList($('#pListSearch').val());" title="81.39106">81.39106</button>
+        <button class="btn btn-blue" onclick="$('#pListSearch').val('81.39106'); filterProductList($('#pListSearch').val());" title="MAN-81.39106">81.39106</button>
+        <button class="btn btn-blue" onclick="$('#pListSearch').val('81.39302'); filterProductList($('#pListSearch').val());" title="MAN-81.39302">81.39302</button>
+        <button class="btn btn-blue" onclick="$('#pListSearch').val('81.39305'); filterProductList($('#pListSearch').val());" title="MAN-81.39305">81.39305</button>
+        <button class="btn btn-blue" onclick="$('#pListSearch').val('81.39312'); filterProductList($('#pListSearch').val());" title="MAN-81.39312">81.39312</button>
+        <button class="btn btn-blue" onclick="$('#pListSearch').val('81.39324'); filterProductList($('#pListSearch').val());" title="MAN-81.39324">81.39324</button>
+        <button class="btn btn-blue" onclick="$('#pListSearch').val('81.39325'); filterProductList($('#pListSearch').val());" title="MAN-81.39325">81.39325</button>
         
     </div>
     
+    {% include catalog-loading-panel.html %}
     <div id="productList" style="display: none;">
-        {% include catalog-loading-panel.html %}
-
-        <ul class="list-group shadow list">
+        
+        <ul class="list-group list">
             {% for product in site.data.kardany %}
             {%- if product.cat_url == "man" -%}
             {% include card_kardan_catalog.html product = product %}
@@ -109,11 +115,15 @@ phone_title: (927) 045 01-18
     </div>
     <hr>
     <h3></h3>
-    <p></p>
-    <p>
-        Карданный вал - механическое устройство,
-         передающее крутящий момент от коробки передач (или раздаточной коробки) на ведущие оси автомобиля.
-    </p>   
+    <strong>Техника марки MAN</strong>
+    <ul>
+        <li>тягачи МАН F2000, TGA, TGS, TGX, L-series, NL-series, F200, F8, F-series, F19</li>
+        <li>бортовые грузовики MAN A20, F-series, F19, F200, F8, L200, L2000, TGA, TGM, TGS</li>
+        <li>грузовые фургоны МАН TGA, TGL, TGM, TGS, L-series</li>
+        <li>автобусы МАН F-series, L-series, Lions-series, Man NL-series</li>
+        <li>коммунальная техника Ман F-series, L2000, TGA, TGM, TGS</li>
+        <li>спецтехника МАН TGS, F-series, F200, F2000, F8, L200 и многие другие виды коммерческого транспорта.</li>
+    </ul>
     <p>
         
     </p>

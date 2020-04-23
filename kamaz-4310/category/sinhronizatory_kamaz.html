@@ -32,8 +32,9 @@ phone_title: (927) 248 23-35
 <div class="col-md-11 col-xs-12" style="margin: auto;">
     <p></p>
     <h3>Каталог синхронизаторов КамАЗ</h3>
+    {% include catalog-loading-panel.html %}
     <div id="productList" class="pt-4 pb-2" style="display: none; ">
-    
+        
         <div class="row list">
             {% for product in site.data.k4310 %}
             {%- if product.path == "/kamaz-4310/catalog/zapchasti/" and product.cat2 == "синхронизаторы" -%}
