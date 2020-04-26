@@ -192,7 +192,7 @@ color: whitesmoke;
 
 
 .btn {
-  font-size: 1.1em;
+  font-size: 1.1rem;
   padding: 5px 30px;
   cursor: pointer;
   font-weight: 400;
@@ -253,7 +253,7 @@ color: whitesmoke;
   background-color: #F63854;
 }
 
-.btn-lg {
+. {
   padding: 14px 33px;
   text-transform: uppercase;
   font-size: 16px;
@@ -1988,4 +1988,19 @@ a.a-class:hover {
   color: #007bff;
   text-decoration: underline;
   cursor: pointer;
+}
+
+.btn-search-var {
+  padding-right: 11px;
+  padding-left: 11px;
+  text-decoration: underline;
+  font-size: 0.9rem;
+  color: #1570cd;
+}
+.btn-search-var:hover {
+  text-decoration: underline !important;
+}
+.btn-search-var:focus {
+  color: #1570cd;
+  font-weight: 600;
 }

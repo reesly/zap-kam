@@ -82,11 +82,11 @@ exclude:
 
 
 # page_gen: 
-#   - index_files: true 
-#     data: kardany
-#     name: url 
-#     template: dostavka_index
-#     filter_condition: "record['name'] != ''"
+#   - index_files: false 
+#     data: dvig_zap
+#     name: url
+#     template: templ_zapchasti
+#     filter_condition: "record['name'] != nil"
 
 #   - index_files: true 
 #     data: dostavka

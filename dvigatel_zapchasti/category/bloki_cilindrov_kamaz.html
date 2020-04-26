@@ -1,0 +1,74 @@
+---
+layout: default_info
+title: Блоки цилиндров двигателей КамАЗ
+description: Каталог блоков цилиндров двигателя КамАЗ Евро-0, Евро-1, Евро-2, Евро-3. Каталог камазовских блоков с ценами, описанием, применимостью и техническими характеристиками. Новые оригинал и восстановленные б/у после кап.ремонта.
+keywords: Блок цилиндров КамАЗ Двигатель КамАЗ Евро Евро-1 Евро-2 Евро-3 Евро-4 Коленвал Коленчатый вал Блок цилиндров шатун шейка поршня кольца Bosch ЯЗДА ЦПГ ЯМЗ SANZ насос турбокомпрессор распредвал 
+hero-title: Запчасти на вездеходы КамАЗ-4310, 43114, 43118, 4326, 4350
+h1: Блоки цилиндров на двигатели КамАЗ   
+h2:
+phone: 
+phone_title:
+---
+
+<!-- Модель камаза  -->
+<div class="col-md-11 col-xs-12" style="margin: auto;">
+    <p>
+       
+    </p>
+</div>
+
+
+<!-- Товары ---->
+
+<div class="col-md-11 col-xs-12" style="margin: auto;">
+    <p></p>
+    <!-- <h3 class="w-100 text-center">Каталог</h3> -->
+    <div class="form form-inline">
+        <input id="pListSearch" class="fuzzy-search" type="search" class="form-control" placeholder="поиск..." style="width:130px;"/>
+        &nbsp;&nbsp;
+        <button class="btn btn-search-var " onclick="$('#pListSearch').val('Блок'); filterProductList($('#pListSearch').val());" title="Блоки">Блоки</button>    
+        <button class="btn btn-search-var " onclick="$('#pListSearch').val('Сборочный'); filterProductList($('#pListSearch').val());" title="Блоки">Сборочный комплект</button>    
+        <button class="btn btn-search-var " onclick="$('#pListSearch').val('Головка'); filterProductList($('#pListSearch').val());" title="Головки блока">Головки блока</button>    
+    </div>
+
+    {% include catalog-loading-panel.html %}
+
+    <div id="productList" class="pt-4 pb-2" style="display: none; ">
+    
+        <div class="row list">
+            {% for product in site.data.dvig_zap %}
+            {%- if product.path == "/dvigatel_zapchasti/catalog/bloki/" -%}
+                {% include card_zapchasti_catalog.html product = product %}
+            {%- endif -%}
+            {% endfor %}
+
+            <div id="loadingDiv">
+                <span>Загрузка данных</span>
+            </div>
+        </div>
+        <div class="no-result">Не найдено</div>
+        <ul class="pagination"></ul>
+    </div>
+</div>
+
+
+<div class="col-md-10 col-xs-12" style="margin: auto;">
+    <div class="alert alert-info">
+        <p>Предоставляется гарантия производителя.</p>
+    </div>
+
+    <p>&nbsp;</p>
+  
+    
+    <p>
+        <iframe width="800" height="450" src="https://www.youtube.com/embed/7VbTtYTKCXY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </p>
+    
+    
+    <p></p>
+    <p></p>
+    {% include kupite_u_nas.html %}
+    
+  <div style="height: 100px;">&nbsp;</div>
+  
+<script src="/assets/js/list.min.js"></script>
