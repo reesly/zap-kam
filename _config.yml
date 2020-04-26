@@ -75,10 +75,10 @@ exclude:
   - _plugins
   - "*.mhtml"
   # - dvigatel_zapchasti
-  - kamaz-4310
-  - kamaz-5490
-  - dostavka
-  - kardanyi_valy
+  # - kamaz-4310
+  # - kamaz-5490
+  # - dostavka
+  # - kardanyi_valy
 
 
 # page_gen: 
