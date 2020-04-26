@@ -30,7 +30,11 @@ phone_title:
         <button class="btn btn-search-var " onclick="$('#pListSearch').val('Блок'); filterProductList($('#pListSearch').val());" title="Блоки">Блоки</button>    
         <button class="btn btn-search-var " onclick="$('#pListSearch').val('Сборочный'); filterProductList($('#pListSearch').val());" title="Блоки"> Комплект</button>    
         <button class="btn btn-search-var " onclick="$('#pListSearch').val('Головка'); filterProductList($('#pListSearch').val());" title="Головки блока">Головки блока</button>    
-        <button class="btn btn-search-var " onclick="$('#pListSearch').val('Головка'); filterProductList($('#pListSearch').val());" title="Головки блока">Головки блока</button>    
+        <button class="btn btn-search-var " onclick="$('#pListSearch').val('Насос'); filterProductList($('#pListSearch').val());" title="Насос">Насос</button>    
+        <button class="btn btn-search-var " onclick="$('#pListSearch').val('ТНВД'); filterProductList($('#pListSearch').val());" title="ТНВД">ТНВД</button>    
+        <button class="btn btn-search-var " onclick="$('#pListSearch').val('Турбокомпрессор'); filterProductList($('#pListSearch').val());" title="Турбокомпрессор">Турбокомпрессор</button>    
+        <button class="btn btn-search-var " onclick="$('#pListSearch').val('Форсунка'); filterProductList($('#pListSearch').val());" title="Форсунка">Форсунка</button>    
+        <button class="btn btn-search-var " onclick="$('#pListSearch').val('Распылитель'); filterProductList($('#pListSearch').val());" title="Распылитель">Распылитель</button>    
     </div>
 
     {% include catalog-loading-panel.html %}
@@ -43,15 +47,12 @@ phone_title:
                 {% include card_zapchasti_catalog.html product = product %}
             {%- endif -%}
             {% endfor %}
-
-            <div id="loadingDiv">
-                <span>Загрузка данных</span>
-            </div>
+    
         </div>
         <div class="no-result">Не найдено</div>
-        <ul class="pagination"></ul>
+        <ul class="pagination" onclick="$('html, body').animate({ scrollTop: 0}, 600);"></ul>
     </div>
-</div>
+</div> 
 
 
 <div class="col-md-10 col-xs-12" style="margin: auto;">
@@ -62,15 +63,11 @@ phone_title:
     <p>&nbsp;</p>
   
     
-    <p>
-        <iframe width="800" height="450" src="https://www.youtube.com/embed/7VbTtYTKCXY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    </p>
-    
     
     <p></p>
     <p></p>
     {% include kupite_u_nas.html %}
     
-  <div style="height: 100px;">&nbsp;</div>
+  <div style="height: 30px;">&nbsp;</div>
   
 <script src="/assets/js/list.min.js"></script>

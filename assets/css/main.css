@@ -2004,3 +2004,7 @@ a.a-class:hover {
   color: #1570cd;
   font-weight: 600;
 }
+
+.pagination .active {
+  font-weight: bold;
+}
