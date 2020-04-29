@@ -3,47 +3,18 @@
     "files.associations": {
     
     "*.mhtml": "html"},
-    "cSpell.words": [
-        "assets",
-        "toggle"
-    ],
-    "cSpell.enabled": true,
-    "cSpell.ignoreWords": [
-        "adme",
-        "cntr",
-        "dcsblp",
-        "deliv",
-        "differentsiala",
-        "expand",
-        "gazpromneft",
-        "getr",
-        "hypoid",
-        "inverse",
-        "kramdown",
-        "md",
-        "navbar",
-        "obojma",
-        "pygments",
-        "razdatochnoj",
-        "rotra",
-        "поземского",
-        "поляковское",
-        "сервоусилителем",
-        "талажское"
-    ],
-    "cSpell.language": "ru,en",
-    "spellright.language": [
+      "spellright.language": [
+        "en",
         "ru"
     ],
+ 
+    "html.format.indentHandlebars": true,
+    "html.format.indentInnerHtml": true,
     "spellright.documentTypes": [
         "markdown",
         "latex",
-        "plaintext"
-    ],
-    "html.format.indentHandlebars": true,
-    "html.format.indentInnerHtml": true,
-    "spellright.notificationClass": "warning",
-    "spellright.spellContextByClass": {
+        "plaintext",
+        "html"
+    ]
     
-    }
 }

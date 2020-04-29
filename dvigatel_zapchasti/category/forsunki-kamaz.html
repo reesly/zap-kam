@@ -1,0 +1,104 @@
+---
+layout: default_info
+title: Форсунки КамАЗ - Каталог
+description: Подбор топливных форсунок на двигатели КамАЗ Евро-0, Евро-1, Евро-2, Евро-3. Каталог форсунок с ценами, описанием, применимостью и техническими характеристиками. Новые оригинал и восстановленные б/у после кап.ремонта.
+keywords: Форсунки КамАЗ Двигатель КамАЗ Евро Евро-1 Евро-2 Евро-3 Евро-4 Коленвал Коленчатый вал Блок цилиндров шатун шейка поршня кольца Bosch ЯЗДА ЦПГ ЯМЗ SANZ насос турбокомпрессор распредвал 
+hero-title: Запчасти на ДВИГАТЕЛИ КамАЗ
+h1: Форсунки топливные на двигатели КамАЗ
+h2:
+phone: 
+phone_title:
+---
+
+<!-- Модель камаза  -->
+<div class="col-md-11 col-xs-12" style="margin: auto;">
+    <p>
+       
+    </p>
+</div>
+
+
+<!-- Товары ---->
+
+<div class="col-md-11 col-xs-12" style="margin: auto;">
+    
+    <p>
+        Форсунки отвечают за распыление топлива, получаемого от <a href="/dvigatel_zapchasti/category/tnvd-toplivnaya-apparatura-kamaz.html"> ТНВД </a> в цилиндры двигателя. 
+        Топливо подается  от плунжерных секций топливного насоса по трубками топливоподачи.
+    </p>
+
+    <!-- <h3 class="w-100 text-center">Каталог</h3> -->
+    <div class="form form-inline">
+        <input id="pListSearch" class="fuzzy-search" type="search" class="form-control" placeholder="поиск..." style="width:130px;"/>
+        &nbsp;&nbsp;
+        <button class="btn btn-search-var " onclick="$('#pListSearch').val(''); filterProductList($('#pListSearch').val());" title="Сбросить фильтр">Все</button>    
+        <button class="btn btn-search-var " onclick="$('#pListSearch').val('Евро-1'); filterProductList($('#pListSearch').val());" title="Евро-1">Евро-1</button>    
+        <button class="btn btn-search-var " onclick="$('#pListSearch').val('Евро-2'); filterProductList($('#pListSearch').val());" title="Евро-2">Евро-2</button>    
+        <button class="btn btn-search-var " onclick="$('#pListSearch').val('Евро-3'); filterProductList($('#pListSearch').val());" title="Евро-3">Евро-3</button>    
+        <button class="btn btn-search-var " onclick="$('#pListSearch').val('Bosch'); filterProductList($('#pListSearch').val());" title="Bosch">Bosch</button>    
+        <button class="btn btn-search-var " onclick="$('#pListSearch').val('ЯЗДА'); filterProductList($('#pListSearch').val());" title="ЯЗДА">ЯЗДА</button>    
+       
+    </div>
+
+    {% include catalog-loading-panel.html %}
+
+    <div id="productList" class="pt-4 pb-2" style="display: none; ">
+    
+        <div class="row list">
+            {% for product in site.data.dvig_zap %}
+            {%- if product.cat == "Форсунки" -%}
+                {% include card_zapchasti_catalog.html product = product %}
+            {%- endif -%}
+            {% endfor %}
+        </div>
+        <div class="no-result">Не найдено</div>
+        <ul class="pagination" onclick="$('html, body').animate({ scrollTop: 0}, 600);"></ul>
+    </div>
+</div>
+
+
+<div class="col-md-10 col-xs-12" style="margin: auto;">
+    <div class="alert alert-info">
+        <p>Предоставляется гарантия производителя.</p>
+    </div>
+
+  
+  <h3>Принцип действия форсунок ЯЗДА и Bosch.</h3> 
+<p>
+    При подаче топлива в полость распылителя, увеличивается давление на
+    нагрузочный пояс иглы, игла движется вверх, преодолевая сопротивление возвратной пружины, и через сопловые
+    отверстия происходит впрыск солярки в камеру сгорания. 
+    <br>
+    При прекращении подачи топлива - давление снижается, и возвратная пружинка возвращает иглу в исходное положение, перекрывая подачу топлива.
+</p>
+
+<h3>Устройство форсунки</h3>
+<p>
+    Форсунка устанавливается в гнездо <a href="/dvigatel_zapchasti/category/golovki-bloka-kamaz.html">головки блока цилиндра (сокр. ГБЦ)</a>, 
+    где закрепляется скобой.
+    В верхней своей части содержит резиновый уплотнитель.
+    В стальном корпусе форсунки есть 2 канала подвода и отвода дизельного топлива.
+    В верхней его части находятся отверстия для вкручивания 2 штуцеров (один с щелевым фильтром, другой дренажный). 
+    Основными деталями форсунки являются - <a href="/dvigatel_zapchasti/category/raspyliteli-forsunki-kamaz.html">распылитель</a> и игла, которые отвечают распыление и формирование струи топлива.
+    Технология производства этих деталей требует высокой точность (прецизионное производство). 
+    Игла и распылитель меняются всегда комплектно, т.е. парой.
+</p>
+
+
+<div class="row">
+    <div class="col-md-6"><img src="/dvigatel_zapchasti/category/img/ustrojstvo-forsunki-kamaz.jpg" alt="Устройство форсунки КамАЗ 740"></div>
+    <div class="col-md-6">
+        <p>
+           <b>рис. Устройство форсунки.</b> 1 - игла распылителя, 2 - кольцевая полость, 3 - распылитель, 4 - накидная гайка, 5 - штифт, 6 - штанга, 7 - пружина, 8 - уплотнительное кольцо, 9 - штуцер, 10 - сетчатый фильтр, 11 - втулка, 12 - регулировочные шайбы, 13 - опорная шайба.
+        </p>
+        
+    </div>
+</div>
+    
+    <p></p>
+    <p></p>
+    {% include kupite_u_nas.html %}
+    
+  <div style="height: 30px;">&nbsp;</div>
+  
+<script src="/assets/js/list.min.js"></script>

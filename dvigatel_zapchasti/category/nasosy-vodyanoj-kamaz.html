@@ -1,0 +1,137 @@
+---
+layout: default_info
+title: Насос водяной КамАЗ
+description: Подбор водяного насоса - помпы КамАЗ для системы охлаждения двигателей Евро-0, Евро-1, Евро-2, Евро-3. Каталог камазовских насосов с ценами, описанием, применимостью и техническими характеристиками. Новые оригинал и восстановленные б/у после кап.ремонта.
+keywords: Насос водяной КамАЗ Двигатель КамАЗ Евро Евро-1 Евро-2 Евро-3 Евро-4 Коленвал Коленчатый вал Блок цилиндров шатун шейка поршня кольца Bosch ЯЗДА ЦПГ ЯМЗ SANZ насос турбокомпрессор распредвал 
+hero-title: Запчасти на ДВИГАТЕЛИ КамАЗ
+h1: Насосы водяные системы охлаждения двигателей КамАЗ
+h2:
+phone: 
+phone_title:
+---
+
+<!-- Модель камаза  -->
+<div class="col-md-11 col-xs-12" style="margin: auto;">
+    <p>
+        Водяной насос - важный и необходимый элемент системы охлаждения двигателя, 
+        на двигателях КамАЗ насос имеет центробежный тип, обеспечивает постоянную циркуляцию жидкости в системе,
+         поддерживая температуру деталей двигателя на необходимом уровне.
+    </p>
+</div>
+
+
+<!-- Товары ---->
+
+<div class="col-md-11 col-xs-12" style="margin: auto;">
+    
+    <!-- <h3 class="w-100 text-center">Каталог</h3> -->
+    <div class="form form-inline">
+        <input id="pListSearch" class="fuzzy-search" type="search" class="form-control" placeholder="поиск..." style="width:130px;"/>
+        &nbsp;&nbsp;
+        <button class="btn btn-search-var " onclick="$('#pListSearch').val(''); filterProductList($('#pListSearch').val());" title="Сбросить фильтр">Все</button>    
+        <button class="btn btn-search-var " onclick="$('#pListSearch').val('740-1003010-20'); filterProductList($('#pListSearch').val());" title="740">740-20</button>    
+        <button class="btn btn-search-var " onclick="$('#pListSearch').val('740.30'); filterProductList($('#pListSearch').val());" title="Евро">740.30 Евро</button>    
+        <button class="btn btn-search-var " onclick="$('#pListSearch').val('740.90'); filterProductList($('#pListSearch').val());" title="Евро">740.90 Евро-3</button>    
+       
+    </div>
+
+    {% include catalog-loading-panel.html %}
+
+    <div id="productList" class="pt-4 pb-2" style="display: none; ">
+    
+        <div class="row list">
+            {% for product in site.data.dvig_zap %}
+            {%- if product.cat == "Головки блока" -%}
+                {% include card_zapchasti_catalog.html product = product %}
+            {%- endif -%}
+            {% endfor %}
+        </div>
+        <div class="no-result">Не найдено</div>
+        <ul class="pagination" onclick="$('html, body').animate({ scrollTop: 0}, 600);"></ul>
+    </div>
+</div>
+
+
+<div class="col-md-10 col-xs-12" style="margin: auto;">
+    <p>
+        В его основной состав входит:
+
+<br>- Радиатор с расширительным бачком
+<br>- Осевой вентилятор с кожухом
+<br>- Несколько термостатов
+<br>- Гидромуфта привода вентилятора
+<br>- Основная перепускная труба
+<br>- Каналы и трубопроводы в рубашке двигателя и в цилиндрах
+    </p>
+
+  
+    
+    <h2>Частые вопросы и ответы по насосам КамАЗ</h2>
+
+    <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+        <h3 itemprop="name">Какой водяной насос устанавливается на двигателе 740.11-240 автобусной комплектации для ЛИАЗ5256??</h3>
+        <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+            <div itemprop="text">
+                <p>
+                    На автобус ЛиАЗ-5256 устанавливался двигатель 740.11-1000407-10 (или 11 в зависимости от КПП),
+                    водяные насосы - 740.11-1307010 с 6-ти ручьевым шкивом 740.11-1307216.
+                </p>
+            </div>
+        </div>
+    </div>
+    
+    
+    <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+        <h3 itemprop="name"> Взаимозаменяемы ли водяные насосы КамАЗ 740.50 и 740.63? В чем отличия?</h3>
+        <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+            <div itemprop="text">
+                <p>
+                    Водяные насосы 740.50 и 740.63 - идентичны, за исключением шкивов.
+                </p>
+                <p>
+                    На 740.50 установлен шкив 7406-1307216-20. <br>
+                    На 740.63 установлен шкив 740.63-1307216-10.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    
+    <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+        <h3 itemprop="name">Чем отличаются водяные насосы КАМАЗ 740.11-1307010 и 7406-1307010-01? взаимозаменяемы ли они?</h3>
+        <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+            <div itemprop="text">
+                <p>
+                    На 740.11-1307010 (автобусная комплектация) устанавливается шкив 740.11-1307216 диаметром 121 мм, в форме "чашки". <br>  
+                    на 7406-1307010-01 (автомобильная комплектация Евро-2) устанавливается шкив 7406-1307216-20 прямой формы.
+                </p>
+                <p>
+                    Насос 7406-1307010-01 для Евро-2 был заменен на насос 740.50-1307010 (с 01.12.2006), в котором
+                     сальник водяного насоса 2101-1307013-01 заменен на сальник SP/1341/1 MECCANOTECNICA UMBRA 94412 производства Италия.
+                </p>
+            </div>
+        </div>
+    </div>
+
+
+    <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+        <h3 itemprop="name">Чем отличаются водяные насосы КамАЗ 740-1307010-02 и 740.13-1307010 и их взаимозаменяемость?</h3>
+        <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+            <div itemprop="text">
+                <p>
+                    Насосы 740-1307010-02 и 740.13-1307010 отличаются друг от друга шкивами: <br>
+                    на 740 устанавливается двухручейковый шкив 740-1307216-30 диаметром 125 мм,<br>
+                    на 740.13 также двухручейковый шкив 740.13-1307216 диаметром 142 мм.<br>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    
+    <p></p>
+    <p></p>
+    {% include kupite_u_nas.html %}
+    
+  <div style="height: 30px;">&nbsp;</div>
+  
+<script src="/assets/js/list.min.js"></script>

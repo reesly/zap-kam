@@ -1,0 +1,78 @@
+---
+layout: default_info
+title: Головка блока цилиндров двигателей КамАЗ
+description: Выбор головок блоков цилиндров двигателя КамАЗ Евро-0, Евро-1, Евро-2, Евро-3. Каталог камазовских блоков с ценами, описанием, применимостью и техническими характеристиками. Новые оригинал и восстановленные б/у после кап.ремонта.
+keywords: Блок цилиндров КамАЗ Двигатель КамАЗ Евро Евро-1 Евро-2 Евро-3 Евро-4 Коленвал Коленчатый вал Блок цилиндров шатун шейка поршня кольца Bosch ЯЗДА ЦПГ ЯМЗ SANZ насос турбокомпрессор распредвал 
+hero-title: Запчасти на ДВИГАТЕЛИ КамАЗ
+h1: Головка блоков цилиндров на двигатели КамАЗ
+h2:
+phone: 
+phone_title:
+---
+
+<!-- Модель камаза  -->
+<div class="col-md-11 col-xs-12" style="margin: auto;">
+    <p>
+       
+    </p>
+</div>
+
+
+<!-- Товары ---->
+
+<div class="col-md-11 col-xs-12" style="margin: auto;">
+    
+    <!-- <h3 class="w-100 text-center">Каталог</h3> -->
+    <div class="form form-inline">
+        <input id="pListSearch" class="fuzzy-search" type="search" class="form-control" placeholder="поиск..." style="width:130px;"/>
+        &nbsp;&nbsp;
+        <button class="btn btn-search-var " onclick="$('#pListSearch').val(''); filterProductList($('#pListSearch').val());" title="Сбросить фильтр">Все</button>    
+        <button class="btn btn-search-var " onclick="$('#pListSearch').val('740-1003010-20'); filterProductList($('#pListSearch').val());" title="740">740-20</button>    
+        <button class="btn btn-search-var " onclick="$('#pListSearch').val('740.30'); filterProductList($('#pListSearch').val());" title="Евро">740.30 Евро</button>    
+        <button class="btn btn-search-var " onclick="$('#pListSearch').val('740.90'); filterProductList($('#pListSearch').val());" title="Евро">740.90 Евро-3</button>    
+       
+    </div>
+
+    {% include catalog-loading-panel.html %}
+
+    <div id="productList" class="pt-4 pb-2" style="display: none; ">
+    
+        <div class="row list">
+            {% for product in site.data.dvig_zap %}
+            {%- if product.cat == "Головки блока" -%}
+                {% include card_zapchasti_catalog.html product = product %}
+            {%- endif -%}
+            {% endfor %}
+        </div>
+        <div class="no-result">Не найдено</div>
+        <ul class="pagination" onclick="$('html, body').animate({ scrollTop: 0}, 600);"></ul>
+    </div>
+</div>
+
+
+<div class="col-md-10 col-xs-12" style="margin: auto;">
+
+    <h3>Конструктивные особенности двигателя КамАЗ-740</h3>
+    <p>
+        <br>- поршни отлиты из высококремнистого алюминиевого сплава, с чугунной упрочняющей вставкой под верхнее
+        компрессионное кольцо и коллоидно-графитным покрытием юбки;
+        <br>- гильзы цилиндров закалены и обработаны плосковершинным хонингованием;
+        <br>- боковые поверхности поршневых колец покрыты хромовым и молибденовым покрытием;
+        <br>- трехслойные тонкостенные стале-бронзовые вкладыши коренных и шатунных подшипников;
+    </p>
+    <p>
+        Гильзы цилиндров - «мокрого» типа, легкосъемные, изготовлены из специального чугуна, объемно закалены.
+        Зеркало гильзы обработано плосковершинным хонингованием для получения сетки впадин и площадок под углом к оси гильзы.
+         
+    </p>
+    <p>
+        
+    </p>
+
+    <p></p>
+    <p></p>
+    {% include kupite_u_nas.html %}
+    
+  <div style="height: 30px;">&nbsp;</div>
+  
+<script src="/assets/js/list.min.js"></script>

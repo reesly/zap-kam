@@ -1,0 +1,122 @@
+---
+layout: default_info
+title: Турбокомпрессоры КамАЗ
+description: Выбор турбокомпрессоров для двигателей КамАЗ Евро-0, Евро-1, Евро-2, Евро-3. Каталог камазовских блоков с ценами, описанием, применимостью и техническими характеристиками. Новые оригинал и восстановленные б/у после кап.ремонта.
+keywords: Блок цилиндров КамАЗ Двигатель КамАЗ Евро Евро-1 Евро-2 Евро-3 Евро-4 Коленвал Коленчатый вал Блок цилиндров шатун шейка поршня кольца Bosch ЯЗДА ЦПГ ЯМЗ SANZ насос турбокомпрессор распредвал 
+hero-title: Запчасти на ДВИГАТЕЛИ КамАЗ
+h1: Турбокомпрессоры на двигатели КамАЗ
+h2:
+phone: 
+phone_title:
+---
+
+<!-- Модель камаза  -->
+<div class="col-md-11 col-xs-12" style="margin: auto;">
+    <p>
+        Турбина преобразовывает энергию выхлопных газов в кинетическую энергию вращения ротора турбокомпрессора, которая затем опять превращается в работу сжатия воздуха.
+        Турбокомпрессор состоит из центростремительной турбины и центробежного компрессора, соединенных между собой подшипниковым узлом.
+    </p>
+</div>
+
+
+<!-- Товары ---->
+
+<div class="col-md-11 col-xs-12" style="margin: auto;">
+    
+    <!-- <h3 class="w-100 text-center">Каталог</h3> -->
+    <div class="form form-inline">
+        <input id="pListSearch" class="fuzzy-search" type="search" class="form-control" placeholder="поиск..." style="width:130px;"/>
+        &nbsp;&nbsp;
+        <button class="btn btn-search-var " onclick="$('#pListSearch').val(''); filterProductList($('#pListSearch').val());" title="Сбросить фильтр">Все</button>    
+        <button class="btn btn-search-var " onclick="$('#pListSearch').val('Евро-1'); filterProductList($('#pListSearch').val());" title="Евро-1">Евро-1</button>    
+        <button class="btn btn-search-var " onclick="$('#pListSearch').val('Евро-2'); filterProductList($('#pListSearch').val());" title="Евро-2">Евро-2</button>    
+        <button class="btn btn-search-var " onclick="$('#pListSearch').val('Евро-3'); filterProductList($('#pListSearch').val());" title="Евро-3">Евро-3</button>    
+        <button class="btn btn-search-var " onclick="$('#pListSearch').val('ТКР-7Н1'); filterProductList($('#pListSearch').val());" title="ТКР-7Н1">ТКР-7Н1</button>    
+        <button class="btn btn-search-var " onclick="$('#pListSearch').val('7406-1118'); filterProductList($('#pListSearch').val());" title="ТКР-7Н1">ТКР 7С-6</button>    
+        <button class="btn btn-search-var " onclick="$('#pListSearch').val('40.60-11180'); filterProductList($('#pListSearch').val());" title="ТКР-7Н1">ТКР 7С-6М</button>    
+        <button class="btn btn-search-var " onclick="$('#pListSearch').val('Чехия'); filterProductList($('#pListSearch').val());" title="Чехия">Чехия</button>    
+        <button class="btn btn-search-var " onclick="$('#pListSearch').val('Schwitzer'); filterProductList($('#pListSearch').val());" title="Schwitzer">Schwitzer</button>    
+
+       
+    </div>
+
+    {% include catalog-loading-panel.html %}
+
+    <div id="productList" class="pt-4 pb-2" style="display: none; ">
+    
+        <div class="row list">
+            {% for product in site.data.dvig_zap %}
+            {%- if product.cat == "Турбокомпрессоры" -%}
+                {% include card_zapchasti_catalog.html product = product %}
+            {%- endif -%}
+            {% endfor %}
+        </div>
+        <div class="no-result">Не найдено</div>
+        <ul class="pagination" onclick="$('html, body').animate({ scrollTop: 0}, 600);"></ul>
+    </div>
+</div>
+
+
+<div class="col-md-10 col-xs-12" style="margin: auto;">
+
+    <p>
+        Турбокомпрессоры <a href="/dvigatel_zapchasti/catalog/turbik/turbokompressor-kamaz-evro-2-tkr-7s-6-levyj__7406-1118010.html">ТКР 7С-6</a> и ТКР 7С-9 отличаются между собой только корпусами турбин - они имеют различную пропускную способность.
+    </p>
+    <p>
+        Турбокомпрессор <a href="/dvigatel_zapchasti/catalog/turbik/turbokompressor-schwitzer-na-kamaz-evro-3__s2b-12749700003-04.html">S2B/7624TAE/0,76D9 фирмы «BorgWarner Turbo Systems»</a> имеет конструкцию, аналогичную <a href="/dvigatel_zapchasti/catalog/turbik/turbokompressor-kamaz-evro-2-tkr-7s-6-levyj__7406-1118010.html">ТКР 7С-6</a>, и по установочным и присоединительным размерам он унифицирован с ТКР 7С-6.
+    </p>
+
+    <p>
+        Рабочие колеса газовой турбины 2 (см.рисунок) и центробежного компрессора 4 закреплены на одном валу и образуют ротор
+        турбокомпрессора. Отработавшие газы, выходящие через выпускной канал 1 поступают в газовую турбину и вращают турбинное
+         колесо с большой частотой.
+        Благодаря высокой частоте вращения колесо компрессора засасывает воздух, сжимает его и нагнетает через канал 5 под
+        давлением 0,05.. .0,08 МПа в цилиндры дизеля.
+        Корпус турбины 1 имеет газоотводящий спиральный канал (улитку) с фланцем для крепления к выпускному коллектору.
+    </p>
+
+    <figure class="wp-block-image"><img
+        src="/dvigatel_zapchasti/category/img/Turbokompressor-TKR-7N-6.jpg" alt="Турбокомпрессор ТКР-7Н-6 чертеж-схема" />
+      <figcaption><br><strong>Рис. Устройство турбокомпрессора:</strong> 
+        1 - корпус турбины; 2 - колесо турбины с валом; 3 - прокладка; 4 - диск турбины; 5 - подшипник;
+        6 - планка пружины; 7 - маслоотражатель; 8 - кольцо уплотнительное;
+        9 - колесо компрессора; 10 - гайка; 11 - втулка; 12 - диффузор; 13, 14, 20 - диски; 
+        15 - корпус компрессора; 16- шайба прижимная; 17 - кольцо стопорное: 18 - фиксатор; 19 - корпус средний; 21 - втулка    
+    </figcaption>
+    </figure>
+
+
+ 
+    <p>
+        Частота вращения ротора турбокомпрессора зависит от расхода, температуры и давления выпускных газов.
+        С увеличением подачи топлива в цилиндры дизеля возрастает энергия выпускных газов, 
+        что повышает частоту вращения ротора, и компрессор увеличивает подачу воздуха в цилиндры.
+
+    </p>
+
+    <strong>Основные неисправности, связанные с турбокомпрессорами</strong>
+    <p>
+        • двигатель не развивает полную мощность;<br>
+        • черный дым из выхлопной трубы;<br>
+        • синий дым из выхлопной трубы;<br>
+        • повышенный расход масла;<br>
+        • шумная работа турбокомпрессора.<br>
+    </p>
+    <p>
+        <a href="/dvigatel_zapchasti/info/tipichnye-neispravnosti-turbin-kamaz.html" class="u small2">подробнее о неисправностях турбин КамАЗ...</a>
+    </p>
+  
+
+    <p class="text-center">
+        <iframe width="800" height="450" style="max-width: 100%;" src="https://www.youtube.com/embed/Osuzua4WUHk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </p>
+    <p class="text-info"> Одна из самых распространенных причин отсутствия наддува турбокомпрессора..</p>
+    
+        
+    <p></p>
+    <p></p>
+    {% include kupite_u_nas.html %}
+    
+  <div style="height: 30px;">&nbsp;</div>
+  
+<script src="/assets/js/list.min.js"></script>
