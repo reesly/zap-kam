@@ -10,6 +10,9 @@ phone:
 phone_title: 
 ---
 
+<div class="col-md-6 col-xs-12" style="margin: auto;">
+
+
 <h3 class="text-center w-100">Оплата</h3>
 <table class="table table-our-plus table-hoverable table-borderless">
   <tbody>
@@ -27,33 +30,51 @@ phone_title:
     </tr>
     <tr>
       <td><i class='lni-chevron-down'></i></td>
-      <td> Оплата при поступлении <br>
+      <td> <b>Оплата при поступлении</b> <br>
       При покупке крупных агрегатов возможна оплата после осмотра товара на пункте выдачи</td>
     </tr>
   </tbody>
 </table>
-<p>&nbsp;</p>
+
+</div>
+
+
+<div class="col-md-6 col-xs-12" style="margin: auto;">
+
 
 <h3 class="text-center w-100">Доставка</h3>
-<div class="col-md-10 col-xs-12" style="margin: auto;">
-  <div>
-    Расчёт стоимости доставки можно произвести в карточке выбранного вами товара.
-  </div>
-  <div>
-    Мы бесплатно доставим ваш груз до терминала удобной для Вас транспортной компании в нашем городе: <br>
-    - ПЭК, Деловые Линии, Байкал-Сервис и др.<br>
-  </div>
-  <div>
-    Подобрать ближайший терминал в вашем городе можно по ссылкам ниже.
+<table class="table table-our-plus table-hoverable table-borderless">
+  <tbody>
+    <tr>
+      <td><i class='lni-chevron-down'></i></td>
+      <td>Расчёт стоимости доставки можно произвести в карточке выбранного вами товара. </td>
+    </tr>
     
-  </div>
+    <tr>
+      <td><i class='lni-chevron-down'></i></td>
+      <td> Мы бесплатно доставим ваш груз до терминала удобной для Вас транспортной компании в нашем городе: <br>
+        - ПЭК, Деловые Линии, Байкал-Сервис и др.</td>
+    </tr>
+    <tr>
+      <td><i class='lni-chevron-down'></i></td>
+      <td> Подобрать ближайший терминал в вашем городе можно по ссылкам ниже. </td>
+    </tr>
+  </tbody>
+</table>
+
+</div>
+
+<p>&nbsp;</p>
+
+
+<div class="col-md-12 col-xs-12" style="margin: auto;">
   
     <table class="table table-hover table-hover table-striped table-responsive-sm" style="width:auto;">
   <thead>
     <th>Город</th>
     <th>Сроки доставки, дней</th>
     <th style="max-width: 50%;">Пункт выдачи</th>
-    <th class="text-right">Расстояние от Н.Челнов, км.</th>
+    <th class="text-right small2">Расстояние от Н.Челнов, км.</th>
   </thead>
   {%- for item in site.data.dostavka -%}
     {%- if item.city -%}
