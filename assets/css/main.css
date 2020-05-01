@@ -54,6 +54,15 @@ p {
   color: #111111;
 }
 
+.breadcrumb {
+  padding: .15rem .15rem;
+  margin-bottom: 0rem;
+  background-color: transparent;
+  border-radius: 0;
+  font-size: 0.9rem;
+  
+}
+
 /* ul, ol {
   list-style: outside none none;
   margin: 0;
@@ -1261,7 +1270,7 @@ textarea {
   background: lightgrey;
   content: "";
   display: block;
-  height: 115%; 
+  height: 110%; 
   position: absolute;
   top: -8px;
   left: -50%;
@@ -2029,4 +2038,8 @@ a.a-class:hover {
 
 .pagination .active {
   font-weight: bold;
+}
+
+.breadcrumb .dropdown-item {
+  padding: 3px 10px !important ;
 }

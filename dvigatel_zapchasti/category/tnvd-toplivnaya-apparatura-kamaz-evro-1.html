@@ -1,0 +1,117 @@
+---
+layout: default_info
+title: ТНВД КамАЗ Евро-1
+description: Каталог ТНВД насосов высокого давления КамАЗ Евро-1. Каталог камазовских блоков с ценами, описанием, применимостью и техническими характеристиками. Новые оригинал и восстановленные б/у после кап.ремонта, 
+keywords: Блок цилиндров КамАЗ Двигатель КамАЗ Евро-1 Коленвал Коленчатый вал Блок цилиндров шатун шейка поршня кольца Bosch ЯЗДА ЦПГ ЯМЗ SANZ насос турбокомпрессор распредвал 
+hero-title: Запчасти на ДВИГАТЕЛИ КамАЗ
+h1: ТНВД на двигатели КамАЗ Евро-1
+h2:
+phone: 
+phone_title:
+---
+
+<!-- Модель камаза  -->
+<div class="col-md-11 col-xs-12" style="margin: auto;">
+    <p>
+        ТНВД - Топливный Насос Высокого Давления. На двигателях КАМАЗ Евро-1 используются V-образные ТНВД ЯЗДА. </p>
+</div>
+
+
+<!-- Товары ---->
+
+<div class="col-md-11 col-xs-12" style="margin: auto;">
+    
+    <!-- <h3 class="w-100 text-center">Каталог</h3> -->
+    <div class="form form-inline">
+        <input id="pListSearch" class="fuzzy-search" type="search" class="form-control" placeholder="поиск..." style="width:130px;"/>
+        &nbsp;&nbsp;
+        <button class="btn btn-search-var " onclick="$('#pListSearch').val(''); filterProductList($('#pListSearch').val());" title="Сбросить фильтр">Все</button>    
+        <button class="btn btn-search-var " onclick="$('#pListSearch').val('ЯЗДА'); filterProductList($('#pListSearch').val());" title="ЯЗДА">ЯЗДА</button>    
+        <button class="btn btn-search-var " onclick="$('#pListSearch').val('Bosch'); filterProductList($('#pListSearch').val());" title="Bosch">Bosch</button>    
+    </div>
+
+    {% include catalog-loading-panel.html %}
+
+    <div id="productList" class="pt-4 pb-2" style="display: none; ">
+    
+        <div class="row list">
+            {% for product in site.data.dvig_zap %}
+            {%- if product.cat == "ТНВД" and product.name contains "Евро-1" -%}
+                {% include card_zapchasti_catalog.html product = product %}
+            {%- endif -%}
+            {% endfor %}
+        </div>
+        <div class="no-result">Не найдено</div>
+        <ul class="pagination" onclick="$('html, body').animate({ scrollTop: 0}, 600);"></ul>
+    </div>
+</div>
+
+
+<div class="col-md-10 col-xs-12" style="margin: auto;">
+
+    <p>
+        Двигатели КамАЗ 740.11-240 и 740.13-260 комплектуются топливными насосами высокого давления (ТНВД) 
+        типа 337 производства ОАО «ЯЗДА», г. Ярославль. 
+        Конструкция V-образного насоса ОАО «ЯЗДА» состоит из насоса высокого
+        давления (ТНВД), насоса топливного низкого давления (ТННД) и регулятора частоты вращения.
+    </p>
+    <p>
+        ТНВД подает под необходимым давлением топливо к нагнетательным секциям ТНВД,
+        которые размещены в V-образном корпусе насоса. ТНВД, в определенные порядком работы двигателя 
+        интервалы времени, подает в цилиндры двигателя строго дозированные порции топлива под высоким давлением.
+    </p>
+    <p>
+        <b>Регулятор частоты вращения</b> – всережимный, прямого действия, механический, 
+        изменяет количество топлива подаваемого в цилиндры в зависимости от нагрузки. 
+        На крышке насоса располагается рычаг управления регулятором и рычаг останова двигателя. 
+        Ход рычагов ограничивается болтами-упорами. 
+    </p>
+    <h3>Применяемость топливных насосов для двигателей КАМАЗ ЕВРО-1</h3>
+    <table class="table table-hover table-bordered table-responsive-sm" style="width: auto;">
+        <tbody>
+        <tr>
+        <td><strong>Двигатель</strong></td>
+        <td><strong>Применяемое ТНВД</strong></td>
+        <td><strong>Обозначение</strong></td>
+        </tr>
+        <tr>
+        <td>740.11-240</td>
+        <td><a href="/dvigatel_zapchasti/catalog/tnvd/tnvd-yazda-337-40-na-kamaz-evro-1-dv-740-11_7405-10_337-1111005-40.html">337-40</a>
+            <a href="/dvigatel_zapchasti/catalog/tnvd/tnvd-yazda-337-42-08-na-kamaz-evro-1-dv-740-11_337-1111005-42-08.html">337-42.08</a>
+            </td>
+        <td>
+            <a href="/dvigatel_zapchasti/catalog/tnvd/tnvd-yazda-337-40-na-kamaz-evro-1-dv-740-11_7405-10_337-1111005-40.html">337.1111005-40</a>
+            <a href="/dvigatel_zapchasti/catalog/tnvd/tnvd-yazda-337-42-08-na-kamaz-evro-1-dv-740-11_337-1111005-42-08.html">337.1111005-42.08</a>
+        </td>
+        </tr>
+        <tr>
+        <td>740.13-260</td>
+        <td><a href="/dvigatel_zapchasti/catalog/tnvd/tnvd-yazda-337-42-kamaz-evro-1-dv-740-13_337-1111005-42.html">337-42</a></td>
+        <td><a href="/dvigatel_zapchasti/catalog/tnvd/tnvd-yazda-337-42-kamaz-evro-1-dv-740-13_337-1111005-42.html">337.1111005-42</a></td>
+        </tr>
+        </tbody>
+        </table>
+        <div class="alert alert-info">
+        В отличие от <a href="/dvigatel_zapchasti/catalog/tnvd/tnvd-yazda-337-42-kamaz-evro-1-dv-740-13_337-1111005-42.html">ТНВД 337-42</a> и 337-42.08 ТНВД 337-40 выпускался с автоматической муфтой опережения впрыскивания
+        топлива (АМОВТ). С 2004 года все двигатели 740.11-240 в серийном производстве комплектуются только ТНВД мод. 337-42.08.
+
+        </div>
+
+        <strong>Форсунки и распылители</strong>
+    <p>
+        На двигателе КАМАЗ 740.11-240 и КамАЗ 740.13-260 ЕВРО-1 применяются форсунки производства ОАО «ЯЗДА», г. Ярославль модели 273-31 и модели 273-20 соответственно. Форсунки модели 273-31 и 273-20 имеют
+        ввертный штуцер подвода дизельного топлива, установленный в корпус форсунки под углом 13°… 17°. Распылитель форсунки имеет пять распыливающих отверстий, диаметр иглы распылителя Ø 6 мм. Давление начала впрыскивания 24,52+12 МПа (250+12 кгс/см2)
+    </p>
+
+
+
+    
+    
+
+    <p></p>
+    <p></p>
+    {% include kupite_u_nas.html %}
+    
+  <div style="height: 30px;">&nbsp;</div>
+  
+<script src="/assets/js/list.min.js"></script>

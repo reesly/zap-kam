@@ -1,10 +1,10 @@
 ---
 layout: default_info
-title: Головка блока цилиндров двигателей КамАЗ
-description: Выбор головок блоков цилиндров двигателя КамАЗ Евро-0, Евро-1, Евро-2, Евро-3. Каталог камазовских блоков с ценами, описанием, применимостью и техническими характеристиками. Новые оригинал и восстановленные б/у после кап.ремонта.
-keywords: Блок цилиндров КамАЗ Двигатель КамАЗ Евро Евро-1 Евро-2 Евро-3 Евро-4 Коленвал Коленчатый вал Блок цилиндров шатун шейка поршня кольца Bosch ЯЗДА ЦПГ ЯМЗ SANZ насос турбокомпрессор распредвал 
+title: Коленвал КамАЗ
+description: Выбор коленвалов КамАЗ Евро-0, Евро-1, Евро-2, Евро-3. Каталог валов коленчатых с ценами, описанием, применимостью и техническими характеристиками. Новые оригинал и восстановленные б/у после кап.ремонта.
+keywords: коленвалы КамАЗ Двигатель КамАЗ Евро Евро-1 Евро-2 Евро-3 Евро-4 Коленвал Коленчатый вал Блок цилиндров шатун шейка поршня кольца Bosch ЯЗДА ЦПГ ЯМЗ SANZ насос турбокомпрессор распредвал 
 hero-title: Запчасти на ДВИГАТЕЛИ КамАЗ
-h1: Головка блоков цилиндров на двигатели КамАЗ
+h1: Валы коленчатые на двигатели КамАЗ
 h2:
 phone: 
 phone_title:
@@ -27,9 +27,11 @@ phone_title:
         <input id="pListSearch" class="fuzzy-search" type="search" class="form-control" placeholder="поиск..." style="width:130px;"/>
         &nbsp;&nbsp;
         <button class="btn btn-search-var " onclick="$('#pListSearch').val(''); filterProductList($('#pListSearch').val());" title="Сбросить фильтр">Все</button>    
-        <button class="btn btn-search-var " onclick="$('#pListSearch').val('740-1003010-20'); filterProductList($('#pListSearch').val());" title="740">740-20</button>    
-        <button class="btn btn-search-var " onclick="$('#pListSearch').val('740.30'); filterProductList($('#pListSearch').val());" title="Евро">740.30 Евро</button>    
-        <button class="btn btn-search-var " onclick="$('#pListSearch').val('740.90'); filterProductList($('#pListSearch').val());" title="Евро">740.90 Евро-3</button>    
+        <button class="btn btn-search-var " onclick="$('#pListSearch').val('Евро-0'); filterProductList($('#pListSearch').val());" title="Евро-0">Евро-0</button>    
+        <button class="btn btn-search-var " onclick="$('#pListSearch').val('Евро-1'); filterProductList($('#pListSearch').val());" title="Евро-1">Евро-1</button>    
+        <button class="btn btn-search-var " onclick="$('#pListSearch').val('Евро-2'); filterProductList($('#pListSearch').val());" title="Евро-2">Евро-2</button>    
+        <button class="btn btn-search-var " onclick="$('#pListSearch').val('Евро-3'); filterProductList($('#pListSearch').val());" title="Евро-3">Евро-3</button>    
+        <button class="btn btn-search-var " onclick="$('#pListSearch').val('Евро-4'); filterProductList($('#pListSearch').val());" title="Евро-4">Евро-4</button>    
        
     </div>
 
@@ -39,7 +41,7 @@ phone_title:
     
         <div class="row list">
             {% for product in site.data.dvig_zap %}
-            {%- if product.cat == "Головки блока" -%}
+            {%- if product.cat == "Валы коленчатые" and product.cat2 == "Ремонт" -%}
                 {% include card_zapchasti_catalog.html product = product %}
             {%- endif -%}
             {% endfor %}
@@ -51,12 +53,182 @@ phone_title:
 
 
 <div class="col-md-10 col-xs-12" style="margin: auto;">
-    <div class="alert alert-info">
-        <p>Предоставляется гарантия производителя.</p>
+    
+    <figure class="wp-block-image"><img
+        src="/dvigatel_zapchasti/category/img/val-kolenchatyi.png" alt="Коленвал чертеж-схема" />
+      <figcaption><br><strong>Рис. Коленчатый вал в сборе:</strong> 
+        1-передний противовес; 2-шестерня привода масляного насоса; 3-заглушка: 4-задний противовес;
+        5-ведущая шестерня; б-маслоотражатель; 7-коленчатый вал. 8-втулка; 9-винn-заглушка.
+    </figcaption>
+    </figure>
+
+
+    <p>&nbsp;</p>
+  
+    <p>&nbsp;</p>
+    <h2>Частые вопросы и ответы</h2>
+
+    <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+        <h3 itemprop="name">
+            Чем отличаются валы 740.50-1005008 и 740.63-1005008, 740.62-1005008?
+        </h3>
+        <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+            <div itemprop="text">
+                <p>
+                    Все валы имеют одну заготовку 740.50-1005020. Все валы либо азотируют (для двигателей cвыше 300л.с.) или обрабатывают токами высокой частоты
+                    (для двигателей до 300 л.с.) и комплектуют противовесами и шестерней по принадлежности для Е2 или Е3.
+                </p>
+                <p>
+                    В двигателе 740.62 применяется вал 740.62-1005008 в состав, которого входит 740.50-1005020 обработанный ТВЧ (токами высокой частоты).
+                </p>
+                <p>
+                    В двигателе 740.63 применяется вал 740.63-1005008 в состав, которого входит азотированный вал 740.50-1005020, шестерни и противовесы идентичны.
+                     Валы не взаимозаменяемы, но допускается устанавливать 740.63 вместо 740.62, обратная замена не допускается.
+                </p>
+            </div>
+        </div>
+    </div>
+    
+
+    <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+        <h3 itemprop="name">
+            Как отличить вал 740.13 от 740.30?
+        </h3>
+        <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+            <div itemprop="text">
+                <p>
+                    <b>На валу 740.30</b> - нет заднего противовеса и шестерни, с переднего торца нет ввертыша
+                     по центру вала, а по диаметру расположены 8 отв.М12 и одно отв. Ф11,
+                      сзади с торца 10 отв.М16 и 2 Ф8 Диаметр вала с заднего торца 62 мм на длине 25мм. 
+                      затем диаметр увеличивается до 112, кроме того на передней шейки есть сквозное отверстие
+                     (на 13 не сквозное).
+                </p>
+                <p>
+                    <b>На валу 740.13</b> с обоих сторон противовесы и шестерни спереди шестерня 740.1011240-10
+                     и противовес 7406.1005026, сзади шестерня 740.1005030-01 и противовес 740.1005027,
+                    спереди с торца на малом диаметре 6 отв. М10 на большом диаметре 8 отв. М12, 
+                    сзади по торцу 8 отв.М14 2 отв.Ф12, кроме того диаметр вала сзади с торца Ф105мм.
+                    
+                </p>
+            </div>
+        </div>
     </div>
 
-  
+
+    <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+        <h3 itemprop="name">
+            Чем отличаются коленчатые валы моделей 740.30-1005008 и 740.50-1005008?
+        </h3>
+        <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+            <div itemprop="text">
+                <p>
+                    Диаметр по оси шатунных шеек на 10 мм на 740.51 больше, чем на 740.30, 
+                    <br>на обоих валах при внешней схожести установлены противовесы: на валу 740.30 противовес 7406.1005026 шириной 14 мм, на валу 740.50
+                    установлен противовес 740.21-1005026 шириной 21 мм,
+                    <br>на валу 740.50 между шестерней привода масляного насоса и противовесом практически нет свободного пространства,
+                    тогда как на валу 740.30 расстояние между щеками противовеса и шестерни более 7 мм.
+
+                </p>
+            </div>
+        </div>
+    </div>
+
+
+    <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+        <h3 itemprop="name">
+             Как применяются шестерни 7406-1005030, 740-1005030, 740.13-1005030?
+        </h3>
+        <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+            <div itemprop="text">
+                <p>
+                    Шестерня 7406-1005030 ставится на коленчатых валах 740.30, 740.50 и 740.31.
+                </p>
+                <p>
+                    740.13-1005030 устанавливается на валу <a href="/dvigatel_zapchasti/catalog/kolenvaly/kolenval-kamaz-740-13-1x-evro-2-dvig-740-31-s-kpp-142__740-13-1005008-10.html" class="u">740.13</a> и применяется на автомобилях - бетоно-смесителях. Профиль и форма зубьев у шестерен 7406 и 740.13 идентичны число зубьев у обоих равно 30. Шестерня 7406 фиксируется на валу на диаметре 62 мм. штифтом Ф=8мм. 
+                </p>
+                <p>
+                    Если автомобиль не бетоносмеситель то на вал 740.13 устанавливается шестерня 740.1005030 имеющая измененный профиль зуба и с числом зубьев 45.На сегодняшний день применяется 740.1005030-01(рассчитана под немецкую манжету).
+                </p>
+            </div>
+        </div>
+    </div>
+
     
+    <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+        <h3 itemprop="name">
+            Каковы внешние отличия коленчатых валов моделей 740.13-1005008-00, -10, -20?
+        </h3>
+        <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+            <div itemprop="text">
+                <table class="table table-hover table-responsive-sm table-bordered" style="width: auto;">
+                    <tbody>
+                    <tr>
+                    <td width="204">
+                    <p><strong>Коленвал</strong></p>
+                    </td>
+                    <td width="123">
+                    <p><strong>740.13-00 Евро-0 (старого образца)</strong></p>
+                    </td>
+                    <td width="123">
+                    <p><strong>740.13-10 Евро-2</strong></p>
+                    </td>
+                    <td width="123">
+                    <p><strong>740.13-20 Евро-0 (нового образца)</strong></p>
+                    </td>
+                    </tr>
+                    <tr>
+                    <td width="204">
+                    <p>Противовес</p>
+                    </td>
+                    <td width="123">
+                    <p>740-1005026-10</p>
+                    </td>
+                    <td width="123">
+                    <p>740.21-1005026</p>
+                    </td>
+                    <td width="123">
+                    <p>740-1005026-10</p>
+                    </td>
+                    </tr>
+                    <tr>
+                    <td width="204">
+                    <p>Шестерня привода маслонасоса</p>
+                    </td>
+                    <td width="123">
+                    <p>740-1011240-10</p>
+                    </td>
+                    <td width="123">
+                    <p>740-1011240-10</p>
+                    </td>
+                    <td width="123">
+                    <p>740-1011240</p>
+                    </td>
+                    </tr>
+                    <tr>
+                    <td width="204">
+                    <p>Ввертыш</p>
+                    </td>
+                    <td width="123">
+                    <p>740-1005535</p>
+                    </td>
+                    <td width="123">
+                    <p>740.21-1005535</p>
+                    </td>
+                    <td width="123">
+                    <p>740-105535</p>
+                    </td>
+                    </tr>
+                    </tbody>
+                    </table>
+                <p>
+                    Все остальное идентично. Противовес 740-1005026 отличается от 740.21-1005026 шириной посадочного места и составляет 12, 5 мм, тогда как на 740.21 ширина составляет 21, 5 мм.
+                </p>
+            </div>
+        </div>
+    </div>
+
+
+
     <p></p>
     <p></p>
     {% include kupite_u_nas.html %}

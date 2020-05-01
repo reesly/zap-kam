@@ -1,0 +1,290 @@
+---
+layout: default_info
+title: ТНВД КамАЗ Евро-2
+description: Каталог ТНВД насосов высокого давления КамАЗ Евро-2. Каталог с ценами, описанием, применимостью и техническими характеристиками. Новые оригинал и восстановленные б/у после кап.ремонта, 
+keywords: Блок цилиндров КамАЗ Двигатель КамАЗ Евро Евро-1 Евро-2 Евро-3 Евро-4 Коленвал Коленчатый вал Блок цилиндров шатун шейка поршня кольца Bosch ЯЗДА ЦПГ ЯМЗ SANZ насос турбокомпрессор распредвал 
+hero-title: Запчасти на ДВИГАТЕЛИ КамАЗ
+h1: ТНВД на двигатели КамАЗ Евро-2
+h2:
+phone: 
+phone_title:
+---
+
+<!-- Модель камаза  -->
+<div class="col-md-11 col-xs-12" style="margin: auto;">
+    <p>
+        ТНВД - Топливный Насос Высокого Давления. 
+        На двигателях КАМАЗ Евро-2 используются V-образные ТНВД ЯЗДА и рядные ТНВД Bosch. </p>
+</div>
+
+
+<!-- Товары ---->
+
+<div class="col-md-11 col-xs-12" style="margin: auto;">
+    
+    <!-- <h3 class="w-100 text-center">Каталог</h3> -->
+    <div class="form form-inline">
+        <input id="pListSearch" class="fuzzy-search" type="search" class="form-control" placeholder="поиск..." style="width:130px;"/>
+        &nbsp;&nbsp;
+        <button class="btn btn-search-var " onclick="$('#pListSearch').val(''); filterProductList($('#pListSearch').val());" title="Сбросить фильтр">Все</button>    
+
+        <button class="btn btn-search-var " onclick="$('#pListSearch').val('740.31'); filterProductList($('#pListSearch').val());" title="740.31-260"> двиг. 740.31</button>    
+        <button class="btn btn-search-var " onclick="$('#pListSearch').val('740.30'); filterProductList($('#pListSearch').val());" title="740.30-260">740.30</button>    
+        <button class="btn btn-search-var " onclick="$('#pListSearch').val('740.51'); filterProductList($('#pListSearch').val());" title="740.51-320">740.51</button>    
+        <button class="btn btn-search-var " onclick="$('#pListSearch').val('740.50'); filterProductList($('#pListSearch').val());" title="740.50-360">740.50</button>    
+        
+        <button class="btn btn-search-var " onclick="$('#pListSearch').val('ЯЗДА'); filterProductList($('#pListSearch').val());" title="ЯЗДА">ЯЗДА</button>    
+        <button class="btn btn-search-var " onclick="$('#pListSearch').val('Bosch'); filterProductList($('#pListSearch').val());" title="Bosch">Bosch</button>            
+    </div>
+
+    {% include catalog-loading-panel.html %}
+
+    <div id="productList" class="pt-4 pb-2" style="display: none; ">
+    
+        <div class="row list">
+            {% for product in site.data.dvig_zap %}
+            {%- if product.cat == "ТНВД" and product.name contains "Евро-2"  -%}
+                {% include card_zapchasti_catalog.html product = product %}
+            {%- endif -%}
+            {% endfor %}
+        </div>
+        <div class="no-result">Не найдено</div>
+        <ul class="pagination" onclick="$('html, body').animate({ scrollTop: 0}, 600);"></ul>
+    </div>
+</div>
+
+
+<div class="col-md-10 col-xs-12" style="margin: auto;">
+
+    <p>
+        Двигатели КАМАЗ мод. 740.31-240, 740.30-260, 740.51-320 и 740.50-360 в серийном
+        производстве комплектуются топливными насосами высокого давления (ТНВД):
+        <br> - типа 337 "ЯЗДА", г. Ярославль 
+        <br> - типа Р7100 "БОШ".
+    </p>
+    <p>
+        <b>ТНВД «ЯЗДА» типа 337.</b> Конструкция блочного 
+        V-образного насоса ОАО «ЯЗДА» состоит из насоса высокого давления,
+        насоса топливного низкого давления, регулятора частоты
+        вращения и корректора по надувочному воздуху. Топливный насос низкого
+        давления подает под необходимым давлением топливо к нагнетательным секциям ТНВД,
+        которые размещены в V-образном корпусе насоса. 
+    </p>
+    
+    <h3>Технические характеристики ТНВД ЯЗДА двигателей Евро-2</h3>
+    <table class="table table-hover table-striped table-responsive-sm table-bordered" style="width: auto;">
+        <tbody>
+        <tr>
+        <td><strong>Параметр</strong></td>
+        <td style="text-align: center;"><strong>337-20.05</strong></td>
+        <td style="text-align: center;"><strong>337-20</strong></td>
+        <td style="text-align: center;"><strong>337-20.03</strong></td>
+        <td style="text-align: center;"><strong>337-20.04</strong></td>
+        </tr>
+        <tr>
+        <td>Диаметр плунжера, мм</td>
+        <td style="text-align: center;" colspan="4" width="645">11</td>
+        </tr>
+        <tr>
+        <td>Ход плунжера, мм</td>
+        <td style="text-align: center;" colspan="4" width="645">13</td>
+        </tr>
+        <tr>
+        <td>Способ дозирования топлива</td>
+        <td style="text-align: center;" colspan="4" width="645">Спиральной кромкой</td>
+        </tr>
+        <tr>
+        <td>Средняя цикловая подача топлива на номинальном режиме, мм3 /цикл</td>
+        <td style="text-align: center;">99,0 &ndash;103,0</td>
+        <td style="text-align: center;">104,0 &ndash; 108,0</td>
+        <td style="text-align: center;">132,0 &ndash; 137,0</td>
+        <td style="text-align: center;">147,0 &ndash; 152,0</td>
+        </tr>
+        <tr>
+        <td>Номинальная частота вращения кулачкового вала, мин -1</td>
+        <td style="text-align: center;" colspan="4" width="645">1100&plusmn;10</td>
+        </tr>
+        <tr>
+        <td>Средняя цикловая подача топлива на режиме минимального холостого хода, мм3 /цикл</td>
+        <td style="text-align: center;" colspan="4" width="645">15 - 20</td>
+        </tr>
+        <tr>
+        <td>Частота вращения на режиме минимального холостого хода, мин -1</td>
+        <td style="text-align: center;" colspan="4" width="645">300&plusmn;10</td>
+        </tr>
+        <tr>
+        <td>Частота вращения на режиме максимального крутящего момента, мин -1</td>
+        <td style="text-align: center;" colspan="4" width="645">700&plusmn;10</td>
+        </tr>
+        <tr>
+        <td>Средняя цикловая подача топлива при частоте вращения, соответствующей максимальному крутящему моменту, мм 3 /цикл</td>
+        <td style="text-align: center;">103,0 &ndash; 110,0</td>
+        <td style="text-align: center;">116,0 &ndash; 121,0</td>
+        <td style="text-align: center;">137,0 &ndash; 143,0</td>
+        <td style="text-align: center;">155,0 &ndash; 160,0</td>
+        </tr>
+        <tr>
+        <td>Средняя цикловая подача топлива при частоте вращения n=500 мин-1 , мм3 /цикл</td>
+        <td style="text-align: center;">87,5 &ndash; 97,5</td>
+        <td style="text-align: center;">87,5 &ndash; 97,5</td>
+        <td style="text-align: center;">87,5 &ndash; 96,5</td>
+        <td style="text-align: center;">87,5 &ndash; 96,5</td>
+        </tr>
+        <tr>
+        <td>Средняя цикловая подача топлива на пусковом режиме (n=100 мин-1 ) должна быть, мм3 /цикл</td>
+        <td style="text-align: center;" colspan="4" width="645">195,0 &ndash; 220,0</td>
+        </tr>
+        <tr>
+        <td>Давление воздуха, соответствующее началу действия корректора по наддуву в сторону увеличения подачи топлива, МПа (кгс/см2 )</td>
+        <td style="text-align: center;">0,01 &ndash; 0,015 (0,10 &ndash; 0,15)</td>
+        <td style="text-align: center;">0,01 &ndash; 0,015 (0,10 &ndash; 0,15)</td>
+        <td style="text-align: center;">0,015 &ndash; 0,02 (0,15 &ndash; 0,20)</td>
+        <td style="text-align: center;">0,015 &ndash; 0,02 (0,15 &ndash; 0,20)</td>
+        </tr>
+        <tr>
+        <td>Давление воздуха, соответствующее окончанию действия корректора по наддуву в сторону увеличения подачи топлива, МПа (кгс/см2 )</td>
+        <td style="text-align: center;">0,025 &ndash; 0,03 (0,55 &ndash; 0,30)</td>
+        <td style="text-align: center;">0,035 &ndash; 0,04 (0,35 &ndash; 0,40)</td>
+        <td style="text-align: center;">0,04 &ndash; 0,045 (0,40 &ndash; 0,45)</td>
+        <td style="text-align: center;">0,05 &ndash; 0,055 (0,5 &ndash; 0,55)</td>
+        </tr>
+        </tbody>
+        </table>
+
+        <strong>Форсунки и распылители</strong>
+    <p>
+        На <a href="/dvigatel_zapchasti/category/dvigatel-kamaz-evro-2.html">двигателях КамАЗ Евро-2 740.30-260, 740.31-240, 740.50-360, 740.51-320</a>  с 
+        ТНВД типа 337 (V-образный) <a class="u" href="/dvigatel_zapchasti/catalog/forsunki/forsunka-yazda-273-20-na-kamaz-evro-2_273-1112010-20.html">применяется форсунка модели 273-20 производства ОАО «ЯЗДА», г. Ярославль</a>. 
+    </p>
+
+    <p>&nbsp;</p>
+    <hr>
+
+
+        <h2>ТНВД типа Р7100 «БОШ»</h2>
+        <p>
+            <b>ТНВД типа Р7100 фирмы «БОШ»</b>, Германия. Конструкция блочного рядного насоса фирмы «БОШ» 
+            состоит из ТНВД, насоса топливного низкого давления, регулятора частоты вращения и корректора по надувочному воздуху. 
+            Топливный насос низкого давления подает под необходимым давлением топливо к нагнетательным секциям ТНВД, 
+            которые размещены в корпусе насоса. 
+        </p>
+        <p>&nbsp;</p>
+        <h3>Применяемость топливных насосов фирмы "БОШ" КамАЗ Евро-2</h3>
+        <table class="table table-hover table-striped table-responsive-sm table-bordered" style="width: auto;">
+            <tbody>
+            <tr>
+            <td><strong>Двигатель</strong></td>
+            <td><strong>Применяемое ТНВД Bosch</strong></td>
+            </tr>
+            <tr>
+            <td>740.31-260</td>
+            <td><a href="/dvigatel_zapchasti/catalog/tnvd/tnvd-bosch-608-na-kamaz-evro-2-dv-740-31_0-402-648-608.html">0 402 648 608</a></td>
+            </tr>
+            <tr>
+            <td>740.30-260</td>
+            <td><a href="/dvigatel_zapchasti/catalog/tnvd/tnvd-bosch-611-na-kamaz-evro-2-dv-740-30_0-402-648-611.html">0 402 648 611</a></td>
+            </tr>
+            <tr>
+            <td>740.51-320</td>
+            <td><a href="/dvigatel_zapchasti/catalog/tnvd/tnvd-bosch-610-na-kamaz-evro-2-dv-740-51_0-402-648-610.html">0 402 648 610</a></td>
+            </tr>
+            <tr>
+            <td>740.50-360</td>
+            <td><a href="/dvigatel_zapchasti/catalog/tnvd/tnvd-bosch-609-na-kamaz-evro-2-evro-3-dv-740-50_0-402-648-609.html">0 402 648 609</a></td>
+            </tr>
+            </tbody>
+            </table>
+            <p>&nbsp;</p>
+            <h3>Технические характеристики ТНВД Bosch двигателей Евро-2</h3>
+            <a href="/dvigatel_zapchasti/catalog/tnvd/tnvd-bosch-608-na-kamaz-evro-2-dv-740-31_0-402-648-608.html">0 402 648 608</a>, 
+            <a href="/dvigatel_zapchasti/catalog/tnvd/tnvd-bosch-611-na-kamaz-evro-2-dv-740-30_0-402-648-611.html">0 402 648 611</a>, 
+            <a href="/dvigatel_zapchasti/catalog/tnvd/tnvd-bosch-610-na-kamaz-evro-2-dv-740-51_0-402-648-610.html">0 402 648 610</a>, 
+            <a href="/dvigatel_zapchasti/catalog/tnvd/tnvd-bosch-609-na-kamaz-evro-2-evro-3-dv-740-50_0-402-648-609.html">0 402 648 609</a>.
+            
+            <table class="table table-hover table-striped table-responsive-sm table-bordered" style="width: auto;">
+                <tbody>
+                <tr>
+                <td width="306"><strong>Наименование параметра</strong></td>
+                <td style="text-align: center;" width="240"><strong>Значение</strong></td>
+                </tr>
+                <tr>
+                <td width="306">Диаметр плунжера, мм</td>
+                <td style="text-align: center;" width="240">12</td>
+                </tr>
+                <tr>
+                <td width="306">Ход плунжера, мм</td>
+                <td style="text-align: center;" width="240">12</td>
+                </tr>
+                <tr>
+                <td width="306">Способ дозирования топлива</td>
+                <td style="text-align: center;" width="240">Нижней управляющей кромкой на плунжере</td>
+                </tr>
+                <tr>
+                <td width="306">Номинальная частота вращения кулачкового вала, мин -1</td>
+                <td style="text-align: center;" width="240">1100&plusmn;10</td>
+                </tr>
+                <tr>
+                <td width="306">Частота вращения на режиме минимального холостого хода, мин-1</td>
+                <td style="text-align: center;" width="240">300&plusmn;10</td>
+                </tr>
+                <tr>
+                <td width="306">Частота вращения на режиме максимального крутящего момента, мин-1</td>
+                <td style="text-align: center;" width="240">700&plusmn;10</td>
+                </tr>
+                </tbody>
+                </table>
+
+
+    
+    <strong>Форсунки и распылители</strong>
+    <p>
+        На <a href="/dvigatel_zapchasti/category/dvigatel-kamaz-evro-2.html">двигателях КамАЗ 740.30-260, 740.31, 740.50, 740.51 ЕВРО-2</a> с топливным насосом высокого давления
+        серии Р7100 "Bosch" применяется форсунка серии 216 производства ЗАО «АЗПИ», г. Барнаул: 
+        <br>на двигателях КамАЗ 740.30 и 740.31 применяется <a class="u" href="/dvigatel_zapchasti/catalog/forsunki/forsunka-bosch-904-evro-240-260ls_216-1112010a.html">форсунка модели 216А</a>, 
+        <br>на двигателе 740.50 применяется <a class="u" href="/dvigatel_zapchasti/catalog/forsunki/forsunka-bosch-906-360ls_216-1112010-02a.html">форсунка модели 216-02А</a>, 
+        <br>на двигателе 740.51 применяется <a class="u" href="/dvigatel_zapchasti/catalog/forsunki/forsunka-bosch-905-320ls_216-1112010-01a.html">форсунка модели 216-01А</a>.
+    </p>
+    <p>
+        Форсунки отличаются друг от друга диаметром распыливающих отверстий и величиной пролива. 
+        Форсунка типа 216 имеет центральный подвод дизельного топлива, распылитель имеет 6 распыливающих отверстий,
+        диаметр иглы распылителя Ø 4,5 мм. Давление начала впрыскивания 26.47…27,65 МПа (270…282 кгс/см2). 
+    </p>
+           
+    <div class="alert alert-info">
+        <h4>Важно.</h4>
+        <p>
+            Проверку и регулировку форсунок, а также замену распылителей, необходимо проводить в специализированной мастерской.
+        </p>
+        <p>
+            Категорически запрещается установка форсунок других моделей, кроме указанных на конкретные двигатели, ввиду возможности выхода из строя двигателя.
+        </p>
+    </div>
+
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <h2>Частые вопросы и ответы</h2>
+    <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+        <h3 itemprop="name">
+            КамАЗ 53215-15 Евро-2 двигатель 740.31-240 стояло до меня ТНВД БОШ. 
+            Мне достался уже с ТНВД 337-42 (пишет Евро). Расход на 100 км при 42т - 65 литров. 
+            Подскажите какое ТНВД должно стоять и какой примерно расход должен?
+        </h3>
+        <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+            <div itemprop="text">
+                <p>
+                    По мануалу, аналогом БОШ действительно является 337-20.05, но есть реальная практика по нескольким авто с
+                    337-42, нормально работают и расходуют,если правильно всё отрегулировать. 
+                    Евро-1 дешевле, чем е-2. Форсы должны быть: 273-21 с распылами 273-20.
+                </p>
+            </div>
+        </div>
+    </div>
+    
+
+    <p></p>
+    <p></p>
+    {% include kupite_u_nas.html %}
+    
+  <div style="height: 30px;">&nbsp;</div>
+  
+<script src="/assets/js/list.min.js"></script>

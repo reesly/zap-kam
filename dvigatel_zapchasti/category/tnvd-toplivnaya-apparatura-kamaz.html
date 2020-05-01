@@ -1,10 +1,10 @@
 ---
 layout: default_info
-title: Головка блока цилиндров двигателей КамАЗ
-description: Выбор головок блоков цилиндров двигателя КамАЗ Евро-0, Евро-1, Евро-2, Евро-3. Каталог камазовских блоков с ценами, описанием, применимостью и техническими характеристиками. Новые оригинал и восстановленные б/у после кап.ремонта.
+title: ТНВД топливный насос КамАЗ
+description: Каталог ТНВД насосов высокого давления головок блоков цилиндров двигателя КамАЗ Евро-0, Евро-1, Евро-2, Евро-3. Каталог камазовских блоков с ценами, описанием, применимостью и техническими характеристиками. Новые оригинал и восстановленные б/у после кап.ремонта, 
 keywords: Блок цилиндров КамАЗ Двигатель КамАЗ Евро Евро-1 Евро-2 Евро-3 Евро-4 Коленвал Коленчатый вал Блок цилиндров шатун шейка поршня кольца Bosch ЯЗДА ЦПГ ЯМЗ SANZ насос турбокомпрессор распредвал 
 hero-title: Запчасти на ДВИГАТЕЛИ КамАЗ
-h1: Головка блоков цилиндров на двигатели КамАЗ
+h1: ТНВД на двигатели КамАЗ
 h2:
 phone: 
 phone_title:
@@ -13,8 +13,7 @@ phone_title:
 <!-- Модель камаза  -->
 <div class="col-md-11 col-xs-12" style="margin: auto;">
     <p>
-       
-    </p>
+        ТНВД - Топливный Насос Высокого Давления. На двигателях КАМАЗ используются V-образные ТНВД ЯЗДА и рядные ТНВД Bosch. </p>
 </div>
 
 
@@ -27,10 +26,14 @@ phone_title:
         <input id="pListSearch" class="fuzzy-search" type="search" class="form-control" placeholder="поиск..." style="width:130px;"/>
         &nbsp;&nbsp;
         <button class="btn btn-search-var " onclick="$('#pListSearch').val(''); filterProductList($('#pListSearch').val());" title="Сбросить фильтр">Все</button>    
-        <button class="btn btn-search-var " onclick="$('#pListSearch').val('740-1003010-20'); filterProductList($('#pListSearch').val());" title="740">740-20</button>    
-        <button class="btn btn-search-var " onclick="$('#pListSearch').val('740.30'); filterProductList($('#pListSearch').val());" title="Евро">740.30 Евро</button>    
-        <button class="btn btn-search-var " onclick="$('#pListSearch').val('740.90'); filterProductList($('#pListSearch').val());" title="Евро">740.90 Евро-3</button>    
-       
+        <button class="btn btn-search-var " onclick="$('#pListSearch').val('ЯЗДА'); filterProductList($('#pListSearch').val());" title="ЯЗДА">ЯЗДА</button>    
+        <button class="btn btn-search-var " onclick="$('#pListSearch').val('Bosch'); filterProductList($('#pListSearch').val());" title="Bosch">Bosch</button>    
+        <button class="btn btn-search-var " onclick="$('#pListSearch').val('Евро-0'); filterProductList($('#pListSearch').val());" title="Евро-0">Евро-0</button>    
+        <button class="btn btn-search-var " onclick="$('#pListSearch').val('Турбо'); filterProductList($('#pListSearch').val());" title="Турбо">Турбо</button>    
+        <button class="btn btn-search-var " onclick="$('#pListSearch').val('Евро-1'); filterProductList($('#pListSearch').val());" title="Евро-1">Евро-1</button>    
+        <button class="btn btn-search-var " onclick="$('#pListSearch').val('Евро-2'); filterProductList($('#pListSearch').val());" title="Евро-2">Евро-2</button>    
+        <button class="btn btn-search-var " onclick="$('#pListSearch').val('Евро-3'); filterProductList($('#pListSearch').val());" title="Евро-3">Евро-3</button>    
+        
     </div>
 
     {% include catalog-loading-panel.html %}
@@ -39,7 +42,7 @@ phone_title:
     
         <div class="row list">
             {% for product in site.data.dvig_zap %}
-            {%- if product.cat == "Головки блока" -%}
+            {%- if product.cat == "ТНВД" -%}
                 {% include card_zapchasti_catalog.html product = product %}
             {%- endif -%}
             {% endfor %}
@@ -51,12 +54,86 @@ phone_title:
 
 
 <div class="col-md-10 col-xs-12" style="margin: auto;">
-    <div class="alert alert-info">
-        <p>Предоставляется гарантия производителя.</p>
+
+    <p>
+        На двигатели КамАЗ устанавливаются несколько моделей ТНВД Bosch - P7100, PE8 и
+        моделями ТНВД ЯЗДА Ярославского завода - 33-02, 33-10, 334, 337-20, 337-23, 337-40, 337-42 и другими. 
+        Использование других ТНВД не допускается производителем, по причине риска полностью нарушить работу ДВС.
+    </p>
+    <p>
+        Основу ТНВД независимо от его типа составляет нагнетательная секция, в которой находится плунжер с гильзой и
+        нагнетательный клапан. в насосе восемь секций, по одной на каждый цилиндр. В V-образном ТНВД секции
+        расположены в два ряда по четыре штуки(большая ширина), в рядном — в один ряд (большая длина).
+    </p>
+    <figure class="wp-block-image">
+        <img src="/dvigatel_zapchasti/category/img/tnvd_plakat_kamaz.jpg" alt="Распылитель форсунки КамАЗ чертеж-схема" style="max-height: 350px;" />
+      <figcaption>
+        1-Корпус, 2-Ролик толкателя, 3-Ось ролика, 4-Втулка ролика, 5-Пята толкателя, 6-Тарелка пружины толкателя, 7-Поворотная втулка, 8-Плунжер,
+        9-Рейка, 10-Втулка плунжера, 11-Нагнетательный клапан, 12-Фланец корпуса секции, 13-Корпус секции, 14-Секция насоса,
+        15-Правая рейка, 16-Рычаг пружины регулятора, 17-Пружина регулятора, 18-Верхняя крышка регулятора, 19-Корректор подачи
+        топлива, 20-Рычаг регулятора, 21-Рычаг выключения подачи, 22-Рычаг муфты грузов, 23-Муфта грузов, 24-Державка грузов,
+        25-Ручной топливоподкачивающий насос, 26-Топливный насос низкого давления, 27-Пружина толкателя, 28-Задняя крышка
+        регулятора, 29-Стопорный винт, 30-Толкатель, 31-Эксцентрик ТНВД,
+        32-Фланец ведущей шестерни регулятора, 33-Ведущая шестерня регулятора,
+         34-Направляющая рейка, 35-Рычаги регулятора, 36-Рычаг реек, 37-Пружина стартовой подачи, 38-Рычаг стартовой подачи, 39-Перепускной клапан
+        (отрегулирован на давление 60—80 к11а (0,6—0,8кгс/см*)),         </figcaption>
+    </figure>
+
+
+    
+    
+    <h2>Частые вопросы и ответы по насосам ТНВД КамАЗ</h2>
+
+
+    <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+        <h3 itemprop="name">
+            КамАЗ евро2 двигатель 740.31.240 стоял бош, потом поставили ЯЗДА 337.20.03, двигатель - тупой, пустой или гружённый разгоняется неохотно.
+            Что сделать, чтобы КамАЗ поехал?
+        </h3>
+        <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+            <div itemprop="text">
+                <p>
+                    Надо проверить форсунки, компрессию, впрыск и давление ТКР, а также давление за ФТОТом - после станет ясна причина поломки.
+                </p>
+            </div>
+        </div>
     </div>
 
-  
+    <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+        <h3 itemprop="name">
+            Снял форсунки, а они все черные. Какая неисправность?
+        </h3>
+        <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+            <div itemprop="text">
+                <p>
+                    Это не очень страшно. Главное, что форсунки должны быть сухими.
+                    В идеале: копчение допускается только на носике распылителя, а далее должны быть чистыми.
+                    Например, распылители Евро-1 273-30 на двигателе Евро-2 всегда черные (похоже на сажу), но всё работает.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+        <h3 itemprop="name">
+            КамАЗ 53215-15 Евро-2 двигатель 740.31-240 стояло до меня ТНВД БОШ. 
+            Мне достался уже с ТНВД 337-42 (пишет Евро). Расход на 100 км при 42т - 65 литров. 
+            Подскажите какое ТНВД должно стоять и какой примерно расход должен?
+        </h3>
+        <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+            <div itemprop="text">
+                <p>
+                    По мануалу, аналогом БОШ действительно является 337-20.05, но я сопровождаю несколько авто с
+                    337-42, нормально работают и расходуют,если правильно всё отрегулировать. 
+                    Евро-1 дешевле, чем е-2. Форсы должны быть: 273-21 с распылами 273-20.
+
+
+                </p>
+            </div>
+        </div>
+    </div>
     
+
     <p></p>
     <p></p>
     {% include kupite_u_nas.html %}
