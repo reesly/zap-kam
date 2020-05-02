@@ -8,11 +8,12 @@ h1: Коробка передач КПП-14 КамАЗ
 h2:
 phone: 
 phone_title: 
+categories: [<a href="/kamaz-4310/catalog/kpp_korobki_peredach/index.html">КПП - Коробки передач</a> ]
 ---
 
 <!-- Товар ---->
 <div id="anc_1"></div>
-{% assign page_url = "kpp_14_kamaz" %}
+{% assign page_url = page.name | replace: ".html", "" %}
 {% assign product = site.data.k4310 | where:"url", page_url | first  %}
 {%- if product -%}
     {% include card_zapchasti.html product = product %}
@@ -60,7 +61,7 @@ phone_title:
             </tr>
             <tr>
                 <th>Система смазывания</th>
-                <td>комбинированная. Все детали смазываются разбрызгиванием, подшипники шестерен коробки передач имеют, кроме того, дополнительную подпитку от маслонагнетающего устройства</td>
+                <td>комбинированная. Все детали смазываются разбрызгиванием, подшипники шестерен коробки передач имеют, кроме того, дополнительную подпитку от масло-нагнетающего устройства</td>
             </tr>
             <tr>
                 <th>Отбор мощности</th>
@@ -108,12 +109,12 @@ phone_title:
     <div class="alert alert-info">
         <b>Восстановленная коробка передач</b>. <br>
         В качестве бюджетного варианта можем предложить коробку передач КамАЗ бывший в эксплуатации,
-        прошедший тщательную дефектовку на задиры, трещины, целостность шеек, при которой меняются 
-        втулки под распредвал и проводятся работы для подготовки к установке.
+        прошедшую капитальный ремонт.
         <br>
         <br>
         Гарантия на восстановленную коробку составит 3-6 месяца.
     </div>
+
     <div class="alert alert-success">
         Примем сломанную коробку передач в счёт новой (до 35% от стоимости).
     </div>
@@ -126,6 +127,7 @@ phone_title:
         <iframe width="800" height="540" src="https://www.youtube.com/embed/5BDguprOmGQ?start=781" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>       
     </p>
     <p></p>
+    {%- include_relative _like_products.mhtml prod = product -%}
     <p></p>
     {% include kupite_u_nas.html %}
     {% include garantiya.html %}

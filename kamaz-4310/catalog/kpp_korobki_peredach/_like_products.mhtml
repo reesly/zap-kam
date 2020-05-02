@@ -5,7 +5,6 @@
     <div class="w-100 text-center">
         <h3 style="padding-top: 5px;">Возможно Вы искали:</h3>
     </div>
-    
     <!-- Теги ---->
     <div class="w-100 text-center">
        
@@ -64,12 +63,13 @@
             
         </script>
     </div>
+
     <div class="w-100 text-center mt-2" style="clear: both;">
         <hr>
     </div>
     <!-- 4 похожих товара ---->
 
-    <div id="product-List" class="pt-1 pb-1 row mr-0 ml-0">
+    <div id="product-List" class="row pt-1 pb-1 mr-0 ml-0">
     {% assign n = 0 %}
     
     {%- if prod.lk1 -%}
@@ -106,7 +106,7 @@
 
     {%- if 4>n -%}
         {%- assign m = 4 | minus: n -%}
-        {%- assign rands = site.data.k4310 | where: "path", "/kamaz-4310/catalog/dvigatel_zapchasti/" | sample: m -%}
+        {%- assign rands = site.data.k4310 | where: "path", "/kamaz-4310/catalog/kpp_korobki_peredach/" | sample: m -%}
         {% for pr in rands %}
             {%- if pr and pr.code1 -%}
                 {% include card_zapchasti_catalog.html product = pr %}    

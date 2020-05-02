@@ -33,52 +33,39 @@ phone_title: (927) 248 23-35
 
 
 
-<!-- Товар ---->
-<div class="row">
-<div id="anc_1"></div>
-{% assign page_url = "blok_cilindrov_740_7403" %}
-{% assign product = site.data.k4310 | where:"url", page_url | first  %}
-{%- if product -%}
-    {% include card_zapchasti_catalog.html product = product  %}
-{%- endif -%}
 
 
-<!-- Товар ---->
-<div id="anc_2"></div>
-{% assign page_url = "blok_cilindrov_740_evro-1-2_yazda" %}
-{% assign product = site.data.k4310 | where:"url", page_url | first  %}
-{%- if product -%}
-    {% include card_zapchasti_catalog.html product = product %}
-{%- endif -%}
+<div class="col-md-11 col-xs-12" style="margin: auto;">
+   
 
-<!-- Товар ---->
-<div id="anc_3"></div>
-{% assign page_url = "blok_cilindrov_740_yazda_bosch_evro-2_evro-3" %}
-{% assign product = site.data.k4310 | where:"url", page_url | first  %}
-{%- if product -%}
-    {% include card_zapchasti_catalog.html product = product %}
-{%- endif -%}
-</div> 
-
-
-<div class="col-md-10 col-xs-12" style="margin: auto;">
-    <h3>Применяемость блоков цилиндров</h3>
     
-    <table class="table">
-        <tr>
-            <td>Блок цилиндров 740.21-1002012-21</td>
-            <td>Евро-0: 740.10, 740.10-20, 7403.10</td>
-        </tr>
-        <tr>
-            <td>Блок 740.21-1002012 под ТНВД ЯЗДА Ярославль </td>
-            <td>для двигателей Евро1: 740.11, 740.13, 740.30, Евро-2: 740.31, 740.50, 740.51, 740.55</td>
-        </tr>
-        <tr>
-            <td>Блок 740.21-1002012-10 под ТНВД Bosch</td>
-            <td>для двигателей Евро-2: 740.30, 740.31, 740.50 и 740.51, Евро-3:740.60, 740.61, 740.62</td>
-        </tr>
-    </table>
+<!-- Товары ---->
 
+<div class="col-md-11 col-xs-12" style="margin: auto;">
+    <p></p>
+    <!-- <h3 class="w-100 text-center">Каталог</h3> -->
+    <div class="form form-inline">
+        <input id="pListSearch" class="fuzzy-search" type="search" class="form-control" placeholder="поиск..." style="width:130px;"/>
+        &nbsp;&nbsp;
+        <button class="btn btn-search-var " onclick="$('#pListSearch').val('Блок'); filterProductList($('#pListSearch').val());" title="Блоки">Блоки</button>    
+        <button class="btn btn-search-var " onclick="$('#pListSearch').val('Сборочный'); filterProductList($('#pListSearch').val());" title="Блоки">Сборочный комплект</button>    
+        <button class="btn btn-search-var " onclick="$('#pListSearch').val('Головка'); filterProductList($('#pListSearch').val());" title="Головки блока">Головки блока</button>    
+    </div>
+
+    {% include catalog-loading-panel.html %}
+
+    <div id="productList" class="pt-4 pb-2" style="display: none; ">
+    
+        <div class="row list">
+            {% for product in site.data.dvig_zap %}
+            {%- if product.path == "/dvigatel_zapchasti/catalog/bloki/" -%}
+                {% include card_zapchasti_catalog.html product = product %}
+            {%- endif -%}
+            {% endfor %}
+        </div>
+        <div class="no-result">Не найдено</div>
+        <ul class="pagination" onclick="$('html, body').animate({ scrollTop: 0}, 600);"></ul>
+    </div>
 </div>
 
 
@@ -98,15 +85,13 @@ phone_title: (927) 248 23-35
 </p>
 <p>
     Гильзы вставляются в специальные гнёзда корпуса блока цилиндров.
-    В блоке предусмотрены специальные полости для образовывания "водяной рубашки" для 
+    В блоке предусмотрены специальные полости для образования "водяной рубашки" для 
     отведения тепла от поршней и поршневых колец.
 </p>
 
 
-    <p>
-        
-    </p>
-    
+    <hr>
+
     <hr>
     <div class="alert alert-info">
         <b>Восстановленный блок</b>. <br>
@@ -135,17 +120,16 @@ phone_title: (927) 248 23-35
       }' >
       <!-- fillWidth -->
       
-      <a href = "/kamaz-4310/img/dvigatel_zap/blok_cilindrov_4310_740_21-1002012__1.gif" data-ngThumb = "/kamaz-4310/img/dvigatel_zap/blok_cilindrov_4310_740_21-1002012__1.gif" title="{{product.name}}"> {{product.name}} </a>
-      <a href = "/kamaz-4310/img/dvigatel_zap/blok_cilindrov_4310_740_21-1002012__2.gif" data-ngThumb = "/kamaz-4310/img/dvigatel_zap/blok_cilindrov_4310_740_21-1002012__2.gif" title="{{product.name}}"> {{product.name}} </a>
+      <a href = "/dvigatel_zapchasti/category/img/blok_cilindrov_4310_740_21-1002012__1.gif" data-ngThumb = "/dvigatel_zapchasti/category/img/blok_cilindrov_4310_740_21-1002012__1.gif" title="{{product.name}}"> {{product.name}} </a>
+      <a href = "/dvigatel_zapchasti/category/img/blok_cilindrov_4310_740_21-1002012__2.gif" data-ngThumb = "/dvigatel_zapchasti/category/img/blok_cilindrov_4310_740_21-1002012__2.gif" title="{{product.name}}"> {{product.name}} </a>
+      <a href = "/dvigatel_zapchasti/category/img/blok_cilindrov_4310_740_21-1002012.gif" data-ngThumb = "/dvigatel_zapchasti/category/img/blok_cilindrov_4310_740_21-1002012.gif" title="{{product.name}}"> {{product.name}} </a>
+      <a href = "/dvigatel_zapchasti/category/img/blok_cilindrov.jpg" data-ngThumb = "/dvigatel_zapchasti/category/img/blok_cilindrov.jpg" title="{{product.name}}"> {{product.name}} </a>
     </div>
-
+    <hr>
     <p>
         <iframe width="800" height="450" src="https://www.youtube.com/embed/URsFZz3r0Vs?start=23" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </p>
 
-    <p>
-        
-    </p>
     <p></p>
     <p></p>
     {% include kupite_u_nas.html %}
@@ -158,3 +142,4 @@ phone_title: (927) 248 23-35
 
 
 
+<script src="/assets/js/list.min.js"></script>
