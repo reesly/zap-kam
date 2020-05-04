@@ -5,7 +5,7 @@
     <div class="w-100 text-center">
         <h3 style="padding-top: 5px;">Возможно Вы искали:</h3>
     </div>
-    <!-- Теги ---->
+    <!-- Теги -->
     <div class="w-100 text-center">
        
        
@@ -51,8 +51,7 @@
                     type="hidden" name="reqenc" value="" /><input id="yandexSearch1" type="search" name="text" value="" /><input type="submit"
                     value="Найти" /></form>
         </div>
-        <style type="text/css">.ya-page_js_yes .ya-site-form_inited_no { display: none;}
-        </style>
+        
         <script type="text/javascript">(function (w, d, c) { var s = d.createElement('script'), h = d.getElementsByTagName('script')[0], e = d.documentElement; if ((' ' + e.className + ' ').indexOf(' ya-page_js_yes ') === -1) { e.className += ' ya-page_js_yes'; } s.type = 'text/javascript'; s.async = true; s.charset = 'utf-8'; s.src = (d.location.protocol === 'https:' ? 'https:' : 'http:') + '//site.yandex.net/v2.0/js/all.js'; h.parentNode.insertBefore(s, h); (w[c] || (w[c] = [])).push(function () { Ya.Site.Form.init() }) })(window, document, 'yandex_site_callbacks');</script>
         <script>
             function search_input_set_text(txt){
@@ -67,7 +66,7 @@
     <div class="w-100 text-center mt-2" style="clear: both;">
         <hr>
     </div>
-    <!-- 4 похожих товара ---->
+    <!-- 4 похожих товара -->
 
     <div id="product-List" class="row pt-1 pb-1 mr-0 ml-0">
     {% assign n = 0 %}

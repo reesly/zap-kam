@@ -11,8 +11,8 @@
   <div style="clear: both;"></div> 
  
    
-      <div id="" class="col-lg-3 col-md-5 col-xs-12" style="padding-top:14px;">
-        <div id="ng-catalog_"{{product.id}} data-nanogallery2 = '{
+      <div class="col-lg-3 col-md-5 col-xs-12" style="padding-top:14px;">
+        <div id="ng-catalog_{{product.id}}" data-nanogallery2 = '{
             "thumbnailLabel":{"display":false},
             "thumbnailBorderVertical":0,"thumbnailBorderHorizontal":0,
             "thumbnailWidth":   "auto",
@@ -68,7 +68,7 @@
       
       </div>
 
-      <div id="description" class="col-lg-5 col-md-7 col-xs-12">
+      <div id="description{{product.id}}" class="col-lg-5 col-md-7 col-xs-12">
         <!-- <h2>{{name}}</h2> -->
         <table class="table table-hover" style="width: auto; max-width: 450px; min-width: 85%;">
             <tr>
@@ -88,19 +88,21 @@
             {%- endunless -%}
             
             {%- if product.price1 -%}
-            <a href="javascript:" onclick="" >
               <tr class="table-active"> <td itemscope="" itemtype="http://schema.org/Offer" itemprop="offers">
+                <a href="javascript:" onclick="" >
                 <link itemprop="availability" href="http://schema.org/InStock">
                 <meta itemprop="priceCurrency" content="RUB">
                 <meta itemprop="price" content="{{product.price1 | replace: ' ', '' | replace: ' ', ''}}">
         
                 <input type="checkbox" class="label-price" id="pr1_{{product.id}}" data-id="{{product.code1}}" data-title="{{ product.name }} {{product.code1}}/ {{product.price1_name}} {%- if {{page.dlina}} -%} (L=page.dlina) {%- endif -%}" data-price="{{ product.price1 | replace: ' ', '' | replace: ' ', '' }}" data-img="{{product.img_path}}{{product.img1}}">
                 <label class="label-price" for="pr1_{{product.id}}">
-                 {{ product.price1_name }} </label> </td>
+                 {{ product.price1_name }} </label>
+                </a>
+                </td>
                 <td style="text-align: right; min-width: 125px;"><span style="font-size:1.1em;font-weight: 600;">
                   {{ product.price1 }} </span>‎ <span style="color: gray;">₽</span>  
                   </td> </tr>
-            </a>
+            
             {%- endif -%}
 
             {%- if product.price2 -%}
@@ -438,7 +440,7 @@
             <tbody id="Tbody">
               <tr>
                 <td>ТК «ПЭК»</td>
-                <td id="Route">
+                <td id="Route1">
                   <div>Набережные Челны - Москва <strong>430 руб.</strong> (авто) </div>
                 </td>
                 <td>
@@ -447,7 +449,7 @@
               </tr>
               <tr>
                 <td>ТК «Деловые линии»</td>
-                <td id="Route">
+                <td id="Route2">
                   <div>Набережные Челны - Москва <strong>440 руб.</strong> (авто) </div>
                   <div class="__insurin">+ <b>Москва</b>: въезд на терминал - <b>100 руб.</b></div>
                 </td>
@@ -457,7 +459,7 @@
               </tr>
               <tr>
                 <td>ТК «Байкал Сервис»</td>
-                <td id="Route">
+                <td id="Route3">
                   <div>Набережные Челны - Москва <strong>444 руб.</strong> (авто) </div>
                   <div class="insurin">+ <b>Москва</b>: въезд на терминал - <b>102 руб.</b></div>
                 </td>

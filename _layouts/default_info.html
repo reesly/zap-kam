@@ -53,7 +53,7 @@
             
             <a class="navbar-toggler" style="padding:10px 3px;" href="tel:+7{{page.phone}}" title="{{page.phone_title}}">
               <img style="height:26px;opacity: 0.6;" src="/assets/img/icon-callto-48.png"></a>
-            <a class="navbar-toggler" id="aim2" style="padding:10px 3px;" rel="nofollow" href="https://wa.me/7{{page.phone}}" target="_blank"><img style="height:28px;opacity: 0.6;" src="/assets/img/icon-whatsapp-48.png"></a>
+            <a class="navbar-toggler" id="aim22" style="padding:10px 3px;" rel="nofollow" href="https://wa.me/7{{page.phone}}" target="_blank"><img style="height:28px;opacity: 0.6;" src="/assets/img/icon-whatsapp-48.png" alt="напишите нам в ватсап"></a>
 
             <!-- Корзина --><a href="javascript:" class="navbar-toggler label-place" style="padding:10px 3px; opacity: 0.8;"></a>
               
@@ -110,7 +110,7 @@
                     <button class="btn btn-secondary" style=" position: absolute;right: 1em; bottom: 1em;
                 " data-toggle="modal" data-target="#requestModal"
                       onclick="ym(57702985, 'reachGoal', 'RequestBill'); return true;">
-                      Заявка</button> </li>
+                      Заявка</button> 
             
                     <!-- <a href="/index.html" class="btn btn-primary " style=" margin-top: 15px;"> Каталог КамАЗ 4310 </a> -->
                   </div>
@@ -145,56 +145,56 @@
           <li class="breadcrumb-item"><a href="/"><i class="lni-home"></i></a></li>
           {%- if page.dir contains "dvigatel_zapchasti" -%}
             <li class="breadcrumb-item"><a href="/dvigatel_zapchasti/index.html" class="dropdown-toggle" id="b_2" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-              Запчасти для ДВИГАТЕЛЯ</i></a></li>
+              Запчасти для ДВИГАТЕЛЯ</a></li>
           {%- endif -%}
           {%- if page.dir contains "kamaz-4310" -%}
             <li class="breadcrumb-item"><a href="/kamaz-4310/category/zapchasti_kamaz-4310.html" class="dropdown-toggle" id="b_2" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-              Запчасти КамАЗ-4310</i></a></li>
+              Запчасти КамАЗ-4310</a></li>
           {%- endif -%}
           {%- if page.dir contains "kamaz-5490" -%}
             <li class="breadcrumb-item"><a href="/kamaz-5490/index.html" class="dropdown-toggle" id="b_2" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"
-              >Запчасти КамАЗ-5490</i></a></li>
+              >Запчасти КамАЗ-5490</a></li>
           {%- endif -%}
           {%- if page.dir contains "kardanyi_valy" -%}
             <li class="breadcrumb-item"><a href="/kardanyi_valy/index.html" class="dropdown-toggle" id="b_2" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-              Карданные валы</i></a></li>
+              Карданные валы</a></li>
           {%- endif -%}
           
           {%- if page.dir contains "dostavka" -%}
             <li class="breadcrumb-item"><a href="/oplata_i_dostavka.html" class="dropdown-toggle" id="b_2" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-              Доставка</i></a></li>
+              Доставка</a></li>
           {%- endif -%}
 
           {%- if page.dir == "" or page.dir == "/" -%}
             <li class="breadcrumb-item"><a href="/" class="dropdown-toggle" id="b_2" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-              Агрегаты и запчасти КамАЗ</i></a></li>
+              Агрегаты и запчасти КамАЗ</a></li>
           {%- endif -%}
 
     
           
         
-          <div class="dropdown-menu" aria-labelledby="b_2">
+          <li class="dropdown-menu" aria-labelledby="b_2">
             <a class="dropdown-item" href="/dvigatel_zapchasti/index.html">Запчасти для ДВИГАТЕЛЯ</a>
             <a class="dropdown-item" href="/kamaz-4310/category/zapchasti_kamaz-4310.html">Запчасти КамАЗ-4310</a>
             <a class="dropdown-item" href="/kardanyi_valy/index.html">Карданные валы</a>
             <a class="dropdown-item" href="/kamaz-5490/index.html">Запчасти КамАЗ-5490</a>
-          </div>
+          </li>
 
         </ol>
         <ol class="breadcrumb dropdown">
           <li class="breadcrumb-item">&nbsp;</li>
           {%- for pp in page.categories -%}
-            <li class='breadcrumb-item dropdown' id="b_3" data-toggle="dropdown"  role="button" aria-haspopup="true" aria-expanded="true">{{pp}}</li>
+            <li class='breadcrumb-item dropdown' id="b_3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">{{pp}}</li>
             <!-- <li class="breadcrumb-item"><a href="/">{{page.tags}}</i></a></li> -->
           {%- endfor -%}
           
           {%- if page.dir contains "dvigatel_zapchasti" or page.name contains "dvigatel_zapchasti" -%}
 
             {%- unless page.categories -%}
-              <li class='breadcrumb-item dropdown' id="b_3" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true"><a href="/dvigatel_zapchasti/catalog/index.html">Каталог</a></li>
+              <li class='breadcrumb-item dropdown' id="b_3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"><a href="/dvigatel_zapchasti/catalog/index.html">Каталог</a></li>
             {%- endunless -%}
           
-          <div class="dropdown-menu" aria-labelledby="b_3">
+          <li class="dropdown-menu" aria-labelledby="b_3">
             <a class="dropdown-item" href="/dvigatel_zapchasti/category/valy-kolenchatye-kamaz.html">Валы коленчатые</a>
             <a class="dropdown-item" href="/dvigatel_zapchasti/category/valy-kolenchatye_bu_remont-kamaz.html">Валы коленчатые ремонтные</a>
             <a class="dropdown-item" href="/dvigatel_zapchasti/category/bloki-cilindrov-kamaz.html">Блоки цилиндров</a>
@@ -210,15 +210,15 @@
             <a class="dropdown-item" href="/dvigatel_zapchasti/category/nasosy-maslyanyj-kamaz.html">Насос масляный</a>
             <a class="dropdown-item" href="/dvigatel_zapchasti/category/nasosy-vodyanoj-kamaz.html">Насос водяной</a>
             <a class="dropdown-item" href="/dvigatel_zapchasti/category/prochie-zapchasti-dvigatelya-kamaz.html">Прочие запчасти для двигателя</a>
-          </div>
+          </li>
           {%- endif -%}
 
           {%- if page.dir contains "kamaz-4310" or page.name contains "zapchasti-kamaz-4310-43118" -%}
           {%- unless page.categories -%}
-            <li class='breadcrumb-item dropdown' id="b_3" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true"><a href="/kamaz-4310/category/zapchasti_kamaz-4310.html">Каталог</a></li>
+            <li class='breadcrumb-item dropdown' id="b_3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"><a href="/kamaz-4310/category/zapchasti_kamaz-4310.html">Каталог</a></li>
           {%- endunless -%}
         
-          <div class="dropdown-menu" aria-labelledby="b_3">
+          <li class="dropdown-menu" aria-labelledby="b_3">
             <a class="dropdown-item" href='/kamaz-4310/category/zapchasti_korobka_peredach.html'>Запчасти для КПП</a>
             <a class="dropdown-item" href='/kamaz-4310/category/zapchasti_razdatka.html'>Для раздаточной коробки</a>
             <a class="dropdown-item" href='/kamaz-4310/category/differencial_kamaz.html'>Дифференциалы </a>
@@ -230,29 +230,29 @@
             <a class="dropdown-item" href='/kamaz-4310/category/zapchasti_mosty.html'>Запчасти для моста</a>
               
             <!-- <a class="dropdown-divider" href="javascript:"></a> -->
-          </div>
+          </li>
           {%- endif -%}
           
           {%- if page.dir contains "kamaz-5490" or page.name contains "kamaz-5490" -%}
 
             {%- unless page.categories -%}
-              <li class='breadcrumb-item dropdown' id="b_3" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true"><a href="/kamaz-5490/index.html">Каталог</a></li>
+              <li class='breadcrumb-item dropdown' id="b_3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"><a href="/kamaz-5490/index.html">Каталог</a></li>
             {%- endunless -%}
             
-            <div class="dropdown-menu" aria-labelledby="b_3">
+            <li class="dropdown-menu" aria-labelledby="b_3">
               <a class="dropdown-item" href='/kamaz-5490/catalog/dvigateli_kamaz_5490.html'>Двигатели КамАЗ</a>
            
               <!-- <a class="dropdown-divider" href="javascript:"></a> -->
-            </div>
+            </li>
           {%- endif -%}
 
           {%- if page.dir contains "kardanyi_valy" or page.name contains "kardanyi_valy" -%}
 
             {%- unless page.categories -%}
-              <li class='breadcrumb-item dropdown' id="b_3" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true"><a href="/kardanyi_valy/index.html">Каталог</a></li>
+              <li class='breadcrumb-item dropdown' id="b_3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"><a href="/kardanyi_valy/index.html">Каталог</a></li>
             {%- endunless -%}
             
-          <div class="dropdown-menu" aria-labelledby="b_3">
+          <li class="dropdown-menu" aria-labelledby="b_3">
             <a class="dropdown-item" href='/kardanyi_valy/category/kardan-kamaz.html'>Вал карданный КамАЗ</a>
             <a class="dropdown-item" href='/kardanyi_valy/category/kardan-ural.html'>Вал карданный Урал</a>
             <a class="dropdown-item" href='/kardanyi_valy/category/kardan-maz.html'>Вал карданный МАЗ</a>
@@ -270,7 +270,7 @@
             <a class="dropdown-item" href='/kardanyi_valy/category/kardan-mzkt.html'>Вал карданный МЗКТ</a>
             <a class="dropdown-item" href='/kardanyi_valy/category/kardan-prochie.html'>Прочие карданы</a>
             <!-- <a class="dropdown-divider" href="javascript:"></a> -->
-          </div>
+          </li>
           {%- endif -%}
           
           

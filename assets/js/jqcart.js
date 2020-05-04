@@ -251,7 +251,7 @@
 			
 			
 			win.document.write('<html><head><title>Заказ ' + curDate + '</title>');
-			win.document.write('<link rel="stylesheet" href="' + cssHref + '" type="text/css" />');
+			win.document.write('<link rel="stylesheet" href="' + cssHref + '" />');
 			win.document.write('</head><body >');
 			win.document.write(data);
 			win.document.write('</body></html>');
