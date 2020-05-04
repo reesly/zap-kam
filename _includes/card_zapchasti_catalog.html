@@ -42,12 +42,17 @@
             </td> </tr>
           
           {%- if product.price1 -%}
-          <a href="javascript:" onclick="" >
-            <tr class="table-bggray" > <td>  <input type="checkbox" class="label-price" id="pr1_{{product.id}}" data-id="{{product.code1}}" data-title="{{ product.name }} {{product.code1}}/ {{product.price1_name}}" data-price="{{ product.price1 | replace: ' ', '' | replace: ' ', '' }}" data-img="{{product.img_path}}{{product.img1}}">
+          
+            <tr class="table-bggray" > <td>  
+              <a href="javascript:" onclick="" ></a>
+              <input type="checkbox" class="label-price" id="pr1_{{product.id}}" data-id="{{product.code1}}" data-title="{{ product.name }} {{product.code1}}/ {{product.price1_name}}" data-price="{{ product.price1 | replace: ' ', '' | replace: ' ', '' }}" data-img="{{product.img_path}}{{product.img1}}">
+              
               <label class="label-price" for="pr1_{{product.id}}">
-                {{ product.price1_name }} </label> </td>
+                {{ product.price1_name }} </label> 
+              </a>
+              </td>
               <td style="text-align: right; min-width: 100px;"><span style="font-size:1.1em;font-weight: 600;">{{ product.price1 }} </span>‎ <span style="color: gray;">₽</span>  </td> </tr>
-          </a>
+          
           {%- endif -%}
 
           {%- if product.price2 -%}
