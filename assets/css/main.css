@@ -2061,3 +2061,7 @@ a.a-class:hover {
 iframe {
   border: none;
 }
+
+.wa {
+  width: auto;
+}

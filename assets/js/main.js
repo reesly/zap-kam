@@ -43,12 +43,12 @@ var prodList;
 
     /* WOW Scroll Spy
     ========================================================*/
-     var wow = new WOW({
-      //disabled for mobile
-        mobile: false
-    });
+    //  var wow = new WOW({
+    //   //disabled for mobile
+    //     mobile: false
+    // });
 
-    wow.init();
+    // wow.init();
 
     /* 
     CounterUp
@@ -198,6 +198,8 @@ var prodList;
     //$.jqCart('openCart'); // открыть корзину
     // $.jqCart('clearCart'); // очистить корзину
 
+    const observer = lozad(); // lazy loads elements with default selector as '.lozad'
+    observer.observe();
 
   }); // on_load     
 
@@ -205,52 +207,52 @@ var prodList;
 
 // LAZY LOAD =======================================================================
 
-var lazyload = lazyload || {};
+// var lazyload = lazyload || {};
  
-(function($, lazyload) {
+// (function($, lazyload) {
  
-    "use strict";
+//     "use strict";
  
-    var page = 2,
-        buttonId = "#moreButton",
-        loadingId = "#loadingDiv",
-        container = "#productList.list-group";
+//     var page = 2,
+//         buttonId = "#moreButton",
+//         loadingId = "#loadingDiv",
+//         container = "#productList.list-group";
  
-    lazyload.load = function(url) {
+//     lazyload.load = function(url) {
  
-        var url = url + page + ".html";
+//         var url = url + page + ".html";
  
-        $(buttonId).hide();
-        $(loadingId).show();
+//         $(buttonId).hide();
+//         $(loadingId).show();
  
-        $.ajax({
-            url: url,
-            success: function(response) {
-                if (!response || response.trim() == "NONE") {
-                    $(buttonId).fadeOut();
-                    $(loadingId).text("Список полностью загружен");
-                    return;
-                }
+//         $.ajax({
+//             url: url,
+//             success: function(response) {
+//                 if (!response || response.trim() == "NONE") {
+//                     $(buttonId).fadeOut();
+//                     $(loadingId).text("Список полностью загружен");
+//                     return;
+//                 }
 
-                var options = {
-                  valueNames: [ 'name' ],
-                  page: 50,
-                  pagination: true
-                };
+//                 var options = {
+//                   valueNames: [ 'name' ],
+//                   page: 50,
+//                   pagination: true
+//                 };
 
-                $(buttonId).hide();
-                $(loadingId).hide();
-                $(response).appendTo($(container));
-                prodList = new List('productList', options);
-            },
-            error: function(response) {
-                $(loadingId).text("К сожалению, возникла какая-то ошибка при запросе. Пожалуйста, обновите страницу.");
-            }
-        });
-    };
+//                 $(buttonId).hide();
+//                 $(loadingId).hide();
+//                 $(response).appendTo($(container));
+//                 prodList = new List('productList', options);
+//             },
+//             error: function(response) {
+//                 $(loadingId).text("К сожалению, возникла какая-то ошибка при запросе. Пожалуйста, обновите страницу.");
+//             }
+//         });
+//     };
 
  
-})(jQuery, lazyload);
+// })(jQuery, lazyload);
 
 
 function filterProductList(text){
