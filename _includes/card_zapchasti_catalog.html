@@ -8,29 +8,48 @@
       </a>
     </div>
 
-    <div class="col-md-4 col-xs-4 catalog-item-img-div">
-      <a href="{{product.path}}{{product.url}}.html" onclick="">
+    
+    <div class="col-md-4 col-xs-4">
+    <div class="catalog-item-img-div" style="cursor: pointer;" onclick="window.location='{{product.path}}{{product.url}}.html'">
+      
         {%- if product.img1 -%}
-          <img class="catalog-item-img" src="{{product.img_path}}{{product.img1}}" alt="{{product.name}}" style="padding:0;">
+
+          <div id="ng-catalog_{{product.id}}_{{product.url}}" data-nanogallery2 = '{
+            "thumbnailLabel":{"display":false},
+            "thumbnailBorderVertical":0,"thumbnailBorderHorizontal":0,
+            "thumbnailWidth":   160,
+            "thumbnailHeight":   120,
+            "thumbnailAlignment": "left", 
+            "fillWidth": "left", 
+            "galleryDisplayMode": "rows",
+            "itemsBaseURL":     "",
+            "thumbnailOpenImage": false,
+            "galleryMaxItems": 1
+          }' >
+            <a href = "{{product.img_path}}{{product.img1}}" data-ngThumb = "{{product.img_path}}{{product.img1}}" title="{{product.name}}"> {{product.name}}</a>
+          </div>
+
+          <!-- <img class="catalog-item-img" src="{{product.img_path}}{{product.img1}}" alt="{{product.name}}" style="padding:0;"> -->
         {%- else -%}
           <img class="catalog-item-img" src="/assets/img/nophoto.jpg" alt="Фото скоро появится"  style="padding:0;">
         {%- endif -%}
       </a>
-        <span class="code1" style="color:rgb(146, 146, 146);float: right; font-size:1.0em; ">
+        <div class="code1" style="color:rgb(146, 146, 146);float: right; font-size:1.0em; ">
           {%- if product.code1 -%}
           <small>код</small>. {{ product.code1 }}
           {%- endif -%}
           {%- if product.code2 -%}
             <br> {{ product.code2 }}
           {%- endif -%}
-        </span>
+        </div>
         {%- if product.code2 -%}
-        <span class="invisible cat">
+        <div class="invisible cat">
           {{ product.cat }}
-        </span>
+        </div>
         {%- endif -%}
         
     </div>
+  </div>
 
     <div id="description{{product.id}}" class="col-md-8 col-xs-8">
       <!-- <h2>{{name}}</h2> -->
