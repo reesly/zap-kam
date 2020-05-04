@@ -89,7 +89,7 @@
             
             {%- if product.price1 -%}
               <tr class="table-active"> <td itemscope="" itemtype="http://schema.org/Offer" itemprop="offers">
-                <a href="javascript:" onclick="">
+                
                 <link itemprop="availability" href="http://schema.org/InStock">
                 <meta itemprop="priceCurrency" content="RUB">
                 <meta itemprop="price" content="{{product.price1 | replace: ' ', '' | replace: ' ', ''}}">
@@ -97,7 +97,6 @@
                 <input type="checkbox" class="label-price" id="pr1_{{product.id}}" data-id="{{product.code1}}" data-title="{{ product.name }} {{product.code1}}/ {{product.price1_name}} {%- if {{page.dlina}} -%} (L=page.dlina) {%- endif -%}" data-price="{{ product.price1 | replace: ' ', '' | replace: ' ', '' }}" data-img="{{product.img_path}}{{product.img1}}">
                 <label class="label-price" for="pr1_{{product.id}}">
                  {{ product.price1_name }} </label>
-                </a>
                 </td>
                 <td style="text-align: right; min-width: 125px;"><span style="font-size:1.1em;font-weight: 600;">
                   {{ product.price1 }} </span>‎ <span style="color: gray;">₽</span>  

@@ -69,7 +69,7 @@
  <ymaps>
  <ymaps><iframe
  src="https://api-maps.yandex.ru/services/inception/?lang=ru_RU&amp;iframe_id=id_1586508065274994630&amp;api_version=2.0&amp;url=%2Fmap&amp;data=%7B%22mapState%22%3A%7B%22origin%22%3A%22jsapi_2_0%22%2C%22source%22%3A%22api-maps%22%2C%22from%22%3A%22api-maps%22%2C%22host%22%3A%22127.0.0.1%3A4000%22%7D%7D"
- width="171" height="28" scrolling="no" frameborder="0" style="overflow: hidden;"></iframe>
+ width="171" height="28" scrolling="no" style="overflow: hidden;"></iframe>
  </ymaps>
  </ymaps>
  <ymaps class="ymaps-overlay-stepwise-pane"
