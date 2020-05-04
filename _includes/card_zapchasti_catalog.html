@@ -44,7 +44,7 @@
           {%- if product.price1 -%}
           
             <tr class="table-bggray" > <td>  
-              <a href="javascript:" onclick="" ></a>
+              <a href="javascript:" onclick="" >
               <input type="checkbox" class="label-price" id="pr1_{{product.id}}" data-id="{{product.code1}}" data-title="{{ product.name }} {{product.code1}}/ {{product.price1_name}}" data-price="{{ product.price1 | replace: ' ', '' | replace: ' ', '' }}" data-img="{{product.img_path}}{{product.img1}}">
               
               <label class="label-price" for="pr1_{{product.id}}">
@@ -86,7 +86,7 @@
         </tr>
 
         <tr style="border-bottom: gray; border-bottom-width: 1px;"> <td colspan="2" style="font-size: 12px;">  
-          <a href="{{product.path}}{{product.url}}.html" class=""></a>
+          <a href="{{product.path}}{{product.url}}.html" class="">
             {%- if product.desc  -%}
             <div class="text-line-1">
               {{ product.desc }} 

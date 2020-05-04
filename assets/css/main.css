@@ -2047,3 +2047,13 @@ a.a-class:hover {
 .ya-page_js_yes .ya-site-form_inited_no { 
   display: none;
 }
+
+.table-kupite i {
+  font-size: 1.6em;
+  color: gray;
+  padding-top: 10px;;
+}
+.table-our-plus i {
+  font-size: 1.0em;
+  color: gray;
+}

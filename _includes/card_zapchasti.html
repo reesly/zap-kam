@@ -25,23 +25,23 @@
           }' >
           <!-- fillWidth -->
           {%- if product.img1 -%}
-            <a href = "{{product.img_path}}{{product.img1}}" data-ngThumb = "{{product.img_path}}{{product.img1}}" itemprop="image" title="{{product.name}}"> {{product.name}}</a>
+            <a href = "{{product.img_path}}{{product.img1}}" data-ngThumb = "{{product.img_path}}{{product.img1}}" title="{{product.name}}"> {{product.name}}</a>
           {%- endif -%}
           
           {%- if product.img2 -%}
-            <a href = "{{product.img_path}}{{product.img2}}" data-ngThumb = "{{product.img_path}}{{product.img2}}" itemprop="image" title="{{product.name}}"> {{product.name}}</a>
+            <a href = "{{product.img_path}}{{product.img2}}" data-ngThumb = "{{product.img_path}}{{product.img2}}"  title="{{product.name}}"> {{product.name}}</a>
           {%- endif -%}
           
           {%- if product.img3 -%}
-          <a href = "{{product.img_path}}{{product.img3}}" data-ngThumb = "{{product.img_path}}{{product.img3}}" itemprop="image" title="{{product.name}}"> {{product.name}}</a>
+          <a href = "{{product.img_path}}{{product.img3}}" data-ngThumb = "{{product.img_path}}{{product.img3}}"  title="{{product.name}}"> {{product.name}}</a>
           {%- endif -%}
           
           {%- if product.img4 -%}
-          <a href = "{{product.img_path}}{{product.img4}}" data-ngThumb = "{{product.img_path}}{{product.img4}}" itemprop="image" title="{{product.name}}"> {{product.name}}</a>
+          <a href = "{{product.img_path}}{{product.img4}}" data-ngThumb = "{{product.img_path}}{{product.img4}}"  title="{{product.name}}"> {{product.name}}</a>
           {%- endif -%}
           
           {%- if product.img5 -%}
-          <a href = "{{product.img_path}}{{product.img5}}" data-ngThumb = "{{product.img_path}}{{product.img5}}" itemprop="image" title="{{product.name}}"> {{product.name}}</a>
+          <a href = "{{product.img_path}}{{product.img5}}" data-ngThumb = "{{product.img_path}}{{product.img5}}"  title="{{product.name}}"> {{product.name}}</a>
           {%- endif -%}
           
           {%- if product.img1 or product.img2 or product.img3 or product.img4 or product.img5 -%}
@@ -51,19 +51,19 @@
         </div>
 
         {%- if product.img1 -%}
-          <div class="image collapse"> <img src="{{product.img_path}}{{product.img1}}" alt="{{product.name}} {{product.code1}} {%- if {{page.dlina}} -%} (L=page.dlina) {%- endif -%}">  </div>
+          <div class="image collapse"> <img src="{{product.img_path}}{{product.img1}}" itemprop="image" alt="{{product.name}} {{product.code1}} {%- if {{page.dlina}} -%} (L=page.dlina) {%- endif -%}">  </div>
         {%- endif -%}
         {%- if product.img2 -%}
-          <div class="image collapse"> <img src="{{product.img_path}}{{product.img2}}" alt="{{product.name}} {{product.code1}} {%- if {{page.dlina}} -%} (L=page.dlina) {%- endif -%}">  </div>
+          <div class="image collapse"> <img src="{{product.img_path}}{{product.img2}}" itemprop="image" alt="{{product.name}} {{product.code1}} {%- if {{page.dlina}} -%} (L=page.dlina) {%- endif -%}">  </div>
         {%- endif -%}
         {%- if product.img3 -%}
-          <div class="image collapse"> <img src="{{product.img_path}}{{product.img3}}" alt="{{product.name}} {{product.code1}} {%- if {{page.dlina}} -%} (L=page.dlina) {%- endif -%}">  </div>
+          <div class="image collapse"> <img src="{{product.img_path}}{{product.img3}}" itemprop="image" alt="{{product.name}} {{product.code1}} {%- if {{page.dlina}} -%} (L=page.dlina) {%- endif -%}">  </div>
         {%- endif -%}
         {%- if product.img4 -%}
-          <div class="image collapse"> <img src="{{product.img_path}}{{product.img4}}" alt="{{product.name}} {{product.code1}} {%- if {{page.dlina}} -%} (L=page.dlina) {%- endif -%}">  </div>
+          <div class="image collapse"> <img src="{{product.img_path}}{{product.img4}}" itemprop="image" alt="{{product.name}} {{product.code1}} {%- if {{page.dlina}} -%} (L=page.dlina) {%- endif -%}">  </div>
         {%- endif -%}
         {%- if product.img5 -%}
-          <div class="image collapse"> <img src="{{product.img_path}}{{product.img5}}" alt="{{product.name}} {{product.code1}} {%- if {{page.dlina}} -%} (L=page.dlina) {%- endif -%}">  </div>
+          <div class="image collapse"> <img src="{{product.img_path}}{{product.img5}}" itemprop="image" alt="{{product.name}} {{product.code1}} {%- if {{page.dlina}} -%} (L=page.dlina) {%- endif -%}">  </div>
         {%- endif -%}
       
       </div>
@@ -89,7 +89,7 @@
             
             {%- if product.price1 -%}
               <tr class="table-active"> <td itemscope="" itemtype="http://schema.org/Offer" itemprop="offers">
-                <a href="javascript:" onclick="" >
+                <a href="javascript:" onclick="">
                 <link itemprop="availability" href="http://schema.org/InStock">
                 <meta itemprop="priceCurrency" content="RUB">
                 <meta itemprop="price" content="{{product.price1 | replace: ' ', '' | replace: ' ', ''}}">
