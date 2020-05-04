@@ -1,0 +1,88 @@
+{% assign city = include.city  %}
+
+
+<div>
+
+  <div class="card-columns">
+    <!--  4310  -->
+    <div class="card">
+      <div class="card-header media">
+        <img class="card-icon1" src="/assets/img/model/kamaz_4310.jpg" alt="">
+        <h4> Запчасти для КамАЗ-4310, 43101, 4326 </h4>
+      </div>
+      <ul class="card-body">
+        <li><a href='/kamaz-4310/catalog/zapchasti/'>все запчасти</a></li>
+        <li><a href='/kamaz-4310/category/'>раздаточной коробки</a></li>
+        <li><a href='/kamaz-4310/category/shesterny_kamaz.html'>коробки передач</a></li>
+        <li><a href='/kamaz-4310/category/zapchasti_kamaz-4310.html'>ведущих мостов</a></li>
+        <!-- <li><a href='/kamaz-4310/catalog/dvigateli/dvigateli_kamaz_43114.html'>редукторов</a></li> -->
+        <li><a href='/kamaz-4310/catalog/dvigateli/dvigateli_kamaz_4310.html'>Двигатели</a></li>
+        <li><a href='/dvigatel_zapchasti/catalog/index.html'>Запчасти для двигателя</a></li>
+        <li><a href='/kamaz-4310/category/valy_kamaz.html'>Валы </a></li>
+        <li><a href='/kamaz-4310/category/shesterny_kamaz.html'>Шестерни</a></li>
+      </ul>
+    </div>
+
+    <!--  43114  -->
+    <div class="card">
+      <div class="card-header media">
+        <img class="card-icon1" src="/assets/img/model/kamaz_43114.jpg" alt="">
+        <h4> Запчасти для КамАЗ-43114 </h4>
+      </div>
+      <ul class="card-body">
+        <li><a href='/kamaz-4310/category/zapchasti_kamaz-4310.html'>все запчасти</a></li>
+        <li><a href='/kamaz-4310/category/'>раздаточной коробки</a></li>
+        <li><a href='/kamaz-4310/category/shesterny_kamaz.html'>коробки передач</a></li>
+        <li><a href='/kamaz-4310/category/zapchasti_kamaz-4310.html'>ведущих мостов</a></li>
+        <li><a href='/kamaz-4310/catalog/dvigateli/dvigateli_kamaz_43114.html'>редукторов</a></li>
+        <li><a href='/kamaz-4310/catalog/dvigateli/dvigateli_kamaz_43114.html'>Двигатели</a></li>
+        <li><a href='/dvigatel_zapchasti/catalog/index.html'>Запчасти для двигателя</a></li>
+        <li><a href='/kamaz-4310/category/valy_kamaz.html'>Валы </a></li>
+        <li><a href='/kamaz-4310/category/shesterny_kamaz.html'>Шестерни</a></li>
+      </ul>
+    </div>
+
+    <!--  4350  -->
+    <div class="card">
+      <div class="card-header media">
+        <img class="card-icon1" src="/assets/img/model/kamaz_4350.jpg" alt="">
+        <h4> Запчасти для КамАЗ-4350, 43261</h4>
+      </div>
+      <ul class="card-body">
+        <li><a href='/kamaz-4310/category/zapchasti_kamaz-4310.html'>все запчасти</a></li>
+        <li><a href='/kamaz-4310/category/'>раздаточной коробки</a></li>
+        <li><a href='/kamaz-4310/category/shesterny_kamaz.html'>коробки передач</a></li>
+        <li><a href='/kamaz-4310/category/zapchasti_kamaz-4310.html'>ведущих мостов</a></li>
+        <li><a href='/kamaz-4310/catalog/dvigateli/dvigateli_kamaz_43114.html'>редукторов</a></li>
+        <li><a href='/kamaz-4310/catalog/dvigateli/dvigateli_kamaz_4350_mustang.html'>Двигатели</a></li>
+        <li><a href='/dvigatel_zapchasti/catalog/index.html'>Запчасти для двигателя</a></li>
+        <li><a href='/kamaz-4310/category/valy_kamaz.html'>Валы </a></li>
+        <li><a href='/kamaz-4310/category/shesterny_kamaz.html'>Шестерни</a></li>
+      </ul>
+    </div>
+    
+
+
+  </div>
+</div>
+
+
+<div>
+  <h3><a href="/kamaz-4310/category/zapchasti_kamaz-4310.html">Популярные запчасти для вездеходов КамАЗ-4310, 43118 c
+      доставкой {{city.name}} </a></h3>
+  <div class="row list">
+
+
+    {%- assign rands = site.data.k4310 | sample: 30 -%}
+    {% for pr in rands %}
+    {%- if pr.url -%}
+    {% include card_zapchasti_catalog.html product = pr %}
+    {%- endif -%}
+    {% endfor %}
+
+  </div>
+</div>
+
+<div class="col-md-10" style="margin: auto;">
+  {%- include kupite_catalog.html -%}
+</div>

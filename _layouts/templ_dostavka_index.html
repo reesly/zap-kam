@@ -13,11 +13,14 @@ phone: 9272482335
 phone_title: (927) 248 23-35
 ---
 
-{%- assign city = site.data.dostavka | where:"city", "{{page.city}}" | first -%}
+{%- assign ct = site.data.dostavka | where:"city", "{{page.city}}" | first -%}
 
-{%- include dostavka_city.html city = city  -%}
+{ %- include_relative info.mhtml city = ct -%}
 
-{%- include dostavka_catalog.html city = city -%}
+{%- include dostavka_city.html city = ct  -%}
+
+{%- include dostavka_catalog.html city = ct -%}
+
 
 
 {{text1}}

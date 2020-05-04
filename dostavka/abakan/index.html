@@ -8,14 +8,13 @@ h1: Доставка в г. Абакан - Запчасти КамАЗ
 h2:
 phone: 9272482335
 phone_title: (927) 248 23-35
+categories: [<a href='/dostavka/abakan/'>Абакан</a>]
 ---
 
-{%- assign city = site.data.dostavka | where:"city", "Абакан" | first -%}
+{%- assign ct = site.data.dostavka | where:"city", "Абакан" | first -%}
 
-{%- include dostavka_city.html city = city -%}
+{%- include_relative info.mhtml city = ct -%}
 
-{%- include dostavka_catalog.html city = city -%}
+{%- include dostavka_city.html city = ct -%}
 
-
-{%- include_relative info.mhtml city = city -%}
-
+{%- include dostavka_catalog.html city = ct -%}

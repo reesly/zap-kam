@@ -1,0 +1,43 @@
+{% assign city = include.city  %}
+
+
+<div>
+
+  <div class="card-columns">
+
+
+
+
+  </div>
+</div>
+  
+  
+  <div>
+    <h3><a href="/kardanyi_valy/index.html">Карданные валы c доставкой {{city.name}} </a></h3>
+    <div class="row list">
+      
+      
+      
+      
+          <ul class="list-group list">
+              {%- assign rands = site.data.kardany | sample: 20 -%}
+              {% for pr in rands  %}
+              
+                {% include card_kardan_catalog.html product = pr %}
+              
+              {% endfor %}
+  
+              <div id="loadingDiv">
+                  <span>Загрузка данных</span>
+              </div>
+          </ul>
+      
+  
+  </div>
+  </div>
+
+  <div class="col-md-10" style="margin: auto;">
+    {%- include kupite_catalog.html -%}
+  </div>
+
+  <script src="/assets/js/list.min.js"></script>

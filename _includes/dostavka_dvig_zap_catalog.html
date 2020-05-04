@@ -1,0 +1,36 @@
+{% assign city = include.city  %}
+
+
+<div>
+
+  <div class="card-columns">
+
+
+
+
+  </div>
+</div>
+  
+  
+  <div>
+    <h3><a href="/kamaz-4310/category/zapchasti_kamaz-4310.html">Популярные запчасти для вездеходов КамАЗ-4310, 43118 c доставкой {{city.name}} </a></h3>
+    <div class="row list">
+      
+      
+      {%- assign rands = site.data.dvig_zap | sample: 30 -%}
+      {% for pr in rands %}
+        {%- if pr.url -%}
+          {% include card_zapchasti_catalog.html product = pr %}
+        {%- endif -%}
+      {% endfor %}
+
+      
+  
+  
+  </div>
+  </div>
+
+  
+  <div class="col-md-10" style="margin: auto;">
+    {%- include kupite_catalog.html -%}
+  </div>

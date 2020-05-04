@@ -6,39 +6,35 @@
     <div class="card-columns">
          
 
-<!--  Запчасти Движки  -->
-<div class="card">
-  <div class="card-header media">
-    <img class="card-icon1" src="/dvigatel_zapchasti/img/category/dvigatel_740.10.jpg" alt="">
-    <a href='/dvigatel_zapchasti/index.html'><h4> Запчасти на Двигатели КамАЗ </h4></a>
-  </div>
-  <ul class="card-body">
-    <li><a href='/dvigatel_zapchasti/category/valy-kolenchatye-kamaz.html'>Валы коленчатые</a></li>
-    <li><a href='/dvigatel_zapchasti/category/bloki-cilindrov-kamaz.html'>Блоки цилиндров</a></li>
-    <li><a href='/dvigatel_zapchasti/category/sborochnye-komplekty-kamaz.html'>Сборочные комплекты двигателя</a></li>
-    <li><a href='/dvigatel_zapchasti/category/golovki-bloka-kamaz.html'>Головки блока</a></li>
-    <li><a href='/dvigatel_zapchasti/category/porshnevaya-gruppa-kamaz.html'>Поршневая группа</a></li>
-    <li><a href='/dvigatel_zapchasti/category/turbokompressory-kamaz.html'>Турбокомпрессоры</a></li>
-    <li><a href='/dvigatel_zapchasti/category/tnvd-toplivnaya-apparatura-kamaz.html'>ТНВД - топливная аппаратура</a></li>
-    <li><a href='/dvigatel_zapchasti/category/forsunki-kamaz.html'>Форсунки</a></li>
-    <li><a href='/dvigatel_zapchasti/category/raspyliteli-forsunki-kamaz.html'>Распылители форсунки</a></li>
-    <li><a href='/dvigatel_zapchasti/category/nasosy-vodyanoj-kamaz.html'>Насос водяной</a></li>
-    <li><a href='/dvigatel_zapchasti/category/nasosy-maslyanyj-kamaz.html'>Насос масляный</a></li>
-    <li><a href='/dvigatel_zapchasti/category/prochie-zapchasti-dvigatelya-kamaz.html'>Прочие запчасти двигателя</a></li>
-    
-  </ul>
-</div>
-
-
-
-
+      <!--  Запчасти Движки  -->
+      <div class="card">
+        <div class="card-header media">
+          <img class="card-icon1" src="/dvigatel_zapchasti/img/category/dvigatel_740.10.jpg" alt="">
+          <a href='dvigatel_zapchasti_kamaz.html'><h4> Запчасти на Двигатели КамАЗ </h4></a>
+        </div>
+        <ul class="card-body">
+          <li><a href='/dvigatel_zapchasti/category/valy-kolenchatye-kamaz.html'>Валы коленчатые</a></li>
+          <li><a href='/dvigatel_zapchasti/category/bloki-cilindrov-kamaz.html'>Блоки цилиндров</a></li>
+          <li><a href='/dvigatel_zapchasti/category/sborochnye-komplekty-kamaz.html'>Сборочные комплекты двигателя</a></li>
+          <li><a href='/dvigatel_zapchasti/category/golovki-bloka-kamaz.html'>Головки блока</a></li>
+          <li><a href='/dvigatel_zapchasti/category/porshnevaya-gruppa-kamaz.html'>Поршневая группа</a></li>
+          <li><a href='/dvigatel_zapchasti/category/turbokompressory-kamaz.html'>Турбокомпрессоры</a></li>
+          <li><a href='/dvigatel_zapchasti/category/tnvd-toplivnaya-apparatura-kamaz.html'>ТНВД - топливная аппаратура</a></li>
+          <li><a href='/dvigatel_zapchasti/category/forsunki-kamaz.html'>Форсунки</a></li>
+          <li><a href='/dvigatel_zapchasti/category/raspyliteli-forsunki-kamaz.html'>Распылители форсунки</a></li>
+          <li><a href='/dvigatel_zapchasti/category/nasosy-vodyanoj-kamaz.html'>Насос водяной</a></li>
+          <li><a href='/dvigatel_zapchasti/category/nasosy-maslyanyj-kamaz.html'>Насос масляный</a></li>
+          <li><a href='/dvigatel_zapchasti/category/prochie-zapchasti-dvigatelya-kamaz.html'>Прочие запчасти двигателя</a></li>
+          
+        </ul>
+      </div>
 
 
       <!--  Всё  -->
       <div class="card">
         <div class="card-header media">
           <img class="card-icon1" src="/assets/img/model/kamaz_4310.jpg" alt="">
-          <h4> Запчасти для КамАЗ-4310, 43101, 4326 </h4>
+          <a href="zapchasti-kamaz-4310-43118-65111.html"><h4> Запчасти для КамАЗ-4310, 43101, 4326 </h4></a>
         </div>
         <ul class="card-body">
           <li><a href='/kamaz-4310/category/zapchasti_kamaz-4310.html'>все запчасти</a></li>
@@ -60,7 +56,7 @@
        <div class="card">
         <div class="card-header media">
           <img class="card-icon1" src="/kamaz-4310/img/catalog-icons/valy-kardannye-kamaz.jpg" alt="">
-          <h4> Валы карданные </h4>
+          <a href="kardanyi_valy_kamaz_maz_gaz_iveco_man.html"><h4> Валы карданные </h4></a>
         </div>
         <ul class="card-body">
           <li><a href='/kardanyi_valy/'>Каталог валов карданных</a></li>
@@ -114,8 +110,9 @@
   
   
   <div>
+    <h3>Запчасти для двигателя КамАЗ</h3>
     <div class="row list">
-      <h3>Запчасти для двигателя КамАЗ</h3>
+      
       
       {%- assign rands = site.data.dvig_zap | sample: 10 -%}
       {% for pr in rands %}
@@ -123,9 +120,15 @@
           {% include card_zapchasti_catalog.html product = pr %}
         {%- endif -%}
       {% endfor %}
-      
-      
-      <h3>Запчасти для вездеходов КамАЗ-4310, 43118</h3>
+    </div>
+    
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+
+
+    <h3><a href="/dostavka/{{city.url}}/zapchasti-kamaz-4310-43118-65111.html">Запчасти для вездеходов КамАЗ-4310, 43118</a></h3>  
+    <div class="row list">
+    
       {%- assign rands = site.data.k4310 | sample: 10 -%}
       {% for pr in rands %}
         {%- if pr.url -%}
@@ -139,6 +142,7 @@
   </div>
   </div>
 
-  <div>
+  
+  <div class="col-md-10" style="margin: auto;">
     {%- include kupite_catalog.html -%}
   </div>

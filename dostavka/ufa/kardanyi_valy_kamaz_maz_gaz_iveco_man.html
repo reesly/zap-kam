@@ -1,0 +1,20 @@
+---
+layout: default_info
+title: Карданные валы производства Innova - доставка в г. Уфа
+description: Продажа, производство и заводской ремонт карданных валов и передач на любую технику КамАЗ, МАЗ, УРАЛ, ИВЕКО, МАН, Мерседес и другие с доставкой в г. Уфа. Расчет стоимости и сроков доставки ПЭК, Деловые Линии.
+keywords: Уфа Карданный вал карданная передача каталог цены
+hero-title: Карданные валы на грузовики c доставкой в г. Уфа
+h1: Карданные валы с доставкой в г. Уфа
+h2: 
+phone: 9270450118
+phone_title: (927) 045 01-18
+categories: [<a href='/dostavka/ufa/'>Уфа</a>, <a href='/kardanyi_valy/index.html'>Карданные валы</a>]
+---
+ 
+{%- assign ct = site.data.dostavka | where:"city", "{{page.city}}" | first -%}
+
+{%- include_relative info.mhtml city = ct -%}
+
+{%- include dostavka_city.html city = ct  -%}
+
+{%- include dostavka_kardany_catalog.html city = ct -%}

@@ -2,7 +2,6 @@
 <html xml:lang="ru" lang="ru">
 
 <head>
-  <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <link rel="icon" href="/favicon.ico" type="image/x-icon"/>
   <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
@@ -42,7 +41,7 @@
 
 <body>
 
-  <!-- +Header   ------------------  -->
+  <!-- +Header   -->
   <header id="header-wrap">
     <div class="head h-100">
       <div class="head__inner h-100">
@@ -90,8 +89,7 @@
                       <li style="margin-top:0px; ">
                         <h2 class="title text-md-left text-sm-center"> {{page.hero-title}} </h2>
                       </li>
-            
-                      <!-- <li><i class="lni-chevron-down"></i>&nbsp;&nbsp;&nbsp;Оперативная отгрузка по России</li>
+                     <!-- <li><i class="lni-chevron-down"></i>&nbsp;&nbsp;&nbsp;Оперативная отгрузка по России</li>
                                 <li><i class="lni-chevron-down"></i>&nbsp;&nbsp;&nbsp;Большой опыт на рынке запчастей </li>
                                  -->
             
@@ -124,7 +122,7 @@
     </div>
     <!-- -Hero Area -->
   </header>
-  <!-- -Header  ------------------ -->
+  <!-- -Header  -->
   
   
    
@@ -161,10 +159,17 @@
             <li class="breadcrumb-item"><a href="/kardanyi_valy/index.html" class="dropdown-toggle" id="b_2" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
               Карданные валы</i></a></li>
           {%- endif -%}
+          
+          {%- if page.dir contains "dostavka" -%}
+            <li class="breadcrumb-item"><a href="/oplata_i_dostavka.html" class="dropdown-toggle" id="b_2" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+              Доставка</i></a></li>
+          {%- endif -%}
+
           {%- if page.dir == "" or page.dir == "/" -%}
             <li class="breadcrumb-item"><a href="/" class="dropdown-toggle" id="b_2" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
               Агрегаты и запчасти КамАЗ</i></a></li>
           {%- endif -%}
+
     
           
         
@@ -179,14 +184,14 @@
         <ol class="breadcrumb dropdown">
           <li class="breadcrumb-item">&nbsp;</li>
           {%- for pp in page.categories -%}
-            <li class='breadcrumb-item dropdown' id="b_3" role="button" aria-haspopup="true" aria-expanded="true">{{pp}}</li>
+            <li class='breadcrumb-item dropdown' id="b_3" data-toggle="dropdown"  role="button" aria-haspopup="true" aria-expanded="true">{{pp}}</li>
             <!-- <li class="breadcrumb-item"><a href="/">{{page.tags}}</i></a></li> -->
           {%- endfor -%}
           
-          {%- if page.dir contains "dvigatel_zapchasti" -%}
+          {%- if page.dir contains "dvigatel_zapchasti" or page.name contains "dvigatel_zapchasti" -%}
 
             {%- unless page.categories -%}
-              <li class='breadcrumb-item dropdown' id="b_3" role="button" aria-haspopup="true" aria-expanded="true"><a href="/dvigatel_zapchasti/catalog/index.html">Каталог</a></li>
+              <li class='breadcrumb-item dropdown' id="b_3" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true"><a href="/dvigatel_zapchasti/catalog/index.html">Каталог</a></li>
             {%- endunless -%}
           
           <div class="dropdown-menu" aria-labelledby="b_3">
@@ -208,9 +213,9 @@
           </div>
           {%- endif -%}
 
-          {%- if page.dir contains "kamaz-4310" -%}
+          {%- if page.dir contains "kamaz-4310" or page.name contains "zapchasti-kamaz-4310-43118" -%}
           {%- unless page.categories -%}
-            <li class='breadcrumb-item dropdown' id="b_3" role="button" aria-haspopup="true" aria-expanded="true"><a href="/kamaz-4310/category/zapchasti_kamaz-4310.html">Каталог</a></li>
+            <li class='breadcrumb-item dropdown' id="b_3" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true"><a href="/kamaz-4310/category/zapchasti_kamaz-4310.html">Каталог</a></li>
           {%- endunless -%}
         
           <div class="dropdown-menu" aria-labelledby="b_3">
@@ -228,10 +233,10 @@
           </div>
           {%- endif -%}
           
-          {%- if page.dir contains "kamaz-5490" -%}
+          {%- if page.dir contains "kamaz-5490" or page.name contains "kamaz-5490" -%}
 
             {%- unless page.categories -%}
-              <li class='breadcrumb-item dropdown' id="b_3" role="button" aria-haspopup="true" aria-expanded="true"><a href="/kamaz-5490/index.html">Каталог</a></li>
+              <li class='breadcrumb-item dropdown' id="b_3" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true"><a href="/kamaz-5490/index.html">Каталог</a></li>
             {%- endunless -%}
             
             <div class="dropdown-menu" aria-labelledby="b_3">
@@ -241,10 +246,10 @@
             </div>
           {%- endif -%}
 
-          {%- if page.dir contains "kardanyi_valy" -%}
+          {%- if page.dir contains "kardanyi_valy" or page.name contains "kardanyi_valy" -%}
 
             {%- unless page.categories -%}
-              <li class='breadcrumb-item dropdown' id="b_3" role="button" aria-haspopup="true" aria-expanded="true"><a href="/kardanyi_valy/index.html">Каталог</a></li>
+              <li class='breadcrumb-item dropdown' id="b_3" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true"><a href="/kardanyi_valy/index.html">Каталог</a></li>
             {%- endunless -%}
             
           <div class="dropdown-menu" aria-labelledby="b_3">
