@@ -1,15 +1,35 @@
-{%- assign phone = "9503108888" -%}
-{%- assign phone_title = "950 310-88-88" -%}
+
+{%- if page.dir contains "dvigatel_zapchasti" or page.name contains "dvigatel_zapchasti" -%}
+  {%- assign phone = "9003234141" -%}
+  {%- assign phone_title = "(900) 323-41-41" -%}
+{%- endif -%}
+
+{%- if page.dir contains "kamaz-4310" or page.name contains "zapchasti-kamaz-4310-43118" -%}
+  {%- assign phone = "9272482335" -%}
+  {%- assign phone_title = "(927) 248 23-35" -%}
+{%- endif -%}
+
+{%- if page.dir contains "kamaz-5490" or page.name contains "kamaz-5490" -%}
+  {%- assign phone = "9872721224" -%}
+  {%- assign phone_title = "(987) 272 12-24" -%}
+{%- endif -%}
+
+{%- if page.dir contains "kardanyi_valy" or page.name contains "kardanyi_valy" -%}
+  {%- assign phone = "(927) 045 01-18" -%}
+  {%- assign phone_title = "(927) 045 01-18" -%}
+{%- endif -%}
+
+{%- if page.dir == "" or page.dir == "/" -%}
+  {%- assign phone = "9003234141" -%}
+  {%- assign phone_title = "900 323-41-41" -%}
+{%- endif -%}
+
+
+
 {%- if page.phone -%}
 {%- if page.phone != "" -%}
   {%- assign phone = page.phone -%}
   {%- assign phone_title = page.phone_title -%}
-  {%- endif -%}
-{%- endif -%}
-{%- if include.phone -%}
-{%- if include.phone != "" -%}
-  {%- assign phone = include.phone -%}
-  {%- assign phone_title = include.phone_title -%}
   {%- endif -%}
 {%- endif -%}
 
@@ -39,9 +59,14 @@
           <div class="contacts col-lg-6 col-md-6 col-xs-12" style="margin: auto;">
             <table class="table table-hover">
               <tr>
-                <td rowspan="3" style="vertical-align: middle;"><i class="lni-phone"></i></td>
+                <td rowspan="4" style="vertical-align: middle;"><i class="lni-phone"></i></td>
                 <td>
                   <a class="nocolor" href="tel:+79272482335">(927) 248 23-35</a> <small>/ запчасти 4310</small><br>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a class="nocolor" href="tel:+79003234141">(927) 323 41-41</a> <small>/ запчасти двигатель</small><br>
                 </td>
               </tr>
               <tr>

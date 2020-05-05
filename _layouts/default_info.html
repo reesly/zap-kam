@@ -49,29 +49,9 @@
         <nav class="navbar navbar-expand-lg fixed-top scrolling-navbar" style="border-bottom: 0.01rem solid #555555;">
           <div class="container">
             <a href="/" class="navbar-brand" style="display: contents;"> <img src="/assets/img/logo2.png" alt=""> </a> 
-
+            {% include top-submenu.html phone = page.phone phone_title = page.phone_title %}
             
-            <a class="navbar-toggler" style="padding:10px 3px;" href="tel:+7{{page.phone}}" title="{{page.phone_title}}">
-              <img style="height:26px;opacity: 0.6;" src="/assets/img/icon-callto-48.png" alt="Позвонить на телефон"></a>
-            <a class="navbar-toggler" id="aim22" style="padding:10px 3px;" rel="nofollow" href="https://wa.me/7{{page.phone}}" target="_blank"><img style="height:28px;opacity: 0.6;" src="/assets/img/icon-whatsapp-48.png" alt="напишите нам в ватсап"></a>
-
-            <!-- Корзина --><a href="javascript:" class="navbar-toggler label-place" style="padding:10px 3px; opacity: 0.8;"></a>
-              
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
-              aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" style="padding:10px 3px;">
-              <i class="lni-menu" style="color: lightblue;"></i>
-            </button>
-
-            <div class="collapse navbar-collapse" id="navbarCollapse">
-              <ul class="navbar-nav mr-auto w-100 justify-content-end clearfix" id="top-submenu">
-                <li class="nav-item">
-                  <a class="nav-link" href="javascript:" onclick="$('html, body').animate({ scrollTop: 0}, 600);" >
-                    <i class="lni-home"></i> 
-                  </a>
-                </li>
-                  {% include top-submenu.html phone = page.phone phone_title = page.phone_title %}
-              </ul>
-            </div>
+           
           </div>
         </nav>
         <!-- -Navbar-  -->
@@ -132,7 +112,7 @@
         <div class="col-md-12 col-xs-12" style="margin: auto;">
           <h1 class="text-center pt-2 pb-0">{{ page.h1 }} </h1>
           {%- if page.h2 and page.h2 != "" -%}
-          <h2 class="text-center pt-2 pb-0" style="font-size:1.5em !important;"> {{ page.h2 }} </h2>
+          <h2 class="text-center pt-2 pb-0" style="font-size:1.6em !important; font-weight: 300;"> {{ page.h2 }} </h2>
           {%- endif -%}
           
             
@@ -152,8 +132,8 @@
               Запчасти КамАЗ-4310</a></li>
           {%- endif -%}
           {%- if page.dir contains "kamaz-5490" -%}
-            <li class="breadcrumb-item"><a href="/kamaz-5490/index.html" class="dropdown-toggle" id="b_2" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"
-              >Запчасти КамАЗ-5490</a></li>
+            <li class="breadcrumb-item"><a href="/kamaz-5490/index.html" class="dropdown-toggle" id="b_2" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+              Запчасти КамАЗ-5490</a></li>
           {%- endif -%}
           {%- if page.dir contains "kardanyi_valy" -%}
             <li class="breadcrumb-item"><a href="/kardanyi_valy/index.html" class="dropdown-toggle" id="b_2" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
@@ -189,8 +169,8 @@
           {%- endfor -%}
           
           {%- if page.dir contains "dvigatel_zapchasti" or page.name contains "dvigatel_zapchasti" -%}
-
-            {%- unless page.categories -%}
+          
+          {%- unless page.categories -%}
               <li class='breadcrumb-item dropdown' id="b_3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"><a href="/dvigatel_zapchasti/catalog/index.html">Каталог</a></li>
             {%- endunless -%}
           
@@ -288,7 +268,7 @@
 
 
   
-  {% include contacts.html %}
+  {% include contacts.html phone = phone phone_title = phone_title  %}
   {% include footer.html %}
 
   <!-- Кнопка вверх-->

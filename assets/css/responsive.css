@@ -37,6 +37,10 @@
 
 /* only small tablets */
 @media (min-width: 768px) and (max-width: 991px) {
+  
+  .container {
+      max-width: 95%;
+  }
   .section-title {
     font-size: 26px;
     margin-bottom: 30px;
@@ -95,6 +99,9 @@
   .contact-right-area {
     margin-top: 0px;
     margin-left: 0px;
+  }
+  .card-columns {
+    column-count:2;
   }
 }
 
@@ -245,6 +252,10 @@
   #hero-area h2 {
     font-size: 1.3em;
   } */
+
+  .card-columns {
+    column-count:1;
+  }
 
 
 }
