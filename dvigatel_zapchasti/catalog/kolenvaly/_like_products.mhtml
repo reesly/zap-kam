@@ -103,8 +103,8 @@
     {%- endif -%}
       
 
-    {%- if 4>n -%}
-        {%- assign m = 4 | minus: n -%}
+    {%- if 2>n -%}
+        {%- assign m = 2 | minus: n -%}
         {%- assign rands = site.data.dvig_zap | sample: m -%}
         {% for pr in rands %}
             {%- if pr and pr.code1 -%}
