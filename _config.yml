@@ -109,3 +109,4 @@ exclude:
   #   name: url
   #   template: dostavka_4310
   #   filter_condition: "record['point1'] != ''"
+        

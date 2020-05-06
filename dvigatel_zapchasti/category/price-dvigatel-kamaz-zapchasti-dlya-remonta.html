@@ -1,0 +1,163 @@
+---
+layout: default_info
+title: Прайс - запчасти двигателя КамАЗ
+description: Каталог c ценами камазовских запчастей для двигателей КамАЗ Евро-0, Евро-1, Евро-2, Евро-3.
+keywords: Блок цилиндров КамАЗ Двигатель КамАЗ Евро Евро-1 Евро-2 Евро-3 Евро-4 Коленвал Коленчатый вал Блок цилиндров шатун шейка поршня кольца Bosch ЯЗДА ЦПГ ЯМЗ SANZ насос турбокомпрессор распредвал 
+hero-title: Запчасти на ДВИГАТЕЛИ КамАЗ
+h1: Прайс на запчасти двигателя КамАЗ
+h2:
+phone: 
+phone_title:
+cat_dvig_zap:
+    - Блоки цилиндров
+    - Сборочный комплект
+    - Головки блока
+    - Валы коленчатые
+    - Запчасти двигателя
+    - Поршневая группа
+    - Насос водяной
+    - Насос масляный
+    - Турбокомпрессоры
+    - ТНВД
+    - Форсунки
+    - Распылители
+---
+
+
+
+<!-- Модель камаза  -->
+<div class="col-md-11 col-xs-12" style="margin: auto;">
+    <p>
+       Цены на запчасти - ориентировочные, точные уточняйте по телефону. 
+    </p>
+</div>
+
+
+<!-- Товары -->
+
+<div class="col-md-12 col-xs-12" style="margin: auto;">
+    
+    <!-- <h3 class="w-100 text-center">Каталог</h3> -->
+    
+    <div id="" class="pt-4 pb-2">
+        <div class="row list">
+
+            {%- for cat in page.cat_dvig_zap -%}
+            <div class="col-md-12">
+
+                <h3>{{cat}}</h3>    
+                
+
+                <table class="table table-bordered table-striped table-hover table-responsive-sm wa" style="font-size:80%;" >
+                    <thead>
+                        <tr>
+                            <th>название</th>
+                            <th>код</th>
+                            <th colspan="100%">цены</th>
+                        </tr>
+                    </thead>
+                    
+                    {% for product in site.data.dvig_zap %}
+                    {%- if product.cat == cat -%}
+                    <tr>
+                        <td><a href="{{product.path}}{{product.url}}.html">
+                            {{product.name}}                      
+                        </a></td>
+                        <td><a href="{{product.path}}{{product.url}}.html">
+                            <span>{{product.code1}} {{product.cat2}} </span>
+                        </a></td>
+
+                        {%- if product.price1 -%}
+                            <td>  
+                                <span class="" style="font-size: 1.1em;">{{product.price1}}</span>
+                                <br>
+                                <span class="small2" style="color: gray; line-height: 14px;">{{ product.price1_name }}</span>
+                            </td>
+                        {%- endif -%}
+
+                        {%- if product.price2 -%}
+                            <td>  
+                                <span class="" style="font-size: 1.1em;">{{product.price2}}</span>
+                                <br>
+                                <span class="small2" style="color: gray;line-height: 14px;">{{ product.price2_name }}</span>
+                            </td>
+                        {%- endif -%}
+
+                        {%- if product.price3 -%}
+                            <td>  
+                                <span class="" style="font-size: 1.1em;">{{product.price3}}</span>
+                                <br>
+                                <span class="small2" style="color: gray;line-height: 14px;">{{ product.price3_name }}</span>
+                            </td>
+                        {%- endif -%}
+
+                        {%- if product.price4 -%}
+                            <td>  
+                                <span class="" style="font-size: 1.1em;">{{product.price4}}</span>
+                                <br>
+                                <span class="small2" style="color: gray;line-height: 14px;">{{ product.price4_name }}</span>
+                            </td>
+                        {%- endif -%}
+
+                        {%- if product.price5 -%}
+                            <td>  
+                                <span class="" style="font-size: 1.1em;">{{product.price5}}</span>
+                                <br>
+                                <span class="small2" style="color: gray;line-height: 14px;">{{ product.price5_name }}</span>
+                            </td>
+                        {%- endif -%}
+
+                        {%- if product.price6 -%}
+                            <td>  
+                                <span class="" style="font-size: 1.1em;">{{product.price6}}</span>
+                                <br>
+                                <span class="small2" style="color: gray;line-height: 14px;">{{ product.price6_name }}</span>
+                            </td>
+                        {%- endif -%}
+
+                        {%- if product.price7 -%}
+                            <td>  
+                                <span class="" style="font-size: 1.1em;">{{product.price7}}</span>
+                                <br>
+                                <span class="small2" style="color: gray;line-height: 14px;">{{ product.price7_name }}</span>
+                            </td>
+                        {%- endif -%}
+                        
+                    </tr>
+
+                    
+                    {%- endif -%}
+                    {% endfor %}
+                </table>  
+                <hr>
+            </div>
+
+            {%- endfor -%}
+        </div>
+        <div class="no-result">Не найдено</div>
+        <ul class="pagination" onclick="$('html, body').animate({ scrollTop: 0}, 600);"></ul>
+    </div>
+</div>
+
+
+<div class="col-md-10 col-xs-12" style="margin: auto;">
+
+
+    <p></p>
+    <p></p>
+    {% include kupite_u_nas.html %}
+    
+  <div style="height: 30px;">&nbsp;</div>
+  
+
+<style>
+    table.table-hover tbody tr:hover {
+        background-color: #a7fdc8; 
+    }
+
+    .table td {
+        padding-top: 4px;
+        padding-bottom: 4px;
+        vertical-align: middle;
+    }
+</style>
