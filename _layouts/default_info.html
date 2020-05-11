@@ -123,6 +123,10 @@
       <div style="display: inline-flex;">
         <ol class="breadcrumb dropdown">
           <li class="breadcrumb-item"><a href="/"><i class="lni-home"></i></a></li>
+          {%- if page.dir contains "agregaty" -%}
+            <li class="breadcrumb-item"><a href="/dvigatel_zapchasti/index.html" class="dropdown-toggle" id="b_2" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+              Агрегаты КамАЗ</a></li>
+          {%- endif -%}
           {%- if page.dir contains "dvigatel_zapchasti" -%}
             <li class="breadcrumb-item"><a href="/dvigatel_zapchasti/index.html" class="dropdown-toggle" id="b_2" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
               Запчасти для ДВИГАТЕЛЯ</a></li>
@@ -205,8 +209,8 @@
             <a class="dropdown-item" href='/kamaz-4310/category/valy_kamaz.html'>Валы</a>
             <a class="dropdown-item"  href='/kamaz-4310/category/shesterny_kamaz.html'>Шестерни</a>
             
-            <a class="dropdown-item" href='/kamaz-4310/catalog/razdatki/index.html'>Коробка раздаточная в сборе</a>
-            <a class="dropdown-item" href='/kamaz-4310/catalog/kpp_korobki_peredach/'>Коробки передач в сборе</a>
+            <a class="dropdown-item" href='/agregaty/razdatki/index.html'>Коробка раздаточная в сборе</a>
+            <a class="dropdown-item" href='/agregaty/kpp/index.html'>Коробки передач в сборе</a>
             <a class="dropdown-item" href='/kamaz-4310/category/zapchasti_mosty.html'>Запчасти для моста</a>
               
             <!-- <a class="dropdown-divider" href="javascript:"></a> -->

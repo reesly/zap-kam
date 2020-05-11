@@ -1,20 +1,17 @@
 User-agent: Yandex
 Allow: /
-Disallow: /assets/
 Disallow: /data/
 Disallow: /materials/
 Disallow: /*.mhtml$
 
 User-agent: Googlebot
 Allow: /
-Disallow: /assets/
 Disallow: /data/
 Disallow: /materials/
 Disallow: /*.mhtml$
 
 User-agent: *
 Allow: /
-Disallow: /assets/
 Disallow: /data/
 Disallow: /materials/
 Disallow: /*.mhtml$

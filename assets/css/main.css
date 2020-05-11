@@ -1296,51 +1296,49 @@ textarea {
 /* Footer Area Start */
 .footer-area {
   position: relative;
-  padding-bottom: 100px;
+  padding-bottom: 20px;
   /* padding: 0px 0px 0px; */
-  /* background: #fff; */
+  color: #ebebeb;
+  background-color: #4b4b4b;
+  font-size: 0.9em;
+
 }
 
 .footer-area .footer-title {
-  font-size: 18px;
-  color: #333333;
+  color: #ebebeb;
   font-weight: 500;
   padding-bottom: 20px;
   letter-spacing: 0.5px;
 }
 
-.footer-area .footer-title span {
-  color: #ccc;
-  font-weight: 400;
+.footer-area a, .footer-area a:hover {
+  color: #ebebeb;
+}
+.footer-area p {
+  color: #ebebeb;
 }
 
-.footer-area .textwidget p {
-  color: #333;
-}
 
 .footer-area .footer-link li {
   margin-bottom: 10px;
 }
 
 .footer-area .footer-link li a {
-  color: #333;
+  color: #ebebeb;
   font-size: 14px;
   font-weight: 400;
   position: relative;
 }
 
-.footer-area .footer-link li a:hover {
-  color: #F63854;
-}
 
 .footer-area .address li {
   margin-bottom: 20px;
 }
 
 .footer-area .address li a {
-  color: #666666;
+  color: #ebebeb;
   font-size: 14px;
-  line-height: 30px;
+  line-height: 25px;
   font-weight: 400;
 }
 
@@ -1364,16 +1362,7 @@ textarea {
   position: relative;
 }
 
-.footer-area #subscribe-form .form-group .btn-common {
-  position: absolute;
-  top: 0;
-  right: 0;
-  padding: 7px 15px;
-  height: 52px;
-  border-radius: 0;
-  background: transparent;
-  color: #F63854;
-}
+
 .footer-area .icon-img{
   opacity: 0.5;
   padding-right: 10px;
@@ -1381,7 +1370,7 @@ textarea {
 
 
 #copyright .copyright-content {
-  border-top: 1px solid #d5d4e9;
+  border-top: 1px solid rgb(213, 212, 233);
   padding: 15px 0;
   margin: 0 0px;
   width: 100%;
@@ -1391,14 +1380,14 @@ textarea {
 
 #copyright p {
   line-height: 42px;
-  color: #333;
+  color: #dddddd;
   text-align: center;
   margin: 0;
 }
 
 .social-icon a {
-  color: #272727;
-  background: #fff;
+  color: #dddddd;
+  background: #343434;
   width: 32px;
   height: 32px;
   line-height: 34px;
