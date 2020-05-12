@@ -72,7 +72,7 @@
     {% assign n = 0 %}
     
     {%- if prod.lk1 -%}
-        {%- assign p1 = site.data.k4310 | where: "code1", prod.lk1 | first -%}
+        {%- assign p1 = site.data.agregaty | where: "code1", prod.lk1 | first -%}
         {%- if p1 -%}
             {% include card_zapchasti_catalog.html product = p1 %}
             {% assign n = n | plus: 1 %}
@@ -80,7 +80,7 @@
     {%- endif -%}
 
     {%- if prod.lk2 -%}
-        {%- assign p1 = site.data.k4310 | where: "code1", prod.lk2 | first -%}
+        {%- assign p1 = site.data.agregaty | where: "code1", prod.lk2 | first -%}
         {%- if p1 -%}
             {% include card_zapchasti_catalog.html product = p1 %}
             {% assign n = n | plus: 1 %}

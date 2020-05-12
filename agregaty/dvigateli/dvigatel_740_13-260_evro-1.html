@@ -10,7 +10,7 @@ h2: Описание, Цены и характеристики. 740.13-260 (Ев
 <!-- Товар  -->
 <div id="740-10"></div>
 {% assign page_url = page.name | replace: ".html", "" %}
-{% assign product = site.data.k4310 | where:"url", page_url | first  %}
+{% assign product = site.data.agregaty | where:"url", page_url | first  %}
 {%- if product -%}
     {% include card_zapchasti.html product = product %}
 {%- endif -%}
