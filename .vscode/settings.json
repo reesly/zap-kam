@@ -15,6 +15,19 @@
         "latex",
         "plaintext",
         "html"
-    ]
+    ],
+    "sqltools.connections": [
+        {
+            "database": "C:\\Users\\Reesly\\AppData\\Roaming\\Datacol7\\Campaigns\\autoopt.par.db",
+            "dialect": "SQLite",
+            "name": "autoopt.par.db"
+        },
+        {
+            "database": "C:\\Users\\Reesly\\AppData\\Roaming\\Datacol7\\Campaigns\\midkam.db",
+            "dialect": "SQLite",
+            "name": "midkam.db"
+        }
+    ],
+    "sqltools.useNodeRuntime": true
     
 }
