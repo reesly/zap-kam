@@ -13,8 +13,8 @@ h2: Всё для ремонта
         <div class="col-md-3">
             <h3 style="padding-top: 0px;">Двигатели Евро-1</h3>
             <table class="table table-hover">
-                <tr><td> <a href="#740.11-240" class="u"> 740.11-240 </a> </td></tr>
-                <tr><td> <a href="#740.13-260" class="u"> 740.13-260 </a> </td></tr> 
+                <tr><td> <a href="/agregaty/dvigateli/dvigatel_kamaz_740_11-240_evro-1.html" class="u"> 740.11-240 </a> </td></tr>
+                <tr><td> <a href="/agregaty/dvigateli/dvigatel_kamaz_740_13-260_evro-1.html" class="u"> 740.13-260 </a> </td></tr> 
             </table>
             <img src="/dvigatel_zapchasti/img/category/dvigatel_740_png.png">
         </div>
@@ -43,8 +43,40 @@ h2: Всё для ремонта
         </div>
     </div>
 
+    <h2>Каталог двигателей Евро-1</h2>
 
-    <h3>Двигатели серии Евро-1</h3>
+    <div id="productList" class="pt-4 pb-2" style="display: block;">
+        <div class="row list">
+
+
+    <!-- Движок 11  -->
+    <div id="740-11"></div>
+    {% assign page_url = "dvigatel_kamaz_740_11-240_evro-1" %}
+    {% assign product = site.data.agregaty | where:"url", page_url | first  %}
+    {%- if product -%}
+    {% include card_zapchasti_catalog.html product = product %}
+    {%- endif -%}
+
+
+
+
+    <!-- Движок турбо  -->
+    <div id="7403-10"></div>
+    {% assign page_url = "dvigatel_kamaz_740_13-260_evro-1" %}
+    {% assign product = site.data.agregaty | where:"url", page_url | first  %}
+    {%- if product -%}
+    {% include card_zapchasti_catalog.html product = product %}
+    {%- endif -%}
+
+</div>
+</div>
+
+<hr>
+
+
+    <h2>Двигатели серии Евро-1</h2>
+
+
     <table class="table table-hover table-harki table-responsive-sm table-sm" style="width: auto;">
             <tbody>
             <tr>
