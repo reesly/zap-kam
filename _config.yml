@@ -91,11 +91,11 @@ exclude:
 #     dir: aaa
 #     filter_condition: "record['point1'] != ''"
 
-#   - index_files: false 
-#     data: dvig_zap
-#     name: url
-#     template: templ_zapchasti
-#     filter_condition: "record['name'] != nil"
+  # - index_files: false 
+  #   data: agregaty
+  #   name: url
+  #   template: templ_zapchasti
+  #   filter_condition: "record['path'] == '/agregaty/reduktory/'"
 
 #   - index_files: true 
 #     data: dostavka

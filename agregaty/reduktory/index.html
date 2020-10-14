@@ -1,0 +1,142 @@
+---
+layout: default_info
+title: Редукторы КАМАЗ задние средние передние, 49 48 47 50 зубьев - ЗапКам.ру
+description: Задние, средние и передние редукторы мостов КАМАЗ 5320, 65115, 6520, 4310, 43114 и другие с доставкой по всей России. В наличии новые, восстановленные, капремонт. Прайс-лист, модификации, каталог, описание, характеристики.
+keywords: Коробка раздаточная КамАЗ 4310, 43114, 43118, 65111, 6522
+hero-title: Редукторы на технику КАМАЗ
+h1: Главные передачи КамАЗ 
+h2:
+phone:
+phone_title:
+---
+
+
+
+<div class="col-md-10 col-xs-12 m-auto">
+    <h4>При заказе уточните следующие параметры:</h4>
+    <ul>
+        <li><strong>Модель</strong> грузового автомобиля КАМАЗ;</li>
+        <li><strong>Количество зубьев</strong> (или передаточное число);</li>
+        <li><strong>Наличие блокировки</strong> (МОД &mdash; межосевая и МКБ &mdash; межколесная);</li>
+        <li><strong>Фланец</strong>: квадратный или круглый;</li>
+        <li><strong>Шлицевая полуосей</strong>:
+            <ul>
+                <li><strong>16 шлицов</strong> - Под полуоси старого образца - 5320, 4310, 55102, 5511, 5410 и др.</li>
+                <li><strong>20 шлицов</strong> - Под полуоси евро - 65115, 43114, 43118, 43253, 43255, 54115, 53205, 53229,
+                    53228 и др. </li>
+            </ul>
+        </li>
+    </ul>
+    <p class='help-text'>
+        Отдельно по самосвалам КАМАЗ 6520 и 6522. На этих машинах могут быть установлены мосты КАМАЗ, MADARA, RABA, Китай.
+        Если количество зубьев редуктора 35 или 31 — подойдёт КАМАЗ, другие варианты под заказ
+    </p>
+
+
+</div>
+
+
+<!-- Товары -->
+<style>
+    .list-group-item{ margin-bottom: 1px; }
+</style>
+
+
+    <div class="col-md-11 col-xs-12" style="margin: auto;">
+        <p></p>
+        <h3>Каталог </h3>
+        <div class="form form-inline">
+            <input id="pListSearch" class="fuzzy-search" type="search" class="form-control" placeholder="поиск..." style="width:130px;"/>
+            &nbsp;&nbsp;
+            <button class="btn btn-search-var" onclick="$('#pListSearch').val('заднего'); filterProductList($('#pListSearch').val());" title="Редукторы заднего моста">Заднего моста</button>   
+            <button class="btn btn-search-var" onclick="$('#pListSearch').val('среднего'); filterProductList($('#pListSearch').val());" title="Главные передачи среднего моста">Среднего моста</button>   
+            <button class="btn btn-search-var" onclick="$('#pListSearch').val('переднего'); filterProductList($('#pListSearch').val());" title="Главные передачи переднего моста">Переднего моста</button>   
+            <button class="btn btn-search-var" onclick="$('#pListSearch').val('дифференциал'); filterProductList($('#pListSearch').val());" title="Межосевые дифференциалы (МОД) КАМАЗ">МОД</button>   
+            <button class="btn btn-search-var" onclick="$('#pListSearch').val('5320'); filterProductList($('#pListSearch').val());" title="5320">5320</button>   
+            <button class="btn btn-search-var" onclick="$('#pListSearch').val('4310'); filterProductList($('#pListSearch').val());" title="4310">4310</button>   
+            <button class="btn btn-search-var" onclick="$('#pListSearch').val('53205'); filterProductList($('#pListSearch').val());" title="53205">53205</button>   
+            <button class="btn btn-search-var" onclick="$('#pListSearch').val('65115'); filterProductList($('#pListSearch').val());" title="65115">65115</button>   
+            <button class="btn btn-search-var" onclick="$('#pListSearch').val('6520'); filterProductList($('#pListSearch').val());" title="6520">6520</button>   
+               
+        </div>
+    
+        {% include catalog-loading-panel.html %}
+    
+        <div id="productList" class="pt-2 pb-2" style="display: none; ">
+        
+            <div class="row list">
+                {% for product in site.data.agregaty %}
+                {%- if product.path == "/agregaty/reduktory/" -%}
+                    {% include card_zapchasti_catalog.html product = product %}
+                {%- endif -%}
+                {% endfor %}
+    
+                <div id="loadingDiv">
+                    <span>Загрузка данных</span>
+                </div>
+            </div>
+            <div class="no-result">Не найдено</div>
+            <ul class="pagination"></ul>
+        </div>
+          
+    
+    
+    </div>
+    
+    
+
+
+
+<div class="col-md-10 col-xs-12 m-auto">
+
+    
+    <p>
+        Продаём редукторы для автомобилей КАМАЗ: 
+    </p>
+    <ul>
+        <li>
+            <b>Новые</b> - собираются из новых деталей на сертифицированном по ремонту предприятии в заводских условиях.
+            Проверены на стенде. Проводится как услуга ремонта (обезличенный ремонт).
+        </li>
+        <li>
+            <b>Капремонт</b> - Капитально отремонтированные редукторы, восстановление ресурса до 80%.
+        </li>
+        
+        <li>
+            <b>Завод</b> - заводские оригинальные детали.
+        </li>
+    </ul>
+
+    
+    <p><strong>Основные параметры:</strong></p>
+    <ul>
+    <li>Под полуоси старого образца со шлицевой на 16 (5320, 5511)</li>
+    <li>Под полуоси евро, шлицевая 20 (65115, 6520)</li>
+    <li>С блокировкой / без блокировки</li>
+    <li>Квадратный / круглый фланец</li>
+    </ul>
+
+
+    
+
+
+    
+
+    <div class="alert alert-info">
+        <p>Предоставляется гарантия производителя.</p>
+        <p></p>
+    </div>
+
+    <p>
+        <a href="/agregaty/reduktory/info/">Типичные неисправности раздаточной коробки КамАЗ</a>
+    </p>
+    <p></p>
+    <p></p>
+    {% include kupite_u_nas.html %}
+    {% include garantiya.html %}
+    
+    
+  <div style="height: 100px;">&nbsp;</div>
+  
+
+<script src="/assets/js/list.min.js"></script>
