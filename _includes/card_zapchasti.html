@@ -11,8 +11,9 @@
             "fillWidth": "right", 
             "thumbnailDisplayTransition":"slideUp",
             "thumbnailHoverEffect2":"scale120|toolsAppear|toolsAppear",
-            "itemsBaseURL":     ""
-          }' >
+            "itemsBaseURL":     "" 
+            , "colorScheme": "light", "colorSchemeViewer": "light" 
+          }' > 
           <!-- fillWidth -->
           {%- if product.img1 -%}
             <a href = "{{product.img_path}}{{product.img1}}" data-ngThumb = "{{product.img_path}}{{product.img1}}" title="{{product.name}}"> {{product.name}}</a>

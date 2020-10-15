@@ -124,7 +124,7 @@
         <ol class="breadcrumb dropdown">
           <li class="breadcrumb-item"><a href="/"><i class="lni-home"></i></a></li>
           {%- if page.dir contains "agregaty" -%}
-            <li class="breadcrumb-item"><a href="/dvigatel_zapchasti/index.html" class="dropdown-toggle" id="b_2" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+            <li class="breadcrumb-item"><a href="/agregaty/index.html" class="dropdown-toggle" id="b_2" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
               Агрегаты КамАЗ</a></li>
           {%- endif -%}
           {%- if page.dir contains "dvigatel_zapchasti" -%}
@@ -158,8 +158,9 @@
           
         
           <li class="dropdown-menu" aria-labelledby="b_2">
-            <a class="dropdown-item" href="/dvigatel_zapchasti/index.html">Запчасти для ДВИГАТЕЛЯ</a>
             <a class="dropdown-item" href="/kamaz-4310/category/zapchasti_kamaz-4310.html">Запчасти КамАЗ-4310</a>
+            <a class="dropdown-item" href="/agregaty/index.html">Агрегаты КамАЗ</a>
+            <a class="dropdown-item" href="/dvigatel_zapchasti/index.html">Запчасти для ДВИГАТЕЛЯ</a>
             <a class="dropdown-item" href="/kardanyi_valy/index.html">Карданные валы</a>
             <a class="dropdown-item" href="/kamaz-5490/index.html">Запчасти КамАЗ-5490</a>
           </li>
@@ -174,7 +175,7 @@
           
           {%- if page.dir contains "dvigatel_zapchasti" or page.name contains "dvigatel_zapchasti" -%}
           
-          {%- unless page.categories -%}
+            {%- unless page.categories -%}
               <li class='breadcrumb-item dropdown' id="b_3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"><a href="/dvigatel_zapchasti/catalog/index.html">Каталог</a></li>
             {%- endunless -%}
           
@@ -257,7 +258,23 @@
           </li>
           {%- endif -%}
           
-          
+
+
+          {%- if page.dir contains "agregaty" or page.name contains "agregaty" -%}
+
+            {%- unless page.categories -%}
+              <li class='breadcrumb-item dropdown' id="b_3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"><a href="/agregaty/index.html">Каталог</a></li>
+            {%- endunless -%}
+            
+            <li class="dropdown-menu" aria-labelledby="b_3">
+              <a class="dropdown-item" href='/agregaty/dvigateli/index.html'>Двигатели на КамАЗ</a>
+              <a class="dropdown-item" href='/agregaty/kpp/index.html'>КПП - Коробки передач</a>
+              <a class="dropdown-item" href='/agregaty/reduktory/index.html'>Редукторы</a>
+              <a class="dropdown-item" href='/agregaty/razdatki/index.html'>Коробки раздаточные</a>
+           
+              <!-- <a class="dropdown-divider" href="javascript:"></a> -->
+            </li>
+          {%- endif -%}
         
         </ol>
       </div>

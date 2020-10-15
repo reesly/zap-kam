@@ -30,16 +30,21 @@ var prodList;
     function close_toggle() {
         if ($(window).width() <= 768) {
             $('.navbar-collapse a').on('click', function (event) {
-              if(event.target.classList.contains("dropdown-toggle")){ return; }
+              if(event.target.classList.contains("dropdown-toggle")){ 
+                return; }
                 $('.navbar-collapse').collapse('hide');
             });
         }
         else {
             $('.navbar .navbar-inverse a').off('click');
+            
+            
         }
     }
     close_toggle();
     $(window).resize(close_toggle);
+
+    
 
     /* WOW Scroll Spy
     ========================================================*/
@@ -200,6 +205,15 @@ var prodList;
 
     const observer = lozad(); // lazy loads elements with default selector as '.lozad'
     observer.observe();
+
+
+    $('.breadcrumb-item a').on('click', function () {
+      var targetLink = $(this).attr('href'); 
+      window.open(targetLink);
+    });
+
+
+    dropdown-item
 
   }); // on_load     
 

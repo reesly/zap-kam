@@ -89,7 +89,7 @@
 
    
     {%- if 4>n -%}
-        {%- assign m = 2 | minus: n -%}
+        {%- assign m = 4 | minus: n -%}
         {%- assign rands = site.data.agregaty | where: "path", "/agregaty/reduktory/" | sample: m -%}
         {% for pr in rands %}
             {%- if pr and pr.code1 -%}
