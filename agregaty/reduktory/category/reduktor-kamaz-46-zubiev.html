@@ -1,0 +1,129 @@
+---
+layout: default_info
+title: Редуктор КАМАЗ 46 зубьев - ЗапКам.ру
+description: Передача главная КАМАЗ 46 зубьев заднего, среднего, переднего моста КАМАЗ 5320, 65115, 6520, 4310, 43114 и др. с доставкой по всей России. В наличии новые, восстановленные, капремонт. Прайс-лист, модификации, каталог, описание, характеристики.
+keywords: редуктор передача мост передний средний задний КамАЗ 4310, 43114, 43118, 65111, 6522
+hero-title: Редукторы на технику КАМАЗ
+h1: Главные передачи (редукторы) КамАЗ 46 зубьев 
+h2:
+phone:
+phone_title:
+---
+
+<div class="col-md-3">
+    <h3>Редукторы 46/16 зубьев</h3>
+    <table class="table table-harki">
+        <tbody>
+            {% for product in site.data.agregaty %}
+            {%- if product.id == "215" or product.id == "221" -%}
+            <tr><td><span> <a href="{{product.path}}{{product.url}}"> {{product.code1}} </a></span></td></tr>
+            {%- endif -%}
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+
+<div class="col-md-9">
+    <div class="alert alert-info">
+        <p>
+            Обозначение редукторов КАМАЗ 46 зубьев оканчивается на -60.<br> 
+            Имеет следующее обозначение:<strong> XXXX-2X0201X-60</strong> <br>
+            65115-2402011-60<br>
+            43253-2402011-60<br>
+        </p>
+        <p>
+            Передаточное число - 4,98. <br>
+            Редукторы с такими характеристиками считаются "скоростными", применяются на 15т самосвалах, коммунальной и строительной технике.
+            Они предназначены для машин, эксплуатируемых на высоких скоростях. Например, на таких моделях как: 43253, 5460.
+        </p>
+        <p>
+            Редукторы с цилиндрической парой 46/16 зубьев стали применяется на грузовиках КАМАЗ не так давно. 
+            Стоимость редуктора 46/16 ощутимо выше, что обусловлено ценовой политикой завода КАМАЗ, 
+            и к тому же его цилиндрическая пара имеет более высокую стоимость.
+        </p>
+        
+    </div>
+</div>
+
+
+
+<!-- Товары -->
+<style>
+    .list-group-item{ margin-bottom: 1px; }
+</style>
+
+    <div class="col-md-11 col-xs-12" style="margin: auto;">
+        <p></p>
+        <h3>Каталог </h3>
+        <div class="form form-inline">
+            <input id="pListSearch" class="fuzzy-search" type="search" class="form-control" placeholder="поиск..." style="width:130px;"/>
+            &nbsp;&nbsp;
+            <button class="btn btn-search-var" onclick="$('#pListSearch').val('заднего'); filterProductList($('#pListSearch').val());" title="Редукторы заднего моста">Заднего моста</button>   
+            <button class="btn btn-search-var" onclick="$('#pListSearch').val('среднего'); filterProductList($('#pListSearch').val());" title="Главные передачи среднего моста">Среднего моста</button>   
+            <button class="btn btn-search-var" onclick="$('#pListSearch').val('переднего'); filterProductList($('#pListSearch').val());" title="Главные передачи переднего моста">Переднего моста</button>   
+               
+        </div>
+     
+        {% include catalog-loading-panel.html %}
+    
+        <div id="productList" class="pt-2 pb-2" style="display: none; ">
+        
+            <div class="row list">
+                {% for product in site.data.agregaty %}
+                {%- if product.id == "215" or product.id == "221" -%}
+                    {% include card_zapchasti_catalog.html product = product %}
+                {%- endif -%}
+                {% endfor %}
+    
+                <div id="loadingDiv">
+                    <span>Загрузка данных</span>
+                </div>
+            </div>
+            <div class="no-result">Не найдено</div>
+            <ul class="pagination"></ul>
+        </div>
+          
+    
+    
+    </div>
+    
+    
+
+
+
+<div class="col-md-10 col-xs-12 m-auto">
+
+    <p>
+        Редуктор среднего моста КамАЗ на 46 зубьев технически отличается от заднего:
+        <br>
+         - На среднем редукторе предусмотрена сдвоенная главная шестерня (ГП) со специальным проходным валом.
+         <br>
+        - Ведущая шестерня установлена непосредственно в горловине картера, и зажат между двумя коническими подшипниками.
+
+    </p>
+    <p>
+        Редуктор заднего моста КАМАЗ 46 зубьев является ведущим.
+         Крутящий момент устройство получает через главную шестерню среднего моста.
+        В отличие от среднего, задний редуктор КАМАЗ на 46 зубьев имеет главную шестерню (ГП) с укороченной ступицей.
+
+    </p>
+    <p>
+        <b>Основные составляющие редуктора КАМАЗ 46 зубьев:</b> <br>
+         - корпус устройства или картер; <br>
+         - главная передача;<br>
+         - дифференциал;<br>
+         - конические и цилиндрические шестерни подшипники; <br>
+         - регулировочные прокладки и шайбы; <br>
+         - сателлиты, а также другие компоненты. <br>
+    </p>
+
+    <p></p>
+    <p></p>
+    {% include kupite_u_nas.html %}
+    {% include garantiya.html %}
+    
+    
+  <div style="height: 100px;">&nbsp;</div>
+  
+
+<script src="/assets/js/list.min.js"></script>

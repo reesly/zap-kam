@@ -1,0 +1,138 @@
+---
+layout: default_info
+title: Редуктор КАМАЗ 47 зубьев - ЗапКам.ру
+description: Передача главная КАМАЗ 47 зубьев заднего, среднего, переднего моста КАМАЗ 5320, 65115, 6520, 4310, 43114 и др. с доставкой по всей России. В наличии новые, восстановленные, капремонт. Прайс-лист, модификации, каталог, описание, характеристики.
+keywords: редуктор передача мост передний средний задний КамАЗ 4310, 43114, 43118, 65111, 6522
+hero-title: Редукторы на технику КАМАЗ
+h1: Главные передачи (редукторы) КамАЗ 47 зубьев 
+h2:
+phone:
+phone_title:
+---
+
+<div class="col-md-3">
+    <h3>Редукторы 47/15 зубьев</h3>
+    <table class="table table-harki">
+        <tbody>
+            {% for product in site.data.agregaty %}
+            {%- if product.id == "203" or product.id == "206" or product.id == "209" or product.id == "212" or product.id == "218" or product.id == "230" or product.id == "233" or product.id == "239" or product.id == "242" or product.id == "245" -%}
+            <tr><td><span> <a href="{{product.path}}{{product.url}}"> {{product.code1}} </a></span></td></tr>
+            {%- endif -%}
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+
+<div class="col-md-9">
+    <div class="alert alert-info">
+        <p>
+            Обозначение редукторов КАМАЗ 47 зубьев оканчивается на -40.<br> 
+            Имеет следующее обозначение:<strong> XXXX-2X0201X-40</strong> <br>
+            53205 - 2402010-40<br>
+            5320  - 2402010-40<br>
+        </p>
+        <p>
+            Передаточное число - 5,43. <br>
+            Редукторы с такими характеристиками считаются "скоростными", применяются на тягачах и одиночной технике.
+        </p>
+        <p>
+            Редукторы с цилиндрической парой 47/15 зубьев встречаются на многих моделях автомобилей КАМАЗ, например, на
+            самосвале 65115, самосвале 45143 (сельхоз вариант), бортовой автомобиль - 65117, тягач - 65116 и других моделях КАМАЗ.
+        </p>
+        <p>
+            Редуктор КАМАЗ на 47 зубов выпускался в двух модификациях: <br>
+            - полуось на 16 шлицов - старого образца 5320.<br>
+            - полуось на 20 шлицов - евро образца.<br>
+        </p>
+        
+    </div>
+</div>
+
+
+
+<!-- Товары -->
+<style>
+    .list-group-item{ margin-bottom: 1px; }
+</style>
+
+    <div class="col-md-11 col-xs-12" style="margin: auto;">
+        <p></p>
+        <h3>Каталог </h3>
+        <div class="form form-inline">
+            <input id="pListSearch" class="fuzzy-search" type="search" class="form-control" placeholder="поиск..." style="width:130px;"/>
+            &nbsp;&nbsp;
+            <button class="btn btn-search-var" onclick="$('#pListSearch').val('заднего'); filterProductList($('#pListSearch').val());" title="Редукторы заднего моста">Заднего моста</button>   
+            <button class="btn btn-search-var" onclick="$('#pListSearch').val('среднего'); filterProductList($('#pListSearch').val());" title="Главные передачи среднего моста">Среднего моста</button>   
+            <button class="btn btn-search-var" onclick="$('#pListSearch').val('переднего'); filterProductList($('#pListSearch').val());" title="Главные передачи переднего моста">Переднего моста</button>   
+            <button class="btn btn-search-var" onclick="$('#pListSearch').val('5320'); filterProductList($('#pListSearch').val());" title="5320">5320</button>   
+            <button class="btn btn-search-var" onclick="$('#pListSearch').val('4310'); filterProductList($('#pListSearch').val());" title="4310">4310</button>   
+            <button class="btn btn-search-var" onclick="$('#pListSearch').val('53205'); filterProductList($('#pListSearch').val());" title="53205">53205</button>   
+            <button class="btn btn-search-var" onclick="$('#pListSearch').val('65115'); filterProductList($('#pListSearch').val());" title="65115">65115</button>   
+            <button class="btn btn-search-var" onclick="$('#pListSearch').val('6520'); filterProductList($('#pListSearch').val());" title="6520">6520</button>   
+       
+               
+        </div>
+     
+        {% include catalog-loading-panel.html %}
+    
+        <div id="productList" class="pt-2 pb-2" style="display: none; ">
+        
+            <div class="row list">
+                {% for product in site.data.agregaty %}
+                {%- if product.id == "203" or product.id == "206" or product.id == "209" or product.id == "212" or product.id == "218" or product.id == "230" or product.id == "233" or product.id == "239" or product.id == "242" or product.id == "245" -%}
+                    {% include card_zapchasti_catalog.html product = product %}
+                {%- endif -%}
+                {% endfor %}
+    
+                <div id="loadingDiv">
+                    <span>Загрузка данных</span>
+                </div>
+            </div>
+            <div class="no-result">Не найдено</div>
+            <ul class="pagination"></ul>
+        </div>
+          
+    
+    
+    </div>
+    
+    
+
+
+
+<div class="col-md-10 col-xs-12 m-auto">
+
+    <p>
+        Редуктор среднего моста КамАЗ на 47 зубьев технически отличается от заднего:
+        <br>
+         - На среднем редукторе предусмотрена сдвоенная главная шестерня (ГП) со специальным проходным валом.
+         <br>
+        - Ведущая шестерня установлена непосредственно в горловине картера, и зажат между двумя коническими подшипниками.
+
+    </p>
+    <p>
+        Редуктор заднего моста КАМАЗ 47 зубьев является ведущим.
+         Крутящий момент устройство получает через главную шестерню среднего моста.
+        В отличие от среднего, задний редуктор КАМАЗ на 47 зубьев имеет главную шестерню (ГП) с укороченной ступицей.
+
+    </p>
+    <p>
+        <b>Основные составляющие редуктора КАМАЗ 47 зубьев:</b> <br>
+         - корпус устройства или картер; <br>
+         - главная передача;<br>
+         - дифференциал;<br>
+         - конические и цилиндрические шестерни подшипники; <br>
+         - регулировочные прокладки и шайбы; <br>
+         - сателлиты, а также другие компоненты. <br>
+    </p>
+
+    <p></p>
+    <p></p>
+    {% include kupite_u_nas.html %}
+    {% include garantiya.html %}
+    
+    
+  <div style="height: 100px;">&nbsp;</div>
+  
+
+<script src="/assets/js/list.min.js"></script>

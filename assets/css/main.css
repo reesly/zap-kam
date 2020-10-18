@@ -1859,6 +1859,14 @@ margin: auto;
   background-color: #014E9E !important;
 }
 
+.ec-calc .ec-calc__header__text {
+  font-weight: 300 !important;
+  font-size: 1.4em !important;
+  color: #383838;
+}
+
+
+
 a.a-class {
   color: #007bff;
   font-size: 0.8em;

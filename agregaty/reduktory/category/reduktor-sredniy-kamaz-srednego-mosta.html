@@ -1,0 +1,116 @@
+---
+layout: default_info
+title: Редуктор среднего моста КАМАЗ - ЗапКам.ру
+description: Каталог средних редукторов КАМАЗ среднего моста 5320, 53205, 65115, 6520, 4310, 43114 и др. с доставкой по всей России. В наличии новые, восстановленные, капремонт. Прайс-лист, модификации, каталог, описание, характеристики.
+keywords: редуктор передача мост передний средний средний КамАЗ 4310, 43114, 43118, 65111, 6522
+hero-title: Редукторы на технику КАМАЗ
+h1: Главные передачи - Редукторы среднего моста КамАЗ 
+h2:
+phone:
+phone_title:
+---
+
+<div class="col-md-3">
+    <h3>Редукторы средние</h3>
+    <table class="table table-harki">
+        <tbody>
+            {% for product in site.data.agregaty %}
+            {%- if product.id == "230" or product.id == "233" or product.id == "236" or product.id == "239" or product.id == "242" or product.id == "245" or product.id == "248" -%}
+            <tr><td><span> <a href="{{product.path}}{{product.url}}"> {{product.code1}} </a></span></td></tr>
+            {%- endif -%}
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+
+<div class="col-md-9">
+    <div class="alert alert-info">
+        <p>
+            Обозначение редукторов КАМАЗ среднего моста содержит <b>код "250"</b>.<br> 
+            Имеет следующее обозначение:<strong> XXXX-<b>250</b>201X</strong> <br>
+            53205 - <b>250</b>2010-40<br>
+            5320  - <b>250</b>2010-40<br>
+        </p>
+
+        <p>
+            Редукторы среднего моста выпускался в двух модификациях: <br>
+            - полуось на 16 шлицов - старого образца 5320.<br>
+            - полуось на 20 шлицов - нового, евро образца.<br>
+        </p>
+        
+    </div>
+</div>
+
+
+
+<!-- Товары -->
+<style>
+    .list-group-item{ margin-bottom: 1px; }
+</style>
+
+    <div class="col-md-11 col-xs-12" style="margin: auto;">
+        <p></p>
+        <h3>Каталог </h3>
+        <div class="form form-inline">
+            <input id="pListSearch" class="fuzzy-search" type="search" class="form-control" placeholder="поиск..." style="width:130px;"/>
+            &nbsp;&nbsp;
+            <button class="btn btn-search-var" onclick="$('#pListSearch').val('5320'); filterProductList($('#pListSearch').val());" title="5320">5320</button>   
+            <button class="btn btn-search-var" onclick="$('#pListSearch').val('4310'); filterProductList($('#pListSearch').val());" title="4310">4310</button>   
+            <button class="btn btn-search-var" onclick="$('#pListSearch').val('53205'); filterProductList($('#pListSearch').val());" title="53205">53205</button>   
+            <button class="btn btn-search-var" onclick="$('#pListSearch').val('65115'); filterProductList($('#pListSearch').val());" title="65115">65115</button>   
+            <button class="btn btn-search-var" onclick="$('#pListSearch').val('6520'); filterProductList($('#pListSearch').val());" title="6520">6520</button>   
+       
+               
+        </div>
+     
+        {% include catalog-loading-panel.html %}
+    
+        <div id="productList" class="pt-2 pb-2" style="display: none; ">
+        
+            <div class="row list">
+                {% for product in site.data.agregaty %}
+                {%- if product.id == "230" or product.id == "233" or product.id == "236" or product.id == "239" or product.id == "242" or product.id == "245" or product.id == "248" -%}
+                    {% include card_zapchasti_catalog.html product = product %}
+                {%- endif -%}
+                {% endfor %}
+    
+                <div id="loadingDiv">
+                    <span>Загрузка данных</span>
+                </div>
+            </div>
+            <div class="no-result">Не найдено</div>
+            <ul class="pagination"></ul>
+        </div>
+          
+    
+    
+    </div>
+    
+    
+
+
+
+<div class="col-md-10 col-xs-12 m-auto">
+
+    <p>
+   
+    <p>
+        <b>Основные составляющие редуктора среднего КАМАЗ:</b> <br>
+         - корпус устройства или картер; <br>
+         - главная передача;<br>
+         - дифференциал;<br>
+         - конические и цилиндрические шестерни подшипники; <br>
+         - регулировочные прокладки и шайбы; <br>
+         - сателлиты, а также другие компоненты. <br>
+    </p>
+
+    <p></p>
+    <p></p>
+    {% include kupite_u_nas.html %}
+    {% include garantiya.html %}
+    
+    
+  <div style="height: 100px;">&nbsp;</div>
+  
+
+<script src="/assets/js/list.min.js"></script>
