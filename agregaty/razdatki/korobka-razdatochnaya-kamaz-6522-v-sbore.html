@@ -13,7 +13,6 @@ phone_title:
 <!-- Товар -->
 <div id="anc_1"></div>
 {% assign page_url = page.name | replace: ".html", "" %} 
-{{page_url}}
 {% assign product = site.data.agregaty | where:"url", page_url | first  %}
 {%- if product -%}
     {% include card_zapchasti.html product = product %}
