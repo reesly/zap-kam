@@ -209,11 +209,12 @@ var prodList;
 
     $('.breadcrumb-item a').on('click', function () {
       var targetLink = $(this).attr('href'); 
-      window.open(targetLink);
+      var win = window.open(targetLink, '_self');
+      win.focus();
     });
 
 
-    dropdown-item
+    // dropdown-item
 
   }); // on_load     
 
