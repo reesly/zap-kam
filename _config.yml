@@ -92,10 +92,10 @@ exclude:
 #     filter_condition: "record['point1'] != ''"
 
   # - index_files: false 
-  #   data: agregaty
+  #   data: k5490
   #   name: url
   #   template: templ_zapchasti
-  #   filter_condition: "record['path'] == '/agregaty/reduktory/'"
+  #   filter_condition: "record['path'] == '/kamaz-5490/catalog/zaps/'"
 
 #   - index_files: true 
 #     data: dostavka

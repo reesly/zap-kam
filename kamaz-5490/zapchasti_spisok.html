@@ -1,0 +1,185 @@
+---
+layout: default_info
+title: Список запчастей КАМАЗ-5490 Mercedes - ЗапКам.ру
+description: Продажа запасных частей на КАМАЗ 5490 и другие с доставкой по всей России. В наличии новые, восстановленные, капремонт. Прайс-лист, модификации, каталог, описание, характеристики.
+keywords: редуктор передача мост передний средний задний КамАЗ 4310, 43114, 43118, 65111, 6522
+hero-title: Запчасти для КамАЗ 5490 <span class="small1"> / 6520, 6580 </span>
+h1: Запасные части КАМАЗ 5490 
+h2:
+phone:
+phone_title:
+categories: [<a href='/agregaty/reduktory/index.html'>Редукторы КАМАЗ</a>]
+---
+
+
+
+<div class="col-md-4 col-xs-12">
+  <img src="/assets/img/model/kamaz_5490.jpg" style="max-width: 100%; padding-top: 0px;">
+  <table class="table">
+    <tr><td> <a href="/kamaz-5490/zapchasti.html" class="u"> Запчасти КамАЗ 5490 </a> </td></tr>  
+    <tr><td> <a href="/kamaz-5490/catalog/dvigatel_om457la_mercedes-benz_v_4_06.html" class="u"> Двигатель Mercedes OM457LA</a> </td></tr>
+    <tr><td> <a href="/kamaz-5490/catalog/dvigateli_kamaz_5490.html" class="u"> Двигатель КамАЗ </a> </td></tr>  
+  </table>
+</div>
+
+
+<div class="col-md-8 col-xs-12 alert alert-info">
+    <div class="alert alert-info">
+      <p>
+        КамАЗ-5490 – многоцелевой седельный тягач магистрального класса, с высокой грузоподъемностью,
+        повышенным комфортом, кабиной и двигателем немецкого производства.<br>
+      </p>
+      <p>
+        В создании участие принимали инженеры из концерна Daimler – основного технологического партнера КамАЗа.
+        Прообразом КамАЗ 5490 стал Mercedes-Benz Axor, выпускающийся с 2001 года.
+        На разработку было потрачено порядка 40 миллионов долларов.
+      </p>
+    </div>
+    <div class="w-100 text-right" style="padding-bottom:20px; ">
+      <a href="/kamaz-5490/zapchasti.html" class="btn btn-primary" style="font-size: 1.0em; margin-top: -20px;"> Запчасти
+        КамАЗ 5490 </a>
+    </div>
+</div>
+
+
+
+<!-- Товары -->
+<style>
+    .list-group-item{ margin-bottom: 1px; }
+</style>
+
+
+    <div class="col-md-11 col-xs-12" style="margin: auto;">
+        <p></p>
+        <h3>Каталог </h3>
+        <div class="form form-inline">
+            <input id="pListSearch" class="fuzzy-search" type="search" class="form-control" placeholder="поиск..." style="width:130px;"/>
+            &nbsp;&nbsp;
+            <button class="btn btn-search-var" onclick="$('#pListSearch').val('Амортизатор'); filterProductList($('#pListSearch').val());" title="Амортизатор">Амортизатор</button>   
+            <button class="btn btn-search-var" onclick="$('#pListSearch').val('РМК'); filterProductList($('#pListSearch').val());" title="РМК">РМК</button>   
+            <button class="btn btn-search-var" onclick="$('#pListSearch').val('Кабин'); filterProductList($('#pListSearch').val());" title="Кабина">Кабина</button>   
+            <button class="btn btn-search-var" onclick="$('#pListSearch').val('Датчик'); filterProductList($('#pListSearch').val());" title="Датчик">Датчик</button>   
+            <button class="btn btn-search-var" onclick="$('#pListSearch').val('Болт'); filterProductList($('#pListSearch').val());" title="5320">Болт</button>   
+            <button class="btn btn-search-var" onclick="$('#pListSearch').val('Трубк'); filterProductList($('#pListSearch').val());" title="4310">Трубка</button>   
+            <button class="btn btn-search-var" onclick="$('#pListSearch').val('Блок'); filterProductList($('#pListSearch').val());" title="53205">Блок</button>   
+            <button class="btn btn-search-var" onclick="$('#pListSearch').val('Тормоз'); filterProductList($('#pListSearch').val());" title="65115">Тормоз</button>   
+            <button class="btn btn-search-var" onclick="$('#pListSearch').val('Кольцо'); filterProductList($('#pListSearch').val());" title="6520">Кольцо</button>   
+               
+        </div>
+    
+        {% include catalog-loading-panel.html %}
+    
+        <div id="productList" class="pt-2 pb-2" style="display: none; ">
+        
+            <div class="row list">
+                {% for product in site.data.k5490 %}
+                {%- if product.path == "/kamaz-5490/catalog/zaps/" -%}
+                    
+                <div class="catalog-item col-md-10 col-lg-10 col-xs-10"  style="font-size: 80%; border-top-width: 1px;
+                border-top-color: lightblue;
+                border-top-style: dotted;">
+                  
+                      <div class="col-md-12 col-xs-12 name">
+                        <a href="{{product.path}}{{product.url}}.html" onclick="">
+                          <div style="font-size:1.1em; font-weight: 600; padding-bottom: 0;">{{product.name}}<span> &nbsp; {{product.code1}}</span> </div> 
+                        </a>
+                      </div>
+                   
+                      
+                      <div id="description{{product.id}}" class="col-md-12 col-xs-12">
+                        
+                          <div class="row ">
+                            
+                            <div class="col-md-4 col-xs-12"><div class="row">
+                            {%- if product.price1 -%}
+                              <div class="col-md-8">
+                                <input type="checkbox" class="label-price" id="pr1_{{product.id}}" data-id="{{product.code1}}" data-title="{{ product.name }} {{product.code1}}/ {{product.price1_name}}" data-price="{{ product.price1 | replace: ' ', '' | replace: ' ', '' }}" data-img="{{product.img_path}}{{product.img1}}">
+                                <label class="label-price" for="pr1_{{product.id}}">
+                                  {{ product.price1_name }} </label> 
+                              </div>
+                              <div class="col-md-4" style="text-align: right; display: flex;">
+                                <span style="font-size:1.1em;font-weight: 600;">{{ product.price1 }} </span>‎ <span style="color: gray;">₽</span> 
+                              </div>
+                            {%- endif -%}
+                          </div></div>
+                  
+                          <div class="col-md-4 col-xs-12"><div class="row">
+                            {%- if product.price2 -%}
+                            <div class="col-md-8">
+                              <input type="checkbox" class="label-price" id="pr2_{{product.id}}" data-id="{{product.code1}}-ц2" data-title="{{ product.name }} {{product.code1}}/ {{product.price2_name}}" data-price="{{ product.price2 | replace: ' ', '' | replace: ' ', '' }}" data-img="{{product.img_path}}{{product.img1}}">
+                              <label class="label-price" for="pr2_{{product.id}}">
+                                {{ product.price2_name }} </label> 
+                              </div>
+                              <div class="col-md-4" style="text-align: right; display: flex;">
+                                <span style="font-size:1.1em;font-weight: 600;">{{ product.price2 }} </span>‎ <span style="color: gray;">₽</span> 
+                              </div>
+                            {%- endif -%}
+                          </div></div>
+
+                          <div class="col-md-4 col-xs-12"><div class="row">
+                            {%- if product.price3 -%}
+                            <div class="col-md-8">
+                              <input type="checkbox" class="label-price" id="pr3_{{product.id}}" data-id="{{product.code1}}-ц3" data-title="{{ product.name }} {{product.code1}}/ {{product.price3_name}}" data-price="{{ product.price3 | replace: ' ', '' | replace: ' ', '' }}" data-img="{{product.img_path}}{{product.img1}}">
+                              <label class="label-price" for="pr3_{{product.id}}">
+                                {{ product.price2_name }} </label> 
+                              </div>
+                              <div class="col-md-4" style="text-align: right; display: flex;">
+                                <span style="font-size:1.1em;font-weight: 600;">{{ product.price2 }} </span>‎ <span style="color: gray;">₽</span> 
+                              </div>
+                            {%- endif -%}
+                          </div></div>
+                  
+                        </div>
+                      </div>
+                      
+                    </div>
+                  
+                    <div class="col-md-2 col-xs-2 text-right pt-1" style="font-size: 14px; border-top-width: 1px;
+                    border-top-color: lightblue;
+                    border-top-style: dotted;"">
+                      <a href="javascript:" style="font-weight: 800;" data-toggle="modal" data-target="#requestModal" onclick="request_form_yandex('{{ product.id }}','https:\/\/zap-kam.ru{{product.path}}{{product.url}}');"> Заказать </a> 
+                      &nbsp;&nbsp;&nbsp;&nbsp;
+                      <a href="javascript:" onclick="add_to_cart('{{ product.id }}','https:\/\/zap-kam.ru{{product.path}}{{product.url}}');"> В заявку </a> 
+                    </div>
+
+
+                {%- endif -%}
+                {% endfor %}
+    
+                <div id="loadingDiv">
+                    <span>Загрузка данных</span>
+                </div>
+            </div>
+            <div class="no-result">Не найдено</div>
+            <ul class="pagination"></ul>
+        </div>
+          
+    
+    
+    </div>
+    
+    
+
+
+
+<div class="col-md-10 col-xs-12 m-auto">
+
+   
+    
+
+    <div class="alert alert-info">
+        <p>Предоставляется гарантия производителя.</p>
+        <p></p>
+    </div>
+
+    
+    <p></p>
+    <p></p>
+    {% include kupite_u_nas.html %}
+    {% include garantiya.html %}
+    
+    
+  <div style="height: 100px;">&nbsp;</div>
+  
+
+<script src="/assets/js/list.min.js"></script>

@@ -28,6 +28,7 @@
             "name": "midkam.db"
         }
     ],
-    "sqltools.useNodeRuntime": true
+    "sqltools.useNodeRuntime": true,
+    "python.dataScience.textOutputLimit": 60000
     
 }

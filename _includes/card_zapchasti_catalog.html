@@ -13,22 +13,9 @@
     <div class="catalog-item-img-div" style="cursor: pointer;" onclick="window.location='{{product.path}}{{product.url}}.html'">
       
         {%- if product.img1 -%}
-
-          <div id="ng-catalog_{{product.id}}_{{product.url}}" data-nanogallery2 = '{
-            "thumbnailLabel":{"display":false},
-            "thumbnailBorderVertical":0,"thumbnailBorderHorizontal":0,
-            "thumbnailWidth":   160,
-            "thumbnailHeight":   120,
-            "thumbnailAlignment": "left", 
-            "fillWidth": "left", 
-            "galleryDisplayMode": "rows",
-            "itemsBaseURL":     "",
-            "thumbnailOpenImage": false,
-            "galleryMaxItems": 1,
-            "colorScheme": "light", "colorSchemeViewer": "light"
-          }' >
-            <a href = "{{product.img_path}}{{product.img1}}" data-ngThumb = "{{product.img_path}}{{product.img1}}" title="{{product.name}}"> {{product.name}}</a>
-          </div>
+        <div id="ng-catalog_{{product.id}}_{{product.url}}">
+          <img class="lozad catalog-item-img" data-src="{{product.img_path}}{{product.img1}}" style="padding:0;" title="{{product.name}}">
+        </div>
 
           <!-- <img class="catalog-item-img" src="{{product.img_path}}{{product.img1}}" alt="{{product.name}}" style="padding:0;"> -->
         {%- else -%}
@@ -54,75 +41,84 @@
 
     <div id="description{{product.id}}" class="col-md-8 col-xs-8">
       <!-- <h2>{{name}}</h2> -->
-      <table class="table table-hover table-sm">
-            <tr> <td colspan="2"  class="text-right" style="border-top:none; padding-top: 0px;">  
-              <a href="{{product.path}}{{product.url}}.html" class=""> 
-                 подробнее... 
-              </a> 
-            </td> </tr>
+      <div class="row row-description">
+        <div class="col-md-12 text-right" style="border-top:none; padding-top: 0px;">
+          <a href="{{product.path}}{{product.url}}.html" class=""> 
+              подробнее... 
+          </a> 
+        </div>
           
-          {%- if product.price1 -%}
-          
-            <tr class="table-bggray" > <td>  
+        {%- if product.price1 -%}
+          <div class="col-md-8 col-xs-8">
               <input type="checkbox" class="label-price" id="pr1_{{product.id}}" data-id="{{product.code1}}" data-title="{{ product.name }} {{product.code1}}/ {{product.price1_name}}" data-price="{{ product.price1 | replace: ' ', '' | replace: ' ', '' }}" data-img="{{product.img_path}}{{product.img1}}">
-              
               <label class="label-price" for="pr1_{{product.id}}">
                 {{ product.price1_name }} </label> 
-              </td>
-              <td style="text-align: right; min-width: 100px;"><span style="font-size:1.1em;font-weight: 600;">{{ product.price1 }} </span>‎ <span style="color: gray;">₽</span>  </td> </tr>
-          
+          </div>  
+          <div class="col-md-4 col-xs-4" style="text-align: right;">
+              <span style="font-size:1.1em;font-weight: 600;">{{ product.price1 }} </span>‎ <span style="color: gray;">₽</span> 
+          </div>
           {%- endif -%}
 
           {%- if product.price2 -%}
-          <tr class="table-bggray"> <td>  <input type="checkbox" class="label-price" id="pr2_{{product.id}}"  data-id="{{product.code1}}-ц2" data-title="{{ product.name }} {{product.code1}}/ {{product.price2_name}}" data-price="{{ product.price2 | replace: ' ', '' | replace: ' ', '' }}" data-img="{{product.img_path}}{{product.img1}}">
-            <label class="label-price" for="pr2_{{product.id}}">
-            {{ product.price2_name }} </label></td>
-            <td style="text-align: right;"><span style="font-size:1.1em;font-weight: 600;">{{ product.price2 }} </span>‎ <span style="color: gray;">₽</span>  </td> </tr>
+            <div class="col-md-8 col-xs-8">
+              <input type="checkbox" class="label-price" id="pr2_{{product.id}}"  data-id="{{product.code1}}-ц2" data-title="{{ product.name }} {{product.code1}}/ {{product.price2_name}}" data-price="{{ product.price2 | replace: ' ', '' | replace: ' ', '' }}" data-img="{{product.img_path}}{{product.img1}}">
+              <label class="label-price" for="pr2_{{product.id}}">
+              {{ product.price2_name }} </label>
+            </div>
+            
+            <div class="col-md-4 col-xs-4" style="text-align: right;">
+              <span style="font-size:1.1em;font-weight: 600;">{{ product.price2 }} </span>‎ <span style="color: gray;">₽</span> 
+            </div>
           {%- endif -%}
 
           {%- if   product.price3 -%}
-          <tr class="table-bggray"> <td> <input type="checkbox" class="label-price" id="pr3_{{product.id}}"  data-id="{{product.code1}}-ц3" data-title="{{ product.name }} {{product.code1}}/ {{product.price3_name}}" data-price="{{ product.price3 | replace: ' ', '' | replace: ' ', '' }}" data-img="{{product.img_path}}{{product.img1}}" >
+          <div class="col-md-8 col-xs-8">
+            <input type="checkbox" class="label-price" id="pr3_{{product.id}}"  data-id="{{product.code1}}-ц3" data-title="{{ product.name }} {{product.code1}}/ {{product.price3_name}}" data-price="{{ product.price3 | replace: ' ', '' | replace: ' ', '' }}" data-img="{{product.img_path}}{{product.img1}}" >
             <label class="label-price" for="pr3_{{product.id}}">
-              {{ product.price3_name }}</label></td>
-            <td style="text-align: right;"><span style="font-size:1.1em;font-weight: 600;">{{ product.price3 }} </span>‎  <span style="color: gray;">₽</span>  </td> </tr>
+              {{ product.price3_name }}</label>
+            </div>
+            
+            <div class="col-md-4 col-xs-4" style="text-align: right;">
+              <span style="font-size:1.1em;font-weight: 600;">{{ product.price3 }} </span>‎  <span style="color: gray;">₽</span>  
+            </div>
           {%- endif -%}
 
           {%- if  product.price4 -%}
-          <tr class="table-bggray"> <td> <input type="checkbox" class="label-price" id="pr4_{{product.id}}"  data-id="{{product.code1}}-ц4" data-title="{{ product.name }} {{product.code1}}/ {{product.price4_name}}" data-price="{{ product.price4 | replace: ' ', '' | replace: ' ', '' }}" data-img="{{product.img_path}}{{product.img1}}"> 
-              <label class="label-price" for="pr4_{{product.id}}">
-                {{ product.price4_name }}</label></td>
-            <td style="text-align: right;"><span style="font-size:1.1em;font-weight: 600;">{{ product.price4 }} </span>‎  <span style="color: gray;">₽</span>  </td> </tr>
+          <div class="col-md-8 col-xs-8">
+             <input type="checkbox" class="label-price" id="pr4_{{product.id}}"  data-id="{{product.code1}}-ц4" data-title="{{ product.name }} {{product.code1}}/ {{product.price4_name}}" data-price="{{ product.price4 | replace: ' ', '' | replace: ' ', '' }}" data-img="{{product.img_path}}{{product.img1}}"> 
+             <label class="label-price" for="pr4_{{product.id}}">
+                {{ product.price4_name }}</label>
+              </div>
+            
+              <div class="col-md-4 col-xs-4" style="text-align: right;">
+                <span style="font-size:1.1em;font-weight: 600;">{{ product.price4 }} </span>‎  <span style="color: gray;">₽</span> 
+              </div>
           {%- endif -%}
 
           
-        <tr>
-          <td colspan="2" class="text-right" style="font-size: 14px;">
-            <a href="javascript:" style="font-weight: 800;" data-toggle="modal" data-target="#requestModal" onclick="request_form_yandex('{{ product.id }}','{{product.path}}{{product.url}}');"> Заказать </a> 
+          <div class="col-md-12" class="text-right" style="font-size: 14px;">
+            <a href="javascript:" style="font-weight: 800;" data-toggle="modal" data-target="#requestModal" onclick="request_form_yandex('{{ product.id }}','https:\/\/zap-kam.ru{{product.path}}{{product.url}}');"> Заказать </a> 
             &nbsp;&nbsp;&nbsp;&nbsp;
-            <a href="javascript:" onclick="add_to_cart('{{ product.id }}','{{product.path}}{{product.url}}');"> В заявку </a> 
-          </td>
-        </tr>
+            <a href="javascript:" onclick="add_to_cart('{{ product.id }}','https:\/\/zap-kam.ru{{product.path}}{{product.url}}');"> В заявку </a> 
+          </div>
 
-        <tr style="border-bottom: gray; border-bottom-width: 1px;"> <td colspan="2" style="font-size: 12px;">  
-          <a href="{{product.path}}{{product.url}}.html" class="">
-            {%- if product.desc  -%}
-            <div class="text-line-1">
-              {{ product.desc }} 
-            </div>
-            {%- endif -%}
-            {%- if product.prim -%}
-            <div class="text-line-2 prim">
-              {{ product.prim }}
-            </div>
-            {%- endif -%}
-          </a> 
-      </td> </tr>
+          <div class="col-md-12" style="font-size: 12px;">
+            <a href="https:\/\/zap-kam.ru{{product.path}}{{product.url}}.html" class="">
+              {%- if product.desc  -%}
+              <div class="text-line-1">
+                {{ product.desc }}
+              </div>
+              {%- endif -%}
+              {%- if product.prim -%}
+              <div class="text-line-2 prim">
+                {{ product.prim }}
+              </div>
+              {%- endif -%}
+            </a>
+          </div>
+
         
-          
-        
-          
-        
-      </table>
+    </div> <!--  row -->
     </div>
     
   </div>

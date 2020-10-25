@@ -1,0 +1,74 @@
+{% assign product = include.product  %} 
+<div class="catalog-item col-md-6 col-lg-6 col-xs-12">
+<div class="row" style="font-size: 80%;">
+    <div class="col-md-12 col-xs-12 title-bg name">
+      <a href="{{product.path}}{{product.url}}.html" onclick="">
+        <div style="font-size:1.2em; font-weight: 600; padding-bottom: 0;">{{product.name}}<span> &nbsp; {{product.code1}}</span> </div> 
+        
+      </a>
+    </div>
+ 
+    
+    <div class="col-md-4 col-xs-4">
+    <div class="catalog-item-img-div" style="cursor: pointer;" onclick="window.location='{{product.path}}{{product.url}}.html'">
+        {%- if product.img1 -%}
+          <div id="ng-catalog_{{product.id}}_{{product.url}}" style = "">
+            <img class="lozad catalog-item-img" data-src="{{product.img_path}}{{product.img1}}" style="padding:0;" title="{{product.name}}">
+          </div>
+        {%- else -%}
+          <img class="catalog-item-img" src="/assets/img/nophoto.jpg" alt="Фото скоро появится"  style="padding:0;">
+        {%- endif -%}
+      </a>
+        <div class="code1" style="color:rgb(146, 146, 146);float: right; font-size:1.0em; ">
+          {%- if product.code1 -%}
+          <small>код</small>. {{ product.code1 }}
+          {%- endif -%}
+        </div>  
+    </div>
+  </div>
+
+    <div id="description{{product.id}}" class="col-md-8 col-xs-8">
+      
+        <div class="row row-description">
+          <div class="col-md-12 text-right" style="border-top:none; padding-top: 0px;">
+              <a href="{{product.path}}{{product.url}}.html" class=""> 
+                 подробнее... 
+              </a> 
+            </div>
+          
+          {%- if product.price1 -%}
+            <div class="col-md-8">
+              <input type="checkbox" class="label-price" id="pr1_{{product.id}}" data-id="{{product.code1}}" data-title="{{ product.name }} {{product.code1}}/ {{product.price1_name}}" data-price="{{ product.price1 | replace: ' ', '' | replace: ' ', '' }}" data-img="{{product.img_path}}{{product.img1}}">
+              <label class="label-price" for="pr1_{{product.id}}">
+                {{ product.price1_name }} </label> 
+            </div>
+            <div class="col-md-4" style="text-align: right;">
+              <span style="font-size:1.1em;font-weight: 600;">{{ product.price1 }} </span>‎ <span style="color: gray;">₽</span> 
+            </div>
+          {%- endif -%}
+
+          {%- if product.price2 -%}
+          <div class="col-md-8">
+            <input type="checkbox" class="label-price" id="pr2_{{product.id}}" data-id="{{product.code1}}-ц2" data-title="{{ product.name }} {{product.code1}}/ {{product.price2_name}}" data-price="{{ product.price2 | replace: ' ', '' | replace: ' ', '' }}" data-img="{{product.img_path}}{{product.img1}}">
+            <label class="label-price" for="pr2_{{product.id}}">
+              {{ product.price2_name }} </label> 
+            </div>
+            <div class="col-md-4" style="text-align: right;">
+              <span style="font-size:1.1em;font-weight: 600;">{{ product.price2 }} </span>‎ <span style="color: gray;">₽</span> 
+            </div>
+          {%- endif -%}
+
+          
+
+          
+          <div class="col-md-12" class="text-right" style="font-size: 14px;">
+            <a href="javascript:" style="font-weight: 800;" data-toggle="modal" data-target="#requestModal" onclick="request_form_yandex('{{ product.id }}','https:\/\/zap-kam.ru{{product.path}}{{product.url}}');"> Заказать </a> 
+            &nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="javascript:" onclick="add_to_cart('{{ product.id }}','https:\/\/zap-kam.ru{{product.path}}{{product.url}}');"> В заявку </a> 
+          </div>
+
+      </div>
+    </div>
+    
+  </div>
+</div>

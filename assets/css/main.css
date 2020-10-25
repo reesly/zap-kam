@@ -1703,14 +1703,15 @@ margin: auto;
   background-color:initial;
 } 
 
-.card {
-  transform: scale(1);
+ .card {
+  /* box-shadow: 0px 0px 3px rgba(88, 88, 88, 0.3); */
+  /* transform: scale(1);
   -webkit-transform: scale(1);
-  -moz-transform: scale(1);
-  box-shadow: 0px 0px 3px rgba(88, 88, 88, 0.3);
+  -moz-transform: scale(1); 
+  
   -webkit-box-shadow: 0px 0px 3px rgba(88, 88, 88, 0.3);
-  -moz-box-shadow: 0px 0px 3px rgba(88, 88, 88, 0.3);
-}
+  -moz-box-shadow: 0px 0px 3px rgba(88, 88, 88, 0.3);*/
+} 
 
 .card a[href^='##'] { 
   color: gray;
@@ -1719,12 +1720,12 @@ margin: auto;
 
 
 .card:hover {
-  transform: scale(1);
+  /* transform: scale(1);
   -webkit-transform: scale(1);
-  -moz-transform: scale(1);
-  box-shadow: 0px 0px 7px rgba(88, 88, 88, 0.3);
-  -webkit-box-shadow: 0px 0px 7px rgba(88, 88, 88, 0.3);
-  -moz-box-shadow: 0px 0px 7px rgba(88, 88, 88, 0.3);
+  -moz-transform: scale(1); */
+  /* box-shadow: 0px 0px 7px rgba(88, 88, 88, 0.3); */
+  /* -webkit-box-shadow: 0px 0px 7px rgba(88, 88, 88, 0.3);
+  -moz-box-shadow: 0px 0px 7px rgba(88, 88, 88, 0.3); */
 }
 
 .no-result {
@@ -1926,6 +1927,14 @@ iframe {
 
 .nGY2 .nGY2GThumbnailImage {
   background-color: #fff !important;
+}
+
+.row-description div[class^='col-'] {
+  padding-top: 6px;
+  z-index: 1;
+  border-top-width: 1px;
+  border-top-color: lightblue;
+  border-top-style: dotted;
 }
 
 
