@@ -1,11 +1,11 @@
 ---
 layout: default_main
-title: Запчасти для КамАЗ 5490 Neo, T5, S5
-description: КамАЗ 5490 - Двигатели, Редукторы, Коробки передач КПП, Кабины и запчасти. Прайс-лист, каталог, описание, характеристики, инструкции и советы эксплуатации.
+title: Запчасти для КамАЗ 5490 Neo, T5, S5 - ЗапКам.ру
+description: КамАЗ 5490 - Агрегаты и запчасти с доставкой в регионы. Прайс-лист, каталог, описание, характеристики.
 keywords: КамАЗ 5490 евро-5
 hero-title: Запасные части для КамАЗ 5490 <span class="small1"> / 6520, 6580 </span>
 h1: КамАЗ 5490. Седельный тягач.
-h2:
+h2: 
 phone:
 phone_title:
 ---
@@ -36,7 +36,17 @@ phone_title:
                     <h1 class="title text-left w-100">Запасные части для КамАЗ 5490</h1>
                   </li>
                   <li style="margin-top:20px; color: rgb(236, 236, 236);">
+                    
                     <h2 class="title w-100" style="font-size: 1.1em;"> КамАЗ-6520: <small style="font-weight:100;">65206,65207,65208,65209</small><br>КамАЗ-6580: <small style="font-weight:100;">65801,65802,65806</small></h2>
+
+                  </li>
+
+                  <li id="hero-menu">
+                    <p class="title text-left w-100">
+                      <a href="/kamaz-5490/catalog/dvigateli_kamaz_5490.html"> Двигатели</a>
+                      &nbsp; • &nbsp; <a href="/kamaz-5490/zapchasti.html"> Запасные части </a>
+                      
+                    </p>
                   </li>
       
       
@@ -83,9 +93,9 @@ phone_title:
         <div class="shape wow fadeInDown"></div>
         <p>Направления деятельности </p>
       </div> -->
-    <div class="row">
+    <div class="row m-auto">
       <!-- Services item -->
-      <div class="col-md-6 col-lg-4 col-xs-12">
+      <div class="col-md-6 col-lg-6 col-xs-12">
         <div class="services-item" style="visibility: visible;">
           <div class="services-content">
             <a href="/kamaz-5490/catalog/dvigateli_kamaz_5490.html"><h3>Двигатели КамАЗ-5490</h3></a>
@@ -95,51 +105,25 @@ phone_title:
         </div>
       </div>
 
-      <!-- Services item -->
-      <div class="col-md-6 col-lg-4 col-xs-12">
-        <div class="services-item" style="visibility: visible;">
-          <div class="services-content">
-            <a href="/kamaz-5490/zapchasti.html"><h3>Запчасти КамАЗ 5490 </h3></a>
-            <p>Широкий ассортимент запчастей, привлекательные цены.
-            </p>
-          </div>
-        </div>
-      </div>
-
-      <!-- Services item -->
-      <div class="col-md-6 col-lg-4 col-xs-12">
-        <div class="services-item" style="visibility: visible;">
-          <div class="services-content">
-            <a href="/kamaz-4310/catalog/zapchasti/"><h3>Запчасти для агрегатов</h3></a>
-            <p>
-              Запчасти на двигатели и коробку передач.
-            </p>
-          </div>
-        </div>
-      </div>
-
-
-
     </div>
-
   </div>
 </section>
 
 
 
-<section id="catalog" class="section-padding" style="padding-top: 20px; ">
+<section id="catalog1" class="section-padding" style="padding-top: 20px; ">
   <div class="container text-center">
-    <div class="section-header text-center">
+    <!-- <div class="section-header text-center">
       <a href="/kamaz-5490/index.html">
         <h2 class="section-title"> Агрегаты КамАЗ 5490</h2>
       </a>
-        <div class="shape wow fadeInDown"></div>  
-      </div> 
+      <div class="shape wow fadeInDown"></div>
+    </div> -->
    
       <div class="row" id="models_container">
 
         {% for item in site.data.k5490 | where: "cat", "Двигатели" %}
-          {% if item.ord == "01" item.ord == or item.ord == "03" or item.ord == "05" or item.ord == "07"  %}
+          {% if item.ord == "1" or item.ord == "3" or item.ord == "5" or item.ord == "7"  %}
           <div class="engine col-md-3 col-xs-6">
               <a href="/kamaz-5490/catalog/{{item.url}}.html">
                 <img src="{{item.img_path}}{{item.img1}}" alt="{{item.name}}"
@@ -151,8 +135,73 @@ phone_title:
         {% endfor %}
 
 
+
+
         
       </div>
+  </div>
+</section>
+
+
+
+
+<!-- Каталог направлений -->
+<section id="catalog2" class="section-padding" style="padding-top: 20px; ">
+  <div class="container text-center">
+    <!-- <div class="section-header text-center">
+        <h2 class="section-title"></h2>
+        <div class="shape wow fadeInDown"></div>
+        <p>Направления деятельности </p>
+      </div> -->
+    <div class="row m-auto">
+      <!-- Services item -->
+      <div class="col-md-6 col-lg-6 col-xs-12">
+        <div class="services-item" style="visibility: visible;">
+          <div class="services-content">
+            <a href="/kamaz-5490/zapchasti.html"><h3>Запчасти КамАЗ 5490 </h3></a>
+            <p>Широкий ассортимент запчастей, привлекательные цены.
+                
+            </p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+
+
+    <div class="row">
+      <!-- Товары -->
+<style>
+  .list-group-item{ margin-bottom: 1px; }
+</style>
+
+
+  <div class="col-md-11 col-xs-12" style="margin: auto;">
+      <p></p>
+      <div id="productList" class="pt-2 pb-2" style="display: none; ">
+      
+          <div class="row list">
+              {%- assign rands = site.data.k5490 | sample: 30 -%}
+              {%- for pr in rands -%}
+              {%- if pr.path == "/kamaz-5490/catalog/zaps/" -%}
+                  {%- include card_zapchasti_catalog_light.html product = pr -%}
+              {%- endif -%}
+              {%- endfor -%}
+
+              <div id="loadingDiv">
+                  <span>Загрузка данных</span>
+              </div>
+          </div>
+          <div class="no-result">Не найдено</div>
+          <ul class="pagination"></ul>
+      </div>
+        
+  
+  
+  </div>
+    </div>
+
   </div>
 </section>
 
@@ -194,6 +243,18 @@ phone_title:
             На разработку было потрачено порядка 40 миллионов долларов. 
       
           </p>
+
+          <h2><span id="Модификации" class="mw-headline">Модификации КАМАЗ NEO</span></h2>
+        <ul>
+        <li>Седельный тягач КамАЗ-65206 с допустимой нагрузкой на седло 16,6 тонны.</li>
+        <li>Бортовой грузовик КамАЗ-65207 грузоподъёмностью 15 т, способный буксировать 14-тонный прицеп.</li>
+        <li>Шасси КамАЗ-65208 с колёсной формулой 6x2 и задней подъёмной осью.</li>
+        <li>Седельный тягач КамАЗ-65209 с колёсной формулой 6х2 и задней подъёмной осью.</li>
+        <li>Самосвал КамАЗ-6580 с колёсной формулой 6x4.</li>
+        <li>Самосвал КамАЗ-65801 с колёсной формулой 8x4.</li>
+        <li>Самосвал КамАЗ-65802 с колёсной формулой 6x6.</li>
+        <li>Седельный тягач КамАЗ-65806 с колёсной формулой 6x4.</li>
+        </ul>
       
       </div>
       <div class="w-100 text-right" style="padding-bottom:20px; ">
