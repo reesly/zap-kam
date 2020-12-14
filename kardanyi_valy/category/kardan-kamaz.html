@@ -40,7 +40,6 @@ phone_title:
             <tr><td style="border-top: none;"> • Многие модели в наличии.</td></tr>
             <tr><td> • ДЕШЕВЛЕ до 40% при изготовлении под заказ!</td></tr>
             <tr><td> • Заводские условия. Качественные запчасти. Гарантия</td></tr>
-            <tr><td> • Восстановим заводское состояние карданного вала</td></tr>
         </table>
     </div>
     <p>
@@ -75,9 +74,9 @@ phone_title:
     <div id="productList" style="display: none;">
         
         <ul class="list-group list">
-            {% for product in site.data.kardany %}
-            {%- if product.cat_url == "kamaz" -%}
-            {% include card_kardan_catalog.html product = product %}
+            {% for product in site.data.kardany-kamaz %}
+            {%- if product.path == "/kardanyi_valy/catalog/kamaz/" -%}
+            {% include card_kardan_catalog_kamaz.html product = product %}
             {%- endif -%}
             {% endfor %}
 

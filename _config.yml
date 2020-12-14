@@ -84,12 +84,12 @@ exclude:
 
   
 # page_gen: 
-#   - index_files: true
-#     data: dostavka
-#     template: templ_dostavka_kardany
-#     name: dir
-#     dir: aaa
-#     filter_condition: "record['point1'] != ''"
+#   - index_files: false
+#     data: kardany-kamaz
+#     template: templ_kardan_kamaz
+#     name: url
+#     dir: path
+#     filter_condition: "record['url'] != ''"
 
   # - index_files: false 
   #   data: k5490
