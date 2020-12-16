@@ -3,7 +3,7 @@
 <li class="list-group-item">
 <div class="row">
 <div class="col-md-8 col-xs-12">
-    <a href="{{product.path}}{{product.url}}" title="{{product.code1}} {{product.name}}">
+    <a href="{{product.path}}{{product.url}}.html" title="{{product.code1}} {{product.name}}">
         <h5 class="mt-1 font-weight-bold mb-2 name">{{product.name}} </h5>
     </a>
 </div>
@@ -61,6 +61,15 @@
         </div>
     </div>
 </div>
-<div class="col-md-3 col-xs-12"><img src="{{product.img_path}}{{product.img1}}" alt="{{product.name}}" width="200"></div>
+<div class="col-md-3 col-xs-12">
+    <a href="{{product.path}}{{product.url}}.html">
+    {%- if product.img1 -%}
+        <img src="{{product.img_path}}{{product.img1}}" alt="{{product.name}}" width="200">
+    {%- else -%}
+        <img src="/kardanyi_valy/img/nophoto.png" alt="{{product.name}}" width="200">
+    {%- endif -%}
+    </a>
+
+</div>
 </div>
 </li> 
