@@ -127,7 +127,7 @@ phone_title:
             <li><a href='/agregaty/razdatki/index.html'>Каталог</a></li>
             {% for product in site.data.agregaty %}
                 {%- if product.path == "/agregaty/razdatki/" -%}
-                  <li><a href='{{product.path}}{{product.url}}'>{{product.name}}</a></li>
+                  <li><a href='{{product.path}}{{product.url}}.html'>{{product.name}}</a></li>
                 {%- endif -%}
             {% endfor %}
             
@@ -147,7 +147,7 @@ phone_title:
               <li><a href='/agregaty/kpp/index.html'></a>Коробки передач в сборе</a></li>
               {% for product in site.data.agregaty %}
                 {%- if product.path == "/agregaty/kpp/" -%}
-                  <li><a href='{{product.path}}{{product.url}}'>{{product.name}}</a></li>
+                  <li><a href='{{product.path}}{{product.url}}.html'>{{product.name}}</a></li>
                 {%- endif -%}
               {% endfor %}
            </ul>
@@ -166,7 +166,7 @@ phone_title:
               <li><a href='/agregaty/reduktory/index.html'>Каталог редукторов</a></li>
               {% for product in site.data.agregaty %}
                 {%- if product.path == "/agregaty/reduktory/" -%}
-                  <li><a href='{{product.path}}{{product.url}}'>{{product.name}}</a></li>
+                  <li><a href='{{product.path}}{{product.url}}.html'>{{product.name}}</a></li>
                 {%- endif -%}
               {% endfor %}
               
@@ -192,7 +192,7 @@ phone_title:
                <li><a href='/agregaty/dvigateli/index.html'>Каталог двигателей</a></li>
                {% for product in site.data.agregaty %}
                 {%- if product.path == "/agregaty/dvigateli/" -%}
-                  <li><a href='{{product.path}}{{product.url}}'>{{product.name}}</a></li>
+                  <li><a href='{{product.path}}{{product.url}}.html'>{{product.name}}</a></li>
                 {%- endif -%}
               {% endfor %}
                <li><a href='/dvigatel_zapchasti/category/bloki-cilindrov-kamaz.html'>Блок цилиндров</a></li>
