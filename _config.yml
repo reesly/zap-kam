@@ -81,15 +81,14 @@ exclude:
   # - kamaz-5490
   # - dostavka
   # - kardanyi_valy
-
   
 # page_gen: 
 #   - index_files: false
-#     data: kardany-kamaz
-#     template: templ_kardan_kamaz
+#     data: agregaty
+#     template: templ_zapchasti
 #     name: url
 #     dir: path
-#     filter_condition: "record['url'] != ''"
+#     filter_condition: "record['cat2'] == 'new'"
 
   # - index_files: false 
   #   data: k5490
