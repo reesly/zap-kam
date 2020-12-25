@@ -63,7 +63,7 @@ categories: [<a href="/kardanyi_valy/category/tirsan-kamaz.html">Валы кар
         
         <ul class="list-group list">
             {% for product in site.data.tirsan-kamaz %}
-            {%- if product.cat_url != "" -%}
+            {%- if product.url != "" -%}
             {% include card_kardan_catalog_kamaz.html product = product %}
             {%- endif -%}
             {% endfor %}
