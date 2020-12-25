@@ -3,27 +3,27 @@ layout:
 ---
 ---
 layout: default_info
-title: {{page.code1}} - {{page.name1}} от {{page.price1}} р. - Зап-Кам.ру
-description: Продаем кардан КАМАЗ {{page.mesto1}} {{page.mesto2}} L={{page.dlina}}мм, {{page.code1}} {{page.code2}} {{page.code3}} {{page.analog}}, {{page.prim}} {{page.desc}} производства Наб.Челны - с доставкой по России. Подбор, модификации, каталог, описание, характеристики.
-keywords: {{page.name1}} {{page.code1}} {{page.code2}} {{page.code3}} {{page.analog}} - {{page.prim}} {{page.prim2}} {{page.dlina}} {{page.desc}}
-hero-title: Карданные валы КАМАЗ с доставкой по России 
+title: {{page.name1}} - {{page.code1}} от {{page.price2}} р. - Зап-Кам.ру
+description: Продаем кардан TIRSAN на {{page.prim}} L={{page.dlina}}мм, {{page.code1}} {{page.code2}} {{page.code3}} {{page.analog}}, {{page.desc}} производства Наб.Челны - с доставкой по России. Подбор, модификации, каталог, описание, характеристики.
+keywords: ТИРСАН tirsan rs. fs. sc. {{page.name1}} {{page.code1}} {{page.code2}} {{page.code3}} {{page.analog}} - {{page.prim}} {{page.prim2}} {{page.dlina}} {{page.desc}}
+hero-title: Карданные валы TIRSAN на КАМАЗ с доставкой 
 h1: {{page.name1}}
 h2: {{page.code1}} 
 phone:
 phone_title:
-categories: [<a href="/kardanyi_valy/category/kardan-kamaz.html">Валы карданные КАМАЗ</a> ]
+categories: [<a href="/kardanyi_valy/category/tirsan-kamaz.html">Валы карданные Tirsan для КАМАЗ</a> ]
 ---
 
 <!-- Товар -->
 <div id="anc_1"></div>
 { % assign page_url = page.name | replace: ".html", "" %}
-{ % assign product = site.data.kardany-kamaz | where:"url", page_url | first  %}
+{ % assign product = site.data.tirsan-kamaz | where:"url", page_url | first  %}
 { %- if product -%}
     { % include card_zapchasti_kardan_kamaz.html product = product %}
 { %- endif -%}
 
 <div class="col-md-10 col-xs-12" style="margin: auto;">
-    <!-- <h3>Описание</h3> -->
+    <!-- <h3>Описание карданного вала ТИРСАН</h3> -->
     <p>
 
     </p>

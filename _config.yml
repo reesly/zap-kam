@@ -84,11 +84,11 @@ exclude:
   
 # page_gen: 
 #   - index_files: false
-#     data: agregaty
-#     template: templ_zapchasti
+#     data: tirsan-kamaz
+#     template: templ_kardan_kamaz
 #     name: url
 #     dir: path
-#     filter_condition: "record['cat2'] == 'new'"
+#     filter_condition: "record['url'] != ''"
 
   # - index_files: false 
   #   data: k5490
