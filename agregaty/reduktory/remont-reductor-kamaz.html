@@ -1,0 +1,222 @@
+---
+layout: default_info
+title: Ремонт редукторов КАМАЗ с отправкой в Наб.Челны - ЗапКам.ру
+description: Ремонтируем редукторы мостов КАМАЗ 5320, 65115, 6520, 4310, 43114. c транспортировкой по всей России. В наличии новые, восстановленные, капремонт. Прайс-лист, модификации, каталог, описание, характеристики.
+keywords: редуктор передача мост передний средний задний КамАЗ 4310, 43114, 43118, 65111, 6522
+hero-title: Редукторы на технику КАМАЗ
+h1: Главные передачи КамАЗ 
+h2:
+phone:
+phone_title:
+---
+
+
+
+<div class="col-md-6 col-xs-12 alert alert-info small">
+    <h4>При заказе уточните следующие параметры:</h4>
+    <ul>
+        <li><strong>Модель</strong> грузового автомобиля КАМАЗ;</li>
+        <li><strong>Количество зубьев</strong> (или передаточное число);</li>
+        <li><strong>Наличие блокировки</strong> (МОД &mdash; межосевая и МКБ &mdash; межколесная);</li>
+        <li><strong>Фланец</strong>: квадратный или круглый;</li>
+        <li><strong>Шлицевая полуосей</strong>:
+            <strong>16 шлицов</strong> - Под полуоси старого образца - 5320, 4310 и др., <strong>20 шлицов</strong> - Под полуоси евро - 65115, 43114, 43118.
+        </li>
+    </ul>
+</div>
+
+
+<div class="col-md-6 col-xs-12 alert alert-success small">
+    <h4>Виды качества редукторов:</h4>
+    <ul>
+        <li>
+            <b>Завод</b> - заводские оригинальные детали.
+        </li>
+        <li>
+            <b>Новые</b> - собираются из новых деталей на сертифицированном по ремонту предприятии в заводских условиях.
+            Проверены на стенде. Проводится как услуга ремонта (обезличенный ремонт).
+        </li>
+        <li>
+            <b>Капремонт</b> - Капитально отремонтированные редукторы, восстановление ресурса до 80%.
+        </li>       
+    </ul>
+</div>
+
+
+
+<!-- Товары -->
+<style>
+    .list-group-item{ margin-bottom: 1px; }
+</style>
+
+
+    <div class="col-md-11 col-xs-12" style="margin: auto;">
+        <p></p>
+        <h3>Каталог </h3>
+        <div class="form form-inline">
+            <input id="pListSearch" class="fuzzy-search" type="search" class="form-control" placeholder="поиск..." style="width:130px;"/>
+            &nbsp;&nbsp;
+            <button class="btn btn-search-var" onclick="$('#pListSearch').val('заднего'); filterProductList($('#pListSearch').val());" title="Редукторы заднего моста">Заднего моста</button>   
+            <button class="btn btn-search-var" onclick="$('#pListSearch').val('среднего'); filterProductList($('#pListSearch').val());" title="Главные передачи среднего моста">Среднего моста</button>   
+            <button class="btn btn-search-var" onclick="$('#pListSearch').val('переднего'); filterProductList($('#pListSearch').val());" title="Главные передачи переднего моста">Переднего моста</button>   
+            <button class="btn btn-search-var" onclick="$('#pListSearch').val('дифференциал'); filterProductList($('#pListSearch').val());" title="Межосевые дифференциалы (МОД) КАМАЗ">МОД</button>   
+            <button class="btn btn-search-var" onclick="$('#pListSearch').val('5320'); filterProductList($('#pListSearch').val());" title="5320">5320</button>   
+            <button class="btn btn-search-var" onclick="$('#pListSearch').val('4310'); filterProductList($('#pListSearch').val());" title="4310">4310</button>   
+            <button class="btn btn-search-var" onclick="$('#pListSearch').val('53205'); filterProductList($('#pListSearch').val());" title="53205">53205</button>   
+            <button class="btn btn-search-var" onclick="$('#pListSearch').val('65115'); filterProductList($('#pListSearch').val());" title="65115">65115</button>   
+            <button class="btn btn-search-var" onclick="$('#pListSearch').val('6520'); filterProductList($('#pListSearch').val());" title="6520">6520</button>   
+               
+        </div>
+    
+        {% include catalog-loading-panel.html %}
+    
+        <div id="productList" class="pt-2 pb-2" style="display: none; ">
+        
+            <div class="row list">
+                {% for product in site.data.agregaty %}
+                {%- if product.path == "/agregaty/reduktory/" -%}
+                    {% include card_zapchasti_catalog.html product = product %}
+                {%- endif -%}
+                {% endfor %}
+    
+                <div id="loadingDiv">
+                    <span>Загрузка данных</span>
+                </div>
+            </div>
+            <div class="no-result">Не найдено</div>
+            <ul class="pagination"></ul>
+        </div>
+          
+    
+    
+    </div>
+    
+    
+
+
+
+<div class="col-md-10 col-xs-12 m-auto">
+
+    <h3>Основные комплектации</h3>
+    <table class="table table-hover table-harki table-responsive-sm wa">
+        <thead>
+        <tr>
+        <th>Обозначение</th>
+        <th style="text-align: center;">Зубьев шестерен</th>
+        <th style="text-align: center;">Передаточное число</th>
+        <th>Код</th>
+        <th>Применяемость</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+        <td>XXXX-2X0201X-<strong>10</strong></td>
+        <td style="text-align: center;"><strong>49</strong>/13</td>
+        <td style="text-align: center;">6,53</td>
+        <td style="text-align: center;">653</td>
+        <td><strong>универсальный</strong>, самосвалы,&nbsp;автопоезда</td>
+        </tr>
+        <tr>
+        <td>XXXX-2X0201X-<strong>20</strong></td>
+        <td style="text-align: center;"><strong>50</strong>/12</td>
+        <td style="text-align: center;">7.22</td>
+        <td style="text-align: center;">722</td>
+        <td><strong>тяговый</strong>, автопоезда, полноприводная техника 6х6, 8х8</td>
+        </tr>
+        <tr>
+        <td>XXXX-2X0201X-<strong>30</strong></td>
+        <td style="text-align: center;"><strong>48</strong>/14</td>
+        <td style="text-align: center;">5,94</td>
+        <td style="text-align: center;">594</td>
+        <td><strong>универсальный</strong>, самосвалы, сельхозники, одиночная техника</td>
+        </tr>
+        <tr>
+        <td>XXXX-2X0201X-<strong>40</strong></td>
+        <td style="text-align: center;"><strong>47</strong>/15</td>
+        <td style="text-align: center;">5,43</td>
+        <td style="text-align: center;">543</td>
+        <td><strong>скоростной</strong>, тягачи, одиночная техника</td>
+        </tr>
+        <tr>
+        <td>XXXX-2X0201X-<strong>60</strong></td>
+        <td style="text-align: center;"><strong>46</strong>/16</td>
+        <td style="text-align: center;">4.98</td>
+        <td style="text-align: center;">498</td>
+        <td><strong>скоростной</strong>,&nbsp;15т самосвалы, коммунальная и строительная</td>
+        </tr>
+        <tr>
+            <td>6520-2X02011-<strong>10</strong></td>
+            <td style="text-align: center;"><strong>35</strong>/21</td>
+            <td style="text-align: center;">5.11</td>
+            <td style="text-align: center;">511</td>
+            <td><strong>тяговый</strong>,&nbsp;самосвальное шасси</td>
+            </tr>
+            <tr>
+                <td>6520-2X02011-<strong>20</strong></td>
+                <td style="text-align: center;"><strong>31</strong>/15</td>
+                <td style="text-align: center;">6.58</td>
+                <td style="text-align: center;">658</td>
+                <td><strong>скоростной</strong>,&nbsp;самосвальное шасси</td>
+                </tr>
+        </tbody>
+    </table>
+    
+    <p>49 зубьев &mdash; оптимальное соотношение для самосвалов, вездеходов и другой коммерческой спецтехники работающей в
+        условиях бездорожья, на карьерах, в горах и пересечённой местности, наиболее популярное. Чем выше передаточное
+        число, тем более сложные дорожные условия сможет преодолеть автомобиль, большую нагрузку выдержать. Для грузовиков
+        без прицепов рекомендованы редукторы с передаточным числом 6.53, 5.94 и 5.43, для автопоездов - 7.22, 6.53 и 5.94. В
+        зависимости от рельефа местности: для равнины &ndash; 5.94, на пересеченной местности &ndash; 6.53, горной &ndash;
+        7.22.</p>
+    
+    <h3>Маркировка редукторов КАМАЗ</h3>
+    <p>У редуктора есть информационная площадке, куда наносятся данные.
+         На информационной площадке редуктора расположены следующие обозначения:</p>
+    <ul>
+    <li>Серийный номер</li>
+    <li>Дата изготовления</li>
+    <li>Передаточное число</li>
+    </ul>
+    <p><img src="/agregaty/reduktory/info/img/markirovka_reductor_kamaz.jpg" alt=""></p>
+    <p>Передаточное число маркируется отдельно от серийного номера и даты изготовления, так же оно зашифровано и внутри каталожного номера.</p>
+    <p>Каталожный номер на редуктор не наносится.</p>
+    <p>Серийный номер редуктора представляет из себя набор цифр и является просто производственным числовым обозначением. Выглядит, например, так: 000137</p>
+    <p>Передаточное число обозначается на редукторе без точки: 722</p>
+
+    <h3>МОД (межосевой дифференциал)</h3>
+    <p>Межосевой дифференциал (поросёнок) устанавливается на редуктор среднего моста. В его задачу входит подключать и отключать средний мост автомобиля. Например, можно отключить средний мост при движении по трассе в целях экономии топлива, а когда автомобилю требуется проходимость, то средний мост подключается с помощью МОД.</p>
+    <p><img src="/agregaty/reduktory/img/53205-2506010_1.png" alt="МОД камаз"></p>
+
+    <h3>МКБ (межколесная блокировка)</h3>
+    <p>МКБ располагается на межколесном дифференциале. При включенной блокировке крутящий момент распределяется поровну на оба колеса, что позволяет, например, выехать автомобилю из бездорожья или выехать при гололеде. Если вдруг водитель забудет выключить блокировку, то это может привести к поломке редуктора на сухом асфальте при повороте.</p>
+    <p>Сегодня многие автомобили КАМАЗ могут быть оборудованы межколесной блокировкой среднего или заднего моста, для этого на одной из чашек межколесного дифференциала устанавливается специальная муфта. На редукторах переднего моста КАМАЗ межколесная блокировка не применяется.</p>
+    <p><img src="/agregaty/reduktory/info/img/markirovka_reductor_kamaz.jpg" alt=""></p>
+    
+    <p class='help-text'>
+        Отдельно по самосвалам КАМАЗ 6520 и 6522. На этих машинах могут быть установлены мосты КАМАЗ, MADARA, RABA, Китай.
+        Если количество зубьев редуктора 35 или 31 — подойдёт КАМАЗ, другие варианты под заказ
+    </p>
+
+    
+    <p>
+        <a href="/agregaty/reduktory/info/tipichnye-neispravnosti-reduktory-kamaz.html">Типичные неисправности редукторов КамАЗ</a>
+        <a href="/agregaty/reduktory/info/index.html">Полезная информация по редукторам КамАЗ</a>
+    </p>
+
+    
+
+    <div class="alert alert-info">
+        <p>Предоставляется гарантия производителя.</p>
+        <p></p>
+    </div>
+
+    
+    <p></p>
+    <p></p>
+    {% include kupite_u_nas.html %}
+    {% include garantiya.html %}
+    
+    
+  <div style="height: 100px;">&nbsp;</div>
+  
+
+<script src="/assets/js/list.min.js"></script>
