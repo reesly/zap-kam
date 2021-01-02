@@ -162,6 +162,8 @@
             {%- endif -%}
 
             
+          {%- if product.price1 or product.price2  or product.price3  or product.price4 or product.price5 or product.price6 or product.price7 or product.price8 or product.price9 or product.price10 -%}
+          
           <tr>
             <td colspan="2">
               
@@ -180,7 +182,7 @@
                 </div>
             </td>
           </tr>
-
+          {%- endif -%}
          
             {%- if product.par1 -%}
             <tr class="small2"><td> {{ product.par1 }} </td>
