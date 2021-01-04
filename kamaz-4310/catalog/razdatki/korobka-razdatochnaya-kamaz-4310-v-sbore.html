@@ -1,0 +1,31 @@
+---
+layout: default_info
+title: Информация по раздатке КамАЗ 4310-1800020 - ЗапКам.ру
+description: Описание коробки раздаточной на КамАЗ 4310, 43101, 4326, 43105 с КОМ и без КОМа с доставкой по всей России. В наличии новые, восстановленные, капремонт. Прайс-лист, модификации, каталог, описание, характеристики.
+keywords: Коробка раздаточная КамАЗ 4310 43114, 43118, 43253
+hero-title: Агрегаты на вездеходы КамАЗ-4310, 43114, 43118, 65111
+h1: Коробка раздаточная КамАЗ 4310 в сборе 
+h2:
+phone:
+phone_title:
+categories: [<a href='/agregaty/razdatki/index.html'>Раздатки КАМАЗ</a>]
+---
+
+<!-- Товар -->
+<div class="col-md-12 alert alert-success text-center">
+    <a href="/agregaty/razdatki/korobka-razdatochnaya-kamaz-4310-v-sbore.html"> Цены на раздаточную коробку КАМАЗ-4310 </a>
+</div>
+
+{% assign page_url = page.name | replace: ".html", "" %}
+{% assign product = site.data.agregaty | where:"url", page_url | first  %}
+{%- if product -%}
+    {% include card_zapchasti.html product = product %}
+{%- endif -%}
+
+<div class="col-md-10 col-xs-12" style="margin: auto;">
+    
+    <p></p>
+    <p></p>
+  <div style="height: 100px;">&nbsp;</div>
+  
+</div>
