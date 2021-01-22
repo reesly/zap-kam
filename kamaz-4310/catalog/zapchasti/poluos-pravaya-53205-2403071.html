@@ -1,0 +1,34 @@
+---
+layout: default_info
+title: 53205-2403071 - Полуось левая длинная заднего моста КАМАЗ-53205
+description: Продаем Полуось правую заднего моста арт.53205-2403071, на грузовики КАМАЗ-65115, 65111 - с доставкой по всей России. В наличии новые, восстановленные, капремонт.
+keywords: Полуось левая 53205-2403071 - КАМАЗ-65115
+hero-title: Запчасти на вездеходы КамАЗ-4310, 43114, 43118, 65111
+h1: Полуось левая, длинная заднего моста КАМАЗ 53205
+h2: 53205-2403071
+phone:
+phone_title:
+---
+
+<!-- Товар -->
+<div id="anc_1"></div>
+{% assign page_url = page.name | replace: ".html", "" %}
+{% assign product = site.data.k4310 | where:"url", page_url | first  %}
+{%- if product -%}
+    {% include card_zapchasti.html product = product %}
+{%- endif -%}
+{%- include_relative _like_products.mhtml prod = product -%}
+
+<div class="col-md-10 col-xs-12" style="margin: auto;">
+    <!-- <h3>Описание</h3> -->
+    
+    
+    <hr>
+    
+    <p></p>
+    <p></p>
+    {% include kupite_u_nas.html %} 
+    {% include garantiya.html %}
+  <div style="height: 100px;">&nbsp;</div>
+  
+</div>
