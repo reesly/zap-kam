@@ -48,31 +48,32 @@ phone_title:
 
 <div id="table-list">
     <!-- <div class="form form-inline"> -->
-        <input id="pListSearch" class="search" type="text" class="" placeholder="введите код..." style="width:180px;"/>
+        <input id="pKodSearch" class="search" type="text" class="" placeholder="введите код..." style="width:180px;"/>
         <!--   fuzzy-
         <button class="btn btn-search-var" onclick="$('#pListSearch').val('Коробка раздаточная'); filterProductList($('#pListSearch').val());" title="Коробка раздаточная">Раздатка</button>   
         <button class="btn btn-search-var" onclick="$('#pListSearch').val('Коробка передач'); filterProductList($('#pListSearch').val());" title="Коробка передач">КПП</button>   
         <button class="btn btn-search-var" onclick="$('#pListSearch').val('4310'); filterProductList($('#pListSearch').val());" title="4310">4310</button>    -->
     <!-- </div>  -->
 
-<table class="table table-striped table-bordered table-sm table-responsive-sm list" style="font-size: 0.8em;">
+<table class="table table-striped table-bordered table-sm table-responsive-sm" style="font-size: 0.8em;">
+  
   <tbody  class="list">
-    <thead class="thead-light"></thead>
+    <!-- <thead class="thead-light"> -->
     <tr>
-      <td>ADM3 fault code (J1939) SPN</td>
-      <td>ADM3 fault code (J1939) FMI</td>
-      <td>ADM3 fault code (K-line)</td>
-      <td>MR2 fault code (K-line)</td>
-      <td>Местоположение ошибки</td>
-      <td>Описание ошибки</td>
+      <th class="code1">ADM3 fault code (J1939) SPN</th>
+      <th class="code2">ADM3 fault code (J1939) FMI</th>
+      <th class="code3">ADM3 fault code (K-line)</th>
+      <th class="code4">MR2 fault code (K-line)</th>
+      <th class="name1">Местоположение ошибки</th>
+      <th class="name2">Описание ошибки</th>
     </tr>
-    </thead>
+    <!-- </thead> -->
   
   
     <tr>
       <td class="code1">51</td>
       <td class="code2">0</td>
-      <td class="code3"></td>
+      <td class="code3"> </td>
       <td class="code4">12419</td>
       <td class="name1">Положение привода дросселя</td>
       <td class="name2">Выше диапазона измерения </td>
@@ -80,7 +81,7 @@ phone_title:
       <tr>
       <td class="code1">51</td>
       <td class="code2">1</td>
-      <td class="code3"></td>
+      <td class="code3"> </td>
       <td class="code4">12420</td>
       <td class="name1">Положение привода дросселя</td>
       <td class="name2">Ниже диапазона измерения </td>
@@ -88,7 +89,7 @@ phone_title:
       <tr>
       <td class="code1">51</td>
       <td class="code2">2</td>
-      <td class="code3"></td>
+      <td class="code3"> </td>
       <td class="code4">12424</td>
       <td class="name1">Положение привода дросселя</td>
       <td class="name2">Диапазон измерения не вероятен </td>
@@ -5068,22 +5069,6 @@ phone_title:
 
 <script src="/assets/js/list.min.js"></script>
 <script>
-  
- 
-      tableList = new List('table-list', {
-        valueNames : [ 'code4' ],
-        searchDelay : 750,
-        indexAsync : true,
+     
 
-      });
-
-      tableList.on('updated', function(list) {
-        if (list.matchingItems.length > 0) {
-          $('.no-result').hide()
-        } else {
-          $('.no-result').show()
-        }
-      });
-  
-      
 </script>

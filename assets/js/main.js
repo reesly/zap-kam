@@ -1,4 +1,5 @@
 var prodList;
+var tableList;
 (function($) {
   
   "use strict";  
@@ -92,6 +93,45 @@ var prodList;
         if (hash) {
           $('#pListSearch').val(hash)
           filterProductList(hash);
+        }
+    }
+
+    // KOD list
+    // ==========================
+
+    if($("#table-list").length>0){
+      
+      tableList = new List('table-list', {
+        valueNames : [ 'code1', 'code2', 'code3', 'code4' ]
+        , searchDelay : 350,
+        indexAsync : true
+
+      });
+      $("#loading-panel").css("display", "none");
+      //$("#kodList").css("display", "block");
+      
+      tableList.on('updated', function(list) {
+        if (list.matchingItems.length > 0) {
+          $('.no-result').hide()
+        } else {
+          $('.no-result').show()
+        }
+      });
+
+      
+        // $('#pKodSearch').on('input', function() {
+        //   filterKodList($('#pKodSearch').val());
+        // });
+      
+    }
+    function filterKodList(text) {
+        if (tableList) {
+          if (text.length >= 2) {
+            tableList.search(text);
+          }
+          else{
+            tableList.search("");
+          }
         }
     }
     
