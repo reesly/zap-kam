@@ -1,18 +1,33 @@
-{%- assign phone = "9003234141" -%}
-{%- assign phone_title = "900 323-41-41" -%}
-{%- if include.phone -%}
-{%- if include.phone != "" -%}
-  {%- assign phone = include.phone -%}
-  {%- assign phone_title = include.phone_title -%}
-  {%- endif -%}
+{%- if page.dir contains "dvigatel_zapchasti" or page.name contains "dvigatel_zapchasti" -%}
+{%- assign phone = "9534825113" -%}
+{%- assign phone_title = "(953) 482-51-13" -%}
+{%- endif -%}
+
+
+{%- if page.dir contains "kamaz-5490" or page.name contains "kamaz-5490" -%}
+  {%- assign phone = "9872721224" -%}
+  {%- assign phone_title = "(987) 272 12-24" -%}
+{%- endif -%}
+
+{%- if page.dir contains "kardanyi_valy" or page.name contains "kardanyi_valy" -%}
+  {%- assign phone = "9003234141" -%}
+  {%- assign phone_title = "(900) 323-41-41" -%}
+{%- endif -%}
+
+{%- if page.dir contains "agregaty" or page.name contains "agregaty" -%}
+  {%- assign phone = "9003234141" -%}
+  {%- assign phone_title = "(900) 323-41-41" -%}
+{%- endif -%}
+
+{%- if page.dir == "" or page.dir == "/" -%}
+  {%- assign phone = "9003234141" -%}
+  {%- assign phone_title = "(900) 323-41-41" -%}
 {%- endif -%}
 
 
 <div style="clear: both;"></div>
-
 <div>
   <hr>
-
   <div class="w-100 text-center" style="padding-bottom:20px;padding-top:10px; ">
     <a href="/kamaz-4310/index.html" class="btn btn-primary" style="font-size: 1.0em;"> Запчасти КамАЗ-4310 </a>
     <a href="/kamaz-5490/index.html" class="btn btn-primary" style="font-size: 1.0em;"> КамАЗ-5490 </a>
@@ -20,9 +35,8 @@
     <a href="/agregaty/kpp/kpp_korobki_zf.html" class="btn btn-primary" style="font-size: 1.0em;"> КПП ZF</a>
     <a href="/agregaty/razdatki/index.html" class="btn btn-primary" style="font-size: 1.0em;"> Раздаточные коробки </a>
     <a href="/agregaty/reduktory/index.html" class="btn btn-primary" style="font-size: 1.0em;"> Редукторы</a>
-    
   </div>
-  
+
   <hr>
    
   <p class="w-100 text-center"><strong>Покупайте запчасти у нас :</strong></p>
@@ -46,7 +60,7 @@
         </tr>
         <tr>
           <td><i class='lni-checkmark'></i></td>
-          <td> Звоните по телефону <strong><a href="tel:+7{{phone}}" class="nocolor" >{{phone_title}}</a></strong> <br>
+          <td> Звоните по телефону <strong><a href="tel:+7{{phone}}" class="nocolor" >{{phone_title}}</a></strong>, или напишите на  <strong><a href="mailto:zap-kam16@yandex.ru" class="nocolor" >zap-kam16@yandex.ru</a></strong><br>
             Потребуется информация: модель авто, год выпуска, модель агрегата, класс Евро.
           </td>
         </tr>
