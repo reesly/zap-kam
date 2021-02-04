@@ -555,6 +555,9 @@ hr {
 .top-nav-collapse .navbar-nav .nav-link:hover {
   color: rgb(202, 227, 255) !important;
 }
+.top-nav-collapse .navbar-nav .nav-link1:hover {
+  color: rgb(202, 227, 255) !important;
+}
 
 .navbar-expand-md .navbar-toggler {
   background: transparent;
@@ -564,10 +567,21 @@ hr {
   cursor: pointer;
 }
 
-.top-nav-collapse .navbar-nav li.active a.nav-link {
+.top-nav-collapse .navbar-nav li.active a.nav-link, .top-nav-collapse .navbar-nav li.active a.nav-link1 {
   color: white ;
   border-color: #143f69;
 }
+
+
+
+.navbar li.active a.nav-link1 {
+  color: white; 
+}
+
+.navbar li a.nav-link1 {
+  color: white; 
+}
+
 
 .indigo {
   background: transparent;
@@ -603,7 +617,7 @@ iframe:hover {
   list-style: none;
 }
 
-.navbar-expand-md .navbar-nav .nav-link {
+.navbar-expand-md .navbar-nav .nav-link, .navbar-expand-md .navbar-nav .nav-link1 {
   color: white;
   font-weight: 400;
   padding: 7px 0;

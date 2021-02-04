@@ -350,6 +350,17 @@ function request_form_yandex(p_id, text) {
   return true;
 }
 
+function copyToClipboard(text, mess) {
+  var input = document.createElement('textarea');
+  input.innerHTML = text;
+  document.body.appendChild(input);
+  input.select();
+  var result = document.execCommand('copy');
+  document.body.removeChild(input);
+  $('#copy_mess').empty().show().html(mess).delay(3000).fadeOut(300);
+  return result;
+}
+
 function add_to_cart(p_id, text) {
 
   var tx = ''; var pars = '';
