@@ -362,10 +362,11 @@ phone_title:
       
       <div class="col-md-11 col-xs-12" style="margin: auto;">
       <h3 class="w-100 text-center">Популярные товары</h3>
+      {% include catalog-loading-panel.html %}
         <div id="productList" class="pt-4 pb-2">
       
           <div class="row list">
-            {%- assign rands = site.data.dvig_zap | sample: 15 -%}
+            {%- assign rands = site.data.dvig_zap | sample: 14 -%}
             {% for pr in rands %}
               {%- if pr.url -%}
                 {% include card_zapchasti_catalog.html product = pr %}
