@@ -41,7 +41,7 @@ phone_title:
     
         <div class="row list">
             {% for product in site.data.dvig_zap %}
-            {%- if product.cat == "Валы коленчатые" and product.cat2 == "Ремонт" -%}
+            {%- if product.cat == "Валы коленчатые" and product.cat2 == "Завод" -%}
                 {% include card_zapchasti_catalog.html product = product %}
             {%- endif -%}
             {% endfor %}
