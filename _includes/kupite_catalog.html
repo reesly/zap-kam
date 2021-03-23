@@ -3,7 +3,6 @@
 {%- assign phone_title = "(953) 482-51-13" -%}
 {%- endif -%}
 
-
 {%- if page.dir contains "kamaz-5490" or page.name contains "kamaz-5490" -%}
   {%- assign phone = "9872721224" -%}
   {%- assign phone_title = "(987) 272 12-24" -%}
@@ -28,6 +27,13 @@
 <div style="clear: both;"></div>
 <div>
   <hr>
+  {%- if page.dir contains "agregaty" or page.name contains "agregaty" -%}
+  <div class="w-100 text-center" style="padding-bottom:20px;padding-top:10px; ">
+    <a href="/agregaty/dvigateli/index.html" class="btn btn-primary" style="font-size: 1.0em;"> Двигатели КАМАЗ </a>
+    
+  </div>
+  {%- else -%}
+
   <div class="w-100 text-center" style="padding-bottom:20px;padding-top:10px; ">
     <a href="/kamaz-4310/index.html" class="btn btn-primary" style="font-size: 1.0em;"> Запчасти КамАЗ-4310 </a>
     <a href="/kamaz-5490/index.html" class="btn btn-primary" style="font-size: 1.0em;"> КамАЗ-5490 </a>
@@ -36,6 +42,9 @@
     <a href="/agregaty/razdatki/index.html" class="btn btn-primary" style="font-size: 1.0em;"> Раздаточные коробки </a>
     <a href="/agregaty/reduktory/index.html" class="btn btn-primary" style="font-size: 1.0em;"> Редукторы</a>
   </div>
+
+  {%- endif -%}
+  
 
   <hr>
    
