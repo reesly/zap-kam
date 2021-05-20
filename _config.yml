@@ -59,7 +59,7 @@ plugins:
   
 
 
-incremental: false
+incremental: true
 
 # livereload: true
 
