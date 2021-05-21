@@ -43,35 +43,42 @@ h2: Всё для ремонта
         </div>
     </div>
 
-    <h2>Каталог двигателей Евро-1</h2>
 
-    <div id="productList" class="pt-4 pb-2" style="display: block;">
-        <div class="row list">
-
-
-    <!-- Движок 11  -->
-    <div id="740-11"></div>
-    {% assign page_url = "dvigatel_kamaz_740_11-240_evro-1" %}
-    {% assign product = site.data.agregaty | where:"url", page_url | first  %}
-    {%- if product -%}
-    {% include card_zapchasti_catalog.html product = product %}
-    {%- endif -%}
+    <hr>
+  	
+<h2>Каталог двигателей Евро-1</h2>
+	
+<div id="productList" class="pt-4 pb-2" style="display: block;">
+	<div class="row list">
 
 
+		<!-- Движок 11  -->
+		<div id="740-11"></div>
+		{% assign page_url = "dvigatel_kamaz_740_11-240_evro-1" %}
+		{% assign product = site.data.agregaty | where:"url", page_url | first %}
+		{%- if product -%}
+		{% include card_zapchasti_catalog.html product = product %}
+		{%- endif -%}
 
 
-    <!-- Движок турбо  -->
-    <div id="7403-10"></div>
-    {% assign page_url = "dvigatel_kamaz_740_13-260_evro-1" %}
-    {% assign product = site.data.agregaty | where:"url", page_url | first  %}
-    {%- if product -%}
-    {% include card_zapchasti_catalog.html product = product %}
-    {%- endif -%}
+		<!-- Движок 13  -->
+		<div id="740-13"></div>
+		{% assign page_url = "dvigatel_kamaz_740_13-260_evro-1" %}
+		{% assign product = site.data.agregaty | where:"url", page_url | first %}
+		{%- if product -%}
+		{% include card_zapchasti_catalog.html product = product %}
+		{%- endif -%}
 
+		<div id="loadingDiv" style="display: none;">
+			<span>Загрузка данных</span>
+		</div>
+	</div>
+	<div class="no-result">Не найдено</div>
+	<ul class="pagination" style="display: none;"></ul>
 </div>
-</div>
-
 <hr>
+<p>&nbsp;</p>
+
 
 
     <h2>Двигатели серии Евро-1</h2>
