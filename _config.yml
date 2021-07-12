@@ -76,13 +76,13 @@ exclude:
   # - data
   - _plugins
   - "*.mhtml"
-  # - dvigatel_zapchasti
-  # - kamaz-4310
-  # - kamaz-5490
-  # - dostavka
-  # - kardanyi_valy
+  - dvigatel_zapchasti
+  - kamaz-4310
+  - kamaz-5490
+  - dostavka
+  - kardanyi_valy
   
-# page_gen: 
+ page_gen: 
 #   - index_files: false
 #     data: tirsan-kamaz
 #     template: templ_kardan_kamaz
@@ -96,11 +96,11 @@ exclude:
   #   template: templ_zapchasti
   #   filter_condition: "record['path'] == '/kamaz-5490/catalog/zaps/'"
 
-#   - index_files: true 
-#     data: dostavka
-#     name: url 
-#     template: templ_dostavka_index
-#     filter_condition: "record['point1'] != ''"
+  - index_files: true 
+    data: dostavka1
+    name: url 
+    template: templ_dostavka_index
+    filter_condition: "record['point1'] != ''"
 
   # - index_files: false
   #   data: dostavka

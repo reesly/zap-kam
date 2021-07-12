@@ -1,0 +1,29 @@
+---
+layout: 
+---
+---
+layout: default_info
+title: Фильтры на авто- и спецтехнику по оптовым ценам c доставкой в г. {{page.city}} - АвтоКомплект
+description: Продаем автомобильные фильтры: топливные, масляные,  на вездеходы КамАЗ 4310, 43114, 443118, карданные валы, коробки передач, редукторы с доставкой г. {{page.city}}, расчет доставки ПЭК, Деловые Линии. Новые оригинал, капитальный ремонт, восстановленные б/у.
+keywords: Фильтры авто {{page.city}} 
+hero-title: Запчасти и агрегаты на технику КамАЗ
+h1: Автофильтры с доставкой в г. {{page.city}}
+h2:
+phone:
+phone_title:
+---
+
+{%- assign ct = site.data.dostavka | where:"city", "{{page.city}}" | first -%}
+
+{ %- include_relative info.mhtml city = ct -%}
+
+{%- include dostavka_city.html city = ct  -%}
+
+{%- include dostavka_catalog.html city = ct -%}
+
+
+
+{{text1}}
+{{text2}}
+{{text3}}
+{{text4}}
