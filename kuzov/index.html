@@ -1,0 +1,86 @@
+---
+layout: default_info
+title: Запчасти для кузовов и прицепов КамАЗ - ЗапКам.ру
+description: Продаем кузова, платформы и запасные части на КАМАЗ с доставкой в регионы. Прайс-лист, каталог, описание, характеристики.
+keywords: КамАЗ кузов платформа евро
+hero-title: Запчасти на кузова и платформы
+h1: Запчасти к прицепам
+h2:
+phone: 9003234141
+phone_title: 8(900)323-41-41
+categories: [<a href="/kuzov/index.html">Запчасти к прицепам</a> ]
+---
+
+
+
+<!-- Товары -->
+<style>
+    .list-group-item{ margin-bottom: 1px; }
+</style>
+
+
+    <div class="col-md-11 col-xs-12" style="margin: auto;">
+        <p></p>
+        <h3>Каталог </h3>
+        <div class="form form-inline">
+            <input id="pListSearch" class="fuzzy-search" type="search" class="form-control" placeholder="поиск..." style="width:130px;"/>
+            &nbsp;&nbsp;
+            <button class="btn btn-search-var" onclick="$('#pListSearch').val('Борт'); filterProductList($('#pListSearch').val());" title="Борт">Борт</button>   
+            <button class="btn btn-search-var" onclick="$('#pListSearch').val('Запор'); filterProductList($('#pListSearch').val());" title="Запор">Запор</button>   
+            <button class="btn btn-search-var" onclick="$('#pListSearch').val('Палец'); filterProductList($('#pListSearch').val());" title="Палец">Палец</button>   
+            <button class="btn btn-search-var" onclick="$('#pListSearch').val('Платформа'); filterProductList($('#pListSearch').val());" title="Платформа">Платформа</button>   
+            <button class="btn btn-search-var" onclick="$('#pListSearch').val('Кронштейн'); filterProductList($('#pListSearch').val());" title="Кронштейн">Кронштейн</button>   
+            <button class="btn btn-search-var" onclick="$('#pListSearch').val('Пружина'); filterProductList($('#pListSearch').val());" title="Пружина">Пружина</button>   
+            <button class="btn btn-search-var" onclick="$('#pListSearch').val('Петля'); filterProductList($('#pListSearch').val());" title="Петля">Петля</button>   
+        </div>
+
+
+        {% include catalog-loading-panel.html %}
+
+        <div id="productList" class="pt-2 pb-2" style="display: none; ">
+        
+            <div class="row list">
+                {% for product in site.data.kuzov %}
+                {%- if product.path == "/kuzov/catalog/" -%}
+                    {% include card_zapchasti_catalog.html product = product %}
+                {%- endif -%}
+                {% endfor %}
+    
+                <div id="loadingDiv">
+                    <span>Загрузка данных</span>
+                </div>
+            </div>
+            <div class="no-result">Не найдено</div>
+            <ul class="pagination"></ul>
+        </div>
+
+    
+    
+    
+    </div>
+    
+    
+
+
+
+<div class="col-md-10 col-xs-12 m-auto">
+
+   
+    
+
+    <div class="alert alert-info">
+        <p>Предоставляется гарантия производителя.</p>
+        <p></p>
+    </div>
+
+    
+    <p></p>
+    <p></p>
+    {% include kupite_u_nas.html %}
+    {% include garantiya.html %}
+    
+    
+  <div style="height: 100px;">&nbsp;</div>
+  
+
+<script src="/assets/js/list.min.js"></script>

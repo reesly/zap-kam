@@ -59,7 +59,7 @@ plugins:
   
 
 
-incremental: false
+incremental: true
 
 # livereload: true
 
@@ -81,8 +81,8 @@ exclude:
   # - kamaz-5490
   # - dostavka
   # - kardanyi_valy
-  
-#  page_gen: 
+
+# page_gen: 
 #   - index_files: false
 #     data: tirsan-kamaz
 #     template: templ_kardan_kamaz
@@ -91,10 +91,10 @@ exclude:
 #     filter_condition: "record['url'] != ''"
 
   # - index_files: false 
-  #   data: k5490
+  #   data: kuzov
   #   name: url
   #   template: templ_zapchasti
-  #   filter_condition: "record['path'] == '/kamaz-5490/catalog/zaps/'"
+  #   filter_condition: "record['path'] == '/kuzov/catalog/'"
 
   # - index_files: true 
   #   data: dostavka1
