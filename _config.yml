@@ -91,12 +91,12 @@ page_gen:
 #     dir: path
 #     filter_condition: "record['url'] != ''"
 
-   - index_files: false 
-     data: k4310
-     dir: "kamaz-4310/zz"
-     name: url
-     template: templ_zapchasti
-     filter_condition: "record['temp1'] == 'zzz' "
+  #  - index_files: false 
+  #    data: k4310
+  #    dir: "kamaz-4310/zz"
+  #    name: url
+  #    template: templ_zapchasti
+  #    filter_condition: "record['temp1'] == 'zzz' "
 
   # - index_files: true 
   #   data: dostavka1
