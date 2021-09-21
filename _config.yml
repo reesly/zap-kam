@@ -75,7 +75,6 @@ exclude:
   - materials 
   # - data
   - _plugins
-  - kuzov
   - "*.mhtml"
   # - dvigatel_zapchasti
   # - kamaz-4310
