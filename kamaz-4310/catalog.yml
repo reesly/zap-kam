@@ -2,10 +2,10 @@
 layout:
 ---
 <?xml version="1.0" encoding="UTF-8"?>
-<yml_catalog date="2021-10-11 12:00">
+<yml_catalog date="2021-10-12T14:30:00+03:00">
     <shop>
         <name>ЗапКам.Запчасти</name>
-        <company></company>
+        <company>ЗапКам</company>
         <url>https://zap-kam.ru</url>
         <platform>html</platform>
         <version></version>
@@ -34,7 +34,7 @@ layout:
 {%- if product.price1 and product.img1 -%}
 {%- if product.url -%}
         <offer id="{{product.id}}" bid="{{product.id}}">
-            <name>{{product.name}}</nameY>
+            <name>{{product.name}}</name>
             <vendor></vendor>
             <vendorCode>{{ product.code1 }}</vendorCode>
             <url>https://zap-kam.ru{{product.path}}{{product.url}}.html</url>
