@@ -80,7 +80,7 @@ layout:
             {%- endif -%}
             <condition type="new">
             </condition>                
-            <weight>{{ product.par3 }}</weight>
+            <weight>{{ product.m }}</weight>
             <dimensions></dimensions>
         </offer>
 {%- endif -%}
