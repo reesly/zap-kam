@@ -1,0 +1,82 @@
+---
+layout: default_info
+title: Энергоаккумуляторы, Тормозные камеры, Подогреватели на КАМАЗ, МАЗ, УРАЛ - ЗапКам.ру
+description: Продаем запасные части Энергоаккумуляторы, Тормозные камеры, Подогреватели. Новые и восстановленные б/у после кап.ремонта.
+keywords: КамАЗ Энергоаккумуляторы, Тормозные камеры, Подогреватели каталог цены
+hero-title: Энергоаккумуляторы, Тормозные камеры, Подогреватели
+h1: Энергоаккумуляторы, Тормозные камеры, Подогреватели
+h2:
+phone: 9173903726
+phone_title: (917)390-37-26
+---
+
+<!-- Модель камаза  -->
+
+
+<!-- Товары -->
+<style>
+    .list-group-item{ margin-bottom: 1px; }
+</style>
+
+<div class="col-md-11 col-xs-12" style="margin: auto;">
+    <p></p>
+    <h3>Каталог </h3>
+    <div class="form form-inline">
+        <input id="pListSearch" class="fuzzy-search" type="search" class="form-control" placeholder="поиск..." style="width:130px;"/>
+        &nbsp;&nbsp;
+        <button class="btn btn-search-var" onclick="$('#pListSearch').val('Энергоаккумулятор'); filterProductList($('#pListSearch').val());" title="Энергоаккумулятор">Энергоаккумулятор</button>   
+        <button class="btn btn-search-var" onclick="$('#pListSearch').val('Подогреватель'); filterProductList($('#pListSearch').val());" title="Подогреватель">Подогреватель</button>   
+        <button class="btn btn-search-var" onclick="$('#pListSearch').val('Топливозаборник'); filterProductList($('#pListSearch').val());" title="Топливозаборник">Топливозаборник</button>     
+    </div>
+
+    {% include catalog-loading-panel.html %}
+
+    <div id="productList" class="pt-2 pb-2" style="display: none; ">
+    
+        <div class="row list">
+            {% for product in site.data.dvig_zap %}
+            {%- if product.cat == "амтк" -%}
+                {% include card_zapchasti_catalog.html product = product %}
+            {%- endif -%}
+            {% endfor %}
+
+            <div id="loadingDiv">
+                <span>Загрузка данных</span>
+            </div>
+        </div>
+        <div class="no-result">Не найдено</div>
+        <ul class="pagination"></ul>
+    </div>
+    
+
+
+</div>
+
+
+<div class="col-md-10 col-xs-12" style="margin: auto;">
+    <div class="alert alert-info">
+        <p>Предоставляется гарантия производителя. 2 года.</p>
+        <p></p>
+    </div>
+
+    
+    <p></p>
+    <p></p>
+    {% include kupite_u_nas.html %} 
+    {% include garantiya.html %}
+    
+    <p></p>
+    <hr>
+    
+    <p>
+    
+    </p>
+    
+    <!-- <p>
+        <iframe width="800" height="450" class="lozad" data-src="https://www.youtube.com/embed/URsFZz3r0Vs?start=23" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </p> -->
+    
+  <div style="height: 100px;">&nbsp;</div>
+  
+
+<script src="/assets/js/list.min.js"></script>

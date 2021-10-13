@@ -3,21 +3,21 @@ layout:
 ---
 ---
 layout: default_info
-title: {{page.code1}} - {{page.name1}} на КАМАЗ {%- if page.code2 -%} ({{page.code2}}) {%- endif -%} - ЗапКам.ру
-description: Продаем {{page.name1}} {%- if page.prim -%}, на технику КАМАЗ {{ page.prim }}  {%- endif -%}  {{page.desc}} {%- if page.desc -%} {{page.desc}}{%- endif -%}, каталожный номер - {{page.code1}} {{page.code2}}  {%- if page.prim2 -%}, на {{page.prim2}} {%- endif -%}. Новые, с разбора, оригинал, аналоги, бу, капремонт. Цена, доставка, описание, вес, размеры.
-keywords: {{page.name1}} {{page.desc}} {{page.code1}} {{page.price1_name}} {{page.price2_name}} {{page.price3_name}}  {{page.cat}} {{page.cat2}} - {{page.prim}}
-hero-title: Запчасти на вездеходы КамАЗ-4310, 43114, 43118, 65111
+title: {{page.name1}} {%- if page.code2 -%} - {{page.code2}} {%- endif -%} на КАМАЗ, МАЗ, ЗИЛ, УРАЛ, MAN
+description: В продаже {{page.code1}} - {{page.name1}} АМТК, БИФОРМ, КЗТА, Рославль, WABCO. {%- if page.prim -%} , на {{ page.prim }}  {%- endif -%}, МАЗ, УРАЛ, ЗИЛ, MAN, Scania, Mercedes,   {{page.desc}} {%- if page.desc -%} {{page.desc}}{%- endif -%}, каталожный номер - {{page.code1}} {{page.code2}}  {%- if page.prim2 -%}, на {{page.prim2}} {%- endif -%}. Новые, оригинал, аналоги, капремонт. Цена, доставка, описание.
+keywords: {{page.name1}} {{page.code1}} {{page.price1_name}} {{page.price2_name}} {{page.price3_name}}  {{page.cat}} {{page.cat2}} - {{page.prim}}
+hero-title: Энергоаккумуляторы, Тормозные камеры, Подогреватели 
 h1: {{page.name1}} 
-h2: {{page.code1}}
+h2: {{page.code2}}
 phone: 
 phone_title: 
-categories: [<a href='/kamaz-4310/index.html'>Запчасти на КАМАЗ-4310</a>]
+categories: [<a href='/kamaz-4310/tormoza/index.html'>Тормоза и подогреватели</a>]
 ---
 
 <!-- Товар -->
 <div id="anc_1"></div>
 { % assign page_url = page.name | replace: ".html", "" %}
-{ % assign product = site.data.k4310 | where:"url", page_url | first  %}
+{ % assign product = site.data.dvig_zap | where:"url", page_url | first  %}
 { %- if product -%}
     { % include card_zapchasti.html product = product %}
 { %- endif -%}

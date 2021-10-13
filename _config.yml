@@ -82,7 +82,7 @@ exclude:
   # - dostavka
   # - kardanyi_valy
 
-page_gen: 
+# page_gen: 
 #   - index_files: false
 #     data: tirsan-kamaz
 #     template: templ_kardan_kamaz
@@ -91,11 +91,11 @@ page_gen:
 #     filter_condition: "record['url'] != ''"
 
   #  - index_files: false 
-  #    data: k4310
-  #    dir: "kamaz-4310/zz"
+  #    data: dvig_zap
+  #    dir: "kamaz-4310/tormoza"
   #    name: url
   #    template: templ_zapchasti
-  #    filter_condition: "record['temp1'] == 'zzz' "
+  #    filter_condition: "record['cat'] == 'амтк'"
 
   # - index_files: true 
   #   data: dostavka1
