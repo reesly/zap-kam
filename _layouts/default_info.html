@@ -13,7 +13,12 @@
   <meta property="og:type" content="website"/>
   <meta property="og:site_name" content="Магазин автозапчастей для а\м КамАЗ"/>
   <meta property="og:image" content="https://zap-kam.ru/assets/img/logo_bgwhite.png"/>
-  <link rel="canonical" href="https://zap-kam.ru{{page.url}}"/>
+  
+  {%- if page.canonical -%} } 
+    {{ page.canonical }}
+  {%- else -%}
+    <link rel="canonical" href="https://zap-kam.ru{{page.url}}"/>
+  {%- endif -%}
 
   <meta name="description" content="{{ page.description }}" />
   <meta property="og:description" content="{{ page.description }}" />

@@ -21,7 +21,11 @@
     <meta name="keywords" content="{{ page.keywords }}">
     <meta name="author" content="Зап-Кам - Запчасти КамАЗ" />
     
-    {{page.tags}}
+    {%- if page.canonical -%} } 
+      {{ page.canonical }}
+    {%- else -%}
+      <link rel="canonical" href="https://zap-kam.ru{{page.url}}"/>
+    {%- endif -%}
     
     <link rel="stylesheet" href="/assets/fonts/line-icons.css">
     <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
