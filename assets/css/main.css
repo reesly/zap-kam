@@ -818,6 +818,14 @@ iframe:hover {
   background-size: 555px;
 }
 
+.hero-area-bg-freza {
+  background: url(/assets/img/freza/fon-freza.png) repeat 0;
+  background-repeat: no-repeat;
+  background-position-x: right;
+  background-position-y: bottom;
+  background-size: 415px;
+}
+
 .hero-area-bg-5490 {
   background: linear-gradient(90deg, #014E9E 10%, #014E9E40 60%), url(/assets/img/hero-bg-5490.png) repeat 0;
   background-repeat: no-repeat;
