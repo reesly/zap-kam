@@ -73,9 +73,16 @@
                 
               </td>
             </tr>
+            <tr>
+              <td colspan="2" style="text-align: right;">
+                <span><i class="small">цены указаны с НДС, возможны скидки</i></span>    
+              </td>
+            </tr>
+
+            
             {%- unless include.page_url == include.page_url != "" -%}
               <tr> <td colspan="2" style="text-align: right;">  
-                <a href="/catalog/{{ product.url }}.html" class="btn btn-link"> Полное описание двигателя... </a> </td> </tr>
+                <a href="/catalog/{{ product.url }}.html" class="btn btn-link"> Полное описание... </a> </td> </tr>
             {%- endunless -%}
             
             {%- if product.price1 -%}
