@@ -65,7 +65,7 @@ incremental: true
 
 # Exclude these files from your production _site
 # include: 
-page_gen-dirs: true
+page_gen-dirs: false
 
 
 exclude: 
@@ -73,7 +73,7 @@ exclude:
   - Gemfile.lock
   - README.md
   - materials 
-  # - data
+  - data
   - _plugins
   - "*.mhtml"
   # - dvigatel_zapchasti
@@ -83,19 +83,12 @@ exclude:
   # - kardanyi_valy
 
 # page_gen: 
-#   - index_files: false
-#     data: tirsan-kamaz
-#     template: templ_kardan_kamaz
-#     name: url
-#     dir: path
-#     filter_condition: "record['url'] != ''"
-
-  #  - index_files: false 
-  #    data: dvig_zap
-  #    dir: "kamaz-4310/tormoza"
-  #    name: url
-  #    template: templ_zapchasti
-  #    filter_condition: "record['cat'] == 'амтк'"
+#    - index_files: false 
+#      data: agregaty
+#      dir: "agregaty/mosty"
+#      name: url
+#      template: templ_zapchasti
+#      filter_condition: "record['cat2'] == '222'"
 
   # - index_files: true 
   #   data: dostavka1
@@ -109,4 +102,3 @@ exclude:
   #   name: url
   #   template: dostavka_4310
   #   filter_condition: "record['point1'] != ''"
-        

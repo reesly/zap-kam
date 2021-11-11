@@ -1,0 +1,67 @@
+---
+layout: default_info
+title: Мосты КамАЗ - Каталог - ЗапКам
+description: Полный каталог мостов КАМАЗ с подбором - КАМАЗ 5320, 5311, 4310, 43114, 43118, 65111, 6502. Мосты заводские КАМАЗ, самосбор, ремонтные
+keywords: Мосты и подвеска КАМАЗ в сборе
+hero-title: Мосты КамАЗ 4310, 5320, 43118, 65111, 6520 
+h1: Мосты на технику КАМАЗ
+h2: 4310, 5320, 43118, 65111, 6520 
+categories: [<a href='/agregaty/mosty/index.html'>Мосты на КАМАЗ</a>]
+---
+
+<div class="col-md-10 col-sm-12" style="width: auto;">
+
+<!-- МОСТЫ КАМАЗ  -->
+<h3>Основные виды мостов КАМАЗ</h3>
+<ul>
+	<li></li>
+</ul>
+
+
+<!-- Мосты -->
+
+<h3>Каталог </h3>
+<!-- <div class="form form-inline">
+	<input id="pListSearch" class="fuzzy-search" type="search" class="form-control" placeholder="поиск..." style="width:130px;"/>
+	&nbsp;&nbsp;
+	<button class="btn btn-search-var" onclick="$('#pListSearch').val('4310'); filterProductList($('#pListSearch').val());" title="4310">4310</button>   
+  
+</div> -->
+
+{% include catalog-loading-panel.html %}
+
+<div id="productList" class="pt-2 pb-2" style="display: none; ">
+
+	<div class="row list">
+		{% for product in site.data.agregaty  %}
+		{%- if product.cat == "мосты" -%}
+			{% include card_zapchasti_catalog.html product = product %}
+		{%- endif -%}
+		{% endfor %}
+
+		<div id="loadingDiv">
+			<span>Загрузка данных</span>
+		</div>
+	</div>
+	<div class="no-result">Не найдено</div>
+	<ul class="pagination"></ul>
+</div>
+
+
+<div class="col-md-10 col-xs-12" style="margin: auto;">
+    <p></p>
+    <h3></h3>
+   
+	
+	<p><a href="/agregaty/mosty/info/index.html">Информация о мостах КАМАЗ</a></p>
+    <p></p>
+    {% include kupite_u_nas.html %}
+  <div style="height: 100px;">&nbsp;</div>
+  
+</div>
+
+
+
+
+
+
