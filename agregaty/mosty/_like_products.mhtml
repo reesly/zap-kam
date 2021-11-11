@@ -105,7 +105,7 @@
 
     {%- if 4>n -%}
         {%- assign m = 4 | minus: n -%}
-        {%- assign rands = site.data.agregaty | where: "path", "/agregaty/kpp/" | sample: m -%}
+        {%- assign rands = site.data.agregaty | where: "path", "/agregaty/mosty/" | sample: m -%}
         {% for pr in rands %}
             {%- if pr and pr.code1 -%}
                 {% include card_zapchasti_catalog.html product = pr %}    
