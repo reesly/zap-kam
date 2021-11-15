@@ -73,7 +73,7 @@ exclude:
   - Gemfile.lock
   - README.md
   - materials 
-  - data
+  # - data
   - _plugins
   - "*.mhtml"
   # - dvigatel_zapchasti
