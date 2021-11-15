@@ -8,10 +8,11 @@ h1: Запчасти на двигатели КамАЗ в г. Сыктывка�
 h2: с доставкой из Наб.Челнов двигателя
 phone:
 phone_title:
+city: Сыктывкар
 categories: [<a href='/dostavka/syktyvkar/'>Сыктывкар</a>, <a href='/dvigatel_zapchasti/catalog/index.html'>Запчасти на двигатели КамАЗ</a>]
 ---
  
-{%- assign ct = site.data.dostavka | where:"city", "{{page.city}}" | first -%}
+{%- assign ct = site.data.dostavka | where:"city", page.city | first -%}
 
 {%- include_relative info.mhtml city = ct -%}
 

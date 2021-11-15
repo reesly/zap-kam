@@ -1,6 +1,6 @@
 ---
 layout: default_info
-title: Карданные валы производства Innova - доставка в г. Санкт-Петербург
+title: Карданные валы  - доставка в г. Санкт-Петербург
 description: Продажа, производство и заводской ремонт карданных валов и передач на любую технику КамАЗ, МАЗ, УРАЛ, ИВЕКО, МАН, Мерседес и другие с доставкой в г. Санкт-Петербург. Расчет стоимости и сроков доставки ПЭК, Деловые Линии.
 keywords: Санкт-Петербург Карданный вал карданная передача каталог цены
 hero-title: Карданные валы на грузовики c доставкой в г. Санкт-Петербург
@@ -8,10 +8,11 @@ h1: Карданные валы с доставкой в г. Санкт-Пете
 h2: 
 phone:
 phone_title:
+city: Санкт-Петербург
 categories: [<a href='/dostavka/sankt-peterburg/'>Санкт-Петербург</a>, <a href='/kardanyi_valy/index.html'>Карданные валы</a>]
 ---
  
-{%- assign ct = site.data.dostavka | where:"city", "{{page.city}}" | first -%}
+{%- assign ct = site.data.dostavka | where:"city", page.city | first -%}
 
 {%- include_relative info.mhtml city = ct -%}
 

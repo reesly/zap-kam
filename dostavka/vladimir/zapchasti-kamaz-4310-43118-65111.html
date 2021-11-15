@@ -8,10 +8,11 @@ h1: Доставка в г. Владимир - Запчасти на КамАЗ-
 h2:
 phone:
 phone_title:
+city: Владимир
 categories: [<a href='/dostavka/vladimir/'>Владимир</a>, <a href='/kamaz-4310/category/zapchasti_kamaz-4310.html'>Запчасти на вездеходы КамАЗ-4310 -43118 -5350 -65111</a>]
 ---
 
-{%- assign ct = site.data.dostavka | where:"city", "{{page.city}}" | first -%}
+{%- assign ct = site.data.dostavka | where:"city", page.city | first -%}
 
 {%- include_relative info.mhtml city = ct -%}
 

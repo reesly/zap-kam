@@ -1,6 +1,6 @@
 ---
 layout: default_info
-title: Карданные валы производства Innova - доставка в г. Смоленск
+title: Карданные валы  - доставка в г. Смоленск
 description: Продажа, производство и заводской ремонт карданных валов и передач на любую технику КамАЗ, МАЗ, УРАЛ, ИВЕКО, МАН, Мерседес и другие с доставкой в г. Смоленск. Расчет стоимости и сроков доставки ПЭК, Деловые Линии.
 keywords: Смоленск Карданный вал карданная передача каталог цены
 hero-title: Карданные валы на грузовики c доставкой в г. Смоленск
@@ -8,10 +8,11 @@ h1: Карданные валы с доставкой в г. Смоленск
 h2: 
 phone:
 phone_title:
+city: Смоленск
 categories: [<a href='/dostavka/smolensk/'>Смоленск</a>, <a href='/kardanyi_valy/index.html'>Карданные валы</a>]
 ---
  
-{%- assign ct = site.data.dostavka | where:"city", "{{page.city}}" | first -%}
+{%- assign ct = site.data.dostavka | where:"city", page.city | first -%}
 
 {%- include_relative info.mhtml city = ct -%}
 
