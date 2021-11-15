@@ -12,13 +12,13 @@ city: Кострома
 categories: [<a href='/dostavka/kostroma/'>Кострома</a>, <a href='/kamaz-4310/category/zapchasti_kamaz-4310.html'>Запчасти на вездеходы КамАЗ-4310 -43118 -5350 -65111</a>]
 ---
 
-{%- assign ct = site.data.dostavka | where:"city", page.city | first -%}
+{%- assign city = site.data.dostavka | where:"city", page.city | first -%}
 
-{%- include_relative info.mhtml city = ct -%}
+{%- include dostavka_city.html city = city  -%}
 
-{%- include dostavka_city.html city = ct  -%}
+{%- include_relative info.mhtml city = city -%}
 
-{%- include dostavka_4310_catalog.html city = ct -%}
+{%- include dostavka_4310_catalog.html city = city -%}
 
 
 

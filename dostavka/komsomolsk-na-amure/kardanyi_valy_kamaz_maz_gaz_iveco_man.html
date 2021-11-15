@@ -14,8 +14,8 @@ categories: [<a href='/dostavka/komsomolsk-na-amure/'>Комсомольск-н�
  
 {%- assign ct = site.data.dostavka | where:"city", page.city | first -%}
 
-{%- include_relative info.mhtml city = ct -%}
-
 {%- include dostavka_city.html city = ct  -%}
+
+{%- include_relative info.mhtml city = ct -%}
 
 {%- include dostavka_kardany_catalog.html city = ct -%}

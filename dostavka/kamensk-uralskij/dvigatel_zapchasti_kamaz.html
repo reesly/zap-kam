@@ -14,9 +14,9 @@ categories: [<a href='/dostavka/kamensk-uralskij/'>Каменск-Уральск
  
 {%- assign ct = site.data.dostavka | where:"city", page.city | first -%}
 
-{%- include_relative info.mhtml city = ct -%}
-
 {%- include dostavka_city.html city = ct  -%}
+
+{%- include_relative info.mhtml city = ct -%}
 
 {%- include dostavka_dvig_zap_catalog.html city = ct -%}
 

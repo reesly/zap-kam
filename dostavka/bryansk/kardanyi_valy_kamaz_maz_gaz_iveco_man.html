@@ -14,8 +14,8 @@ categories: [<a href='/dostavka/bryansk/'>Брянск</a>, <a href='/kardanyi_v
  
 {%- assign ct = site.data.dostavka | where:"city", page.city | first -%}
 
-{%- include_relative info.mhtml city = ct -%}
-
 {%- include dostavka_city.html city = ct  -%}
+
+{%- include_relative info.mhtml city = ct -%}
 
 {%- include dostavka_kardany_catalog.html city = ct -%}
