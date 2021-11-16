@@ -63,7 +63,7 @@ phone_title:
                     <p class="title text-left w-100">
                       <p>&nbsp;</p>
                       <!-- <a href="/kamaz-5490/zapchasti.html"> Запчасти КамАЗ 5490</a>
-                      &nbsp; • &nbsp; <a href="/kamaz-5490/index.html"> Двигатели 5490 </a> -->
+                      &nbsp; • &nbsp; <a href="/kamaz-5490/"> Двигатели 5490 </a> -->
                     </p>
                   </li>
       
@@ -114,7 +114,7 @@ phone_title:
 <section id="catalog1" class="section-padding" style="padding-top: 20px; ">
   <div class="container text-center">
     <!-- <div class="section-header text-center">
-      <a href="/kamaz-5490/index.html">
+      <a href="/kamaz-5490/">
         <h2 class="section-title"> Агрегаты КамАЗ 5490</h2>
       </a>
       <div class="shape wow fadeInDown"></div>
@@ -123,7 +123,7 @@ phone_title:
       <div class="row" id="models_container">
 
         {% for item in site.data.k5490 | where: "cat", "Двигатели" %}
-          {% if item.ord == "1" or item.ord == "3" or item.ord == "5" or item.ord == "7"  %}
+          {% if item.id == "1" or item.id == "3" or item.id == "5"  %}
           <div class="engine col-md-3 col-xs-6">
               <a href="/kamaz-5490/catalog/{{item.url}}.html">
                 <img src="{{item.img_path}}{{item.img1}}" alt="{{item.name}}"
