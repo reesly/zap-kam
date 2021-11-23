@@ -36,7 +36,7 @@ layout:
         <offers>
 {% for product in site.data.agregaty %}
 {%- if product.url -%}
-{%- if product.cat = "РК" -%}
+{%- if product.cat == "РК" -%}
         <offer id="{{product.id}}" bid="{{product.id}}">
             <name>{{product.name}}</name>
             <vendor></vendor>
