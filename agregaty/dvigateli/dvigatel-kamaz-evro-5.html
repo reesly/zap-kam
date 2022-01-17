@@ -13,17 +13,17 @@ h2: с доставкой из Наб.Челнов
         <div class="col-md-3">
             <h3 style="padding-top: 0px;">Двигатели Евро-5</h3>
             <table class="table table-hover">
-                <tr><td> <a href="#740.705-300" class="u">740.705-300</a> </td></tr>
-                <tr><td> <a href="#740.715-320" class="u">740.715-320</a> </td></tr>
-                <tr><td> <a href="#740.725-360" class="u">740.725-360</a> </td></tr>
-                <tr><td> <a href="#740.735-400" class="u">740.735-400</a> </td></tr>
-                <tr><td> <a href="#740.745-420" class="u">740.745-420</a> </td></tr>
-                <tr><td> <a href="#740.755-440" class="u">740.755-440</a> </td></tr>
-                <tr><td> <a href="#" class="u">Двигатель Р6</a> </td></tr>
+                <tr><td> <a href="/agregaty/dvigateli/dvigatel_kamaz_740_705-300_evro-4.html" class="u" target="_blank">740.705-300</a> </td></tr>
+                <tr><td> <a href="#catalog1" class="">740.715-320</a> </td></tr>
+                <tr><td> <a href="#catalog1" class="">740.725-360</a> </td></tr>
+                <tr><td> <a href="/agregaty/dvigateli/dvigatel_kamaz_740_735-400_evro-4.html" class="u"  target="_blank">740.735-400</a> </td></tr>
+                <tr><td> <a href="#catalog1" class="">740.745-420</a> </td></tr>
+                <tr><td> <a href="#catalog1" class="">740.755-440</a> </td></tr>
+                <tr><td> <a href="#" class="">Двигатель Р6</a> </td></tr>
             </table>
-            <img src="/dvigatel_zapchasti/img/category/dvigatel_740_png.png">
+            <!-- <img src="/dvigatel_zapchasti/img/category/dvigatel_740_png.png"> -->
         </div>
-    
+     
         <div class="col-md-9">
             <div class="text text-light">
                 <p>Серия КамАЗ Евро-5: 740.755-440, 740.745-420, 740.735-400, 740.725-360, 740.715-320, 740.705-300.</p>
@@ -42,6 +42,40 @@ h2: с доставкой из Наб.Челнов
     </div>
 
 
+    
+<div class="col-md-12 m-auto" id="catalog1">
+  	
+    <h2>Каталог двигателей Евро-5</h2>
+        
+    <div id="productList" class="pt-4 pb-2" style="display: block;">
+        <div class="row list">
+    
+    
+            <!-- Движок 705  -->
+            <div id="740-705"></div>
+            {% assign page_url = "dvigatel_kamaz_740_705-300_evro-4" %}
+            {% assign product = site.data.agregaty | where:"url", page_url | first %}
+            {%- if product -%}
+            {% include card_zapchasti_catalog.html product = product %}
+            {%- endif -%}
+    
+    
+            <!-- Движок 735  -->
+            <div id="740-735"></div>
+            {% assign page_url = "dvigatel_kamaz_740_735-400_evro-4" %}
+            {% assign product = site.data.agregaty | where:"url", page_url | first %}
+            {%- if product -%}
+            {% include card_zapchasti_catalog.html product = product %}
+            {%- endif -%}
+    
+            <div id="loadingDiv" style="display: none;">
+                <span>Загрузка данных</span>
+            </div>
+        </div>
+        <div class="no-result">Не найдено</div>
+        <ul class="pagination" style="display: none;"></ul>
+    </div>
+    <hr>
 
 
 
