@@ -28,7 +28,11 @@ strong {
 
 .ec-calc-layout * {
   color: #606060 !important;
- 
+}
+
+.ecCalcResultTbody a
+{
+  color: #ffffff !important;
 }
 
 h1, h2, h3, h4 {
