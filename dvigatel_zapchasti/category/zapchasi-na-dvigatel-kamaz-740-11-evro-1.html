@@ -1,10 +1,10 @@
 ---
 layout: default_info
 title: Запчасти двигателя КАМАЗ 740.11 Евро-1 - подбор з/ч для ремонта
-description: Каталог камазовских запасных частей для ремонта двигателя 740.11 240 л.с. Евро-1: сборочные комплекты, блок цилиндров, вал коленчатый (коленвал), распредвал, ЦПГ (гильзы, поршни, шатуны), ТНВД с ценами, описанием, применимостью. Новые оригинал и восстановленные б/у после кап.ремонта.
+description: Каталог камазовских запасных частей для ремонта двигателя 740.11 240 л.с. Евро-1 сборочные комплекты, блок цилиндров, вал коленчатый (коленвал), распредвал, ЦПГ (гильзы, поршни, шатуны), ТНВД с ценами, описанием, применимостью. Новые оригинал и восстановленные б/у после кап.ремонта.
 keywords: Блок цилиндров КамАЗ Двигатель КамАЗ Евро Евро-1 Коленвал Коленчатый вал Блок цилиндров шатун шейка поршня кольца Bosch ЯЗДА ЦПГ насос турбокомпрессор распредвал 
 hero-title: Всё для ремонта двигателей КАМАЗ
-h1: Всё для ремонта двигателя 740.11-240 КАМАЗ Евро-1
+h1: Всё для ремонта двигателя<br> 740.11-240 КАМАЗ Евро-1
 h2:
 phone: 
 phone_title:
@@ -22,20 +22,144 @@ phone_title:
 <!-- Товары -->
 
 <div class="row pb-3">
-    <div class="col-md-9 col-xs-12 text-center pt-4 pt-5" style="margin: auto;">
+    <div class="col-md-9 col-xs-12 pt-4 pt-5" style="margin: auto;">
       
-    <h2>Сборочный комплект</h2>
 
+        <div id="productList" class="pt-4 pb-2" style="display: block;">
+            <div class="row list">
+                
+                {% assign page_url = "dvigatel_kamaz_740_11-240_evro-1" %}
+                {% assign product = site.data.agregaty | where:"url", page_url | first %}
+                {%- if product -%}
+                {% include card_zapchasti_catalog_tabl.html product = product %}
+                {%- endif -%}
+               
+               
+                {% assign page_url = "sborochnyj-komplekt-dvigatelya-kamaz__740-11-1000660" %}
+                {% assign product = site.data.dvig_zap | where:"url", page_url | first %}
+                {%- if product -%}
+                {% include card_zapchasti_catalog_tabl.html product = product %}
+                {%- endif -%}
+
+
+                {% assign page_url = "blok-cilindrov-yazda-dvigatelya-kamaz-evro-1-evro-2__740-21-1002012" %}
+                {% assign product = site.data.dvig_zap | where:"url", page_url | first %}
+                {%- if product -%}
+                {% include card_zapchasti_catalog_tabl.html product = product %}
+                {%- endif -%}
+ 
+                 
+                {% assign page_url = "kolenval-kamaz-740.13-evro-1-dvig.-740.11-740.13__740.13-1005008" %}
+                {% assign product = site.data.dvig_zap | where:"url", page_url | first %}
+                {%- if product -%}
+                {% include card_zapchasti_catalog_tabl.html product = product %}
+                {%- endif -%}
+        
+                {% assign page_url = "golovka-bloka-cilindrov-kamaz-evro-1-2-3-v-sbore__740-30-1003010" %}
+                {% assign product = site.data.dvig_zap | where:"url", page_url | first %}
+                {%- if product -%}
+                {% include card_zapchasti_catalog_tabl.html product = product %}
+                {%- endif -%}
+
+                {% assign page_url = "kolca-porshnevye-kamaz-evro-1-cherno-belye__740-13-1000106" %}
+                {% assign product = site.data.dvig_zap | where:"url", page_url | first %}
+                {%- if product -%}
+                {% include card_zapchasti_catalog_tabl.html product = product %}
+                {%- endif -%}
+        
+                
+                {% assign page_url = "komplekt-porshnevoj-gruppy-cpg-evro-1-740-13-1000128" %}
+                {% assign product = site.data.dvig_zap | where:"url", page_url | first %}
+                {%- if product -%}
+                {% include card_zapchasti_catalog_tabl.html product = product %}
+                {%- endif -%} 
+
+                {% assign page_url = "shatun-kamaz_740-1004045" %}
+                {% assign product = site.data.dvig_zap | where:"url", page_url | first %}
+                {%- if product -%}
+                {% include card_zapchasti_catalog_tabl.html product = product %}
+                {%- endif -%}
+
+                {% assign page_url = "val-raspredelitelnyj-kamaz_740-1006015" %}
+                {% assign product = site.data.dvig_zap | where:"url", page_url | first %}
+                {%- if product -%}
+                {% include card_zapchasti_catalog_tabl.html product = product %}
+                {%- endif -%}
+
+
+                {% assign page_url = "tnvd-yazda-337-40-na-kamaz-evro-1-dv-740-11_7405-10_337-1111005-40" %}
+                {% assign product = site.data.dvig_zap | where:"url", page_url | first %}
+                {%- if product -%}
+                {% include card_zapchasti_catalog_tabl.html product = product %}
+                {%- endif -%}
+
+                {% assign page_url = "forsunka-yazda-273-31-na-kamaz-evro-1_273-1112010-31" %}
+                {% assign product = site.data.dvig_zap | where:"url", page_url | first %}
+                {%- if product -%}
+                {% include card_zapchasti_catalog_tabl.html product = product %}
+                {%- endif -%}
+
+               
+
+                {% assign page_url = "nasos-vodyanoj-kamaz-evro-1-740-13-1307010" %}
+                {% assign product = site.data.dvig_zap | where:"url", page_url | first %}
+                {%- if product -%}
+                {% include card_zapchasti_catalog_tabl.html product = product %}
+                {%- endif -%}
+
+                {% assign page_url = "nasos-maslyanyj-kamaz-evro-740-11-1011014-02" %}
+                {% assign product = site.data.dvig_zap | where:"url", page_url | first %}
+                {%- if product -%}
+                {% include card_zapchasti_catalog_tabl.html product = product %}
+                {%- endif -%}
+
+                {% assign page_url = "turbokompressor-kamaz-evro-1-tkr-7n1-levyj_7403-1118010" %}
+                {% assign product = site.data.dvig_zap | where:"url", page_url | first %}
+                {%- if product -%}
+                {% include card_zapchasti_catalog_tabl.html product = product %}
+                {%- endif -%}
+
+                {% assign page_url = "turbokompressor-kamaz-evro-1-chekhiya_k-27-115-01-02" %}
+                {% assign product = site.data.dvig_zap | where:"url", page_url | first %}
+                {%- if product -%}
+                {% include card_zapchasti_catalog_tabl.html product = product %}
+                {%- endif -%}
+
+                {% assign page_url = "turbokompressor-schwitzer-na-kamaz-evro-1_s2b-317809-10" %}
+                {% assign product = site.data.dvig_zap | where:"url", page_url | first %}
+                {%- if product -%}
+                {% include card_zapchasti_catalog_tabl.html product = product %}
+                {%- endif -%}
+            
+        
+                
+        
+                <div id="loadingDiv" style="display: none;">
+                    <span>Загрузка данных</span>
+                </div>
+            </div>
+            <div class="no-result">Не найдено</div>
+            <ul class="pagination" style="display: none;"></ul>
+        </div>
+        <hr>
+        <p>&nbsp;</p>
+
+
+    
+
+   
+
+   
         
 
-      <table class="table m-auto table-responsive-sm table-striped table-hover" style="width: auto;">
+      <!-- <table class="table m-auto table-responsive-sm table-striped table-hover" style="width: auto;">
       
-        <!-- <thead>
+        <thead>
             <tr>
           <th>Наименование</th>
           <th>Обозначение</th>
           </tr>
-          </thead> -->
+          </thead>
             <tbody>
           <tr>
           <td> <b>Сборочный комплект</b> </td>
@@ -43,24 +167,15 @@ phone_title:
            
           </td>
           </tr>
-  
-          
-
-
-
           </tbody>
           </table>
-  
+   -->
   
   </p>
 
 
 <div class="col-md-10 col-xs-12" style="margin: auto;">
-    <p>
-        <img src="/dvigatel_zapchasti/img/bloki/740.21-1002015_3.jpg" alt="Блок цилиндров камаз">
-    </p>
-    
-    
+ 
 
 
     <p></p>
