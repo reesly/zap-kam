@@ -594,10 +594,11 @@
 
     <script id="dcsbl" rel="nofollow" 
     src="https://dostavka.sbl.su/api/delivery.js?comp=10,8,24{{sizes}}{{mass}}&startCt=Набережные Челны&startCntr=RU&btn=no&innerDeliv=1&sizeShow=1&startPick=1&title=расчет доставки&autoEnd=1&dopInsure=0&btnBg=#014E9E&dopLathing=1"></script>
-    <script> 
+   
+    <script defer> 
       function csblCustomFunc($) {
-        $('.__header').html('Стоимость доставки');        }
-      </script> 
+        $(".ec-calc-result__header").html("Стоимость доставки");   }
+    </script> 
 
     
   </div>
