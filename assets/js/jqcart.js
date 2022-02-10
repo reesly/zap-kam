@@ -212,7 +212,7 @@
 			
       if (tx != '') { pars = pars + '&answer_long_text_1877903=' + encodeURIComponent(tx + '\n- '); }
 
-      pars = 'https:' + '/' + '/forms.yandex.ru/u/5e5831b56296cf035c59867f/?iframe=1' + pars+'&answer_url_13308679=korzina';
+      pars = 'https:' + '/' + '/forms.yandex.ru/u/5e5831b56296cf035c59867f/?iframe=1' + pars+'&answer_short_text_13331990=korzina';
       document.getElementById('form1').src = pars;
 
       actions.hideCart();
