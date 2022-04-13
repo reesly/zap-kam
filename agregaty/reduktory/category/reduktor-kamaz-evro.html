@@ -1,0 +1,127 @@
+---
+layout: default_info
+title: Редукторы КАМАЗ Евро - заднего, среднего моста 48,49,50,47,46 зубьев
+description: Подбор редуктора Евро (главной передачи) на КАМАЗ 53205, 65115, 43114, 43118, 53229. Среднего и заднего моста и др. с доставкой. В наличии новые, оригинал, восстановленные, кап.ремонт. Прайс, модификации, каталог, описание, характеристики.
+keywords: редуктор передача мост передний средний передний КамАЗ 53205
+hero-title: Редукторы КАМАЗ Евро
+h1: Редукторы на КамАЗ Евро 53205 (65115, 43114)
+h2:
+phone:
+phone_title:
+categories: [<a href='/agregaty/reduktory/index.html'>Редукторы КАМАЗ</a>] 
+---
+
+
+
+<!-- Товары -->
+<style>
+    .list-group-item{ margin-bottom: 1px; }
+</style>
+
+    <div class="col-md-11 col-xs-12" style="margin: auto;">
+        <p></p>
+        <h2>Редукторы на КАМАЗ Евро</h2>
+        <div class="form form-inline">
+            <input id="pListSearch" class="fuzzy-search" type="search" class="form-control" placeholder="поиск..." style="width:130px;"/>
+            &nbsp;&nbsp;
+            <button class="btn btn-search-var" onclick="$('#pListSearch').val('заднего'); filterProductList($('#pListSearch').val());" title="Редукторы заднего моста">Задний</button>   
+            <button class="btn btn-search-var" onclick="$('#pListSearch').val('среднего'); filterProductList($('#pListSearch').val());" title="Главные передачи среднего моста">Средний</button>   
+            <button class="btn btn-search-var" onclick="$('#pListSearch').val('53205'); filterProductList($('#pListSearch').val());" title="53205">53205</button>   
+            <button class="btn btn-search-var" onclick="$('#pListSearch').val('65115'); filterProductList($('#pListSearch').val());" title="65115">65115</button>   
+            <button class="btn btn-search-var" onclick="$('#pListSearch').val('43114'); filterProductList($('#pListSearch').val());" title="43114">43114</button>   
+            <button class="btn btn-search-var" onclick="$('#pListSearch').val('53229'); filterProductList($('#pListSearch').val());" title="53229">53229</button>   
+               
+        </div>
+     
+        {% include catalog-loading-panel.html %}
+    
+        <div id="productList" class="pt-2 pb-2" style="display: none; ">
+        
+            <div class="row list">
+                {% for product in site.data.agregaty %}
+                {%- if product.id == "206" or product.id == "209" or product.id == "212" or product.id == "242" or product.id == "245" or product.id == "247" or product.id == "249" or product.id == "221" -%}
+                    <div id="ss-{{product.id}}"></div>
+                    {% include card_zapchasti_catalog.html product = product %}
+                {%- endif -%}
+                {% endfor %}
+    
+                <div id="loadingDiv">
+                    <span>Загрузка данных</span>
+                </div>
+            </div>
+            <div class="no-result">Не найдено</div>
+            <ul class="pagination"></ul>
+        </div>
+          
+    
+    
+    </div>
+    
+    
+
+    
+<div class="col-md-3 text-center">
+    <h2>Редукторы на КАМАЗ Евро</h2>
+    <table class="table table-harki m-auto text-left">
+        <tbody>
+            {% for product in site.data.agregaty %}
+            {%- if product.id == "206" or product.id == "209" or product.id == "212" or product.id == "242" or product.id == "245" or product.id == "247" or product.id == "249" or product.id == "221" -%}
+            <tr><td><span> <a href="#ss-{{product.id}}"> {{product.prim2}} - {{product.code1}}  </a></span></td></tr>
+            {%- endif -%}
+            {% endfor %}
+        </tbody>
+    </table>
+    <img src="/assets/img/model/kamaz_53205.jpg"/ style="max-width: 100%;">
+    
+</div>
+
+
+<div class="col-md-9">
+    <div class="alert alert-info">
+        <p>
+            
+            <b>Замена редуктора - лучше ремонта. Обменяем ваш сломанный редуктор на новый. <br>
+               Профессионально отремонтируем ваш редуктор. 
+            </b> 
+        </p>
+       <p> 
+           Восстановленный нами редуктор делается, пожалуй, лучшим специалистом в Наб.Челнах, у которого ремонтируют свои редукторы многие местные владельцы КАМАЗов. 
+           Используется тщательно проверенный старый корпус/картер, вся начинка заменятся на новые заводские детали, купленные по оптовым ценам.
+           <br> Вам будет сложно починить его также качественно и недорого, как нам.   
+       </p>
+       <p>
+            Стоимость доставки редуктора 53205 в Наб.Челны из Москвы или Краснодара = 1-3&nbsp;тыс.руб.
+       </p>
+    </div>
+
+    
+</div>
+
+
+
+<div class="col-md-10 col-xs-12 m-auto">
+    <div class="alert alert-info">
+        При поломке, внимательно осмотрите корпус, при обнаружении повреждений - рекомендуем отказаться от ремонта и купить готовый, т.к. это литая деталь и восстановить её сложно.
+    </div>
+
+  
+    <p>
+        <b>Основные составляющие редуктора переднего на КАМАЗ 53205:</b> <br>
+         - корпус устройства или картер; <br>
+         - главная передача;<br>
+         - дифференциал;<br>
+         - конические и цилиндрические шестерни подшипники; <br>
+         - регулировочные прокладки и шайбы; <br>
+         - сателлиты, а также другие компоненты. <br>
+    </p>
+
+    <p></p>
+    <p></p>
+    {% include kupite_u_nas.html %}
+    {% include garantiya.html %}
+    
+    
+  <div style="height: 100px;">&nbsp;</div>
+  
+
+<script src="/assets/js/list.min.js"></script>
