@@ -8,16 +8,65 @@ h1: Техническое обслуживание мостов КамАЗ
 h2: 
 phone:
 phone_title:
-categories: [<a href='/kamaz-4310/category/zapchasti_mosty.html'>Запчасти для мостов КамАЗ</a>] 
+categories: [<a href='/agregaty/mosty/index.html'>Мосты КамАЗ</a>] 
 ---
 
 <div class="col-md-12 col-xs-12 text-right w-100 pt-1 pb-2">
-    <a class="btn btn-primary" href="/kamaz-4310/category/zapchasti_mosty.html"> Запчасти к мостам </a>
+    <a class="btn btn-primary" href="/agregaty/mosty/index.html"> Мосты</a>
+	<a class="btn btn-primary" href="/agregaty/mosty/index-osi-kamaz.html"> Оси передние </a>
+    <a class="btn btn-primary" href="/agregaty/reduktory/index.html"> Редукторы </a>
+	<a class="btn btn-primary" href="/agregaty/mosty/index-telezhki-kamaz-poveska-v-sbore.html"> Тележки задние </a>
 </div>
 
 
 
-<div class="col-md-10 col-xs-12" style="margin: auto;"> 
+
+
+
+<div class="col-md-11 col-xs-12" style="margin: auto;"> 
+
+<!-- Мосты -->
+
+<h3>Каталог </h3>
+<div class="form form-inline">
+	<input id="pListSearch" class="fuzzy-search" type="search" class="form-control" placeholder="поиск..." style="width:130px;"/>
+	&nbsp;&nbsp;
+	<button class="btn btn-search-var" onclick="$('#pListSearch').val('задний'); filterProductList($('#pListSearch').val());" title="Задний">Задний</button>   
+	<button class="btn btn-search-var" onclick="$('#pListSearch').val('средний'); filterProductList($('#pListSearch').val());" title="Средний">Средний</button>   
+	<button class="btn btn-search-var" onclick="$('#pListSearch').val('передний'); filterProductList($('#pListSearch').val());" title="Передний">Передний</button>   
+	&nbsp;&nbsp;
+	<button class="btn btn-search-var" onclick="$('#pListSearch').val('5320'); filterProductList($('#pListSearch').val());" title="5320">5320</button>   
+	<button class="btn btn-search-var" onclick="$('#pListSearch').val('43114'); filterProductList($('#pListSearch').val());" title="43114">43114</button>   
+	<button class="btn btn-search-var" onclick="$('#pListSearch').val('65111'); filterProductList($('#pListSearch').val());" title="65111">65111</button>   
+	<button class="btn btn-search-var" onclick="$('#pListSearch').val('6520'); filterProductList($('#pListSearch').val());" title="6520">6520</button>   
+	
+	
+</div>
+
+{% include catalog-loading-panel.html %}
+
+<div id="productList" class="pt-2 pb-2" style="display: none; ">
+
+	<div class="row list">
+		{% for product in site.data.agregaty  %}
+		{%- if product.cat == "мосты" -%}
+			{% include card_zapchasti_catalog.html product = product %}
+		{%- endif -%}
+		{% endfor %}
+
+		<div id="loadingDiv">
+			<span>Загрузка данных</span>
+		</div>
+	</div>
+	<div class="no-result">Не найдено</div>
+	<ul class="pagination"></ul>
+</div>
+
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<br>
+
 
 <p>
 В семействе автомобилей КАМАЗ используется множество различных ведущих мостов, которые имеют конструктивные отличия. Все ведущие мосты можно привести к пяти типам:</p>
