@@ -1,0 +1,39 @@
+---
+layout: default_info
+title: Комплекты переоборудования КамАЗ евро 2-3-4-5 - каталог
+description: Полные комплекты по переоборудованию автомобилей и двигателей КАМАЗ 740 на различные топливные аппаратуры Евро-2,-3,-4,-5, турбокомпрессоры, одно- и двух-турбинные (турбовые).
+keywords: евро-1 двигатель КамАЗ   запчасти ремонт
+hero-title: Запчасти на ДВИГАТЕЛИ КамАЗ
+h1: Комплекты переоборудования КамАЗ Евро-2
+h2: Евро -3,-4,-5
+
+---
+
+
+
+<div class="col-md-11 col-xs-12" style="margin: auto;">
+    
+    <!-- <h3 class="w-100 text-center">Каталог</h3> -->
+    <!-- <div class="form form-inline">
+        <input id="pListSearch" class="fuzzy-search" type="search" class="form-control" placeholder="поиск..." style="width:130px;"/>
+        &nbsp;&nbsp;
+        <button class="btn btn-search-var " onclick="$('#pListSearch').val(''); filterProductList($('#pListSearch').val());" title="Сбросить фильтр">Все</button>    
+       
+    </div> -->
+
+    {% include catalog-loading-panel.html %}
+
+    <div id="productList" class="pt-4 pb-2" style="display: none; ">
+    
+        <div class="row list">
+            {% for pr in site.data.dvig_zap %}
+            {%- if pr.cat == "Комплект" -%}
+                {% include card_zapchasti_catalog.html product = pr %}
+            {%- endif -%}
+            {% endfor %}
+        </div>
+        <div class="no-result">Не найдено</div>
+        <ul class="pagination" onclick="$('html, body').animate({ scrollTop: 0}, 600);"></ul>
+    </div>
+</div>
+
