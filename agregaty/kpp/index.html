@@ -11,8 +11,70 @@ categories: [<a href="/agregaty/kpp/index.html">КПП - Коробки пере
 
 <div class="col-md-10 col-sm-12" style="width: auto;">
 
-<!-- Модель камаза  -->
-<h3>Применяемость коробок передач КамАЗ</h3>
+
+
+
+
+<!-- Товар -->
+<div class="row">
+<div id="anc_1"></div>
+{% assign page_url = "kpp_14_kamaz" %}
+{% assign product = site.data.agregaty | where:"url", page_url | first %}
+{%- if product -%}
+    {% include card_zapchasti_catalog.html product = product %}
+{%- endif -%}
+
+
+<!-- Товар -->
+<div id="anc_2"></div>
+{% assign page_url = "kpp_141_kamaz" %}
+{% assign product = site.data.agregaty | where:"url", page_url | first  %}
+{%- if product -%}
+    {% include card_zapchasti_catalog.html product = product  %}
+{%- endif -%}
+
+<!-- Товар -->
+<div id="anc_3"></div>
+{% assign page_url = "kpp_142_kamaz" %}
+{% assign product = site.data.agregaty | where:"url", page_url | first  %}
+{%- if product -%}
+    {% include card_zapchasti_catalog.html product = product %}
+{%- endif -%}
+</div>
+
+<!-- Товар -->
+<div id="anc_3"></div>
+{% assign page_url = "kpp_15_kamaz" %}
+{% assign product = site.data.agregaty | where:"url", page_url | first  %}
+{%- if product -%}
+    {% include card_zapchasti_catalog.html product = product %}
+{%- endif -%}
+</div>
+
+<!-- Товар -->
+<div id="anc_3"></div>
+{% assign page_url = "kpp_152_kamaz" %}
+{% assign product = site.data.agregaty | where:"url", page_url | first  %}
+{%- if product -%}
+    {% include card_zapchasti_catalog.html product = product %}
+{%- endif -%}
+</div>
+
+<!-- Товар -->
+<div id="anc_3"></div>
+{% assign page_url = "kpp_154_kamaz" %}
+{% assign product = site.data.agregaty | where:"url", page_url | first  %}
+{%- if product -%}
+    {% include card_zapchasti_catalog.html product = product %}
+{%- endif -%}
+</div>
+
+
+
+<div class="col-md-10 col-xs-12" style="margin: auto;">
+
+	<!-- Модель камаза  -->
+<h2>Применяемость коробок передач КамАЗ</h2>
 
 <table class="table table-striped table-sm table-responsive-sm" style="font-size: 13px;color: black; font-family: sans-serif;" >
     <thead>
@@ -214,75 +276,20 @@ categories: [<a href="/agregaty/kpp/index.html">КПП - Коробки пере
 	</tbody>
 </table>
 
-
-
-
-<!-- Товар -->
-<div class="row">
-<div id="anc_1"></div>
-{% assign page_url = "kpp_14_kamaz" %}
-{% assign product = site.data.agregaty | where:"url", page_url | first %}
-{%- if product -%}
-    {% include card_zapchasti_catalog.html product = product %}
-{%- endif -%}
-
-
-<!-- Товар -->
-<div id="anc_2"></div>
-{% assign page_url = "kpp_141_kamaz" %}
-{% assign product = site.data.agregaty | where:"url", page_url | first  %}
-{%- if product -%}
-    {% include card_zapchasti_catalog.html product = product  %}
-{%- endif -%}
-
-<!-- Товар -->
-<div id="anc_3"></div>
-{% assign page_url = "kpp_142_kamaz" %}
-{% assign product = site.data.agregaty | where:"url", page_url | first  %}
-{%- if product -%}
-    {% include card_zapchasti_catalog.html product = product %}
-{%- endif -%}
-</div>
-
-<!-- Товар -->
-<div id="anc_3"></div>
-{% assign page_url = "kpp_15_kamaz" %}
-{% assign product = site.data.agregaty | where:"url", page_url | first  %}
-{%- if product -%}
-    {% include card_zapchasti_catalog.html product = product %}
-{%- endif -%}
-</div>
-
-<!-- Товар -->
-<div id="anc_3"></div>
-{% assign page_url = "kpp_152_kamaz" %}
-{% assign product = site.data.agregaty | where:"url", page_url | first  %}
-{%- if product -%}
-    {% include card_zapchasti_catalog.html product = product %}
-{%- endif -%}
-</div>
-
-<!-- Товар -->
-<div id="anc_3"></div>
-{% assign page_url = "kpp_154_kamaz" %}
-{% assign product = site.data.agregaty | where:"url", page_url | first  %}
-{%- if product -%}
-    {% include card_zapchasti_catalog.html product = product %}
-{%- endif -%}
-</div>
-
-
-
-<div class="col-md-10 col-xs-12" style="margin: auto;">
     <p></p>
     <h3></h3>
-    <p>
-      
-    </p>
-    <p>
-        <strong>Передаточные числа КПП</strong>
+    
+	<p>На автомобилях, в зависимости от моделей и комплектаций, применяются коробки передач моделей 141, 142, 144, 152, 154, ZF-6S1000, ZF-9S1310, ZF-9S109 ф. "ZF" (Германия).</p>
+	<p><strong>КПП-141</strong> - механическая, трехходовая, пятиступенчатая с синхронизаторами на второй, третьей, четвертой и пятой передачах.<br/></p>
+	<p><strong>КПП-142, 144</strong> - механическая, пятиступенчатая, с синхронизаторами на второй, третьей, четвертой и пятой передачах, состоит из основного редуктора; </p>
+	<p><strong>КПП-152, 154</strong> - механическая, десятиступенчатая, состоит из основного пятиступенчатого редуктора и двухступенчатого делителя, расположенного впереди основной коробки. </p>
+	<p><strong>КПП ZF-6S1000</strong> - механическая, шестиступенчатая с синхронизаторами на первой, второй, третьей, четвертой, пятой, шестой передачах.</p>
+	<p><strong>КП </strong><strong>ZF-9S109, ZF-9S1310</strong> - механическая, девятиступенчатая, включает основной четырехступенчатый редуктор и планетарный демультипликатор, расположенный сзади основной коробки, имеет дополнительную пониженную передачу </p>
 
-        <table class="table table-hover table-striped" style="width:auto;">
+    <p>
+        <strong>Передаточные числа КПП</strong></p>
+
+        <table class="table table-hover table-striped table-responsive-sm" style="width:auto;">
             <thead>
                 <tr>
                     <td>Передачи</td>
@@ -332,8 +339,7 @@ categories: [<a href="/agregaty/kpp/index.html">КПП - Коробки пере
             </tbody>
         </table>
         
-    </p>   
- 
+    
     <h3>Устройство коробки передач автомобиля КамАЗ-4310</h3>
     <p>
         
