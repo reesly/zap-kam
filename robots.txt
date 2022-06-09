@@ -15,3 +15,9 @@ Allow: /
 Disallow: /data/
 Disallow: /materials/
 Disallow: /*.mhtml$
+Disallow: /poisk.html*
+Disallow: /*?
+Allow: *.js
+Allow: *.css
+Allow: *.jpg
+Allow: *.png
