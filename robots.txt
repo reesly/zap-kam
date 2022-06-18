@@ -22,4 +22,5 @@ Allow: *.css
 Allow: *.jpg
 Allow: *.png
 
-Clean-param: utm
+Clean-param: utm /*
+Clean-param: etext /*
