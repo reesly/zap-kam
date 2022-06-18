@@ -16,8 +16,10 @@ Disallow: /data/
 Disallow: /materials/
 Disallow: /*.mhtml$
 Disallow: /poisk.html*
-Disallow: /*?
+Disallow: /*?*
 Allow: *.js
 Allow: *.css
 Allow: *.jpg
 Allow: *.png
+
+Clean-param: utm
