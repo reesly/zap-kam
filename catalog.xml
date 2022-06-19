@@ -36,7 +36,7 @@ layout:
 {% for product in site.data.agregaty %}
 {%- if product.url and product.id  -%}
 {%- if product.price1 or product.price2 -%}
-        <offer id="{{product.id}}" bid="{{product.id}}">
+        <offer id="1000{{product.id}}" bid="1000{{product.id}}">
             <name>{{product.name}}</name>
             <vendor></vendor>
             <vendorCode>{{ product.code1 }}</vendorCode>
@@ -98,7 +98,7 @@ layout:
 {% for product in site.data.dvig_zap %}
 {%- if product.url and product.id  -%}
 {%- if product.price1 or product.price2 -%}
-        <offer id="{{product.id}}" bid="{{product.id}}">
+        <offer id="2000{{product.id}}" bid="2000{{product.id}}">
             <name>{{product.name}}</name>
             <vendor></vendor>
             <vendorCode>{{ product.code1 }}</vendorCode>
@@ -160,7 +160,7 @@ layout:
 {% for product in site.data.k4310 %}
 {%- if product.url and product.id  -%}
 {%- if product.price1 or product.price2 -%}
-        <offer id="{{product.id}}" bid="{{product.id}}">
+        <offer id="3000{{product.id}}" bid="3000{{product.id}}">
             <name>{{product.name}}</name>
             <vendor></vendor>
             <vendorCode>{{ product.code1 }}</vendorCode>
@@ -222,7 +222,7 @@ layout:
 {% for product in site.data.kardany-kamaz %}
 {%- if product.url and product.id  -%}
 {%- if product.price1 or product.price2 -%}
-        <offer id="{{product.id}}" bid="{{product.id}}">
+        <offer id="4000{{product.id}}" bid="4000{{product.id}}">
             <name>{{product.name}}</name>
             <vendor></vendor>
             <vendorCode>{{ product.code1 }}</vendorCode>
@@ -284,7 +284,7 @@ layout:
 {% for product in site.data.kuzov %}
 {%- if product.url and product.id  -%}
 {%- if product.price1 or product.price2 -%}
-        <offer id="{{product.id}}" bid="{{product.id}}">
+        <offer id="5000{{product.id}}" bid="5000{{product.id}}">
             <name>{{product.name}}</name>
             <vendor></vendor>
             <vendorCode>{{ product.code1 }}</vendorCode>
