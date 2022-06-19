@@ -1,0 +1,370 @@
+---
+layout:
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<yml_catalog date="2021-10-12T14:30:00+03:00">
+    <shop>
+        <name>ЗапКам.Запчасти</name>
+        <company>ЗапКам</company>
+        <url>https://zap-kam.ru</url>
+        <platform>html</platform>
+        <version></version>
+        <agency></agency>
+        <email>zap-kam16@yandex.ru</email>
+        <currencies>
+            <currency id="RUR" rate="1"/>
+        </currencies>
+        <categories>
+            <category id="1">Запчасти КамАЗ</category>
+            <category id="101" parentId="1">Коробка передач</category>
+            <category id="102" parentId="1">Двигатели</category>
+            <category id="103" parentId="1">Запчасти двигателя</category>
+            <category id="104" parentId="1">КПП</category>
+            <category id="105" parentId="1">Двигатели</category>
+            <category id="106" parentId="1">Коробка раздаточная</category>
+            <category id="107" parentId="1">Мост задний</category>
+            <category id="108" parentId="1">Мост передний</category>
+            <category id="109" parentId="1">Мост средний</category>
+            <category id="110" parentId="1">Подвод воздуха к шинам</category>
+            <category id="111" parentId="1">Редуктор</category>
+            <category id="112" parentId="1">Сцепление</category>
+            <category id="115" parentId="1">Запчасти КАМАЗ-5490</category>
+        </categories>
+        <offers>
+
+
+{% for product in site.data.agregaty %}
+{%- if product.url  -%}
+{%- if product.price1 or product.price2 -%}
+        <offer id="{{product.id}}" bid="{{product.id}}">
+            <name>{{product.name}}</name>
+            <vendor></vendor>
+            <vendorCode>{{ product.code1 }}</vendorCode>
+            <url>https://zap-kam.ru{{product.path}}{{product.url}}.html</url>
+            {%- if product.price1 -%}
+            <price>{{product.price1 | replace: " ", "" | replace: " ", "" | replace: "-", "" }}</price>
+            {%- else -%}
+            <price>{{product.price2 | replace: " ", "" | replace: " ", "" | replace: "-", ""}}</price>
+            {%- endif -%}
+            <enable_auto_discounts>false</enable_auto_discounts>
+            <currencyId>RUR</currencyId>
+            <categoryId>119</categoryId>
+            {%- if product.img1 -%}<picture>https://zap-kam.ru{{product.img_path}}{{product.img1}}</picture>{%- endif -%}
+            <store>true</store>
+            <description>
+                <![CDATA[     
+                    <h3>{{product.name}} {{product.code1}}</h3>
+                
+                    {%- if product.desc  -%}
+                        <p>{{ product.desc }}</p>
+                    {%- endif -%}
+
+                    {%- if product.comment  -%}
+                        <p>{{ product.comment }}</p>
+                    {%- endif -%}
+                                        
+                    {%- if product.prim -%}
+                        <p>Применяемость: {{ product.prim }}</p>
+                    {%- endif -%}
+
+                    {%- if product.prim2  -%}
+                        <p>{{ product.prim2 }}</p>
+                    {%- endif -%}
+            ]]>
+            </description>
+            <sales_notes>с доставкой</sales_notes>
+            <manufacturer_warranty>true</manufacturer_warranty>
+            <country_of_origin>Россия</country_of_origin>
+            <barcode></barcode>
+            {%- if product.text1 -%}
+                <param name="{{ product.par1 }}">{{ product.text1 }}</param>
+            {%- endif -%}
+            {%- if product.text2 -%}
+                <param name="{{ product.par2 }}">{{ product.text2 }}</param>
+            {%- endif -%}
+            {%- if product.text3 -%}
+                <param name="{{ product.par3 }}">{{ product.text3 }}</param>
+            {%- endif -%}
+            <condition type="new">
+            </condition>                
+            <weight>{{ product.m }}</weight>
+            <dimensions></dimensions>
+        </offer>
+{%- endif -%}
+{%- endif -%}
+{% endfor %}
+
+
+{% for product in site.data.dvig_zap %}
+{%- if product.url  -%}
+{%- if product.price1 or product.price2 -%}
+        <offer id="{{product.id}}" bid="{{product.id}}">
+            <name>{{product.name}}</name>
+            <vendor></vendor>
+            <vendorCode>{{ product.code1 }}</vendorCode>
+            <url>https://zap-kam.ru{{product.path}}{{product.url}}.html</url>
+            {%- if product.price1 -%}
+            <price>{{product.price1 | replace: " ", "" | replace: " ", "" | replace: "-", "" }}</price>
+            {%- else -%}
+            <price>{{product.price2 | replace: " ", "" | replace: " ", "" | replace: "-", ""}}</price>
+            {%- endif -%}
+            <enable_auto_discounts>false</enable_auto_discounts>
+            <currencyId>RUR</currencyId>
+            <categoryId>119</categoryId>
+            {%- if product.img1 -%}<picture>https://zap-kam.ru{{product.img_path}}{{product.img1}}</picture>{%- endif -%}
+            <store>true</store>
+            <description>
+                <![CDATA[     
+                    <h3>{{product.name}} {{product.code1}}</h3>
+                
+                    {%- if product.desc  -%}
+                        <p>{{ product.desc }}</p>
+                    {%- endif -%}
+
+                    {%- if product.comment  -%}
+                        <p>{{ product.comment }}</p>
+                    {%- endif -%}
+                                        
+                    {%- if product.prim -%}
+                        <p>Применяемость: {{ product.prim }}</p>
+                    {%- endif -%}
+
+                    {%- if product.prim2  -%}
+                        <p>{{ product.prim2 }}</p>
+                    {%- endif -%}
+            ]]>
+            </description>
+            <sales_notes>с доставкой</sales_notes>
+            <manufacturer_warranty>true</manufacturer_warranty>
+            <country_of_origin>Россия</country_of_origin>
+            <barcode></barcode>
+            {%- if product.text1 -%}
+                <param name="{{ product.par1 }}">{{ product.text1 }}</param>
+            {%- endif -%}
+            {%- if product.text2 -%}
+                <param name="{{ product.par2 }}">{{ product.text2 }}</param>
+            {%- endif -%}
+            {%- if product.text3 -%}
+                <param name="{{ product.par3 }}">{{ product.text3 }}</param>
+            {%- endif -%}
+            <condition type="new">
+            </condition>                
+            <weight>{{ product.m }}</weight>
+            <dimensions></dimensions>
+        </offer>
+{%- endif -%}
+{%- endif -%}
+{% endfor %}
+
+
+{% for product in site.data.k4310 %}
+{%- if product.url  -%}
+{%- if product.price1 or product.price2 -%}
+        <offer id="{{product.id}}" bid="{{product.id}}">
+            <name>{{product.name}}</name>
+            <vendor></vendor>
+            <vendorCode>{{ product.code1 }}</vendorCode>
+            <url>https://zap-kam.ru{{product.path}}{{product.url}}.html</url>
+            {%- if product.price1 -%}
+            <price>{{product.price1 | replace: " ", "" | replace: " ", "" | replace: "-", "" }}</price>
+            {%- else -%}
+            <price>{{product.price2 | replace: " ", "" | replace: " ", "" | replace: "-", ""}}</price>
+            {%- endif -%}
+            <enable_auto_discounts>false</enable_auto_discounts>
+            <currencyId>RUR</currencyId>
+            <categoryId>119</categoryId>
+            {%- if product.img1 -%}<picture>https://zap-kam.ru{{product.img_path}}{{product.img1}}</picture>{%- endif -%}
+            <store>true</store>
+            <description>
+                <![CDATA[     
+                    <h3>{{product.name}} {{product.code1}}</h3>
+                
+                    {%- if product.desc  -%}
+                        <p>{{ product.desc }}</p>
+                    {%- endif -%}
+
+                    {%- if product.comment  -%}
+                        <p>{{ product.comment }}</p>
+                    {%- endif -%}
+                                        
+                    {%- if product.prim -%}
+                        <p>Применяемость: {{ product.prim }}</p>
+                    {%- endif -%}
+
+                    {%- if product.prim2  -%}
+                        <p>{{ product.prim2 }}</p>
+                    {%- endif -%}
+            ]]>
+            </description>
+            <sales_notes>с доставкой</sales_notes>
+            <manufacturer_warranty>true</manufacturer_warranty>
+            <country_of_origin>Россия</country_of_origin>
+            <barcode></barcode>
+            {%- if product.text1 -%}
+                <param name="{{ product.par1 }}">{{ product.text1 }}</param>
+            {%- endif -%}
+            {%- if product.text2 -%}
+                <param name="{{ product.par2 }}">{{ product.text2 }}</param>
+            {%- endif -%}
+            {%- if product.text3 -%}
+                <param name="{{ product.par3 }}">{{ product.text3 }}</param>
+            {%- endif -%}
+            <condition type="new">
+            </condition>                
+            <weight>{{ product.m }}</weight>
+            <dimensions></dimensions>
+        </offer>
+{%- endif -%}
+{%- endif -%}
+{% endfor %}
+
+
+{% for product in site.data.kardany-kamaz %}
+{%- if product.url  -%}
+{%- if product.price1 or product.price2 -%}
+        <offer id="{{product.id}}" bid="{{product.id}}">
+            <name>{{product.name}}</name>
+            <vendor></vendor>
+            <vendorCode>{{ product.code1 }}</vendorCode>
+            <url>https://zap-kam.ru{{product.path}}{{product.url}}.html</url>
+            {%- if product.price1 -%}
+            <price>{{product.price1 | replace: " ", "" | replace: " ", "" | replace: "-", "" }}</price>
+            {%- else -%}
+            <price>{{product.price2 | replace: " ", "" | replace: " ", "" | replace: "-", ""}}</price>
+            {%- endif -%}
+            <enable_auto_discounts>false</enable_auto_discounts>
+            <currencyId>RUR</currencyId>
+            <categoryId>119</categoryId>
+            {%- if product.img1 -%}<picture>https://zap-kam.ru{{product.img_path}}{{product.img1}}</picture>{%- endif -%}
+            <store>true</store>
+            <description>
+                <![CDATA[     
+                    <h3>{{product.name}} {{product.code1}}</h3>
+                
+                    {%- if product.desc  -%}
+                        <p>{{ product.desc }}</p>
+                    {%- endif -%}
+
+                    {%- if product.comment  -%}
+                        <p>{{ product.comment }}</p>
+                    {%- endif -%}
+                                        
+                    {%- if product.prim -%}
+                        <p>Применяемость: {{ product.prim }}</p>
+                    {%- endif -%}
+
+                    {%- if product.prim2  -%}
+                        <p>{{ product.prim2 }}</p>
+                    {%- endif -%}
+            ]]>
+            </description>
+            <sales_notes>с доставкой</sales_notes>
+            <manufacturer_warranty>true</manufacturer_warranty>
+            <country_of_origin>Россия</country_of_origin>
+            <barcode></barcode>
+            {%- if product.text1 -%}
+                <param name="{{ product.par1 }}">{{ product.text1 }}</param>
+            {%- endif -%}
+            {%- if product.text2 -%}
+                <param name="{{ product.par2 }}">{{ product.text2 }}</param>
+            {%- endif -%}
+            {%- if product.text3 -%}
+                <param name="{{ product.par3 }}">{{ product.text3 }}</param>
+            {%- endif -%}
+            <condition type="new">
+            </condition>                
+            <weight>{{ product.m }}</weight>
+            <dimensions></dimensions>
+        </offer>
+{%- endif -%}
+{%- endif -%}
+{% endfor %}
+
+
+{% for product in site.data.kuzov %}
+{%- if product.url  -%}
+{%- if product.price1 or product.price2 -%}
+        <offer id="{{product.id}}" bid="{{product.id}}">
+            <name>{{product.name}}</name>
+            <vendor></vendor>
+            <vendorCode>{{ product.code1 }}</vendorCode>
+            <url>https://zap-kam.ru{{product.path}}{{product.url}}.html</url>
+            {%- if product.price1 -%}
+            <price>{{product.price1 | replace: " ", "" | replace: " ", "" | replace: "-", "" }}</price>
+            {%- else -%}
+            <price>{{product.price2 | replace: " ", "" | replace: " ", "" | replace: "-", ""}}</price>
+            {%- endif -%}
+            <enable_auto_discounts>false</enable_auto_discounts>
+            <currencyId>RUR</currencyId>
+            <categoryId>119</categoryId>
+            {%- if product.img1 -%}<picture>https://zap-kam.ru{{product.img_path}}{{product.img1}}</picture>{%- endif -%}
+            <store>true</store>
+            <description>
+                <![CDATA[     
+                    <h3>{{product.name}} {{product.code1}}</h3>
+                
+                    {%- if product.desc  -%}
+                        <p>{{ product.desc }}</p>
+                    {%- endif -%}
+
+                    {%- if product.comment  -%}
+                        <p>{{ product.comment }}</p>
+                    {%- endif -%}
+                                        
+                    {%- if product.prim -%}
+                        <p>Применяемость: {{ product.prim }}</p>
+                    {%- endif -%}
+
+                    {%- if product.prim2  -%}
+                        <p>{{ product.prim2 }}</p>
+                    {%- endif -%}
+            ]]>
+            </description>
+            <sales_notes>с доставкой</sales_notes>
+            <manufacturer_warranty>true</manufacturer_warranty>
+            <country_of_origin>Россия</country_of_origin>
+            <barcode></barcode>
+            {%- if product.text1 -%}
+                <param name="{{ product.par1 }}">{{ product.text1 }}</param>
+            {%- endif -%}
+            {%- if product.text2 -%}
+                <param name="{{ product.par2 }}">{{ product.text2 }}</param>
+            {%- endif -%}
+            {%- if product.text3 -%}
+                <param name="{{ product.par3 }}">{{ product.text3 }}</param>
+            {%- endif -%}
+            <condition type="new">
+            </condition>                
+            <weight>{{ product.m }}</weight>
+            <dimensions></dimensions>
+        </offer>
+{%- endif -%}
+{%- endif -%}
+{% endfor %}
+
+
+    </offers>
+    <gifts>
+        <!-- <gift id="33">
+            <name>Кружка 300 мл Brand 16</name>
+            <picture>https://zap-kam.ru/promos/33.jpg</picture>
+        </gift>             -->
+    </gifts>
+    <promos>
+        <!-- <promo id="PromoGift" type="gift with purchase">
+            <start-date>2020-02-01 09:00:00</start-date>
+            <end-date>2020-03-01 22:00:00</end-date>
+            <description>Купите бытовую технику марки Brand и получите кружку в подарок.</description>
+            <url>http://zap-kam.ru/promos/gift</url>
+            <purchase>
+                <product offer-id="9012"/>
+                <product offer-id="12346"/>
+            </purchase>
+            <promo-gifts>
+                <promo-gift offer-id="9012"/>
+                <promo-gift gift-id="33"/>
+            </promo-gifts>
+        </promo> -->
+    </promos>
+</shop>
+</yml_catalog>
