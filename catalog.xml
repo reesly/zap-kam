@@ -34,7 +34,7 @@ layout:
 
 
 {% for product in site.data.agregaty %}
-{%- if product.url  -%}
+{%- if product.url and product.id  -%}
 {%- if product.price1 or product.price2 -%}
         <offer id="{{product.id}}" bid="{{product.id}}">
             <name>{{product.name}}</name>
@@ -96,7 +96,7 @@ layout:
 
 
 {% for product in site.data.dvig_zap %}
-{%- if product.url  -%}
+{%- if product.url and product.id  -%}
 {%- if product.price1 or product.price2 -%}
         <offer id="{{product.id}}" bid="{{product.id}}">
             <name>{{product.name}}</name>
@@ -158,7 +158,7 @@ layout:
 
 
 {% for product in site.data.k4310 %}
-{%- if product.url  -%}
+{%- if product.url and product.id  -%}
 {%- if product.price1 or product.price2 -%}
         <offer id="{{product.id}}" bid="{{product.id}}">
             <name>{{product.name}}</name>
@@ -220,7 +220,7 @@ layout:
 
 
 {% for product in site.data.kardany-kamaz %}
-{%- if product.url  -%}
+{%- if product.url and product.id  -%}
 {%- if product.price1 or product.price2 -%}
         <offer id="{{product.id}}" bid="{{product.id}}">
             <name>{{product.name}}</name>
@@ -282,7 +282,7 @@ layout:
 
 
 {% for product in site.data.kuzov %}
-{%- if product.url  -%}
+{%- if product.url and product.id  -%}
 {%- if product.price1 or product.price2 -%}
         <offer id="{{product.id}}" bid="{{product.id}}">
             <name>{{product.name}}</name>
