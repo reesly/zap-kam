@@ -10,10 +10,41 @@ phone:
 phone_title:
 categories: [<a href='/kamaz-4310/category/zapchasti_korobka_peredach.html'>Запчасти для КПП - коробки передач</a>] 
 ---
-<div class="col-md-12 col-xs-12" class="text-right">
-  <a href="/kamaz-4310/category/zapchasti_korobka_peredach.html"> Запчасти коробки передач</a>
-</div>
 
+
+<div class="col-md-12 m-auto">
+  	
+  <h2>Каталог двигателей Евро-1</h2>
+    
+  <div id="productList" class="pt-4 pb-2" style="display: block;">
+    <div class="row list">
+  
+  
+      <!-- ГУР 4310  -->
+      <div id="4310"></div>
+      {% assign page_url = "gur-4310-kamaz-remont-4310-3400020" %}
+      {% assign product = site.data.k4310 | where:"url", page_url | first %}
+      {%- if product -%}
+      {% include card_zapchasti_catalog.html product = product %}
+      {%- endif -%}
+  
+  
+      <!-- гур 5320  -->
+      <div id="5320"></div>
+      {% assign page_url = "gur-5320-kamaz-gidrousilitel-5320-3400020" %}
+      {% assign product = site.data.k4310 | where:"url", page_url | first %}
+      {%- if product -%}
+      {% include card_zapchasti_catalog.html product = product %}
+      {%- endif -%}
+  
+      <div id="loadingDiv" style="display: none;">
+        <span>Загрузка данных</span>
+      </div>
+    </div>
+    <div class="no-result">Не найдено</div>
+    <ul class="pagination" style="display: none;"></ul>
+  </div>
+  <hr>
 
 <div class="col-md-10 col-xs-12" style="margin: auto;">
 
@@ -165,11 +196,11 @@ categories: [<a href='/kamaz-4310/category/zapchasti_korobka_peredach.html'>За
 <p>• Присутствует воздух в системе. .
   <br> Устранение: Удалите воздух и восстановите герметичность.</p>
 <p>• Деформация коллектора.
-  <br> Устранение: Если нарушение незначительны, то выровните коллектор. Если нарушения серьезные, то лучше заменить коллектор.</p>
+  <br> Устранение: Если нарушение незначительны, то выровняйте коллектор. Если нарушения серьезные, то лучше заменить коллектор.</p>
 <p>• Нарушена герметичность прокладки компьютера.
   <br> Устранение: Замените прокладку.</p>
 <hr>
-
+ 
 
 <b>Стук в рулевом механизме.</b>
 <p>• Увеличен засор зубчатого сцепления рулевого механизма.
