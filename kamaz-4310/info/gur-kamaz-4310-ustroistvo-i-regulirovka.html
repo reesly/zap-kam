@@ -36,6 +36,15 @@ categories: [<a href='/kamaz-4310/category/zapchasti_korobka_peredach.html'>За
       {%- if product -%}
       {% include card_zapchasti_catalog.html product = product %}
       {%- endif -%}
+
+
+      <div id="5320"></div>
+      {% assign page_url = "gur-43118-6520-4308-no-avtogidrousilitel_shnkf-453461425-01" %}
+      {% assign product = site.data.k4310 | where:"url", page_url | first %}
+      {%- if product -%}
+      {% include card_zapchasti_catalog.html product = product %}
+      {%- endif -%}
+      
   
       <div id="loadingDiv" style="display: none;">
         <span>Загрузка данных</span>
