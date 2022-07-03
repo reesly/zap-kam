@@ -38,13 +38,21 @@ layout:
 {%- if product.price1 or product.price2 -%}
         <offer id="1000{{product.id}}" bid="1000{{product.id}}">
             <name>{{product.name}}</name>
-            <vendor></vendor>
+            <vendor>КАМАЗ</vendor>
+            <manufacturer>КАМАЗ</manufacturer>
             <vendorCode>{{ product.code1 }}</vendorCode>
+            <brandcars>KAMAZ</brandcars>
+            <modelcars>{{ product.prim }}</modelcars>
+            <engine>{{ product.prim2 }}</engine>
+            <oem_number>{{ product.code1 }}</oem_number>
+            <analog_numbers>{{ product.code2 }}</analog_numbers>
             <url>https://zap-kam.ru{{product.path}}{{product.url}}.html</url>
             {%- if product.price1 -%}
             <price>{{product.price1 | replace: " ", "" | replace: " ", "" | replace: "-", "" }}</price>
+            <condition>{{product.price1_name}}</condition>
             {%- else -%}
             <price>{{product.price2 | replace: " ", "" | replace: " ", "" | replace: "-", ""}}</price>
+            <condition>{{product.price2_name}}</condition>
             {%- endif -%}
             <enable_auto_discounts>false</enable_auto_discounts>
             <currencyId>RUR</currencyId>
@@ -99,14 +107,22 @@ layout:
 {%- if product.url and product.id  -%}
 {%- if product.price1 or product.price2 -%}
         <offer id="2000{{product.id}}" bid="2000{{product.id}}">
-            <name>{{product.name}}</name>
-            <vendor></vendor>
+             <name>{{product.name}}</name>
+            <vendor>КАМАЗ</vendor>
+            <manufacturer>КАМАЗ</manufacturer>
             <vendorCode>{{ product.code1 }}</vendorCode>
+            <brandcars>KAMAZ</brandcars>
+            <modelcars>{{ product.prim }}</modelcars>
+            <engine>{{ product.prim2 }}</engine>
+            <oem_number>{{ product.code1 }}</oem_number>
+            <analog_numbers>{{ product.code2 }}</analog_numbers>
             <url>https://zap-kam.ru{{product.path}}{{product.url}}.html</url>
             {%- if product.price1 -%}
             <price>{{product.price1 | replace: " ", "" | replace: " ", "" | replace: "-", "" }}</price>
+            <condition>{{product.price1_name}}</condition>
             {%- else -%}
             <price>{{product.price2 | replace: " ", "" | replace: " ", "" | replace: "-", ""}}</price>
+            <condition>{{product.price2_name}}</condition>
             {%- endif -%}
             <enable_auto_discounts>false</enable_auto_discounts>
             <currencyId>RUR</currencyId>
@@ -162,13 +178,21 @@ layout:
 {%- if product.price1 or product.price2 -%}
         <offer id="3000{{product.id}}" bid="3000{{product.id}}">
             <name>{{product.name}}</name>
-            <vendor></vendor>
+            <vendor>КАМАЗ</vendor>
+            <manufacturer>КАМАЗ</manufacturer>
             <vendorCode>{{ product.code1 }}</vendorCode>
+            <brandcars>KAMAZ</brandcars>
+            <modelcars>{{ product.prim }}</modelcars>
+            <engine>{{ product.prim2 }}</engine>
+            <oem_number>{{ product.code1 }}</oem_number>
+            <analog_numbers>{{ product.code2 }}</analog_numbers>
             <url>https://zap-kam.ru{{product.path}}{{product.url}}.html</url>
             {%- if product.price1 -%}
             <price>{{product.price1 | replace: " ", "" | replace: " ", "" | replace: "-", "" }}</price>
+            <condition>{{product.price1_name}}</condition>
             {%- else -%}
             <price>{{product.price2 | replace: " ", "" | replace: " ", "" | replace: "-", ""}}</price>
+            <condition>{{product.price2_name}}</condition>
             {%- endif -%}
             <enable_auto_discounts>false</enable_auto_discounts>
             <currencyId>RUR</currencyId>
@@ -224,13 +248,21 @@ layout:
 {%- if product.price1 or product.price2 -%}
         <offer id="4000{{product.id}}" bid="4000{{product.id}}">
             <name>{{product.name}}</name>
-            <vendor></vendor>
+            <vendor>КАМАЗ</vendor>
+            <manufacturer>КАМАЗ</manufacturer>
             <vendorCode>{{ product.code1 }}</vendorCode>
+            <brandcars>KAMAZ</brandcars>
+            <modelcars>{{ product.prim }}</modelcars>
+            <engine>{{ product.prim2 }}</engine>
+            <oem_number>{{ product.code1 }}</oem_number>
+            <analog_numbers>{{ product.code2 }}</analog_numbers>
             <url>https://zap-kam.ru{{product.path}}{{product.url}}.html</url>
             {%- if product.price1 -%}
             <price>{{product.price1 | replace: " ", "" | replace: " ", "" | replace: "-", "" }}</price>
+            <condition>{{product.price1_name}}</condition>
             {%- else -%}
             <price>{{product.price2 | replace: " ", "" | replace: " ", "" | replace: "-", ""}}</price>
+            <condition>{{product.price2_name}}</condition>
             {%- endif -%}
             <enable_auto_discounts>false</enable_auto_discounts>
             <currencyId>RUR</currencyId>
@@ -285,14 +317,22 @@ layout:
 {%- if product.url and product.id  -%}
 {%- if product.price1 or product.price2 -%}
         <offer id="5000{{product.id}}" bid="5000{{product.id}}">
-            <name>{{product.name}}</name>
-            <vendor></vendor>
+             <name>{{product.name}}</name>
+            <vendor>КАМАЗ</vendor>
+            <manufacturer>КАМАЗ</manufacturer>
             <vendorCode>{{ product.code1 }}</vendorCode>
+            <brandcars>KAMAZ</brandcars>
+            <modelcars>{{ product.prim }}</modelcars>
+            <engine>{{ product.prim2 }}</engine>
+            <oem_number>{{ product.code1 }}</oem_number>
+            <analog_numbers>{{ product.code2 }}</analog_numbers>
             <url>https://zap-kam.ru{{product.path}}{{product.url}}.html</url>
             {%- if product.price1 -%}
             <price>{{product.price1 | replace: " ", "" | replace: " ", "" | replace: "-", "" }}</price>
+            <condition>{{product.price1_name}}</condition>
             {%- else -%}
             <price>{{product.price2 | replace: " ", "" | replace: " ", "" | replace: "-", ""}}</price>
+            <condition>{{product.price2_name}}</condition>
             {%- endif -%}
             <enable_auto_discounts>false</enable_auto_discounts>
             <currencyId>RUR</currencyId>
