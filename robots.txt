@@ -24,3 +24,6 @@ Allow: *.png
 
 Clean-param: utm /*
 Clean-param: etext /*
+Clean-param: searchid /*
+Clean-param: text /*
+Clean-param: web /*
