@@ -1,15 +1,3 @@
-User-agent: Yandex
-Allow: /
-Disallow: /data/
-Disallow: /materials/
-Disallow: /*.mhtml$
-
-User-agent: Googlebot
-Allow: /
-Disallow: /data/
-Disallow: /materials/
-Disallow: /*.mhtml$
-
 User-agent: *
 Allow: /
 Disallow: /data/
