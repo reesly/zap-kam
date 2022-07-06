@@ -68,6 +68,7 @@ layout:
             <store>true</store>
             <description>
                 <![CDATA[     
+                    {{product.price1_name}}<br>
                     <h3>{{product.name}} {{product.code1}}</h3>
                 
                     {%- if product.desc  -%}
@@ -176,7 +177,8 @@ layout:
             {%- if product.img1 -%}<picture>https://zap-kam.ru{{product.img_path}}{{product.img1}}</picture>{%- endif -%}
             <store>true</store>
             <description>
-                <![CDATA[     
+                <![CDATA[  
+                {{product.price1_name}}<br>   
                     <h3>{{product.name}} {{product.code1}}</h3>
                 
                     {%- if product.desc  -%}
@@ -252,7 +254,7 @@ layout:
             {%- if product.img1 -%}<picture>https://zap-kam.ru{{product.img_path}}{{product.img1}}</picture>{%- endif -%}
             <store>true</store>
             <description>
-                <![CDATA[     
+                <![CDATA[     {{product.price1_name}}<br>
                     <h3>{{product.name}} {{product.code1}}</h3>
                 
                     {%- if product.desc  -%}
@@ -327,7 +329,7 @@ layout:
             {%- if product.img1 -%}<picture>https://zap-kam.ru{{product.img_path}}{{product.img1}}</picture>{%- endif -%}
             <store>true</store>
             <description>
-                <![CDATA[     
+                <![CDATA[     {{product.price1_name}}<br>
                     <h3>{{product.name}} {{product.code1}}</h3>
                 
                     {%- if product.desc  -%}
@@ -403,7 +405,7 @@ layout:
             {%- if product.img1 -%}<picture>https://zap-kam.ru{{product.img_path}}{{product.img1}}</picture>{%- endif -%}
             <store>true</store>
             <description>
-                <![CDATA[     
+                <![CDATA[     {{product.price1_name}}<br>
                     <h3>{{product.name}} {{product.code1}}</h3>
                 
                     {%- if product.desc  -%}
