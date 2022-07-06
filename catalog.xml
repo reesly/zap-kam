@@ -16,19 +16,21 @@ layout:
         </currencies>
         <categories>
             <category id="1">Запчасти КамАЗ</category>
-            <category id="101" parentId="1">Коробка передач</category>
-            <category id="102" parentId="1">Двигатели</category>
+            <category id="102" parentId="1">Двигатели КАМАЗ</category>
             <category id="103" parentId="1">Запчасти двигателя</category>
-            <category id="104" parentId="1">КПП</category>
+            <category id="104" parentId="1">КПП КАМАЗ</category>
             <category id="105" parentId="1">Двигатели</category>
             <category id="106" parentId="1">Коробка раздаточная</category>
-            <category id="107" parentId="1">Мост задний</category>
-            <category id="108" parentId="1">Мост передний</category>
-            <category id="109" parentId="1">Мост средний</category>
-            <category id="110" parentId="1">Подвод воздуха к шинам</category>
+            <category id="107" parentId="1">Мосты КАМАЗ</category>
+            <category id="108" parentId="1">Оси КАМАЗ</category>
+            <category id="110" parentId="1">Подвеска в сборе</category>
             <category id="111" parentId="1">Редуктор</category>
             <category id="112" parentId="1">Сцепление</category>
             <category id="115" parentId="1">Запчасти КАМАЗ-5490</category>
+            <category id="132" parentId="1">Агрегаты</category>
+            <category id="133" parentId="1">Запчасти трансмиссия</category>
+            <category id="134" parentId="1">Карданные валы</category>
+            <category id="135" parentId="1">Запчасти НЕФАЗ</category>
         </categories>
         <offers>
 
@@ -42,8 +44,12 @@ layout:
             <manufacturer>КАМАЗ</manufacturer>
             <vendorCode>{{ product.code1 }}</vendorCode>
             <brandcars>KAMAZ</brandcars>
+            {%- if product.prim -%}
             <modelcars>{{ product.prim }}</modelcars>
+            {%- endif -%}
+            {%- if product.prim2 -%}
             <engine><![CDATA[  {{ product.prim2 }}]]></engine>
+            {%- endif -%}
             <oem_number>{{ product.code1 }}</oem_number>
             <analog_numbers>{{ product.code2 }}</analog_numbers>
             <url>https://zap-kam.ru{{product.path}}{{product.url}}.html</url>
@@ -52,11 +58,11 @@ layout:
             <condition><![CDATA[{{product.price1_name}}]]></condition>
             {%- else -%}
             <price>{{product.price2 | replace: " ", "" | replace: " ", "" | replace: "-", ""}}</price>
-            <condition><![CDATA[{{product.price2_name}}]]></condition>
+            <condition type="new"><![CDATA[{{product.price2_name}}]]></condition>
             {%- endif -%}
             <enable_auto_discounts>false</enable_auto_discounts>
             <currencyId>RUR</currencyId>
-            <categoryId>119</categoryId>
+            
             {%- if product.img1 -%}<picture>https://zap-kam.ru{{product.img_path}}{{product.img1}}</picture>{%- endif -%}
             <store>true</store>
             <description>
@@ -93,10 +99,44 @@ layout:
             {%- if product.text3 -%}
                 <param name="{{ product.par3 }}">{{ product.text3 }}</param>
             {%- endif -%}
-            <condition type="new">
-            </condition>                
+                          
             <weight>{{ product.m }}</weight>
-            <dimensions></dimensions>
+            {%- if product.w -%}
+            <dimensions>{{ product.l }}/{{ product.w }}/{{ product.h }}</dimensions>
+            {%- endif -%}
+
+            {%- if product.cat == "Двигатели" -%}
+                <categoryId>102</categoryId>
+            {%- endif -%}
+
+            {%- if product.cat == "КПП" -%}
+                <categoryId>104</categoryId>
+            {%- endif -%}
+
+            {%- if product.cat == "РК" -%}
+                <categoryId>106</categoryId>
+            {%- endif -%}
+
+            {%- if product.cat == "Редукторы" -%}
+                <categoryId>132</categoryId>
+            {%- endif -%}
+
+            {%- if product.cat == "МОД" -%}
+                <categoryId>111</categoryId>
+            {%- endif -%}
+
+            {%- if product.cat == "тележки" -%}
+                <categoryId>110</categoryId>
+            {%- endif -%}
+
+            {%- if product.cat == "мосты" -%}
+                <categoryId>107</categoryId>
+            {%- endif -%}
+
+            {%- if product.cat == "оси" -%}
+                <categoryId>108</categoryId>
+            {%- endif -%}
+
         </offer>
 {%- endif -%}
 {%- endif -%}
@@ -112,8 +152,12 @@ layout:
             <manufacturer>КАМАЗ</manufacturer>
             <vendorCode>{{ product.code1 }}</vendorCode>
             <brandcars>KAMAZ</brandcars>
+            {%- if product.prim -%}
             <modelcars>{{ product.prim }}</modelcars>
+            {%- endif -%}
+            {%- if product.prim2 -%}
             <engine><![CDATA[  {{ product.prim2 }}]]></engine>
+            {%- endif -%}
             <oem_number>{{ product.code1 }}</oem_number>
             <analog_numbers>{{ product.code2 }}</analog_numbers>
             <url>https://zap-kam.ru{{product.path}}{{product.url}}.html</url>
@@ -122,11 +166,11 @@ layout:
             <condition><![CDATA[{{product.price1_name}}]]></condition>
             {%- else -%}
             <price>{{product.price2 | replace: " ", "" | replace: " ", "" | replace: "-", ""}}</price>
-            <condition><![CDATA[{{product.price2_name}}]]></condition>
+            <condition  type="new"><![CDATA[{{product.price2_name}}]]></condition>
             {%- endif -%}
             <enable_auto_discounts>false</enable_auto_discounts>
             <currencyId>RUR</currencyId>
-            <categoryId>119</categoryId>
+            <categoryId>103</categoryId>
             {%- if product.img1 -%}<picture>https://zap-kam.ru{{product.img_path}}{{product.img1}}</picture>{%- endif -%}
             <store>true</store>
             <description>
@@ -163,10 +207,11 @@ layout:
             {%- if product.text3 -%}
                 <param name="{{ product.par3 }}">{{ product.text3 }}</param>
             {%- endif -%}
-            <condition type="new">
-            </condition>                
+                        
             <weight>{{ product.m }}</weight>
-            <dimensions></dimensions>
+            {%- if product.w -%}
+            <dimensions>{{ product.l }}/{{ product.w }}/{{ product.h }}</dimensions>
+            {%- endif -%}
         </offer>
 {%- endif -%}
 {%- endif -%}
@@ -182,8 +227,12 @@ layout:
             <manufacturer>КАМАЗ</manufacturer>
             <vendorCode>{{ product.code1 }}</vendorCode>
             <brandcars>KAMAZ</brandcars>
+            {%- if product.prim -%}
             <modelcars>{{ product.prim }}</modelcars>
+            {%- endif -%}
+            {%- if product.prim2 -%}
             <engine><![CDATA[  {{ product.prim2 }}]]></engine>
+            {%- endif -%}
             <oem_number>{{ product.code1 }}</oem_number>
             <analog_numbers>{{ product.code2 }}</analog_numbers>
             <url>https://zap-kam.ru{{product.path}}{{product.url}}.html</url>
@@ -192,11 +241,11 @@ layout:
             <condition><![CDATA[{{product.price1_name}}]]></condition>
             {%- else -%}
             <price>{{product.price2 | replace: " ", "" | replace: " ", "" | replace: "-", ""}}</price>
-            <condition><![CDATA[{{product.price2_name}}]]></condition>
+            <condition  type="new"><![CDATA[{{product.price2_name}}]]></condition>
             {%- endif -%}
             <enable_auto_discounts>false</enable_auto_discounts>
             <currencyId>RUR</currencyId>
-            <categoryId>119</categoryId>
+            <categoryId>133</categoryId>
             {%- if product.img1 -%}<picture>https://zap-kam.ru{{product.img_path}}{{product.img1}}</picture>{%- endif -%}
             <store>true</store>
             <description>
@@ -232,11 +281,11 @@ layout:
             {%- endif -%}
             {%- if product.text3 -%}
                 <param name="{{ product.par3 }}">{{ product.text3 }}</param>
-            {%- endif -%}
-            <condition type="new">
-            </condition>                
+            {%- endif -%}                
             <weight>{{ product.m }}</weight>
-            <dimensions></dimensions>
+            {%- if product.w -%}
+            <dimensions>{{ product.l }}/{{ product.w }}/{{ product.h }}</dimensions>
+            {%- endif -%}
         </offer>
 {%- endif -%}
 {%- endif -%}
@@ -252,8 +301,12 @@ layout:
             <manufacturer>КАМАЗ</manufacturer>
             <vendorCode>{{ product.code1 }}</vendorCode>
             <brandcars>KAMAZ</brandcars>
+            {%- if product.prim -%}
             <modelcars>{{ product.prim }}</modelcars>
+            {%- endif -%}
+            {%- if product.prim2 -%}
             <engine><![CDATA[  {{ product.prim2 }}]]></engine>
+            {%- endif -%}
             <oem_number>{{ product.code1 }}</oem_number>
             <analog_numbers>{{ product.code2 }}</analog_numbers>
             <url>https://zap-kam.ru{{product.path}}{{product.url}}.html</url>
@@ -262,11 +315,11 @@ layout:
             <condition><![CDATA[{{product.price1_name}}]]></condition>
             {%- else -%}
             <price>{{product.price2 | replace: " ", "" | replace: " ", "" | replace: "-", ""}}</price>
-            <condition><![CDATA[{{product.price2_name}}]]></condition>
+            <condition  type="new"><![CDATA[{{product.price2_name}}]]></condition>
             {%- endif -%}
             <enable_auto_discounts>false</enable_auto_discounts>
             <currencyId>RUR</currencyId>
-            <categoryId>119</categoryId>
+            <categoryId>134</categoryId>
             {%- if product.img1 -%}<picture>https://zap-kam.ru{{product.img_path}}{{product.img1}}</picture>{%- endif -%}
             <store>true</store>
             <description>
@@ -303,10 +356,11 @@ layout:
             {%- if product.text3 -%}
                 <param name="{{ product.par3 }}">{{ product.text3 }}</param>
             {%- endif -%}
-            <condition type="new">
-            </condition>                
+                         
             <weight>{{ product.m }}</weight>
-            <dimensions></dimensions>
+            {%- if product.w -%}
+            <dimensions>{{ product.l }}/{{ product.w }}/{{ product.h }}</dimensions>
+            {%- endif -%}
         </offer>
 {%- endif -%}
 {%- endif -%}
@@ -322,8 +376,12 @@ layout:
             <manufacturer>КАМАЗ</manufacturer>
             <vendorCode>{{ product.code1 }}</vendorCode>
             <brandcars>KAMAZ</brandcars>
+            {%- if product.prim -%}
             <modelcars>{{ product.prim }}</modelcars>
+            {%- endif -%}
+            {%- if product.prim2 -%}
             <engine><![CDATA[  {{ product.prim2 }}]]></engine>
+            {%- endif -%}
             <oem_number>{{ product.code1 }}</oem_number>
             <analog_numbers>{{ product.code2 }}</analog_numbers>
             <url>https://zap-kam.ru{{product.path}}{{product.url}}.html</url>
@@ -332,11 +390,11 @@ layout:
             <condition><![CDATA[{{product.price1_name}}]]></condition>
             {%- else -%}
             <price>{{product.price2 | replace: " ", "" | replace: " ", "" | replace: "-", ""}}</price>
-            <condition><![CDATA[{{product.price2_name}}]]></condition>
+            <condition  type="new"><![CDATA[{{product.price2_name}}]]></condition>
             {%- endif -%}
             <enable_auto_discounts>false</enable_auto_discounts>
             <currencyId>RUR</currencyId>
-            <categoryId>119</categoryId>
+            <categoryId>135</categoryId>
             {%- if product.img1 -%}<picture>https://zap-kam.ru{{product.img_path}}{{product.img1}}</picture>{%- endif -%}
             <store>true</store>
             <description>
@@ -373,10 +431,10 @@ layout:
             {%- if product.text3 -%}
                 <param name="{{ product.par3 }}">{{ product.text3 }}</param>
             {%- endif -%}
-            <condition type="new">
-            </condition>                
             <weight>{{ product.m }}</weight>
-            <dimensions></dimensions>
+            {%- if product.w -%}
+            <dimensions>{{ product.l }}/{{ product.w }}/{{ product.h }}</dimensions>
+            {%- endif -%}
         </offer>
 {%- endif -%}
 {%- endif -%}
