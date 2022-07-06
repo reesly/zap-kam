@@ -62,6 +62,7 @@ layout:
             {%- endif -%}
             <enable_auto_discounts>false</enable_auto_discounts>
             <currencyId>RUR</currencyId>
+            <vat>vat_20</vat>
             
             {%- if product.img1 -%}<picture>https://zap-kam.ru{{product.img_path}}{{product.img1}}</picture>{%- endif -%}
             <store>true</store>
@@ -170,6 +171,7 @@ layout:
             {%- endif -%}
             <enable_auto_discounts>false</enable_auto_discounts>
             <currencyId>RUR</currencyId>
+            <vat>vat_20</vat>
             <categoryId>103</categoryId>
             {%- if product.img1 -%}<picture>https://zap-kam.ru{{product.img_path}}{{product.img1}}</picture>{%- endif -%}
             <store>true</store>
@@ -245,6 +247,7 @@ layout:
             {%- endif -%}
             <enable_auto_discounts>false</enable_auto_discounts>
             <currencyId>RUR</currencyId>
+            <vat>vat_20</vat>
             <categoryId>133</categoryId>
             {%- if product.img1 -%}<picture>https://zap-kam.ru{{product.img_path}}{{product.img1}}</picture>{%- endif -%}
             <store>true</store>
@@ -319,6 +322,7 @@ layout:
             {%- endif -%}
             <enable_auto_discounts>false</enable_auto_discounts>
             <currencyId>RUR</currencyId>
+            <vat>vat_20</vat>
             <categoryId>134</categoryId>
             {%- if product.img1 -%}<picture>https://zap-kam.ru{{product.img_path}}{{product.img1}}</picture>{%- endif -%}
             <store>true</store>
@@ -394,6 +398,7 @@ layout:
             {%- endif -%}
             <enable_auto_discounts>false</enable_auto_discounts>
             <currencyId>RUR</currencyId>
+            <vat>vat_20</vat>
             <categoryId>135</categoryId>
             {%- if product.img1 -%}<picture>https://zap-kam.ru{{product.img_path}}{{product.img1}}</picture>{%- endif -%}
             <store>true</store>
@@ -443,26 +448,9 @@ layout:
 
     </offers>
     <gifts>
-        <!-- <gift id="33">
-            <name>Кружка 300 мл Brand 16</name>
-            <picture>https://zap-kam.ru/promos/33.jpg</picture>
-        </gift>             -->
     </gifts>
     <promos>
-        <!-- <promo id="PromoGift" type="gift with purchase">
-            <start-date>2020-02-01 09:00:00</start-date>
-            <end-date>2020-03-01 22:00:00</end-date>
-            <description>Купите бытовую технику марки Brand и получите кружку в подарок.</description>
-            <url>http://zap-kam.ru/promos/gift</url>
-            <purchase>
-                <product offer-id="9012"/>
-                <product offer-id="12346"/>
-            </purchase>
-            <promo-gifts>
-                <promo-gift offer-id="9012"/>
-                <promo-gift gift-id="33"/>
-            </promo-gifts>
-        </promo> -->
+ 
     </promos>
 </shop>
 </yml_catalog>
