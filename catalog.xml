@@ -2,7 +2,7 @@
 layout:
 ---
 <?xml version="1.0" encoding="UTF-8"?>
-<yml_catalog date="2021-10-12T14:30:00+03:00">
+<yml_catalog date="2022-07-07T14:30">
     <shop>
         <name>ЗапКам.Запчасти</name>
         <company>ЗапКам</company>
@@ -329,23 +329,23 @@ layout:
             {%- if product.img1 -%}<picture>https://zap-kam.ru{{product.img_path}}{{product.img1}}</picture>{%- endif -%}
             <store>true</store>
             <description>
-                <![CDATA[     {{product.price1_name}}<br>
+                <![CDATA[     {{product.price1_name}} &nbsp; <br>
                     <h3>{{product.name}} {{product.code1}}</h3>
                 
                     {%- if product.desc  -%}
-                        <p>{{ product.desc }}</p>
+                        <p> {{ product.desc }}</p>
                     {%- endif -%}
 
                     {%- if product.comment  -%}
-                        <p>{{ product.comment }}</p>
+                        <p> {{ product.comment }}</p>
                     {%- endif -%}
                                         
                     {%- if product.prim -%}
-                        <p>Применяемость: {{ product.prim }}</p>
+                        <p> Применяемость: {{ product.prim }}</p>
                     {%- endif -%}
 
                     {%- if product.prim2  -%}
-                        <p>{{ product.prim2 }}</p>
+                        <p> {{ product.prim2 }}</p>
                     {%- endif -%}
             ]]>
             </description>
