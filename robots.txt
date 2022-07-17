@@ -10,6 +10,7 @@ Allow: *.css
 Allow: *.jpg
 Allow: *.png
 
+User-agent: Yandex
 Clean-param: utm /*
 Clean-param: etext /*
 Clean-param: searchid /*
