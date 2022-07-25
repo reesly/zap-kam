@@ -45,7 +45,7 @@ layout:
             <vendorCode>{{ product.code1 }}</vendorCode>
             <brandcars>KAMAZ</brandcars>
             {%- if product.prim -%}
-            <modelcars>{{ product.prim }}</modelcars>
+            <modelcars><![CDATA[ {{ product.prim }} ]]></modelcars>
             {%- endif -%}
             {%- if product.prim2 -%}
             <engine><![CDATA[  {{ product.prim2 }}]]></engine>
@@ -155,7 +155,7 @@ layout:
             <vendorCode>{{ product.code1 }}</vendorCode>
             <brandcars>KAMAZ</brandcars>
             {%- if product.prim -%}
-            <modelcars>{{ product.prim }}</modelcars>
+            <modelcars><![CDATA[ {{ product.prim }} ]]></modelcars>
             {%- endif -%}
             {%- if product.prim2 -%}
             <engine><![CDATA[  {{ product.prim2 }}]]></engine>
@@ -232,7 +232,7 @@ layout:
             <vendorCode>{{ product.code1 }}</vendorCode>
             <brandcars>KAMAZ</brandcars>
             {%- if product.prim -%}
-            <modelcars>{{ product.prim }}</modelcars>
+            <modelcars><![CDATA[ {{ product.prim }} ]]></modelcars>
             {%- endif -%}
             {%- if product.prim2 -%}
             <engine><![CDATA[  {{ product.prim2 }}]]></engine>
@@ -307,7 +307,7 @@ layout:
             <vendorCode>{{ product.code1 }}</vendorCode>
             <brandcars>KAMAZ</brandcars>
             {%- if product.prim -%}
-            <modelcars>{{ product.prim }}</modelcars>
+            <modelcars><![CDATA[ {{ product.prim }} ]]></modelcars>
             {%- endif -%}
             {%- if product.prim2 -%}
             <engine><![CDATA[  {{ product.prim2 }}]]></engine>
@@ -383,7 +383,7 @@ layout:
             <vendorCode>{{ product.code1 }}</vendorCode>
             <brandcars>KAMAZ</brandcars>
             {%- if product.prim -%}
-            <modelcars>{{ product.prim }}</modelcars>
+            <modelcars><![CDATA[ {{ product.prim }} ]]></modelcars>
             {%- endif -%}
             {%- if product.prim2 -%}
             <engine><![CDATA[  {{ product.prim2 }}]]></engine>
