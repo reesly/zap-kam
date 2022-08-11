@@ -18,7 +18,7 @@ categories: [ <a href='/dvigatel_zapchasti/category/tnvd-toplivnaya-apparatura-k
 {%- if product -%}
     {% include card_zapchasti.html product = product %}
 {%- endif -%}
-{%- include_relative _like_products.mhtml prod = product -%}
+
 
 <div class="col-md-10 col-xs-12" style="margin: auto;">
     <h3>Описание</h3>
@@ -284,6 +284,8 @@ categories: [ <a href='/dvigatel_zapchasti/category/tnvd-toplivnaya-apparatura-k
     <p></p>
     {% include kupite_u_nas.html %}
     {% include garantiya.html %}
+
+    {%- include_relative _like_products.mhtml prod = product -%}
   <div style="height: 80px;">&nbsp;</div>
   
 </div>

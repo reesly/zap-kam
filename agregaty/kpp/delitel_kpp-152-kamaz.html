@@ -15,9 +15,7 @@ categories: [<a href="/agregaty/kpp/index.html">КПП - Коробки пере
 <div id="anc_1"></div>
 {% assign page_url = page.name | replace: ".html", "" %}
 {% assign product = site.data.agregaty | where:"url", page_url | first  %}
-{%- if product -%}
-    {% include card_zapchasti.html product = product %}
-{%- endif -%}
+
 {%- include_relative _like_products.mhtml prod = product -%}
 
 <div class="col-md-10 col-xs-12" style="margin: auto;">
@@ -46,3 +44,5 @@ categories: [<a href="/agregaty/kpp/index.html">КПП - Коробки пере
   <div style="height: 100px;">&nbsp;</div>
   
 </div>
+
+{%- if product -%} {% include card_zapchasti.html product = product %} {%- endif -%}

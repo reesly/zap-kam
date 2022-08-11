@@ -15,9 +15,7 @@ categories: [<a href="/agregaty/dvigateli/index.html">Двигатели КАМ�
 <div id="anc_1"></div>
 {% assign page_url = page.name | replace: ".html", "" %}
 {% assign product = site.data.agregaty | where:"url", page_url | first  %}
-{%- if product -%}
-    {% include card_zapchasti.html product = product %}
-{%- endif -%}
+
 {%- include_relative _like_products.mhtml prod = product -%}
 
 <div class="col-md-12 col-xs-12 text-right w-100">
