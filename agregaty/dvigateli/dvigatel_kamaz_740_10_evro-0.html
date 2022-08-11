@@ -12,6 +12,8 @@ categories: [<a href="/agregaty/dvigateli/index.html">Двигатели КАМ�
 <div id="740-10"></div>
 {% assign page_url = page.name | replace: ".html", "" %}
 {% assign product = site.data.agregaty | where:"url", page_url | first  %}
+{%- if product -%} {% include card_zapchasti.html product = product %} {%- endif -%}
+
 
 
 <div class="col-md-10 col-xs-12" style="margin: auto;">
@@ -48,5 +50,3 @@ categories: [<a href="/agregaty/dvigateli/index.html">Двигатели КАМ�
   <div style="height: 100px;">&nbsp;</div>
   
 </div>
-
-{%- if product -%} {% include card_zapchasti.html product = product %} {%- endif -%}

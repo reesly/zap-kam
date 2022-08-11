@@ -29,6 +29,8 @@ categories: [<a href="/agregaty/kpp/index.html">КПП - Коробки пере
 <div id="anc_2"></div>
 {% assign page_url = "kpp_141_kamaz" %}
 {% assign product = site.data.agregaty | where:"url", page_url | first  %}
+{%- if product -%} {% include card_zapchasti.html product = product %} {%- endif -%}
+
 {%- if product -%}
     {% include card_zapchasti_catalog.html product = product  %}
 {%- endif -%}
@@ -37,6 +39,8 @@ categories: [<a href="/agregaty/kpp/index.html">КПП - Коробки пере
 <div id="anc_3"></div>
 {% assign page_url = "kpp_142_kamaz" %}
 {% assign product = site.data.agregaty | where:"url", page_url | first  %}
+{%- if product -%} {% include card_zapchasti.html product = product %} {%- endif -%}
+
 {%- if product -%}
     {% include card_zapchasti_catalog.html product = product %}
 {%- endif -%}
@@ -46,6 +50,8 @@ categories: [<a href="/agregaty/kpp/index.html">КПП - Коробки пере
 <div id="anc_3"></div>
 {% assign page_url = "kpp_15_kamaz" %}
 {% assign product = site.data.agregaty | where:"url", page_url | first  %}
+{%- if product -%} {% include card_zapchasti.html product = product %} {%- endif -%}
+
 {%- if product -%}
     {% include card_zapchasti_catalog.html product = product %}
 {%- endif -%}
@@ -55,6 +61,8 @@ categories: [<a href="/agregaty/kpp/index.html">КПП - Коробки пере
 <div id="anc_3"></div>
 {% assign page_url = "kpp_152_kamaz" %}
 {% assign product = site.data.agregaty | where:"url", page_url | first  %}
+{%- if product -%} {% include card_zapchasti.html product = product %} {%- endif -%}
+
 {%- if product -%}
     {% include card_zapchasti_catalog.html product = product %}
 {%- endif -%}
@@ -64,6 +72,8 @@ categories: [<a href="/agregaty/kpp/index.html">КПП - Коробки пере
 <div id="anc_3"></div>
 {% assign page_url = "kpp_154_kamaz" %}
 {% assign product = site.data.agregaty | where:"url", page_url | first  %}
+{%- if product -%} {% include card_zapchasti.html product = product %} {%- endif -%}
+
 {%- if product -%}
     {% include card_zapchasti_catalog.html product = product %}
 {%- endif -%}
@@ -395,8 +405,6 @@ categories: [<a href="/agregaty/kpp/index.html">КПП - Коробки пере
   <div style="height: 100px;">&nbsp;</div>
   
 </div>
-
-{%- if product -%} {% include card_zapchasti.html product = product %} {%- endif -%}
 
 
 

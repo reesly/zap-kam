@@ -28,6 +28,8 @@ categories: [<a href="/agregaty/kpp/kpp_korobki_zf.html">КПП ZF</a> ]
 <div id="anc_2"></div>
 {% assign page_url = "kpp_kamaz_zf-16s1820" %}
 {% assign product = site.data.agregaty | where:"url", page_url | first  %}
+{%- if product -%} {% include card_zapchasti.html product = product %} {%- endif -%}
+
 {%- if product -%}
     {% include card_zapchasti_catalog.html product = product  %}
 {%- endif -%}
@@ -36,6 +38,8 @@ categories: [<a href="/agregaty/kpp/kpp_korobki_zf.html">КПП ZF</a> ]
 <div id="anc_3"></div>
 {% assign page_url = "kpp_kamaz_zf-9s1310" %}
 {% assign product = site.data.agregaty | where:"url", page_url | first  %}
+{%- if product -%} {% include card_zapchasti.html product = product %} {%- endif -%}
+
 {%- if product -%}
     {% include card_zapchasti_catalog.html product = product %}
 {%- endif -%}
@@ -253,8 +257,6 @@ categories: [<a href="/agregaty/kpp/kpp_korobki_zf.html">КПП ZF</a> ]
   <div style="height: 100px;">&nbsp;</div>
   
 </div>
-
-{%- if product -%} {% include card_zapchasti.html product = product %} {%- endif -%}
 
 
 

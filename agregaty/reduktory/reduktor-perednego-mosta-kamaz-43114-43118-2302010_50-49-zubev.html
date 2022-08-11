@@ -15,6 +15,8 @@ categories: [<a href='/agregaty/reduktory/index.html'>Редукторы КАМ�
 <div id="anc_1"></div>
 {% assign page_url = page.name | replace: ".html", "" %}
 {% assign product = site.data.agregaty | where:"url", page_url | first  %}
+{%- if product -%} {% include card_zapchasti.html product = product %} {%- endif -%}
+
 
 {%- include_relative _like_products.mhtml prod = product -%}
 

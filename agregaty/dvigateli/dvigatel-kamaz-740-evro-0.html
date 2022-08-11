@@ -55,6 +55,8 @@ h2: с доставкой из Наб.Челнов
             <div id="740-10"></div>
             {% assign page_url = "dvigatel_kamaz_740_10_evro-0" %}
             {% assign product = site.data.agregaty | where:"url", page_url | first  %}
+{%- if product -%} {% include card_zapchasti.html product = product %} {%- endif -%}
+
             {%- if product -%}
             {% include card_zapchasti_catalog.html product = product %}
             {%- endif -%}
@@ -63,6 +65,8 @@ h2: с доставкой из Наб.Челнов
             <div id="7403-10"></div>
             {% assign page_url = "dvigatel_kamaz_7403_10_turbo" %}
             {% assign product = site.data.agregaty | where:"url", page_url | first  %}
+{%- if product -%} {% include card_zapchasti.html product = product %} {%- endif -%}
+
             {%- if product -%}
             {% include card_zapchasti_catalog.html product = product %}
             {%- endif -%}

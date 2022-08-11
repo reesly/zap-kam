@@ -13,6 +13,8 @@ categories: [<a href="/agregaty/dvigateli/index.html">Двигатели КАМ�
 <div id="740-10"></div>
 {% assign page_url = page.name | replace: ".html", "" %}
 {% assign product = site.data.agregaty | where:"url", page_url | first  %}
+{%- if product -%} {% include card_zapchasti.html product = product %} {%- endif -%}
+
 
 <div class="col-md-10 col-xs-12 text-right w-100">
     <a class="btn btn-secondary" href="/dvigatel_zapchasti/category/zapchasi-na-dvigatel-kamaz-740-11-evro-1.html"> Запчасти на двигатель КамАЗ Евро-1</a>
@@ -242,4 +244,3 @@ categories: [<a href="/agregaty/dvigateli/index.html">Двигатели КАМ�
 </div>
 
 
-{%- if product -%} {% include card_zapchasti.html product = product %} {%- endif -%}
