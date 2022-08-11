@@ -49,10 +49,6 @@ categories: [<a href="/agregaty/dvigateli/index.html">Двигатели КАМ�
 {% assign product = site.data.agregaty | where:"url", page_url | first  %}
 {%- if product -%} {% include card_zapchasti.html product = product %} {%- endif -%}
 
-{%- if product -%}
-{% include card_template_dvigatel.html product = product %}
-{%- endif -%}
-
 <div class="col-md-1"></div>
 <div class="col-md-10">
     <!-- <h3>Описание</h3> -->

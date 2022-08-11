@@ -57,9 +57,7 @@ h2: с доставкой из Наб.Челнов
             {% assign product = site.data.agregaty | where:"url", page_url | first  %}
 {%- if product -%} {% include card_zapchasti.html product = product %} {%- endif -%}
 
-            {%- if product -%}
-            {% include card_zapchasti_catalog.html product = product %}
-            {%- endif -%}
+
 
 
             <div id="7403-10"></div>
@@ -67,9 +65,7 @@ h2: с доставкой из Наб.Челнов
             {% assign product = site.data.agregaty | where:"url", page_url | first  %}
 {%- if product -%} {% include card_zapchasti.html product = product %} {%- endif -%}
 
-            {%- if product -%}
-            {% include card_zapchasti_catalog.html product = product %}
-            {%- endif -%}
+
 
             <div id="loadingDiv" style="display: none;">
                 <span>Загрузка данных</span>
