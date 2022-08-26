@@ -51,17 +51,22 @@ h2: с доставкой из Наб.Челнов
         <div class="row list">
     
     
-            <!-- Движок 705  -->
-            <div id="740-705"></div>
-            {% assign page_url = "dvigatel_kamaz_740_705-300_evro-4" %}
-            {% assign product = site.data.agregaty | where:"url", page_url | first %}
-
-    
-    
-            <!-- Движок 735  -->
-            <div id="740-735"></div>
-            {% assign page_url = "dvigatel_kamaz_740_735-400_evro-4" %}
-            {% assign product = site.data.agregaty | where:"url", page_url | first %}
+             <!-- Движок 705  -->
+             <div id="740-705"></div>
+             {% assign page_url = "dvigatel_kamaz_740_705-300_evro-4" %}
+             {% assign product = site.data.agregaty | where:"url", page_url | first %}
+             {%- if product -%}
+             {% include card_zapchasti_catalog.html product = product %}
+             {%- endif -%}
+     
+     
+             <!-- Движок 735  -->
+             <div id="740-735"></div>
+             {% assign page_url = "dvigatel_kamaz_740_735-400_evro-4" %}
+             {% assign product = site.data.agregaty | where:"url", page_url | first %}
+             {%- if product -%}
+             {% include card_zapchasti_catalog.html product = product %}
+             {%- endif -%}
 
     
             <div id="loadingDiv" style="display: none;">
