@@ -1,0 +1,35 @@
+---
+layout: default_info
+title: Блок управления BOSCH 114 - двиг. КАМАЗ EDC7UC31 - 0 281 020 114
+description: Продаем блок управления EDC7UC31 BOSCH 114 на двигатель КАМАЗ - артикул 0 281 020 114. С прошивкой под любой двигатель КАМАЗ. Можем отключить мочевину. 
+keywords: EDC7UC31 - 0281020114
+hero-title: Блок управлением мотором КамАЗ
+h1: Блок управления двигателем BOSCH 114 на КАМАЗ Евро Common Rail
+h2: 0 281 020 114
+phone: 
+phone_title: 
+categories: [ <a href='/dvigatel_zapchasti/catalog/bloki-uprav/index.html'>Блоки управления двиг.КАМАЗ</a>]
+---
+
+<!-- Товар -->
+<div id="anc_1"></div>
+{% assign page_url = page.name | replace: ".html", "" %}
+{% assign product = site.data.dvig_zap | where:"url", page_url | first  %}
+{%- if product -%}
+    {% include card_zapchasti.html product = product %}
+{%- endif -%}
+{%- include_relative _like_products.mhtml prod = product -%}
+
+<div class="col-md-10 col-xs-12" style="margin: auto;">
+    <p>Электроника управляет работой двигателя на основании зафиксированных датчиками параметров, учитывая температуру окружающей среды, что способствует экономному расходу топлива, равномерному распределению нагрузки на механизм двигателя, снижению токсичности выхлопа.</p>
+<p>Электронный блок управления двигателем Bosch (Бош) КАМАЗ c EDC 0281020114 (0 281 020 114)</p>
+<p>Для программирования необходима следующая информация:<br />номер шасси XTC...<br />год выпуска</p>
+    <hr>
+    
+    <p></p>
+    <p></p>
+    {% include kupite_u_nas.html %}
+    {% include garantiya.html %}
+  <div style="height: 80px;">&nbsp;</div>
+  
+</div>

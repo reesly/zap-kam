@@ -1,0 +1,262 @@
+---
+layout: default_info
+title: Блоки управления двигателями КамАЗ - Подбор с ценами
+description: Каталог блоков управления двигателя КамАЗ с прошивков Евро-0, Евро-1, Евро-2, Евро-3. Каталог камазовских блоков с ценами, описанием, применимостью и техническими характеристиками. Новые оригинал и восстановленные б/у после кап.ремонта.
+keywords: Блок цилиндров КамАЗ Двигатель КамАЗ Евро Евро-1 Евро-2 Евро-3 Евро-4 Коленвал Коленчатый вал Блок цилиндров шатун шейка поршня кольца Bosch ЯЗДА ЦПГ ЯМЗ SANZ насос турбокомпрессор распредвал 
+hero-title: Запчасти на ДВИГАТЕЛИ КамАЗ
+h1: Блоки управления двигателями КамАЗ   
+h2:
+phone: 
+phone_title:
+---
+
+<!-- Модель КамАЗа  -->
+<div class="col-md-11 col-xs-12" style="margin: auto;">
+  
+
+</div>
+
+
+<!-- Товары -->
+
+<div class="col-md-11 col-xs-12" style="margin: auto;">
+    <p></p>
+    <!-- <h3 class="w-100 text-center">Каталог</h3> -->
+    <div class="form form-inline">
+        <input id="pListSearch" class="fuzzy-search" type="search" class="form-control" placeholder="поиск..." style="width:130px;"/>
+        &nbsp;&nbsp;
+        <button class="btn btn-search-var " onclick="$('#pListSearch').val('Блок'); filterProductList($('#pListSearch').val());" title="Блоки">Блоки</button>    
+        <button class="btn btn-search-var " onclick="$('#pListSearch').val('Сборочный'); filterProductList($('#pListSearch').val());" title="Блоки">Сборочный комплект</button>    
+        <button class="btn btn-search-var " onclick="$('#pListSearch').val('Головка'); filterProductList($('#pListSearch').val());" title="Головки блока">Головки блока</button>    
+    </div>
+
+    {% include catalog-loading-panel.html %}
+
+    <div id="productList" class="pt-4 pb-2" style="display: none; ">
+    
+        <div class="row list">
+            {% for product in site.data.dvig_zap %}
+            {%- if product.path == "/dvigatel_zapchasti/catalog/bloki-uprav/" -%}
+                {% include card_zapchasti_catalog.html product = product %}
+            {%- endif -%}
+            {% endfor %}
+        </div>
+        <div class="no-result">Не найдено</div>
+        <ul class="pagination" onclick="$('html, body').animate({ scrollTop: 0}, 600);"></ul>
+    </div>
+</div>
+
+
+<div class="col-md-10 col-xs-12" style="margin: auto;">
+    <!-- <div class="alert alert-info">
+        <p>Предоставляется гарантия производителя.</p>
+    </div> -->
+
+    <p>
+        Блок цилиндров представляет собой корпус двигателя, предназначен для монтажа и закрепления всех механизмов мотора.
+        Блок выполнен в виде монолитной литой конструкции с технологическими отверстиями и каналы для смазки и охлаждения.
+    </p>
+
+    <p>
+        В верхней части блока цилиндров располагаются гнезда под гильзы. 
+        Корпус оснащен каналами и полостями для прохода охлаждающей
+        жидкости. В нижней части блока установлен коленчатый вал. 
+        Внутри предусмотрены перегородки со специальными ребрами жесткости, в которых есть специальные расточки
+        для установки коленчатого и распределительных валов.
+    </p>
+
+    <p>
+        Гильзы цилиндров служат в качестве направляющих для поршней. 
+        Вместе с головкой блока они образуют камеру сгорания топлива.
+        Гильзы изготавливаются из особого чугуна, а также проходят закалку электричеством.
+    </p>
+
+
+    <h3>Применяемость блоков цилиндров</h3>
+    <p>740.xx-10020<b>12</b> - в сборе без гильзы цилиндров</p>
+    <p>740.xx-10020<b>10</b> - в сборе с крышками подшипников коленвала и заглушками</p>
+    <p>740.xx-10020<b>11</b> - в сборе с крышками подшипников коленвала, без заглушек</p>
+    
+    
+    <table class="table table-striped table-bordered table-responsive-sm table-harki" style="width: auto;">
+      <tbody>
+            <tr>
+            <td style="text-align: center;width: 140px;">
+            <p>Блок цилиндров<br /><span style="color: #808080; font-size: 85%;">(в сборе с крышками подшипников коленвала и заглушками)</span></p>
+            </td>
+            <td style="text-align: center;">Топливная аппаратура и особенности</td>
+            <td style="text-align: center;">Двигатели КАМАЗ</td>
+            <td style="text-align: center;">Блок цилиндров (деталь)</td>
+            <td style="text-align: center;">Блок цилиндров (отливка)</td>
+            </tr>
+            <tr>
+            <td>740.21-1002010</td>
+            <td>ЯЗДА</td>
+            <td>740.39-380, 740.58-300</td>
+            <td>740.21-1002015</td>
+            <td>740.21-1002015</td>
+            </tr>
+            <tr>
+            <td>740.21-1002010-10</td>
+            <td>BOSCH</td>
+            <td>740.39-380, 740.58-300</td>
+            <td>740.21-1002015</td>
+            <td>740.21-1002015</td>
+            </tr>
+            <tr>
+            <td>740.21-1002010-30</td>
+            <td>ЯЗДА, с гильзой цилиндров</td>
+            <td>740.11-240, 740.13-260, 740.19-200, 740.30-260, 740.31-240</td>
+            <td>740.21-1002015</td>
+            <td>740.21-1002015</td>
+            </tr>
+            <tr>
+            <td>740.21-1002012-30</td>
+            <td>без гильзы цилиндров</td>
+            <td>740.11-240, 740.13-260, 740.19-200, 740.30-260, 740.31-240</td>
+            <td>740.21-1002015</td>
+            <td>740.21-1002015</td>
+            </tr>
+            <tr>
+            <td>740.21-1002012</td>
+            <td>ЯЗДА</td>
+            <td>740.50-360, 740.51-320, 740.55-300, 740.60-360, 740.61-320, 740.62-280, 740.65-240</td>
+            <td>740.21-1002015</td>
+            <td>740.21-1002015</td>
+            </tr>
+            <tr>
+            <td>740.21-1002012-10</td>
+            <td>BOSCH</td>
+            <td>740.50-360, 740.51-320, 740.60-360, 740.61-320, 740.62-280, 740.65-240</td>
+            <td>740.21-1002015</td>
+            <td>740.21-1002015</td>
+            </tr>
+            <tr>
+            <td>820.01-1002010-10</td>
+            <td>Газовый двигатель, ЭБУ двигателя М20 &laquo;ГРПЗ&raquo;</td>
+            <td>820.90-260, 820.91-260, 820.92-300, 820.93-320, 820.74-300, 820.73-300, 820.60-260, 820.61-260, 820.62-300, 820.63-320, 820.52-260, 820.53-260</td>
+            <td>740.21-1002015</td>
+            <td>740.21-1002015</td>
+            </tr>
+            <tr>
+            <td>740.21-1002010-20</td>
+            <td>ЯЗДА, <br />с гильзой цилиндров</td>
+            <td>740.10, 740.10-20, 7403.10</td>
+            <td>740.21-1002015-20</td>
+            <td>740.21-1002015</td>
+            </tr>
+            <tr>
+            <td>740.21-1002012-20</td>
+            <td>ЯЗДА<br />без гильзы цилиндров</td>
+            <td>740.10, 740.10-20, 7403.10</td>
+            <td>740.21-1002015-20</td>
+            <td>740.21-1002015</td>
+            </tr>
+            <tr>
+            <td>740.21-1002012-21</td>
+            <td>ЯЗДА<br />с распределительным валом</td>
+            <td>740.10, 740.10-20, 7403.10 (в запасные части)</td>
+            <td>740.21-1002015-20</td>
+            <td>740.21-1002015</td>
+            </tr>
+            <tr>
+            <td>740.14-1002010-10</td>
+            <td>ЯЗДА<br />с гильзой цилиндров</td>
+            <td>740.14-300</td>
+            <td>740.21-1002015-30</td>
+            <td>740.21-1002015</td>
+            </tr>
+            <tr>
+            <td>740.14-1002012-10</td>
+            <td>ЯЗДА<br />без гильзы цилиндров</td>
+            <td>740.14-300</td>
+            <td>740.21-1002015-30</td>
+            <td>740.21-1002015</td>
+            </tr>
+            <tr>
+            <td>820.92-1002010</td>
+            <td>Газовый двигатель,<br />ЭБУ двигателем EGC4 &laquo;Bosch&raquo;</td>
+            <td>820.90-260, 820.91-260, 820.92-300, 820.93-320</td>
+            <td>740.21-1002015-40</td>
+            <td>740.21-1002015</td>
+            </tr>
+            <tr>
+            <td>740.63-1002010</td>
+            <td>ЯЗДА</td>
+            <td>740.35-400, 740.37-400</td>
+            <td>740.63-1002015</td>
+            <td>740.63-1002015</td>
+            </tr>
+            <tr>
+            <td>740.63-1002010-10</td>
+            <td>BOSCH</td>
+            <td>740.35-400, 740.37-400</td>
+            <td>740.63-1002015</td>
+            <td>740.63-1002015</td>
+            </tr>
+            <tr>
+            <td>740.70-1002010</td>
+            <td>Common Rail</td>
+            <td>740.60-360, 740.61-320, 740.62-280, 740.602-360, 740.612-320, 740.622-280, 740.652-260, 740.662-300, 740.70-280, 740.71-320, 740.72-360, 740.705-300, 740.715-320, 740.725-360</td>
+            <td>740.70-1002015</td>
+            <td>740.70-1002015</td>
+            </tr>
+            <tr>
+            <td>740.73-1002010</td>
+            <td>Common Rail</td>
+            <td>740.63-400, 740.64-420, 740.632-400, 740.642-420, 740.73-400, 740.74-420, 740.75-440, 740.735-400, 740.745-420, 740.755-440</td>
+            <td>740.73-1002015</td>
+            <td>740.73-1002015</td>
+            </tr>
+            </tbody>
+            </table>
+    
+    <p><strong>Чем отличается блок под аппаратуру ЯЗДА от Bosch</strong></p>
+    <p> Основное отличие заключается в посадочных отверстиях для топливной аппаратуры.
+        Часть мотористов практикуют установку ярославского насоса ЯЗДА на блок под Bosch, но на 3 отверстия вместо положенных 4.
+        Мы не рекомендуем такую практику, так как это запрещается технической документаций производителя КамАЗ. </p>
+    
+        <hr>
+        <div class="alert alert-info">
+            <b>Восстановленный блок</b>. <br>
+            В качестве бюджетного варианта можем предложить блок цилиндров КамАЗ 4310 бывший в эксплуатации,
+            прошедший тщательную дефектовку на задиры, трещины, целостность шеек, при которой меняются 
+            втулки под распредвал и проводятся работы для подготовки к установке.
+            <br>
+            <br>
+            Цена зависит года выпуска и от состояния.
+            <br>
+             Гарантия на восстановленный блок цилиндров составит 3 месяца.
+        </div>
+        <hr>
+       
+    
+        <div id="nanogallery2" data-nanogallery2 = '{
+            "thumbnailLabel":{"display":false},
+            "thumbnailBorderVertical":0,"thumbnailBorderHorizontal":0,
+            "thumbnailWidth":   "auto",
+            "thumbnailHeight":   240,
+            "thumbnailAlignment": "center", 
+            "fillWidth": "center", 
+            "thumbnailDisplayTransition":"slideUp",
+            "thumbnailHoverEffect2":"scale120|toolsAppear|toolsAppear",
+            "itemsBaseURL":     ""
+          }' >
+          <!-- fillWidth -->
+          
+          <a href = "/dvigatel_zapchasti/category/img/blok_cilindrov_4310_740_21-1002012__1.gif" data-ngThumb = "/dvigatel_zapchasti/category/img/blok_cilindrov_4310_740_21-1002012__1.gif" title="{{product.name}}"> {{product.name}} </a>
+          <a href = "/dvigatel_zapchasti/category/img/blok_cilindrov_4310_740_21-1002012__2.gif" data-ngThumb = "/dvigatel_zapchasti/category/img/blok_cilindrov_4310_740_21-1002012__2.gif" title="{{product.name}}"> {{product.name}} </a>
+          <a href = "/dvigatel_zapchasti/category/img/blok_cilindrov_4310_740_21-1002012.gif" data-ngThumb = "/dvigatel_zapchasti/category/img/blok_cilindrov_4310_740_21-1002012.gif" title="{{product.name}}"> {{product.name}} </a>
+          <a href = "/dvigatel_zapchasti/category/img/blok_cilindrov.jpg" data-ngThumb = "/dvigatel_zapchasti/category/img/blok_cilindrov.jpg" title="{{product.name}}"> {{product.name}} </a>
+        </div>
+        <hr>
+    
+      
+    
+    <p></p>
+    <p></p>
+    {% include kupite_u_nas.html %}
+    
+  <div style="height: 30px;">&nbsp;</div>
+  
+<script src="/assets/js/list.min.js"></script>

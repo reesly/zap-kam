@@ -235,6 +235,23 @@ phone_title:
     </div>
 
 
+      <!--  Блоки управления  -->
+      <div class="card"> <!-- col-md-6 col-lg-4 col-xs-12 "> -->
+        <div class="card-header media">
+          <img class="card-icon1" src="/dvigatel_zapchasti/img/bloki-uprav/0281020114-block-ebu-bosch-na-kamaz-evro-4-5-common-rail_1.png" alt="Блоки управления двигателем">
+          <a href="/dvigatel_zapchasti/catalog/bloki-uprav/index.html">
+            <h4>Блоки управления двигателя</h4>
+          </a>      
+              </div> 
+            <ul class="card-body card-line-limit">
+              {% for product in site.data.dvig_zap %}
+              {%- if product.cat == "ЭБУ" -%}
+                <li>• <a href='{{product.path}}{{product.url}}.html'>{{product.name}}</a></li>
+              {%- endif -%}
+              {% endfor %}
+          </ul>
+      </div>
+
         <!--  Группа  -->
         <div class="card"> <!-- col-md-6 col-lg-4 col-xs-12 "> -->
           <div class="card-header media">

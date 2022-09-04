@@ -1,0 +1,34 @@
+---
+layout: default_info
+title: Блок управления двигателем Cummins 6 ISBe - 4988820
+description: Продаем блок управления двигателем Cummins 6 ISBe - артикул 4988820. С прошивкой под любой двигатель КАМАЗ. Можем отключить мочевину. 
+keywords: 4988820
+hero-title: Блоки управления двигателями КамАЗ
+h1: Блок управления двигателем Cummins 6 ISBe на КАМАЗ
+h2: 4988820
+phone: 
+phone_title: 
+categories: [ <a href='/dvigatel_zapchasti/catalog/bloki-uprav/index.html'>Блоки управления двиг.КАМАЗ</a>]
+---
+
+<!-- Товар -->
+<div id="anc_1"></div>
+{% assign page_url = page.name | replace: ".html", "" %}
+{% assign product = site.data.dvig_zap | where:"url", page_url | first  %}
+{%- if product -%}
+    {% include card_zapchasti.html product = product %}
+{%- endif -%}
+{%- include_relative _like_products.mhtml prod = product -%}
+
+<div class="col-md-10 col-xs-12" style="margin: auto;">
+    
+
+    <hr>
+    
+    <p></p>
+    <p></p>
+    {% include kupite_u_nas.html %}
+    {% include garantiya.html %}
+  <div style="height: 80px;">&nbsp;</div>
+  
+</div>
