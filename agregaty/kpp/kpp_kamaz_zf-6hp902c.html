@@ -1,0 +1,40 @@
+---
+layout: default_info
+title: Коробка передач ZF 6H P902c автоматическая на КамАЗ - ZF ECOMAT
+description: Продаем коробки передач ZF ECOMAT 6H.P902c на КамАЗ 6560 по всей России. В наличии новая, восстановленная, капремонт.
+keywords: 6HP902c автомат
+hero-title: Коробки передач на технику КамАЗ
+h1: Коробка передач ZF 6HP902c на КамАЗ
+h2:
+phone: 
+phone_title: 
+categories: [<a href="/agregaty/kpp/index.html">КПП - Коробки передач</a> ]
+---
+
+<!-- Товар -->
+<div id="anc_1"></div>
+{% assign page_url = page.name | replace: ".html", "" %}
+{% assign product = site.data.agregaty | where:"url", page_url | first  %}
+{%- if product -%} {% include card_zapchasti.html product = product %} {%- endif -%}
+
+
+
+<div class="col-md-10 col-xs-12" style="margin: auto;">
+    <h3>Описание</h3>
+    <p>
+        Автоматическая гидромеханическая коробка передач модели ZF 6 HP 902 устанавливается на шасси,
+        полноприводные автомобили КамАЗ тяжелого семейства. Коробка передач состоит из следующих основных узлов: гидротрансформатора, шестиступенчатой планетарной коробки передач с автоматическим управлением. Имеется возможность установки
+        до двух коробок отбора мощности с отбором мощности от двигателя
+    </p>
+    
+
+   <hr>
+   
+    <p></p>
+    {%- include_relative _like_products.mhtml prod = product -%}
+    <p></p>
+    {% include kupite_u_nas.html %}
+    {% include garantiya.html %}
+  <div style="height: 100px;">&nbsp;</div>
+  
+</div>
