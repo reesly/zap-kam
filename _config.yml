@@ -58,7 +58,7 @@ sass:
   #- jekyll-sitemap # Create a sitemap using the official Jekyll sitemap gem
   
 plugins:
- - jekyll-redirect-from
+#  - jekyll-redirect-from
 
 incremental: true
 
