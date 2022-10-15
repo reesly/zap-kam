@@ -6,6 +6,7 @@ Disallow: /*.mhtml$
 Disallow: /poisk.html*
 Disallow: /*?*
 Disallow: /kamaz-5490/docs/Rukovodstvo-po-ekspluatatsii-dvigateley-Mercedes-457la.pdf
+Disallow: https://zap-kam.ru/kamaz-5490/docs/Rukovodstvo-po-ekspluatatsii-dvigateley-Mercedes-457la.pdf
 Allow: *.js
 Allow: *.css
 Allow: *.jpg
