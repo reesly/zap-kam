@@ -6,6 +6,8 @@ Disallow: /*.mhtml$
 Disallow: /poisk.html*
 Disallow: /*?*
 Disallow: /kamaz-5490/docs/Rukovodstvo-po-ekspluatatsii-dvigateley-Mercedes-457la.pdf
+Disallow: /kamaz-5490/docs/OM_457_LA_daimler_kamaz-5490-rukovodstvo.pdf
+Disallow: /kamaz-5490/docs/rukovodstvo-po-ekspluatatsii-dvigateley-457la.pdf
 Allow: *.js
 Allow: *.css
 Allow: *.jpg
