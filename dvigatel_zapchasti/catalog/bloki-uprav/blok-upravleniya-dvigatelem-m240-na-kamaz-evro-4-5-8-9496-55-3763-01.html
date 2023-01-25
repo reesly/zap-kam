@@ -1,0 +1,33 @@
+---
+layout: default_info
+title: Блок управления двигателем М240 на КАМАЗ Евро-4,-5 - 8.9496-55.3763-01
+description: Продаем блок управления двигателем М240 на КАМАЗ Евро-4, Евро-5  - артикул 8.9496-55.3763-01. С прошивкой под любой двигатель КАМАЗ. Можем отключить мочевину. 
+keywords: 8.9496-55.3763-01
+hero-title: Блок управлением мотором КамАЗ
+h1: Блок управления двигателем М240 на КАМАЗ Евро-4,-5 
+h2: 8.9496-55.3763-01
+phone: 
+phone_title: 
+categories: [ <a href='/dvigatel_zapchasti/catalog/bloki-uprav/index.html'>Блоки управления двиг.КАМАЗ</a>]
+---
+
+<!-- Товар -->
+<div id="anc_1"></div>
+{% assign page_url = page.name | replace: ".html", "" %}
+{% assign product = site.data.dvig_zap | where:"url", page_url | first  %}
+{%- if product -%}
+    {% include card_zapchasti.html product = product %}
+{%- endif -%}
+{%- include_relative _like_products.mhtml prod = product -%}
+
+<div class="col-md-10 col-xs-12" style="margin: auto;">
+    
+    <hr>
+    
+    <p></p>
+    <p></p>
+    {% include kupite_u_nas.html %}
+    {% include garantiya.html %}
+  <div style="height: 80px;">&nbsp;</div>
+  
+</div>
