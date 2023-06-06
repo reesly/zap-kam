@@ -34,7 +34,7 @@ layout:
 {%- if product.url and product.id -%}
 {%- if product.price1 or product.price2 -%}
 {%- if product.price1 != "-" and  product.price1 != "0" -%}
-{%- if product.price1_name != "-" and  product.price1 != "0" -%}
+
         <offer id="{{product.id}}" bid="{{product.id}}">
             <name>{{product.name}}</name>
             <vendor></vendor>
