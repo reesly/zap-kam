@@ -31,6 +31,7 @@ layout:
         </categories>
         <offers>
 {% for product in site.data.k4310 %}
+
 {%- if product.url and product.id -%}
 {%- if product.price1 or product.price2 -%}
 {%- if product.price1 != "-" and  product.price1 != "0" -%}
