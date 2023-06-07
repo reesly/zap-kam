@@ -38,6 +38,7 @@ layout:
 {% for product in site.data.agregaty %}
 {%- if product.url and product.id  -%}
 {%- if product.price1 or product.price2 -%}
+{%- if product.price1 != "-" and product.price1 != "0" -%}
         <offer id="1000{{product.id}}" bid="1000{{product.id}}">
             <name>{{product.name}} - {{product.code1}}</name>
             <vendor>КАМАЗ</vendor>
@@ -139,6 +140,7 @@ layout:
             {%- endif -%}
 
         </offer>
+{%- endif -%}
 {%- endif -%}
 {%- endif -%}
 {% endfor %}
