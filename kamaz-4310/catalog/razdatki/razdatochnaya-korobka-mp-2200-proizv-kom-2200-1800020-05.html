@@ -13,23 +13,27 @@ categories: [<a href='/agregaty/razdatki/index.html'>Раздатки КАМАЗ
 
 <!-- Товар -->
 
-<div class="col-md-12 w-100">
-    <img src="/kamaz-4310/img/razdatka/mp2200-1800020-05.gif" alt="Технические харакретиристики РК 2200-1800020-05"/>
-</div>
-
-
-<!-- <div class="col-md-12 alert alert-success text-center">
-   
-</div> -->
-
 {% assign page_url = page.name | replace: ".html", "" %}
 {% assign product = site.data.k4310 | where:"url", page_url | first  %}
 {%- if product -%}
     {% include card_zapchasti.html product = product %}
 {%- endif -%}
 
+
+
+
+<!-- <div class="col-md-12 alert alert-success text-center">
+   
+</div> -->
+
+
+
 <div class="col-md-10 col-xs-12" style="margin: auto;">
     
+    <div class=" w-100">
+        <img src="/kamaz-4310/img/razdatka/mp2200-1800020-05.gif" alt="Технические харакретиристики РК 2200-1800020-05"/>
+    </div>
+
     <p></p>
     <p></p>
   <div style="height: 100px;">&nbsp;</div>
