@@ -371,79 +371,7 @@ layout:
 {% endfor %}
 
 
-{% for product in site.data.kuzov %}
-{%- if product.url and product.id  -%}
-{%- if product.price1 or product.price2 -%}
-        <offer id="5000{{product.id}}" bid="5000{{product.id}}">
-            <name>{{product.name}} - {{product.code1}}</name>
-            <vendor>КАМАЗ</vendor>
-            <manufacturer>КАМАЗ</manufacturer>
-            <vendorCode>{{ product.code1 }}</vendorCode>
-            <brandcars>KAMAZ</brandcars>
-            {%- if product.prim -%}
-            <modelcars><![CDATA[ {{ product.prim }} ]]></modelcars>
-            {%- endif -%}
-            {%- if product.prim2 -%}
-            <engine><![CDATA[  {{ product.prim2 }}]]></engine>
-            {%- endif -%}
-            <oem_number>{{ product.code1 }}</oem_number>
-            <analog_numbers>{{ product.code2 }}</analog_numbers>
-            <url>https://zap-kam.ru{{product.path}}{{product.url}}.html</url>
-            {%- if product.price1 -%}
-            <price>{{product.price1 | replace: " ", "" | replace: " ", "" | replace: "-", "" }}</price>
-            <condition><![CDATA[{{product.price1_name}}]]></condition>
-            {%- else -%}
-            <price>{{product.price2 | replace: " ", "" | replace: " ", "" | replace: "-", ""}}</price>
-            <condition  type="new"><![CDATA[{{product.price2_name}}]]></condition>
-            {%- endif -%}
-            <enable_auto_discounts>false</enable_auto_discounts>
-            <currencyId>RUR</currencyId>
-            <vat>vat_20</vat>
-            <categoryId>135</categoryId>
-            {%- if product.img1 -%}<picture>https://zap-kam.ru{{product.img_path}}{{product.img1}}</picture>{%- endif -%}
-            <store>true</store>
-            <description>
-                <![CDATA[     {{product.price1_name}} &nbsp; <br>
-                    <p>{{product.name}} {{product.code1}} &nbsp; </p>
-                
-                    {%- if product.desc  -%}
-                        <p>{{ product.desc }}</p>
-                    {%- endif -%}
 
-                    {%- if product.comment  -%}
-                        <p>{{ product.comment }}</p>
-                    {%- endif -%}
-                                        
-                    {%- if product.prim -%}
-                        <p>Применяемость: {{ product.prim }}</p>
-                    {%- endif -%}
-
-                    {%- if product.prim2  -%}
-                        <p>{{ product.prim2 }}</p>
-                    {%- endif -%}
-            ]]>
-            </description>
-            <sales_notes>с доставкой</sales_notes>
-            <manufacturer_warranty>true</manufacturer_warranty>
-            <country_of_origin>Россия</country_of_origin>
-            <barcode></barcode>
-            {%- if product.text1 -%}
-                <param name="{{ product.par1 }}">{{ product.text1 }}</param>
-            {%- endif -%}
-            {%- if product.text2 -%}
-                <param name="{{ product.par2 }}">{{ product.text2 }}</param>
-            {%- endif -%}
-            {%- if product.text3 -%}
-                <param name="{{ product.par3 }}">{{ product.text3 }}</param>
-            {%- endif -%}
-            <weight>{{ product.m }}</weight>
-            {%- if product.w -%}
-            <dimensions>{{ product.l }}/{{ product.w }}/{{ product.h }}</dimensions>
-            {%- endif -%}
-        </offer>
-{%- endif -%}
-{%- endif -%}
-{% endfor %}
 
 
     </offers>
