@@ -51,7 +51,7 @@ layout:
             <currencyId>RUR</currencyId>
             <categoryId>119</categoryId>
             {%- if product.img1 -%}<picture>https://zap-kam.ru{{product.img_path}}{{product.img1}}</picture>{%- endif -%}
-            <store>true</store>
+            <store>false</store>
             <description>
                 <![CDATA[     
                     <h3>{{product.name}} {{product.code1}}</h3>
@@ -90,6 +90,7 @@ layout:
             </condition>                
             <weight>{{ product.m }}</weight>
             <dimensions></dimensions>
+            <available>false</available>
         </offer>
 {%- endif -%}
 {%- endif -%}
