@@ -91,6 +91,7 @@ layout:
             <weight>{{ product.m }}</weight>
             <dimensions></dimensions>
             <available>false</available>
+            <inStock>false</inStock>
         </offer>
 {%- endif -%}
 {%- endif -%}

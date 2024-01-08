@@ -66,7 +66,7 @@ layout:
             <vat>vat_20</vat>
             
             {%- if product.img1 -%}<picture>https://zap-kam.ru{{product.img_path}}{{product.img1}}</picture>{%- endif -%}
-            <store>true</store>
+            <store>false</store>
             <description>
                 <![CDATA[     {{product.price1_name}} &nbsp; <br>
                     <p>{{product.name}} {{product.code1}} &nbsp; </p>
@@ -138,7 +138,7 @@ layout:
             {%- if product.cat == "оси" -%}
                 <categoryId>108</categoryId>
             {%- endif -%}
-
+            <inStock>false</inStock>
         </offer>
 {%- endif -%}
 {%- endif -%}
@@ -176,7 +176,7 @@ layout:
             <vat>vat_20</vat>
             <categoryId>103</categoryId>
             {%- if product.img1 -%}<picture>https://zap-kam.ru{{product.img_path}}{{product.img1}}</picture>{%- endif -%}
-            <store>true</store>
+            <store>false</store>
             <description>
                 <![CDATA[     {{product.price1_name}} &nbsp; <br>
                     <p>{{product.name}} {{product.code1}} &nbsp; </p>
@@ -217,6 +217,7 @@ layout:
             <dimensions>{{ product.l }}/{{ product.w }}/{{ product.h }}</dimensions>
             {%- endif -%}
         </offer>
+        <inStock>false</inStock>
 {%- endif -%}
 {%- endif -%}
 {% endfor %}
@@ -252,7 +253,7 @@ layout:
             <vat>vat_20</vat>
             <categoryId>133</categoryId>
             {%- if product.img1 -%}<picture>https://zap-kam.ru{{product.img_path}}{{product.img1}}</picture>{%- endif -%}
-            <store>true</store>
+            <store>false</store>
             <description>
                 <![CDATA[     {{product.price1_name}} &nbsp; <br>
                     <p>{{product.name}} {{product.code1}} &nbsp; </p>
@@ -291,6 +292,7 @@ layout:
             {%- if product.w -%}
             <dimensions>{{ product.l }}/{{ product.w }}/{{ product.h }}</dimensions>
             {%- endif -%}
+            <inStock>false</inStock>
         </offer>
 {%- endif -%}
 {%- endif -%}
@@ -327,7 +329,7 @@ layout:
             <vat>vat_20</vat>
             <categoryId>134</categoryId>
             {%- if product.img1 -%}<picture>https://zap-kam.ru{{product.img_path}}{{product.img1}}</picture>{%- endif -%}
-            <store>true</store>
+            <store>false</store>
             <description>
                <![CDATA[     {{product.price1_name}} &nbsp; <br>
                     <p>{{product.name}} {{product.code1}} &nbsp; </p>
@@ -367,6 +369,8 @@ layout:
             {%- if product.w -%}
             <dimensions>{{ product.l }}/{{ product.w }}/{{ product.h }}</dimensions>
             {%- endif -%}
+
+            <inStock>false</inStock>
         </offer>
 {%- endif -%}
 {%- endif -%}
