@@ -292,7 +292,7 @@
             {%- assign sizes = "" -%}
             {%- if product.l  -%}
             {%- capture sizes -%}&size={{product.l | times: 100 | plus: 1}},{{product.w | times: 100 | plus: 1}},{{product.h | times: 100 | plus: 1}}{%- endcapture -%}
-            <tr><td> Габариты (ДШВ),м</td>
+            <tr><td> Габариты (ДШВ), м</td>
               <td> {{ product.l }} х {{ product.w }} x {{ product.h }}  <span itemprop="volume invisible"> </span> </td>
             </tr>
             {%- endif -%}
