@@ -2,13 +2,24 @@
 layout: default_info
 title: Двигатели КамАЗ Р6 910.хх - каталог, описание, характеристики 
 description: Таблица двигателей КамАЗ 910 - серия Р6, рядная шестерка Евро-5/6. Подсказки по выбору, прайс-листы, описание, характеристики.
-keywords: двигатель КамАЗ 4310 740.10 евро-0 евро-1 евро-2 евро-3 евро-4 7403 турбо Двигатель КамАЗ Евро Евро-1 Евро-2 Евро-3 Евро-4 
+keywords: двигатель камаз 910 Евро-5 Евро-6  
 h1: Двигатели КамАЗ 910.хх - серия Р6 
-h2:
+h2: 910.15-1000400
 phone:  
 phone_title: 
 categories: [<a href="/agregaty/index.html">Агрегаты</a> ]
 ---
+
+
+<!-- Товар  -->
+<div id="910-15"></div>
+{% assign page_url = page.name | replace: ".html", "" %}
+{% assign product = site.data.agregaty | where:"url", page_url | first  %}
+{%- if product -%} {% include card_zapchasti.html product = product %} {%- endif -%}
+
+<hr>
+
+
 <div class="col-md-10 col-xs-12" style="margin: auto;">
     <img src="/agregaty/dvigateli/img/kamaz-r6/kamaz-r6-910-schema.jpg" alt="Двигатели КАМАЗ Р6 910 - схема">
 
