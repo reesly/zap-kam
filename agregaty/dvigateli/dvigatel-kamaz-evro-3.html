@@ -13,12 +13,11 @@ h2: с доставкой из Наб.Челнов
         <div class="col-md-3">
             <h3 style="padding-top: 0px;">Двигатели Евро-3</h3>
             <table class="table table-hover">
-                <tr><td> <a href="#740.60-360" class="u">740.60-360 Евро-3</a> </td></tr>
-                <tr><td> <a href="#740.61-320" class="u">740.61-320 Евро-3</a> </td></tr>
-                <tr><td> <a href="#740.62-280" class="u">740.62-280 Евро-3-4</a> </td></tr>
-                <tr><td> <a href="#740.63-400" class="u">740.63-400 Евро-3-4</a> </td></tr>
-                <tr><td> <a href="#740.64-420" class="u">740.64-420 Евро-3-4</a> </td></tr>
-                <tr><td> <a href="#740.65-240" class="u">740.65-240 Евро-3-4</a> </td></tr>
+                <tr><td> <a href="/agregaty/dvigateli/dvigatel_kamaz_740_60-360_evro-3.html" class="u">740.60-360 Евро-3</a> </td></tr>
+                <tr><td> <a href="/agregaty/dvigateli/dvigatel_kamaz_740_61-320_evro-3.html" class="u">740.61-320 Евро-3</a> </td></tr>
+                <tr><td> <a href="/agregaty/dvigateli/dvigatel_kamaz_740_62-280_evro-3.html" class="u">740.62-280 Евро-3-4</a> </td></tr>
+                <tr><td> <a href="/agregaty/dvigateli/dvigatel_kamaz_740_63-400_evro-3.html" class="u">740.63-400 Евро-3-4</a> </td></tr>
+                <tr><td> <a href="/agregaty/dvigateli/dvigatel_kamaz_740_65-240_evro-3.html" class="u">740.65-240 Евро-3-4</a> </td></tr>
             </table>
             <img src="/dvigatel_zapchasti/img/category/dvigatel_740_png.png">
         </div>
@@ -46,6 +45,48 @@ h2: с доставкой из Наб.Челнов
             </div>
         </div>
     </div>
+
+
+    <h2>Каталог двигателей Евро-2</h2>
+    
+    <div id="productList" class="pt-4 pb-2" style="display: block;">
+        <div class="row list">
+    
+
+            <div id="740-60"></div>
+            {% assign page_url = "dvigatel_kamaz_740_60-360_evro-3" %}
+            {% assign product = site.data.agregaty | where:"url", page_url | first %}
+            {% include card_zapchasti_catalog.html product = product %}
+
+            <div id="740-61"></div>
+            {% assign page_url = "dvigatel_kamaz_740_61-320_evro-3" %}
+            {% assign product = site.data.agregaty | where:"url", page_url | first %}
+            {% include card_zapchasti_catalog.html product = product %}
+    
+            <div id="740-62"></div>
+            {% assign page_url = "dvigatel_kamaz_740_62-280_evro-3" %}
+            {% assign product = site.data.agregaty | where:"url", page_url | first %}
+            {% include card_zapchasti_catalog.html product = product %}
+    
+            <div id="740-63"></div>
+            {% assign page_url = "dvigatel_kamaz_740_63-400_evro-3" %}
+            {% assign product = site.data.agregaty | where:"url", page_url | first %}
+            {% include card_zapchasti_catalog.html product = product %}
+
+            <div id="740-65"></div>
+            {% assign page_url = "dvigatel_kamaz_740_65-240_evro-3" %}
+            {% assign product = site.data.agregaty | where:"url", page_url | first %}
+            {% include card_zapchasti_catalog.html product = product %}
+    
+            <div id="loadingDiv" style="display: none;">
+                <span>Загрузка данных</span>
+            </div>
+        </div>
+        <div class="no-result">Не найдено</div>
+        <ul class="pagination" style="display: none;"></ul>
+    </div>
+    <hr>
+    <p>&nbsp;</p>
 
 
     <h3>Двигатели серии Евро-3</h3>
