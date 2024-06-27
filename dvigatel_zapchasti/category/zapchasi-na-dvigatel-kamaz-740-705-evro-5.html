@@ -29,7 +29,7 @@ phone_title:
             <div class="row list">
                 
                 {% assign page_url = "blok-cilindrov-dvigatelya-kamaz-evro-4-common-rail__740-70-1002011-10" %}
-                {% assign product = site.data.agregaty | where:"url", page_url | first %}
+                {% assign product = site.data.dvig_zap | where:"url", page_url | first %}
                 {%- if product -%}
                 {% include card_zapchasti_catalog_tabl.html product = product %}
                 {%- endif -%}
