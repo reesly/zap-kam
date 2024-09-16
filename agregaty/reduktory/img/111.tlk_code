@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Data Version="1.0" Comment="Infostart Toolkit PROF 2023.4.08">
+	<Code Presentation="Код">
+		<Text>Для Каждого Ссылка Из Параметры.Объекты Цикл
+	
+	Объект = Ссылка.ПолучитьОбъект();
+	Если СтрНайти(объект.Наименование, "Главная передача")&gt; 0 Тогда
+		Объект.Наименование = СтрЗаменить(Объект.Наименование, "Главная передача", "Редуктор");
+		Объект.НаименованиеПолное = Объект.Наименование; 
+		//Объект.ВидНоменклатуры = Справочники.ВидыНоменклатуры.НайтиПоНаименованию(" Запчасти с качеством");
+		Объект.Записать();
+	КонецЕсли;
+	
+КонецЦикла;</Text>
+		<Parametrs>
+			<Parameter Name="Объекты" Type="ValueList">
+				<Item Type="CatalogRef.Номенклатура" Value="ed7122fd-605d-11ef-be20-00155d0e6345"/>
+				<Item Type="CatalogRef.Номенклатура" Value="9fcdc8f8-b426-11ea-867f-507b9d800fc4"/>
+				<Item Type="CatalogRef.Номенклатура" Value="9fcdc8f9-b426-11ea-867f-507b9d800fc4"/>
+				<Item Type="CatalogRef.Номенклатура" Value="bcebb904-b426-11ea-867f-507b9d800fc4"/>
+				<Item Type="CatalogRef.Номенклатура" Value="bcebb905-b426-11ea-867f-507b9d800fc4"/>
+				<Item Type="CatalogRef.Номенклатура" Value="bcebb906-b426-11ea-867f-507b9d800fc4"/>
+				<Item Type="CatalogRef.Номенклатура" Value="bcebb907-b426-11ea-867f-507b9d800fc4"/>
+				<Item Type="CatalogRef.Номенклатура" Value="bcebb908-b426-11ea-867f-507b9d800fc4"/>
+				<Item Type="CatalogRef.Номенклатура" Value="bcebb909-b426-11ea-867f-507b9d800fc4"/>
+				<Item Type="CatalogRef.Номенклатура" Value="29ce8f8b-7365-11ef-be21-00155d0e6345"/>
+				<Item Type="CatalogRef.Номенклатура" Value="33d530ed-b42e-11ea-867f-507b9d800fc4"/>
+				<Item Type="CatalogRef.Номенклатура" Value="33d530ee-b42e-11ea-867f-507b9d800fc4"/>
+				<Item Type="CatalogRef.Номенклатура" Value="33d530ef-b42e-11ea-867f-507b9d800fc4"/>
+				<Item Type="CatalogRef.Номенклатура" Value="7fbdeee5-b436-11ea-867f-507b9d800fc4"/>
+				<Item Type="CatalogRef.Номенклатура" Value="9662e1ad-47c5-11ee-be03-00155d0e6345"/>
+				<Item Type="CatalogRef.Номенклатура" Value="faecc9bc-b437-11ea-867f-507b9d800fc4"/>
+			</Parameter>
+		</Parametrs>
+	</Code>
+	<Group Presentation="Обработка товароа">
+		<Code Presentation="Замена наименования">
+			<Text>Для Каждого Ссылка Из Параметры.Объекты Цикл
+	
+	Объект = Ссылка.ПолучитьОбъект();
+	Если СтрНайти(объект.Наименование, "Главная передача")&gt; 0 Тогда
+		Объект.Наименование = СтрЗаменить(Объект.Наименование, "Главная передача", "Редуктор");
+		Объект.НаименованиеПолное = Объект.Наименование; 
+		//Объект.ВидНоменклатуры = Справочники.ВидыНоменклатуры.НайтиПоНаименованию(" Запчасти с качеством");
+		Объект.Записать();
+	КонецЕсли;
+	
+КонецЦикла;</Text>
+		</Code>
+	</Group>
+</Data>
